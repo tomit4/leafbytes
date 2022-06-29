@@ -1,6 +1,17 @@
-h1 {
-    font-family: Arial, "MS Trebuchet", sans-serif;
-    font-size: 100%;
+body {
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: monospace;
+    font-size: 300%;
     font-weight: 900;
-    color: cyan;
+    color: grey;
+    text-decoration: underline;
+}
+
+h2 {
+    text-decoration: none;
+    font-size: 150%;
 }
