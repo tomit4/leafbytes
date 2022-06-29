@@ -1,3 +1,3 @@
-## A Simple README
+## A Simple Static Site for Testing Github Pages
 
-Some Text
+[My Simple Static Site](https://tomit4.github.io/my_gh_static/)
