@@ -22,14 +22,17 @@ h2 {
 }
 
 #intro {
-    font-size: 125%;
+    font-size: 135%;
     text-align: left;
+    font-weight: 600;
     margin: 2em 8em 2em 8em;
     color: #dddddd;
 }
 
 #about {
     margin: 0 0 0 0;
+    font-size: 115%;
+    font-weight: 600;
     text-align: center;
-    color: #dddddd;
+    color: #e0b24d;
 }
