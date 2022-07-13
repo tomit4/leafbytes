@@ -8,10 +8,15 @@ body {
     text-align: center;
 }
 
+img {
+    margin: 1em -2.1em 0 0;
+}
+
 h1 {
+    display: inline;
     font-size: 300%;
     font-weight: 900;
-    margin: 1em 0 -0.25em 0;
+    margin: 1em 1em -0.25em 0;
     /* color: #e0b24d; */
     color: #87651d;
 }
@@ -25,7 +30,7 @@ h2 {
 }
 
 .snippet {
-    margin: 2em 20em -2em 20em;
+    margin: 2em 27em -2em 27em;
     padding: 0.5em 1em -0.5em 1em;
 }
 
@@ -33,7 +38,7 @@ h2 {
     font-size: 135%;
     text-align: left;
     font-weight: 600;
-    margin: 2em 8em 2em 8em;
+    margin: 2em 22rem 2em 22rem;
     /* color: #dedede; */
     color: #2f2f2f;
 }
