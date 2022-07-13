@@ -9,14 +9,14 @@ body {
 }
 
 img {
-    margin: 1em -2.1em 0 0;
+    margin: 0.5em -1em -1em 0;
 }
 
 h1 {
     display: inline;
     font-size: 300%;
     font-weight: 900;
-    margin: 1em 1em -0.25em 0;
+    margin: 1em 1.25em -1em 0;
     /* color: #e0b24d; */
     color: #87651d;
 }
