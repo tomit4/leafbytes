@@ -24,21 +24,9 @@ h2 {
     color: #87651d;
 }
 
-pre {
-    border: 0px solid #252525;
-    border-radius: 5px;
-    text-align: left;
-    background-color: #252525;
+.snippet {
     margin: 0em 20em 0em 20em;
     padding: 0.5em 1em 0.5em 1em;
-}
-
-code {
-    font-family: monospace;
-    font-size: 125%;
-    font-weight: 500;
-    background-color: #252525;
-    color: #dddddd;
 }
 
 #intro {
