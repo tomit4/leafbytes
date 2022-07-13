@@ -1,6 +1,7 @@
 * {
     font-family: monospace;
-    background-color: #1e1e1e;
+    /* background-color: #1e1e1e; */
+    background-color: #dedede;
 }
 
 body {
@@ -10,7 +11,8 @@ body {
 h1 {
     font-size: 300%;
     font-weight: 900;
-    color: #e0b24d;
+    /* color: #e0b24d; */
+    color: #87651d; /*off-black*/
     /* text-decoration: underline; */
 }
 
@@ -18,7 +20,25 @@ h2 {
     text-decoration: none;
     font-size: 150%;
     font-weight: 900;
-    color: #e0b24d;
+    /* color: #e0b24d; */
+    color: #87651d;
+}
+
+pre {
+    border: 0px solid #252525;
+    border-radius: 5px;
+    text-align: left;
+    background-color: #252525;
+    margin: 0em 20em 0em 20em;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+code {
+    font-family: monospace;
+    font-size: 125%;
+    font-weight: 500;
+    background-color: #252525;
+    color: #dddddd;
 }
 
 #intro {
@@ -26,7 +46,7 @@ h2 {
     text-align: left;
     font-weight: 600;
     margin: 2em 8em 2em 8em;
-    color: #dddddd;
+    color: #2f2f2f;
 }
 
 #about {
@@ -34,5 +54,6 @@ h2 {
     font-size: 115%;
     font-weight: 600;
     text-align: center;
-    color: #e0b24d;
+    /* color: #e0b24d; */
+    color: #87651d;
 }
