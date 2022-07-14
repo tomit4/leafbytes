@@ -16,5 +16,3 @@ __Checklist:__
 > - [ ] Create Responsive Design for Tablet/Phone Use
 > - [ ] Program Dark/Light Mode
 > - [ ] First Article Idea: Why !bangs make ddg the best search engine for programmers
-
-just a test line to be removed later
