@@ -1,6 +1,6 @@
 ## leafbytes, a personal blog
 
-<center><img src="./assets/blog_header.jpg"></center>
+![alt text](assets/blog_header.jpg)
 
 [leafbytes](https://leafbytes.com)
 
