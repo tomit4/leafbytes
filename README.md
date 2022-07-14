@@ -1,5 +1,6 @@
-> ![alt text](assets/blog_header.jpg)
 ## leafbytes, a personal blog
+
+<center><img src="./assets/blog_header.jpg"></center>
 
 [leafbytes](https://leafbytes.com)
 
