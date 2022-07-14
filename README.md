@@ -1,3 +1,15 @@
-## A Simple Static Site for Testing Github Pages
+## leafbytes, a personal blog
 
-[My Simple Static Site](https://tomit4.github.io/my_gh_static/)
+[leafbytes](https://leafbytes.com)
+
+This repository contains the various html, css, and javascript necessary for my personal blog, leafbytes. It is a simple static html site, currently hosted on Github Pages.
+
+__Checklist:__
+
+- [x] Add favicon
+- [x] Add basic logo
+- [x] Add Code Snippets
+- [ ] Create Navigation Bar
+- [ ] Streamline Blog Post Methodology
+- [ ] Create Responsive Design for Tablet/Phone Use
+- [ ] Program Dark/Light Mode
