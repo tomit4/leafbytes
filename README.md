@@ -1,4 +1,6 @@
-## leafbytes, a personal blog
+![alt text](assets/blog_header.jpg)
+
+<!-- ## leafbytes, a personal blog -->
 
 [leafbytes](https://leafbytes.com)
 
@@ -6,10 +8,10 @@ This repository contains the various html, css, and javascript necessary for my 
 
 __Checklist:__
 
-- [x] Add favicon
-- [x] Add basic logo
-- [x] Add Code Snippets
-- [ ] Create Navigation Bar
-- [ ] Streamline Blog Post Methodology
-- [ ] Create Responsive Design for Tablet/Phone Use
-- [ ] Program Dark/Light Mode
+> - [x] Add favicon
+> - [x] Add basic logo
+> - [x] Add Code Snippets
+> - [ ] Create Navigation Bar
+> - [ ] Streamline Blog Post Methodology
+> - [ ] Create Responsive Design for Tablet/Phone Use
+> - [ ] Program Dark/Light Mode
