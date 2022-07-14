@@ -1,6 +1,5 @@
-![alt text](assets/blog_header.jpg)
-
-<!-- ## leafbytes, a personal blog -->
+> ![alt text](assets/blog_header.jpg)
+## leafbytes, a personal blog
 
 [leafbytes](https://leafbytes.com)
 
