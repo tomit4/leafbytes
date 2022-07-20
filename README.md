@@ -12,7 +12,13 @@ __Checklist:__
 > - [x] Add basic logo
 > - [x] Add Code Snippets
 > - [ ] Create Navigation Bar
+> - [ ] Add test images (jpgs, gifs)
 > - [ ] Streamline Blog Post Methodology
 > - [ ] Create Responsive Design for Tablet/Phone Use
 > - [ ] Program Dark/Light Mode
-> - [ ] First Article Idea: Why !bangs make ddg the best search engine for programmers
+> - [ ] Article Idea: Why !bangs make ddg the best search engine for programmers
+> - [ ] Article Idea: In pursuit of a purely textual browsing experience
+> - [ ] Article Idea: Why every developer must eventually learn at least a few Vim Keybindings
+> - [ ] Article Idea: Gushing over my desktop environment (bspwm and Artix)
+> - [ ] Article Idea: Neovim, Zsh, and Git (setting up a minimalist development environment)
+> - [ ] Article Idea: bgit, my simple bash script alternative to github-cli
