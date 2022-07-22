@@ -26,6 +26,28 @@ body {
         width: 50%;
     }
 
+    nav {
+        background-color: #87651d;
+        display: block;
+        align-content: center;
+        justify-item: center;
+        /* width: 50%; */
+        margin: 0em 4em 0em 4em;
+        padding: 0.25em 0.5em 0.25em 0.5em;
+        border: 1px solid #87651d;
+        border-radius: 5px;
+    }
+
+    .navlink {
+        display: inline;
+        background-color: #87651d;
+        color: white;
+        text-decoration: none;
+        font-size: 125%;
+        font-weight: 900;
+        padding: 0 2em 0 2em;
+    }
+
     img {
         margin: 1.5em -1.5em -1em 0;
     }
@@ -47,33 +69,6 @@ body {
         color: #87651d;
     }
 
-    nav {
-        background-color: #87651d;
-        display: block;
-        align-content: center;
-        justify-item: center;
-        /* width: 50%; */
-        margin: 1em 4em -0.5em 4em;
-        padding: 0.25em 0.5em 0.25em 0.5em;
-        border: 1px solid #87651d;
-        border-radius: 5px;
-    }
-
-    .navlink {
-        display: inline;
-        background-color: #87651d;
-        color: white;
-        text-decoration: none;
-        font-size: 125%;
-        font-weight: 900;
-        padding: 0 2em 0 2em;
-
-    }
-
-    .snippet {
-        margin: 0em 17em 0em 17em;
-        padding: 0.5em 1em 1em 1em;
-    }
 
     #intro {
         font-size: 135%;
@@ -82,6 +77,11 @@ body {
         margin: 1em 5em 1em 5em;
         /* color: #dedede; */
         color: #2f2f2f;
+    }
+
+    .snippet {
+        margin: 0em 17em 0em 17em;
+        padding: 0.5em 1em 1em 1em;
     }
 
     footer {
