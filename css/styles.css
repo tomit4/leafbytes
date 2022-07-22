@@ -10,6 +10,21 @@ body {
 }
 
 @media screen and (min-width: 1185px) {
+    #margin {
+        width: 1185px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    #margin-left {
+        float: left;
+        width: 50%;
+    }
+
+    #margin-right {
+        float: right;
+        width: 50%;
+    }
 
     img {
         margin: 1.5em -1.5em -1em 0;
