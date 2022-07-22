@@ -12,6 +12,7 @@ __Checklist:__
 > - [x] Add basic logo
 > - [x] Add Code Snippets
 > - [x] Create Navigation Bar
+> - [ ] Trace circuit_board_vector.jpg asset in Inkscape to create svg bg element
 > - [ ] Create mock fill for blog posts/about/faq/links/contact
 > - [ ] Add test images (jpgs, gifs)
 > - [ ] Streamline Blog Post Methodology
