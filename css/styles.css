@@ -5,50 +5,82 @@
 }
 
 body {
+    margin-top: 2em;
     text-align: center;
 }
 
-img {
-    margin: 0.5em -1.5em -1em 0;
-}
+@media screen and (min-width: 1185px) {
 
-h1 {
-    display: inline;
-    font-size: 300%;
-    font-weight: 900;
-    margin: 1em 1.25em -1em 0;
-    /* color: #e0b24d; */
-    color: #87651d;
-}
+    img {
+        margin: 1.5em -1.5em -1em 0;
+    }
 
-h2 {
-    text-decoration: none;
-    font-size: 150%;
-    font-weight: 900;
-    margin: 0 0 0 0;
-    /* color: #e0b24d; */
-    color: #87651d;
-}
+    h1 {
+        display: inline;
+        font-size: 300%;
+        font-weight: 900; margin: 1em 1.25em -1em 0;
+        /* color: #e0b24d; */
+        color: #87651d;
+    }
 
-.snippet {
-    margin: 2em 27em -2em 27em;
-    padding: 0.5em 1em -0.5em 1em;
-}
+    h2 {
+        text-decoration: none;
+        font-size: 150%;
+        font-weight: 900;
+        margin: -0.15em 0 0 0;
+        /* color: #e0b24d; */
+        color: #87651d;
+    }
 
-#intro {
-    font-size: 135%;
-    text-align: left;
-    font-weight: 600;
-    margin: 2em 22rem 2em 22rem;
-    /* color: #dedede; */
-    color: #2f2f2f;
-}
+    nav {
+        background-color: #87651d;
+        display: block;
+        align-content: center;
+        justify-item: center;
+        /* width: 50%; */
+        margin: 1em 4em -0.5em 4em;
+        padding: 0.25em 0.5em 0.25em 0.5em;
+        border: 1px solid #87651d;
+        border-radius: 5px;
+    }
 
-#about {
-    margin: 0 0 0 0;
-    font-size: 125%;
-    font-weight: 900;
-    text-align: center;
-    /* color: #e0b24d; */
-    color: #87651d;
+    .navlink {
+        display: inline;
+        background-color: #87651d;
+        color: white;
+        text-decoration: none;
+        font-size: 125%;
+        font-weight: 900;
+        padding: 0 2em 0 2em;
+
+    }
+
+    .snippet {
+        margin: 0em 17em 0em 17em;
+        padding: 0.5em 1em 1em 1em;
+    }
+
+    #intro {
+        font-size: 135%;
+        text-align: left;
+        font-weight: 500;
+        margin: 1em 5em 1em 5em;
+        /* color: #dedede; */
+        color: #2f2f2f;
+    }
+
+    footer {
+        margin: -3em 0em 0em 0em;
+
+    }
+
+    #contact {
+        margin: 0em 1em 12em 1em;
+        font-size: 125%;
+        font-weight: 900;
+        text-align: center;
+        /* color: #e0b24d; */
+        color: #87651d;
+        text-decoration: none;
+    }
 }
