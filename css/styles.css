@@ -1,16 +1,24 @@
 * {
     font-family: monospace;
     /* background-color: #1e1e1e; */
-    background-color: #dedede;
+    background-color: #e9ecef;
 }
 
 body {
-    margin-top: 2em;
+    /* margin-top: 2em; */
     text-align: center;
+    background-image:
+        url("../assets/circuit_board_vector.svg");
+        height: 100%;
+        background-attachment: fixed;
+        /* background-repeat: no-repeat; */
+        /* width: 90%; */
 }
 
 @media screen and (min-width: 1185px) {
     #margin {
+        /* background-image: */
+            /* url("../assets/circuit_board_vector.svg"); */
         width: 1185px;
         margin: 0 auto;
         overflow: hidden;
@@ -32,7 +40,7 @@ body {
         align-content: center;
         justify-item: center;
         /* width: 50%; */
-        margin: 0em 4em 0em 4em;
+        margin: 1em 4em 0em 4em;
         padding: 0.25em 0.5em 0.25em 0.5em;
         border: 1px solid #87651d;
         border-radius: 5px;
