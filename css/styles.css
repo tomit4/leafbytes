@@ -16,6 +16,8 @@ body {
 
 @media screen and (min-width: 1185px) {
     #margin {
+        border: 3px solid #d8c586;
+        border-radius: 5px;
         width: 1185px;
         margin: 0 auto;
         overflow: hidden;
@@ -94,7 +96,7 @@ body {
         font-size: 150%;
         text-align: left;
         font-weight: 500;
-        margin: -1em 0em 0em 6em;
+        margin: -1em 8em 0em 6em;
         padding: 0em 0m 0em 0em;
         color: #87651d;
     }
@@ -104,15 +106,6 @@ body {
         color: #87651d;
         /* color: white; */
 
-    }
-
-    #intro {
-        font-size: 135%;
-        text-align: left;
-        font-weight: 500;
-        margin: 1em 5em 1em 5em;
-        /*  color: #dedede; */
-        color: #2f2f2f;
     }
 
     .snippet {
