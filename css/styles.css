@@ -31,6 +31,17 @@ body {
         height: 170px;
     }
 
+    .blankborder {
+        position: fixed;
+        background-color: #87651d;
+        margin: 14.20em 0em 0em 5em;
+        width: 1075px;
+        height: 4px;
+        border: 1px solid #87651d;
+        border-radius: 10px 10px 0px 0px;
+
+    }
+
     #margin-left {
         float: left;
         width: 50%;
@@ -92,7 +103,7 @@ body {
 
     ul {
         list-style-type: none;
-        margin: 16em 0 0 0;
+        margin: 19em 0 0 0;
     }
 
     li {
@@ -125,9 +136,12 @@ body {
 
     #lidecoration {
         background-color: #87651d;
-        margin: 0em 0em -1.5em 5.5em;
+        margin: 0em 0em -1.5em 6em;
         width: 790px;
-        height: 4px;
+        height: 3px;
+        border: 1px solid #87651d;
+        border-radius: 0px 5px 0px 5px;
+
     }
 
     .snippet {
