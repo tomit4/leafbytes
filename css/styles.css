@@ -35,7 +35,7 @@ body {
     .blankborder {
         position: fixed;
         background-color: #87651d;
-        margin: 14.20em 0em 0em 5em;
+        margin: 13em 0em 0em 5em;
         width: 1075px;
         height: 4px;
         border: 1px solid #87651d;
@@ -87,7 +87,7 @@ body {
         text-decoration: none;
         font-weight: 900;
         height: 10px;
-        margin: 1.5em 0em 0em 1.5em;
+        margin: 1.25em 0em 0em 1.5em;
         /* color: #e0b24d; */
         color: #87651d;
     }
@@ -97,7 +97,7 @@ body {
         text-decoration: none;
         font-size: 150%;
         font-weight: 900;
-        margin: 6em 0em 0em 22em;
+        margin: 5.5em 0em 0em 22.5em;
         /* color: #e0b24d; */
         color: #87651d;
     }
