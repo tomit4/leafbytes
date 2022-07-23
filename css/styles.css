@@ -26,7 +26,8 @@ body {
 
     .blank {
         position: fixed;
-        background-color: white;
+        background-color: #e9ecef;
+        margin: -1em 0em 0em 0em;
         width: 1185px;
         height: 170px;
     }
