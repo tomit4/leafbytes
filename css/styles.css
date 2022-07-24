@@ -1,30 +1,26 @@
 * {
+    padding: 0px;
+    margin: 0px;
     font-family: monospace;
     /* background-color: #1e1e1e; */
     background-color: #e9ecef;
 }
 
-body {
-    /* margin-top: 2em; */
-    text-align: center;
-    background-image:
-        url("../assets/circuit_board_vector.svg");
-        height: 100%;
-        /* background-attachment: fixed; */
-        /* background-repeat: no-repeat; */
-}
 
-/* chrome-specific settings */
+/* chrome-specific css */
 @supports (-webkit-appearance:none) {
     nav {
-        margin: 0em 0em 0em 18.75em;
+        margin: 0em 0em 0em 17.75em;
     }
     .blank {
         height: 193px;
     }
+    .h2 {
+        margin: 5.5em 0em 0em 19.5em;
+    }
 }
 
-/* firefox-specific settings */
+/* firefox-specific css */
 @-moz-document url-prefix() {
     nav {
         margin: 0em 0em 0em 21.5em;
@@ -32,10 +28,25 @@ body {
     .blank {
         height: 170px;
     }
+    .h2 {
+        margin: 5.5em 0em 0em 22.5em;
+    }
 }
 
+/* desktop-specific css */
 @media screen and (min-width: 1185px) {
-    #margin {
+
+     body {
+        /* margin-top: 2em; */
+        text-align: center;
+        background-image:
+            url("../assets/circuit_board_vector.svg");
+            height: 100%;
+            /* background-attachment: fixed; */
+            /* background-repeat: no-repeat; */
+    }
+
+   #margin {
         border-right: 3px solid #d8c586;
         border-left: 3px solid #d8c586;
         border-radius: 5px;
@@ -49,7 +60,6 @@ body {
         background-color: #e9ecef;
         margin: -1em 0em 0em 0em;
         width: 1185px;
-        /* height: 170px; */
     }
 
     .blankborder {
@@ -116,7 +126,7 @@ body {
         text-decoration: none;
         font-size: 150%;
         font-weight: 900;
-        margin: 5.5em 0em 0em 22.5em;
+        /* margin: 5.5em 0em 0em 22.5em; */
         /* color: #e0b24d; */
         color: #87651d;
     }
@@ -186,4 +196,179 @@ body {
         /* color: #e0b24d; */
         text-decoration: none;
     }
+}
+
+/* tiny phone css */
+@media screen and (max-width: 677px) {
+
+     body {
+        /* margin-top: 2em; */
+        text-align: center;
+        background-image:
+            url("../assets/circuit_board_vector.svg");
+            height: 100%;
+            /* background-attachment: fixed; */
+            /* background-repeat: no-repeat; */
+        background-size: 30%;
+    }
+
+
+    #margin {
+        /* border-right: 3px solid #d8c586; */
+        /* border-left: 3px solid #d8c586; */
+        border-radius: 5px;
+        width: 375px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .blank {
+        position: fixed;
+        background-color: #e9ecef;
+        margin: -1em 0em 0em 0em;
+        height: 110px;
+        width: 385px;
+    }
+
+    .blankborder {
+        position: fixed;
+        background-color: #87651d;
+        margin: 8em 0em 0em 0em;
+        width: 385px;
+        height: 2px;
+        border: 1px solid #87651d;
+        border-radius: 10px 10px 0px 0px;
+
+    }
+
+    #margin-left {
+        float: left;
+        width: 50%;
+    }
+
+    #margin-right {
+        float: right;
+        width: 50%;
+    }
+
+    nav {
+        position: fixed;
+        background-color: #87651d;
+        /* display: block; */
+        /* align-content: center; */
+        /* justify-item: center; */
+        margin: 0em 0em 0em 1em;
+        padding: 0em 1em 0em 1em;
+        border: 1px solid #87651d;
+        border-radius: 2px 2px 9px 9px;
+    }
+
+    .navlink {
+        background-color: #87651d;
+        color: white;
+        text-decoration: none;
+        font-size: 125%;
+        font-weight: 900;
+        margin: 0em 0.5em 0em 0.5em;
+        padding: 0em 0em 0em 0em;
+    }
+
+    img {
+        postition: fixed;
+        margin: 0em 0em 0em -3em;
+        width: 20%;
+    }
+
+    .h1 {
+        position: fixed;
+        display: inline;
+        font-size: 225%;
+        text-decoration: none;
+        font-weight: 900;
+        height: 10px;
+        margin: 1.25em 0em 0em -0.5em;
+        /* color: #e0b24d; */
+        color: #87651d;
+    }
+
+    .h2 {
+        position: fixed;
+        text-decoration: none;
+        font-size: 110%;
+        font-weight: 900;
+        margin: 5em 0em 0em 4em;
+        /* color: #e0b24d; */
+        color: #87651d;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 11em 0 0 0;
+    }
+
+    li {
+        font-size: 150%;
+        text-align: left;
+        font-weight: 900;
+        margin: 1em 0em 0em 0em;
+        padding: 1em 0em 0em 1em;
+        color: #87651d;
+    }
+
+    .artsnip {
+        /* display: none; */
+        font-size: 100%;
+        text-align: left;
+        font-weight: 500;
+        font-size: 120%;
+        margin: 0.5em 0em 0em 3em;
+        padding: 0em 0m 0em 0em;
+        color: #87651d;
+    }
+
+    .articleLink {
+        text-decoration: none;
+        background-color: #87651d;
+        font-size: 85%;
+        border: 4px solid #87651d;
+        margin: 0em 0em 0em 0em;
+        padding: 0em 0.25em 0em 0.25em;
+        border-radius: 6px 6px 0px 0px;
+        color: white;
+    }
+
+    #lidecoration {
+        background-color: #87651d;
+        margin: 0em 0em -1.45em 6em;
+        width: 230px;
+        height: 1px;
+        border: 1px solid #87651d;
+        border-radius: 0px 5px 0px 5px;
+
+    }
+
+    .snippet {
+        margin: 3em 1em 0em 1em;
+        /* padding: 0.5em 1em 0.5em 1em; */
+    }
+
+    footer {
+        margin: 0em 0em 0em 0em;
+    }
+
+    #contact {
+        margin: 0em 0em 0em 0em;
+        padding: 0em 1em 1em 1em;
+        background-color: #87651d;
+        color: #e9ecef;
+        font-size: 125%;
+        font-weight: 900;
+        border: 1px solid #87651d;
+        border-radius: 6px 6px 2px 2px;
+        text-align: center;
+        /* color: #e0b24d; */
+        text-decoration: none;
+    }
+}
+
 }
