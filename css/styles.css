@@ -128,6 +128,7 @@
     .h2 {
         position: fixed;
         background-color: transparent;
+        background-color: transparent;
         text-decoration: none;
         font-size: 150%;
         font-weight: 900;
@@ -295,12 +296,12 @@
         position: fixed;
         background-color: transparent;
         display: inline;
-        font-size: 200%;
+        font-size: 225%;
         text-decoration: none;
         font-weight: 900;
         height: 10px;
         /* iphone */
-        margin: 2em 0em 0em -2.5em;
+        margin: 1em 0em 0em -2.5em;
         /* color: #e0b24d; */
         color: #87651d;
     }
@@ -311,7 +312,7 @@
         text-decoration: none;
         font-size: 110%;
         font-weight: 900;
-        margin: 5em 0em 0em 4.5em;
+        margin: 4em 0em 0em 5.5em;
         /* color: #e0b24d; */
         color: #87651d;
     }
