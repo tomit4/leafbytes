@@ -224,7 +224,10 @@
 
     .blank {
         position: fixed;
-        background-color: #e9ecef;
+        /* iphone */
+        background-image:
+            url("../assets/circuit_board_vector.svg");
+        /* background-color: #e9ecef; */
         margin: -1em 0em 0em 0em;
         height: 110px;
         width: 385px;
@@ -276,7 +279,7 @@
 
     img {
         postition: fixed;
-        margin: 2em 0em 0em -4.5em;
+        margin: 3em 0em 0em -3.5em;
         /* width: 30%; */
         /* iphone */
         width: 50%;
