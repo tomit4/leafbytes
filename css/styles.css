@@ -13,7 +13,7 @@
         margin: 0em 0em 0em 17.75em;
     }
     .blank {
-        height: 193px;
+        height: 185px;
     }
     .h2 {
         margin: 5.5em 0em 0em 19.5em;
@@ -107,13 +107,11 @@
 
     .h1 {
         position: fixed;
-        display: inline;
         background-color: transparent;
         font-size: 300%;
         text-decoration: none;
         font-weight: 900;
-        height: 10px;
-        margin: 1.25em 0em 0em 1.5em;
+        margin: 1.5em 0em 0em -2.75em;
         /* color: #e0b24d; */
         color: #87651d;
     }
@@ -121,11 +119,10 @@
     .h2 {
         position: fixed;
         background-color: transparent;
-        background-color: transparent;
         text-decoration: none;
         font-size: 150%;
         font-weight: 900;
-        /* margin: 5.5em 0em 0em 22.5em; */
+        margin: 5.25em 0em 0em 22em;
         /* color: #e0b24d; */
         color: #87651d;
     }
