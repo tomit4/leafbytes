@@ -57,7 +57,9 @@
 
     .blank {
         position: fixed;
-        background-color: #e9ecef;
+        /* background-color: #e9ecef; */
+        background-image:
+            url("../assets/circuit_board_vector.svg");
         margin: -1em 0em 0em 0em;
         width: 1185px;
     }
@@ -104,6 +106,7 @@
     }
 
     img {
+        display: none;
         postition: fixed;
         margin: 0em 0em 0em -5em;
         width: 65%;
@@ -112,6 +115,7 @@
     .h1 {
         position: fixed;
         display: inline;
+        background-color: transparent;
         font-size: 300%;
         text-decoration: none;
         font-weight: 900;
@@ -123,6 +127,7 @@
 
     .h2 {
         position: fixed;
+        background-color: transparent;
         text-decoration: none;
         font-size: 150%;
         font-weight: 900;
