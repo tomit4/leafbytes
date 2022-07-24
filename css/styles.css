@@ -258,7 +258,7 @@
         /* align-content: center; */
         /* justify-item: center; */
         margin: 0em 0em 0em 1em;
-        padding: 0em 1em 0em 1em;
+        padding: 0em 1em 0em 0em;
         border: 1px solid #87651d;
         border-radius: 2px 2px 9px 9px;
     }
