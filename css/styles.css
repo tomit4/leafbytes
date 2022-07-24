@@ -204,7 +204,7 @@
     }
 }
 
-/* tiny phone css */
+/* tiny iphone css */
 @media screen and (max-width: 677px) {
 
      body {
@@ -312,7 +312,7 @@
         text-decoration: none;
         font-size: 110%;
         font-weight: 900;
-        margin: 4em 0em 0em 5.5em;
+        margin: 4em 0em 0em 6.5em;
         /* color: #e0b24d; */
         color: #87651d;
     }
