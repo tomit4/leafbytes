@@ -254,9 +254,7 @@
     nav {
         position: fixed;
         background-color: #87651d;
-        /* display: block; */
-        /* align-content: center; */
-        /* justify-item: center; */
+        /* iphone */
         margin: 0em 0em 0em 0em;
         padding: 0em 1em 0em 0em;
         border: 1px solid #87651d;
@@ -268,8 +266,8 @@
         background-color: #87651d;
         color: white;
         text-decoration: none;
-        /* looks good in test, not on phone */
         /* font-size: 125%; */
+        /* iphone */
         font-size: 110%;
         font-weight: 900;
         margin: 0em 0.5em 0em 0.5em;
@@ -291,7 +289,7 @@
         text-decoration: none;
         font-weight: 900;
         height: 10px;
-        margin: 1.25em 0em 0em -0.5em;
+        /* margin: 1.25em 0em 0em -0.5em; */
         /* color: #e0b24d; */
         color: #87651d;
     }
