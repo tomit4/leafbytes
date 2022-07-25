@@ -23,3 +23,4 @@ __Checklist:__
 > - [ ] Article Idea: Gushing over my desktop environment (bspwm and Artix)
 > - [ ] Article Idea: Neovim, Zsh, and Git (setting up a minimalist development environment)
 > - [ ] Article Idea: bgit, my simple bash script alternative to github-cli
+> - [ ] Article Idea: Want to start knowing more about computers? Learn the command line first!
