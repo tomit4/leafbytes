@@ -1,0 +1,28 @@
+* {
+    background-color: #d8c586;
+}
+
+img {
+    display: block;
+    margin: 4.25em auto 0em auto;
+}
+
+.circle {
+    background-color: #d8c586;
+    margin: 5em auto 0em auto;
+    border: 25px solid #87651d;
+    border-radius: 500px;
+    width: 675px;
+    height: 675px;
+}
+
+h1 {
+        font-family: sans-serif;
+        /* font-family: monospace; */
+        font-weight: 900;
+        color: #87651d;
+        text-align: center;
+        margin: -0.25em auto 0em auto;
+        width: 220px;
+        height: 40px;
+}
