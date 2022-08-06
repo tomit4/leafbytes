@@ -70,16 +70,15 @@ img {
      margin: -57em 0em 0em 5em;
      width: 7px;
      animation-delay: .2s;
-     animation-duration: 3s;
-     animation-name:zap1;
+    animation: zap1 2s, fadeBackground 4s;
      animation-fill-mode: forwards;
 }
 
 #bar2 {
     width: 8px;
-    margin: -60em 0em 0em 9em; animation-delay: .2s;
-    animation-duration: 1.8s;
-    animation-name:zap2;
+    margin: -64em 0em 0em 18em;
+    animation-delay: .2s;
+    animation: zap2 1.8s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
@@ -87,8 +86,7 @@ img {
     width: 4px;
     margin: -62em 0em 0em 13em;
     animation-delay: .2s;
-    animation-duration: 2s;
-    animation-name:zap3;
+    animation: zap3 2s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
@@ -96,8 +94,7 @@ img {
     width: 6px;
     margin: -61em 0em 0em 10em;
     animation-delay: .2s;
-    animation-duration: 2s;
-    animation-name:zap4;
+    animation: zap4 2s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
@@ -105,8 +102,7 @@ img {
     width: 9px;
     margin: -55em 0em 0em 3em;
     animation-delay: .2s;
-    animation-duration: 2s;
-    animation-name:zap5;
+    animation: zap5 2s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
@@ -114,8 +110,7 @@ img {
     width: 3px;
     margin: -60em 0em 0em 33em;
     animation-delay: .2s;
-    animation-duration: 2s;
-    animation-name:zap6;
+    animation: zap6 2s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
@@ -124,52 +119,51 @@ img {
     border-radius: 3px 3px 3px 20px;
     margin: -55em 0em 0em 38em;
     animation-delay: .2s;
-    animation-duration: 3.5s;
-    animation-name:zap7;
+    animation: zap7 3.5s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
 #bar8 {
     width: 3px;
-    margin: -58em 0em 0em 36em; animation-delay: .2s;
-    animation-duration: 1.8s;
-    animation-name:zap8;
+    margin: -58em 0em 0em 36em;
+    animation-delay: .2s;
+    animation: zap8 1.8s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
 #bar9 {
     width: 14px;
     border-radius: 5px 5px 25px 5px;
-    margin: -60em 0em 0em 9em; animation-delay: .2s;
-    animation-duration: 1.8s;
-    animation-name:zap9;
+    margin: -60em 0em 0em 9em;
+    animation-delay: .2s;
+    animation: zap9 1.8s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
 #bar10 {
     width: 12px;
     border-radius: 5px 5px 5px 25px;
-    margin: -63em 0em 0em 25em; animation-delay: .2s;
-    animation-duration: 1.8s;
-    animation-name:zap10;
+    margin: -63em 0eh 0em 25em;
+    animation-delay: .2s;
+    animation: zap10 1.8s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
 #bar11 {
     width: 7px;
     border-radius: 5px 5px 5px 15px;
-    margin: -63em 0em 0em 27em; animation-delay: .2s;
-    animation-duration: 2s;
-    animation-name:zap11;
+    margin: -63em 0em 0em 27em;
+    animation-delay: .2s;
+    animation: zap11 2s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
 #bar12 {
     width: 4px;
     border-radius: 5px 5px 25px 5px;
-    margin: -64em 0em 0em 17em; animation-delay: .2s;
-    animation-duration: 1.8s;
-    animation-name:zap12;
+    margin: -64em 0em 0em 17em;
+    animation-delay: .2s;
+    animation: zap12 1.8s, fadeBackground 4s;
     animation-fill-mode: forwards;
 }
 
@@ -186,7 +180,7 @@ img {
 
 @keyframes zap2  {
      from { height:0; }
-     to { height:50px;}
+     to { height:150px;}
 }
 
 @keyframes zap3  {
