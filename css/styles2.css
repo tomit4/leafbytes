@@ -1,5 +1,6 @@
 * {
-    background-color: #d8c586;
+    /* background-color: #d8c586; */
+    background-color: #e9ecef;
 }
 
 img {
@@ -9,20 +10,57 @@ img {
 
 .circle {
     background-color: #d8c586;
-    margin: 5em auto 0em auto;
+    margin: 8em auto 0em auto;
     border: 25px solid #87651d;
     border-radius: 500px;
     width: 675px;
     height: 675px;
 }
 
-h1 {
-        font-family: sans-serif;
-        /* font-family: monospace; */
-        font-weight: 900;
-        color: #87651d;
-        text-align: center;
-        margin: -0.25em auto 0em auto;
-        width: 220px;
-        height: 40px;
+.node {
+    position: relative;
+    background-color: #d8c586;
+    /* bottom: 300px; */
+    /* right: 125px; */
+    border: 15px solid #87651d;
+    border-radius: 500px;
+    width: 50px;
+    height: 50px;
+
 }
+
+#node1 {
+    bottom: 300px;
+    right: 125px;
+}
+
+#node2 {
+    bottom: 395px;
+    left: 720px;
+}
+
+#node3 {
+    bottom: 150px;
+    left: 590px;
+}
+
+#node4 {
+    bottom: 220px;
+    left: 10px;
+}
+
+#node5 {
+    bottom: 200px;
+    left: 300px;
+}
+
+/* h1 { */
+        /* font-family: sans-serif; */
+        /* [> font-family: monospace; <] */
+        /* font-weight: 900; */
+        /* color: #87651d; */
+        /* text-align: center; */
+        /* margin: -0.25em auto 0em auto; */
+        /* width: 220px; */
+        /* height: 40px; */
+/* } */
