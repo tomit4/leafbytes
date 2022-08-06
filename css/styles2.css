@@ -77,8 +77,7 @@ img {
 }
 
 #bar2 {
-    margin: -60em 0em 0em 9em;
-    animation-delay: .2s;
+    margin: -60em 0em 0em 9em; animation-delay: .2s;
     animation-duration: 1.8s;
     animation-name:zap2;
     animation-fill-mode: forwards;
@@ -100,9 +99,17 @@ img {
     animation-fill-mode: forwards;
 }
 
+#bar5 {
+    margin: -55em 0em 0em 3em;
+    animation-delay: .2s;
+    animation-duration: 2s;
+    animation-name:zap5;
+    animation-fill-mode: forwards;
+}
+
 @keyframes zap1  {
      0% {height:0;}
-     100% {height:200px;}
+     100% {height:400px;}
 }
 
 @keyframes zap2  {
@@ -116,6 +123,11 @@ img {
 }
 
 @keyframes zap4  {
+    from { height:0; }
+    to { height:175px;}
+}
+
+@keyframes zap5  {
     from { height:0; }
     to { height:175px;}
 }
