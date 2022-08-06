@@ -3,6 +3,11 @@
     background-color: #e9ecef;
 }
 
+body {
+    /* media query this to be sure */
+    overflow: hidden;
+}
+
 img {
     display: block;
     margin: 4.25em auto 0em auto;
@@ -10,7 +15,7 @@ img {
 
 .circle {
     background-color: #d8c586;
-    margin: 8em auto 0em auto;
+    margin: 5em auto auto auto;
     border: 25px solid #87651d;
     border-radius: 500px;
     width: 675px;
