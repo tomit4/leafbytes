@@ -29,6 +29,8 @@ img {
     border-radius: 500px;
     width: 50px;
     height: 50px;
+    animation: fadeBackground 4s;
+    animation-fill-mode: forwards;
 }
 
 #node1 {
@@ -169,6 +171,12 @@ img {
     animation-duration: 1.8s;
     animation-name:zap12;
     animation-fill-mode: forwards;
+}
+
+@keyframes fadeBackground {
+    from { opacity: 0%;}
+    to { opacity: 100%;}
+
 }
 
 @keyframes zap1  {
