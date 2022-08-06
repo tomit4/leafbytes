@@ -8,15 +8,19 @@ This repository contains the various html, css, and javascript necessary for my 
 
 __Checklist:__
 
+> - [x] Create/Design Landing Page
+> - [ ] Add "circuit board" css to main Circle Element of Landing Page
+> - [ ] Add simple animations to Landing Page
 > - [x] Add favicon
 > - [x] Add basic logo
 > - [x] Add Code Snippets
 > - [x] Create Navigation Bar
 > - [ ] Create mock fill for blog posts/about/faq/links/contact
-> - [ ] Add test images (jpgs, gifs)
+> - [x] Add test images (jpgs, gifs)
 > - [ ] Streamline Blog Post Methodology
 > - [ ] Create Responsive Design for Tablet/Phone Use (started with desktop media query)
 > - [ ] Program Dark/Light Mode
+> - [x] Article Idea: The Keyboard Driven Workflow
 > - [ ] Article Idea: Why !bangs make ddg the best search engine for programmers
 > - [ ] Article Idea: In pursuit of a purely textual browsing experience
 > - [ ] Article Idea: Why every developer must eventually learn at least a few Vim Keybindings
