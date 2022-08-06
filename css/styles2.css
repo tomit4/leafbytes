@@ -22,6 +22,7 @@ img {
     height: 675px;
 }
 
+
 .node {
     position: relative;
     background-color: #d8c586;
@@ -59,13 +60,63 @@ img {
     left: 300px;
 }
 
-/* h1 { */
-        /* font-family: sans-serif; */
-        /* [> font-family: monospace; <] */
-        /* font-weight: 900; */
-        /* color: #87651d; */
-        /* text-align: center; */
-        /* margin: -0.25em auto 0em auto; */
-        /* width: 220px; */
-        /* height: 40px; */
-/* } */
+.bar {
+     position: absolute;
+     background: #87651d;
+     border: 1px solid #87651d;
+     border-radius: 3px;
+     width: 5px;
+}
+
+#bar1 {
+     margin: -57em 0em 0em 5em;
+     animation-delay: .2s;
+     animation-duration: 3s;
+     animation-name:zap1;
+     animation-fill-mode: forwards;
+}
+
+#bar2 {
+    margin: -60em 0em 0em 9em;
+    animation-delay: .2s;
+    animation-duration: 1.8s;
+    animation-name:zap2;
+    animation-fill-mode: forwards;
+}
+
+#bar3 {
+    margin: -62em 0em 0em 13em;
+    animation-delay: .2s;
+    animation-duration: 2s;
+    animation-name:zap3;
+    animation-fill-mode: forwards;
+}
+
+#bar4 {
+    margin: -61em 0em 0em 10em;
+    animation-delay: .2s;
+    animation-duration: 2s;
+    animation-name:zap4;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zap1  {
+     0% {height:0;}
+     100% {height:200px;}
+}
+
+@keyframes zap2  {
+     from { height:0; }
+     to { height:50px;}
+}
+
+@keyframes zap3  {
+    from { height:0; }
+    to { height:75px;}
+}
+
+@keyframes zap4  {
+    from { height:0; }
+    to { height:175px;}
+}
+
