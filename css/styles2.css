@@ -22,17 +22,13 @@ img {
     height: 675px;
 }
 
-
 .node {
     position: relative;
     background-color: #d8c586;
-    /* bottom: 300px; */
-    /* right: 125px; */
     border: 15px solid #87651d;
     border-radius: 500px;
     width: 50px;
     height: 50px;
-
 }
 
 #node1 {
@@ -70,6 +66,7 @@ img {
 
 #bar1 {
      margin: -57em 0em 0em 5em;
+     width: 7px;
      animation-delay: .2s;
      animation-duration: 3s;
      animation-name:zap1;
@@ -77,6 +74,7 @@ img {
 }
 
 #bar2 {
+    width: 8px;
     margin: -60em 0em 0em 9em; animation-delay: .2s;
     animation-duration: 1.8s;
     animation-name:zap2;
@@ -84,6 +82,7 @@ img {
 }
 
 #bar3 {
+    width: 4px;
     margin: -62em 0em 0em 13em;
     animation-delay: .2s;
     animation-duration: 2s;
@@ -92,6 +91,7 @@ img {
 }
 
 #bar4 {
+    width: 6px;
     margin: -61em 0em 0em 10em;
     animation-delay: .2s;
     animation-duration: 2s;
@@ -100,10 +100,74 @@ img {
 }
 
 #bar5 {
+    width: 9px;
     margin: -55em 0em 0em 3em;
     animation-delay: .2s;
     animation-duration: 2s;
     animation-name:zap5;
+    animation-fill-mode: forwards;
+}
+
+#bar6 {
+    width: 3px;
+    margin: -60em 0em 0em 33em;
+    animation-delay: .2s;
+    animation-duration: 2s;
+    animation-name:zap6;
+    animation-fill-mode: forwards;
+}
+
+#bar7 {
+    width: 10px;
+    border-radius: 3px 3px 3px 20px;
+    margin: -55em 0em 0em 38em;
+    animation-delay: .2s;
+    animation-duration: 3.5s;
+    animation-name:zap7;
+    animation-fill-mode: forwards;
+}
+
+#bar8 {
+    width: 3px;
+    margin: -58em 0em 0em 36em; animation-delay: .2s;
+    animation-duration: 1.8s;
+    animation-name:zap8;
+    animation-fill-mode: forwards;
+}
+
+#bar9 {
+    width: 14px;
+    border-radius: 5px 5px 25px 5px;
+    margin: -60em 0em 0em 9em; animation-delay: .2s;
+    animation-duration: 1.8s;
+    animation-name:zap9;
+    animation-fill-mode: forwards;
+}
+
+#bar10 {
+    width: 12px;
+    border-radius: 5px 5px 5px 25px;
+    margin: -63em 0em 0em 25em; animation-delay: .2s;
+    animation-duration: 1.8s;
+    animation-name:zap10;
+    animation-fill-mode: forwards;
+}
+
+#bar11 {
+    width: 7px;
+    border-radius: 5px 5px 5px 15px;
+    margin: -63em 0em 0em 27em; animation-delay: .2s;
+    animation-duration: 2s;
+    animation-name:zap11;
+    animation-fill-mode: forwards;
+}
+
+#bar12 {
+    width: 4px;
+    border-radius: 5px 5px 25px 5px;
+    margin: -64em 0em 0em 17em; animation-delay: .2s;
+    animation-duration: 1.8s;
+    animation-name:zap12;
     animation-fill-mode: forwards;
 }
 
@@ -130,5 +194,40 @@ img {
 @keyframes zap5  {
     from { height:0; }
     to { height:175px;}
+}
+
+@keyframes zap6  {
+    from { height:0; }
+    to { height:185px;}
+}
+
+@keyframes zap7  {
+    from { height:0; }
+    to { height:380px;}
+}
+
+@keyframes zap8  {
+     from { height:0; }
+     to { height:50px;}
+}
+
+@keyframes zap9  {
+     from { height:0; }
+     to { height:50px;}
+}
+
+@keyframes zap10  {
+     from { height:0; }
+     to { height:50px;}
+}
+
+@keyframes zap11  {
+     from { height:0; }
+     to { height:90px;}
+}
+
+@keyframes zap12  {
+     from { height:0; }
+     to { height:60px;}
 }
 
