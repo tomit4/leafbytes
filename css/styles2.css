@@ -29,7 +29,7 @@ img {
     border-radius: 500px;
     width: 50px;
     height: 50px;
-    animation: fadeBackground 3s;
+    animation: fadebackGround 3s;
     animation-fill-mode: forwards;
 }
 
@@ -71,7 +71,7 @@ img {
      width: 7px;
      border-radius: 5em 5em 35em 5em;
      animation-delay: .2s;
-    animation: zap1 2s, fadeBackground 3s;
+    animation: zap1 2s, fadebackGround2 3s;
      animation-fill-mode: forwards;
 }
 
@@ -79,7 +79,7 @@ img {
     width: 8px;
     margin: -64em 0em 0em 18em;
     animation-delay: .2s;
-    animation: zap2 1.8s, fadeBackground 3s;
+    animation: zap2 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -87,7 +87,7 @@ img {
     width: 4px;
     margin: -62em 0em 0em 13em;
     animation-delay: .2s;
-    animation: zap3 2s, fadeBackground 3s;
+    animation: zap3 2s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -95,7 +95,7 @@ img {
     width: 6px;
     margin: -61em 0em 0em 10em;
     animation-delay: .2s;
-    animation: zap4 2s, fadeBackground 3s;
+    animation: zap4 2s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -103,7 +103,7 @@ img {
     width: 9px;
     margin: -55em 0em 0em 3em;
     animation-delay: .2s;
-    animation: zap5 2s, fadeBackground 3s;
+    animation: zap5 2s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -111,7 +111,7 @@ img {
     width: 3px;
     margin: -60em 0em 0em 33em;
     animation-delay: .2s;
-    animation: zap6 2s, fadeBackground 3s;
+    animation: zap6 2s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -120,7 +120,7 @@ img {
     border-radius: 3px 3px 3px 20px;
     margin: -55em 0em 0em 38em;
     animation-delay: .2s;
-    animation: zap7 3.5s, fadeBackground 3s;
+    animation: zap7 3.5s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -128,7 +128,7 @@ img {
     width: 3px;
     margin: -58em 0em 0em 36em;
     animation-delay: .2s;
-    animation: zap8 1.8s, fadeBackground 3s;
+    animation: zap8 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -137,7 +137,7 @@ img {
     border-radius: 5px 5px 25px 5px;
     margin: -60em 0em 0em 9em;
     animation-delay: .2s;
-    animation: zap9 1.8s, fadeBackground 3s;
+    animation: zap9 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -146,7 +146,7 @@ img {
     /* border-radius: 5px 5px 5px 25px; */
     /* margin: 63em 0eh 0em 10em; */
     /* animation-delay: .2s; */
-    /* animation: zap10 1.8s, fadeBackground 3s; */
+    /* animation: zap10 1.8s, fadebackGround2 3s; */
     /* animation-fill-mode: forwards; */
 /* } */
 
@@ -155,7 +155,7 @@ img {
     border-radius: 5px 5px 5px 15px;
     margin: -63em 0em 0em 27em;
     animation-delay: .2s;
-    animation: zap11 2s, fadeBackground 3s;
+    animation: zap11 2s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -164,7 +164,7 @@ img {
     border-radius: 5px 5px 25px 5px;
     margin: -64em 0em 0em 17em;
     animation-delay: .2s;
-    animation: zap12 1.8s, fadeBackground 3s;
+    animation: zap12 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -173,7 +173,7 @@ img {
     border-radius: 5px 5px 25px 5px;
     margin: -63em 0em 0em 13.40em;
     animation-delay: .2s;
-    animation: zap13 1s, fadeBackground 3s;
+    animation: zap13 1s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -182,16 +182,16 @@ img {
     border-radius: 5px 5px 5px 55px;
     margin: -63em 0em 0em 26em;
     animation-delay: .2s;
-    animation: zap14 1.8s, fadeBackground 3s;
+    animation: zap14 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
 #bar15 {
-    width: 14px;
+    width: 17px;
     border-radius: 5px 5px 25px 5px;
-    margin: -64em 0em 0em 18.65em;
+    margin: -54em 0em 0em 38.65em;
     animation-delay: .2s;
-    animation: zap15 1.8s, fadeBackground 3s;
+    animation: zap15 3.5s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -200,7 +200,7 @@ img {
     border-radius: 5px 5px 200px 5px;
     margin: -58em 0em 0em 5.55em;
     animation-delay: .2s;
-    animation: zap16 2s, fadeBackground 3s;
+    animation: zap16 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -209,7 +209,7 @@ img {
     border-radius: 5px 5px 25px 5px;
     margin: -59.25em 0em 0em 8em;
     animation-delay: .2s;
-    animation: zap17 1.8s, fadeBackground 3s;
+    animation: zap17 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -218,7 +218,7 @@ img {
     border-radius: 5px 5px 25px 5px;
     margin: -63em 0em 0em 19.60em;
     animation-delay: .2s;
-    animation: zap18 2s, fadeBackground 3s;
+    animation: zap18 2s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -227,23 +227,29 @@ img {
     border-radius: 5px 5px 5px 55px;
     margin: -56em 0em 0em 4em;
     animation-delay: .2s;
-    animation: zap19 1.8s, fadeBackground 3s;
+    animation: zap19 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
 #bar20 {
-    width: 14px;
+    width: 6px;
     border-radius: 5px 5px 25px 5px;
-    margin: -64em 0em 0em 18.65em;
+    margin: -62em 0em 0em 11em;
     animation-delay: .2s;
-    animation: zap20 1.8s, fadeBackground 3s;
+    animation: zap20 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
 
-@keyframes fadeBackground {
+@keyframes fadebackGround {
     from { opacity: 0%;}
     to { opacity: 100%;}
+
+}
+
+@keyframes fadebackGround2 {
+    from { opacity: 0%;}
+    to { opacity: 95%;}
 
 }
 
@@ -319,7 +325,7 @@ img {
 
 @keyframes zap15 {
      from { height:0; }
-     to { height:60px;}
+     to { height:290px;}
 }
 
 @keyframes zap16 {
@@ -344,6 +350,6 @@ img {
 
 @keyframes zap20 {
      from { height:0; }
-     to { height:60px;}
+     to { height:140px;}
 }
 
