@@ -130,20 +130,20 @@ img {
 }
 
 .bar {
-     position: absolute;
-     background: #87651d;
-     border: 1px solid #87651d;
-     border-radius: 3px;
-     width: 5px;
+    position: absolute;
+    background: #87651d;
+    border: 1px solid #87651d;
+    border-radius: 3px;
+    width: 5px;
 }
 
 #bar1 {
-     margin: -57em 0em 0em 5em;
-     width: 7px;
-     border-radius: 5em 5em 35em 5em;
-     animation-delay: .2s;
+    margin: -55em 0em 0em 3.5em;
+    width: 7px;
+    border-radius: 5em 5em 35em 5em;
+    animation-delay: .2s;
     animation: zap1 2s, fadebackGround2 3s;
-     animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 #bar2 {
@@ -189,7 +189,7 @@ img {
 #bar7 {
     width: 10px;
     border-radius: 3px 3px 3px 20px;
-    margin: -55em 0em 0em 38em;
+    margin: -56em 0em 0em 37em;
     animation-delay: .2s;
     animation: zap7 3.5s, fadebackGround2 3s;
     animation-fill-mode: forwards;
@@ -260,7 +260,7 @@ img {
 #bar15 {
     width: 17px;
     border-radius: 5px 5px 25px 5px;
-    margin: -54em 0em 0em 38.65em;
+    margin: -55em 0em 0em 37.65em;
     animation-delay: .2s;
     animation: zap15 3.5s, fadebackGround2 3s;
     animation-fill-mode: forwards;
@@ -269,7 +269,7 @@ img {
 #bar16 {
     width: 12px;
     border-radius: 5px 5px 200px 5px;
-    margin: -58em 0em 0em 5.55em;
+    margin: -56.5em 0em 0em 4em;
     animation-delay: .2s;
     animation: zap16 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
@@ -311,6 +311,85 @@ img {
     animation-fill-mode: forwards;
 }
 
+#hbar1 {
+    opacity: 0%;
+    width: 180px;
+    height: 2px;
+    border-radius: 5px 5px 25px 25px;
+    margin: -30.75em 0em 0em 4.25em;
+    animation: hzap1 1.8s, fadebackGround2 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#welcometext {
+    opacity: 70%;
+    color: #87651d;
+    background-color: #d8c586;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 225px;
+    height: 20px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 100%;
+    margin: -32.4em 0em 0em 4.75em;
+    animation: animated-text 2s
+    steps(29, end) 1s 1 normal both;
+    animation-delay: 6s;
+}
+
+#hbar2 {
+    opacity: 0%;
+    width: 200px;
+    height: 8px;
+    border-radius: 5px 50px 5px 50px;
+    margin: 0.75em 0em 0em 4.75em;
+    animation: hzap2 1.8s, fadebackGround2 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#hbar3 {
+    opacity: 0%;
+    width: 170px;
+    height: 4px;
+    border-radius: 25px 5px 25px 5px;
+    margin: 3em 0em 0em 24.5em;
+    animation: hzap3 1.8s, fadebackGround2 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+#hbar4 {
+    opacity: 0%;
+    width: 200px;
+    height: 12px;
+    border-radius: 5px 50px 5px 50px;
+    margin: 1.5em 0em 0em 5.25em;
+    animation: hzap4 1.8s, fadebackGround2 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#blogtext {
+    opacity: 70%;
+    color: #87651d;
+    background-color: #d8c586;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px;
+    height: 20px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 99%;
+    margin: 1.5em 0em 0em 26.25em;
+    animation: animated-text2 2s
+    steps(29, end) 1s 1 normal both;
+    animation-delay: 8s;
+
+}
+
 @keyframes fadebackGround {
     from { opacity: 0%;}
     to { opacity: 100%;}
@@ -325,7 +404,7 @@ img {
 
 @keyframes zap1 {
      0% {height:0;}
-     100% {height:400px;}
+     100% {height:380px;}
 }
 
 @keyframes zap2 {
@@ -355,7 +434,7 @@ img {
 
 @keyframes zap7 {
     from { height:0; }
-    to { height:380px;}
+    to { height:410px;}
 }
 
 @keyframes zap8 {
@@ -395,12 +474,12 @@ img {
 
 @keyframes zap15 {
      from { height:0; }
-     to { height:290px;}
+     to { height:340px;}
 }
 
 @keyframes zap16 {
      from { height:0; }
-     to { height:405px;}
+     to { height:390px;}
 }
 
 @keyframes zap17 {
@@ -421,5 +500,35 @@ img {
 @keyframes zap20 {
      from { height:0; }
      to { height:140px;}
+}
+
+@keyframes hzap1 {
+     from { width:0; }
+     to { width:180px;}
+}
+
+@keyframes hzap2 {
+     from { width:0; }
+     to { width:200px;}
+}
+
+@keyframes hzap3 {
+     from { width:0; }
+     to { width:190px;}
+}
+
+@keyframes hzap4 {
+     from { width:0; }
+     to { width:210px;}
+}
+
+@keyframes animated-text {
+    from{width: 0;}
+    to{width:167px;}
+}
+
+@keyframes animated-text2 {
+    from{width: 0;}
+    to{width:168px;}
 }
 
