@@ -1,12 +1,61 @@
 * {
-    /* background-color: #d8c586; */
+    font-family: Courier New;
+    font-size: 100%;
+    font-weight: 900;
+   /* background-color: #d8c586; */
     background-color: #e9ecef;
+    /* comment out to work for now, will have to restructure bars and nodes to get this to work: */
+    /* overflow-y: hidden; */
 }
 
 body {
     /* media query this to be sure */
-    overflow: hidden;
+    overflow-y: hidden;
+    text-align: center;
+    background-image:
+            url("../assets/circuit_board_vector.svg");
+            height: 100vh;
 }
+
+   #margin {
+        border-right: 3px solid #d8c586;
+        border-left: 3px solid #d8c586;
+        border-radius: 5px;
+        width: 1185px;
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    #margin-left {
+        float: left;
+        width: 50%;
+    }
+
+    #margin-right {
+        float: right;
+        width: 50%;
+    }
+
+    nav {
+        background-color: #87651d;
+        display: block;
+        align-content: center;
+        justify-item: center;
+        width: 800px;
+        margin: 0em 0em 0em 9.5em;
+        padding: 0.25em 2em 0.25em 5em;
+        border: 1px solid #87651d;
+        border-radius: 2px 2px 9px 9px;
+    }
+
+    .navlink {
+        background-color: #87651d;
+        color: white;
+        text-decoration: none;
+        font-size: 125%;
+        font-weight: 900;
+        padding: 0 2em 0 2em;
+    }
 
 img {
     display: block;
@@ -15,7 +64,7 @@ img {
 
 .circle {
     background-color: #d8c586;
-    margin: 5em auto auto auto;
+    margin: 2em auto auto auto;
     border: 25px solid #87651d;
     border-radius: 500px;
     width: 675px;
@@ -257,7 +306,6 @@ img {
     animation: zap20 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
-
 
 @keyframes fadebackGround {
     from { opacity: 0%;}
