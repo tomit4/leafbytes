@@ -207,7 +207,8 @@
 }
 
 /* tiny iphone css */
-@media screen and (max-width: 677px) {
+/* @media screen and (max-width: 677px) { */
+@media screen and (max-width: 1136px) {
 
      body {
         /* margin-top: 2em; */
