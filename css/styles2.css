@@ -250,7 +250,7 @@ img {
 }
 
 @keyframes fadebackGround2 {
-    from { opacity: 0%;}
+    from { opacity: 5%;}
     to { opacity: 95%;}
 
 }
