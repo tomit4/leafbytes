@@ -18,8 +18,10 @@ body {
 }
 
 #margin {
-    border-right: 3px solid #d8c586;
-    border-left: 3px solid #d8c586;
+    opacity: 90%;
+    background-color: #fbf0d9;
+    border-right: 10px solid #d8c586;
+    border-left: 10px solid #d8c586;
     border-radius: 5px;
     width: 1185px;
     margin: 0 auto;
@@ -36,6 +38,10 @@ body {
     width: 50%;
 }
 
+#navwrapper {
+    background-color: #fbf0d9;
+}
+
 nav {
     background-color: #87651d;
     display: block;
@@ -50,7 +56,7 @@ nav {
 
 .navlink {
     background-color: #87651d;
-    color: white;
+    color: #fbf0d9;
     text-decoration: none;
     font-size: 125%;
     font-weight: 900;
@@ -58,6 +64,7 @@ nav {
 }
 
 .navlink:hover {
+    color: #e9ecef;
     text-decoration: underline;
 }
 
@@ -83,8 +90,6 @@ img {
     border-radius: 500px;
     width: 50px;
     height: 50px;
-    /* animation: fadebackGround 3s; */
-    /* animation-fill-mode: forwards; */
     animation-delay: 2.25s;
     transform: scale(0.95);
 }
@@ -323,9 +328,8 @@ img {
 }
 
 #welcometext {
-    opacity: 70%;
     color: #87651d;
-    background-color: #d8c586;
+    background-color: transparent;
     white-space: nowrap;
     overflow: hidden;
     width: 225px;
@@ -337,6 +341,10 @@ img {
     animation: animated-text 2s
     steps(29, end) 1s 1 normal both;
     animation-delay: 6s;
+}
+
+#welcometext:hover {
+    cursor: default;
 }
 
 #hbar2 {
@@ -405,10 +413,31 @@ img {
     animation-fill-mode: forwards;
 }
 
+#hbar8 {
+    opacity: 0%;
+    width: 200px;
+    height: 32px;
+    border-radius: 5px 5px 50px 50px;
+    margin: 3.75em 0em 0em 13.5em;
+    animation: hzap8 1.8s, fadebackGround2 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#hbar9 {
+    opacity: 0%;
+    width: 200px;
+    height: 6px;
+    border-radius: 5px 5px 50px 50px;
+    margin: 6.25em 0em 0em 16em;
+    animation: hzap9 1.8s, fadebackGround2 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
 #blogtext {
-    opacity: 70%;
     color: #87651d;
-    background-color: #d8c586;
+    background-color: transparent;
     white-space: nowrap;
     overflow: hidden;
     width: 200px;
@@ -421,6 +450,10 @@ img {
     steps(29, end) 1s 1 normal both;
     animation-delay: 8s;
 
+}
+
+#blogtext:hover {
+    cursor: default;
 }
 
 @keyframes fadebackGround {
@@ -568,6 +601,16 @@ img {
 @keyframes hzap7 {
      from { width:0; }
      to { width:190px;}
+}
+
+@keyframes hzap8 {
+     from { width:0; }
+     to { width:250px;}
+}
+
+@keyframes hzap9 {
+     from { width:0; }
+     to { width:170px;}
 }
 
 @keyframes animated-text {
