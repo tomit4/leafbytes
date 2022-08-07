@@ -29,7 +29,7 @@ img {
     border-radius: 500px;
     width: 50px;
     height: 50px;
-    animation: fadeBackground 4s;
+    animation: fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
@@ -69,8 +69,9 @@ img {
 #bar1 {
      margin: -57em 0em 0em 5em;
      width: 7px;
+     border-radius: 5em 5em 35em 5em;
      animation-delay: .2s;
-    animation: zap1 2s, fadeBackground 4s;
+    animation: zap1 2s, fadeBackground 3s;
      animation-fill-mode: forwards;
 }
 
@@ -78,7 +79,7 @@ img {
     width: 8px;
     margin: -64em 0em 0em 18em;
     animation-delay: .2s;
-    animation: zap2 1.8s, fadeBackground 4s;
+    animation: zap2 1.8s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
@@ -86,7 +87,7 @@ img {
     width: 4px;
     margin: -62em 0em 0em 13em;
     animation-delay: .2s;
-    animation: zap3 2s, fadeBackground 4s;
+    animation: zap3 2s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
@@ -94,7 +95,7 @@ img {
     width: 6px;
     margin: -61em 0em 0em 10em;
     animation-delay: .2s;
-    animation: zap4 2s, fadeBackground 4s;
+    animation: zap4 2s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
@@ -102,7 +103,7 @@ img {
     width: 9px;
     margin: -55em 0em 0em 3em;
     animation-delay: .2s;
-    animation: zap5 2s, fadeBackground 4s;
+    animation: zap5 2s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
@@ -110,7 +111,7 @@ img {
     width: 3px;
     margin: -60em 0em 0em 33em;
     animation-delay: .2s;
-    animation: zap6 2s, fadeBackground 4s;
+    animation: zap6 2s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
@@ -119,7 +120,7 @@ img {
     border-radius: 3px 3px 3px 20px;
     margin: -55em 0em 0em 38em;
     animation-delay: .2s;
-    animation: zap7 3.5s, fadeBackground 4s;
+    animation: zap7 3.5s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
@@ -127,7 +128,7 @@ img {
     width: 3px;
     margin: -58em 0em 0em 36em;
     animation-delay: .2s;
-    animation: zap8 1.8s, fadeBackground 4s;
+    animation: zap8 1.8s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
@@ -136,25 +137,25 @@ img {
     border-radius: 5px 5px 25px 5px;
     margin: -60em 0em 0em 9em;
     animation-delay: .2s;
-    animation: zap9 1.8s, fadeBackground 4s;
+    animation: zap9 1.8s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
-#bar10 {
-    width: 12px;
-    border-radius: 5px 5px 5px 25px;
-    margin: -63em 0eh 0em 25em;
-    animation-delay: .2s;
-    animation: zap10 1.8s, fadeBackground 4s;
-    animation-fill-mode: forwards;
-}
+/* #bar10 { */
+    /* width: 12px; */
+    /* border-radius: 5px 5px 5px 25px; */
+    /* margin: 63em 0eh 0em 10em; */
+    /* animation-delay: .2s; */
+    /* animation: zap10 1.8s, fadeBackground 3s; */
+    /* animation-fill-mode: forwards; */
+/* } */
 
 #bar11 {
     width: 7px;
     border-radius: 5px 5px 5px 15px;
     margin: -63em 0em 0em 27em;
     animation-delay: .2s;
-    animation: zap11 2s, fadeBackground 4s;
+    animation: zap11 2s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
 
@@ -163,9 +164,82 @@ img {
     border-radius: 5px 5px 25px 5px;
     margin: -64em 0em 0em 17em;
     animation-delay: .2s;
-    animation: zap12 1.8s, fadeBackground 4s;
+    animation: zap12 1.8s, fadeBackground 3s;
     animation-fill-mode: forwards;
 }
+
+#bar13 {
+    width: 23px;
+    border-radius: 5px 5px 25px 5px;
+    margin: -63em 0em 0em 13.40em;
+    animation-delay: .2s;
+    animation: zap13 1s, fadeBackground 3s;
+    animation-fill-mode: forwards;
+}
+
+#bar14 {
+    width: 14px;
+    border-radius: 5px 5px 5px 55px;
+    margin: -63em 0em 0em 26em;
+    animation-delay: .2s;
+    animation: zap14 1.8s, fadeBackground 3s;
+    animation-fill-mode: forwards;
+}
+
+#bar15 {
+    width: 14px;
+    border-radius: 5px 5px 25px 5px;
+    margin: -64em 0em 0em 18.65em;
+    animation-delay: .2s;
+    animation: zap15 1.8s, fadeBackground 3s;
+    animation-fill-mode: forwards;
+}
+
+#bar16 {
+    width: 12px;
+    border-radius: 5px 5px 200px 5px;
+    margin: -58em 0em 0em 5.55em;
+    animation-delay: .2s;
+    animation: zap16 2s, fadeBackground 3s;
+    animation-fill-mode: forwards;
+}
+
+#bar17 {
+    width: 14px;
+    border-radius: 5px 5px 25px 5px;
+    margin: -59.25em 0em 0em 8em;
+    animation-delay: .2s;
+    animation: zap17 1.8s, fadeBackground 3s;
+    animation-fill-mode: forwards;
+}
+
+#bar18 {
+    width: 3px;
+    border-radius: 5px 5px 25px 5px;
+    margin: -63em 0em 0em 19.60em;
+    animation-delay: .2s;
+    animation: zap18 2s, fadeBackground 3s;
+    animation-fill-mode: forwards;
+}
+
+#bar19 {
+    width: 14px;
+    border-radius: 5px 5px 5px 55px;
+    margin: -56em 0em 0em 4em;
+    animation-delay: .2s;
+    animation: zap19 1.8s, fadeBackground 3s;
+    animation-fill-mode: forwards;
+}
+
+#bar20 {
+    width: 14px;
+    border-radius: 5px 5px 25px 5px;
+    margin: -64em 0em 0em 18.65em;
+    animation-delay: .2s;
+    animation: zap20 1.8s, fadeBackground 3s;
+    animation-fill-mode: forwards;
+}
+
 
 @keyframes fadeBackground {
     from { opacity: 0%;}
@@ -173,62 +247,102 @@ img {
 
 }
 
-@keyframes zap1  {
+@keyframes zap1 {
      0% {height:0;}
      100% {height:400px;}
 }
 
-@keyframes zap2  {
+@keyframes zap2 {
      from { height:0; }
      to { height:150px;}
 }
 
-@keyframes zap3  {
+@keyframes zap3 {
     from { height:0; }
     to { height:75px;}
 }
 
-@keyframes zap4  {
+@keyframes zap4 {
     from { height:0; }
     to { height:175px;}
 }
 
-@keyframes zap5  {
+@keyframes zap5 {
     from { height:0; }
     to { height:175px;}
 }
 
-@keyframes zap6  {
+@keyframes zap6 {
     from { height:0; }
     to { height:185px;}
 }
 
-@keyframes zap7  {
+@keyframes zap7 {
     from { height:0; }
     to { height:380px;}
 }
 
-@keyframes zap8  {
+@keyframes zap8 {
      from { height:0; }
      to { height:50px;}
 }
 
-@keyframes zap9  {
+@keyframes zap9 {
      from { height:0; }
      to { height:50px;}
 }
 
-@keyframes zap10  {
-     from { height:0; }
-     to { height:50px;}
-}
+/* @keyframes zap10 { */
+     /* from { height:0; } */
+     /* to { height:50px;} */
+/* } */
 
-@keyframes zap11  {
+@keyframes zap11 {
      from { height:0; }
      to { height:90px;}
 }
 
-@keyframes zap12  {
+@keyframes zap12 {
+     from { height:0; }
+     to { height:60px;}
+}
+
+@keyframes zap13 {
+     from { height:0; }
+     to { height:60px;}
+}
+
+@keyframes zap14 {
+     from { height:0; }
+     to { height:70px;}
+}
+
+@keyframes zap15 {
+     from { height:0; }
+     to { height:60px;}
+}
+
+@keyframes zap16 {
+     from { height:0; }
+     to { height:405px;}
+}
+
+@keyframes zap17 {
+     from { height:0; }
+     to { height:100px;}
+}
+
+@keyframes zap18 {
+     from { height:0; }
+     to { height: 20px;}
+}
+
+@keyframes zap19 {
+     from { height:0; }
+     to { height:70px;}
+}
+
+@keyframes zap20 {
      from { height:0; }
      to { height:60px;}
 }
