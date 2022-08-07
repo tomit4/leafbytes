@@ -372,6 +372,39 @@ img {
     animation-fill-mode: forwards;
 }
 
+#hbar5 {
+    opacity: 0%;
+    width: 200px;
+    height: 18px;
+    border-radius: 5px 50px 5px 50px;
+    margin: 0em 0em 0em 6.5em;
+    animation: hzap5 1.8s, fadebackGround2 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#hbar6 {
+    opacity: 0%;
+    width: 200px;
+    height: 28px;
+    border-radius: 5px 50px 5px 50px;
+    margin: 1.5em 0em 0em 8em;
+    animation: hzap6 1.8s, fadebackGround2 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#hbar7 {
+    opacity: 0%;
+    width: 200px;
+    height: 28px;
+    border-radius: 50px 5px 50px 5px;
+    margin: 1.5em 0em 0em 22.5em;
+    animation: hzap7 1.8s, fadebackGround2 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
 #blogtext {
     opacity: 70%;
     color: #87651d;
@@ -520,6 +553,21 @@ img {
 @keyframes hzap4 {
      from { width:0; }
      to { width:210px;}
+}
+
+@keyframes hzap5 {
+     from { width:0; }
+     to { width:210px;}
+}
+
+@keyframes hzap6 {
+     from { width:0; }
+     to { width:190px;}
+}
+
+@keyframes hzap7 {
+     from { width:0; }
+     to { width:190px;}
 }
 
 @keyframes animated-text {
