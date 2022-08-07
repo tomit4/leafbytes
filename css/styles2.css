@@ -30,33 +30,48 @@ img {
     border-radius: 500px;
     width: 50px;
     height: 50px;
-    animation: fadebackGround 3s;
-    animation-fill-mode: forwards;
+    /* animation: fadebackGround 3s; */
+    /* animation-fill-mode: forwards; */
     animation-delay: 2.25s;
+    transform: scale(0.95);
+}
+
+.node:hover {
+    transform: scale(1.05);
 }
 
 #node1 {
     bottom: 300px;
+    animation: fadebackGround 6s;
+    animation-fill-mode: forwards;
     right: 125px;
 }
 
 #node2 {
     bottom: 395px;
+    animation: fadebackGround 6s;
+    animation-fill-mode: forwards;
     left: 720px;
 }
 
 #node3 {
     bottom: 150px;
+    animation: fadebackGround 5s;
+    animation-fill-mode: forwards;
     left: 590px;
 }
 
 #node4 {
     bottom: 220px;
+    animation: fadebackGround 5s;
+    animation-fill-mode: forwards;
     left: 10px;
 }
 
 #node5 {
     bottom: 200px;
+    animation: fadebackGround 4s;
+    animation-fill-mode: forwards;
     left: 300px;
 }
 
