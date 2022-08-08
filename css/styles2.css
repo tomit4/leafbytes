@@ -301,7 +301,7 @@ img {
 #bar19 {
     width: 14px;
     border-radius: 5px 5px 5px 55px;
-    margin: -56em 0em 0em 4em;
+    margin: -52.75em 0em 0em 2em;
     animation-delay: .2s;
     animation: zap19 1.8s, fadebackGround2 3s;
     animation-fill-mode: forwards;
@@ -313,6 +313,15 @@ img {
     margin: -62em 0em 0em 11em;
     animation-delay: .2s;
     animation: zap20 1.8s, fadebackGround2 3s;
+    animation-fill-mode: forwards;
+}
+
+#bar21 {
+    width: 11px;
+    border-radius: 5px 5px 25px 5px;
+    margin: -59em 0em 0em 33.25em;
+    animation-delay: .2s;
+    animation: zap21 2s, fadebackGround2 3s;
     animation-fill-mode: forwards;
 }
 
@@ -566,6 +575,11 @@ img {
 @keyframes zap20 {
      from { height:0; }
      to { height:140px;}
+}
+
+@keyframes zap21 {
+     from { height:0; }
+     to { height:120px;}
 }
 
 @keyframes hzap1 {
