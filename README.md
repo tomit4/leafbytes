@@ -28,4 +28,6 @@ __Checklist:__
 > - [ ] Article Idea: Neovim, Zsh, and Git (setting up a minimalist development environment)
 > - [ ] Article Idea: bgit, my simple bash script alternative to github-cli
 > - [ ] Article Idea: Want to start knowing more about computers? Learn the command line first!
+> - [ ] Article Idea: Down the rabbit hole: why asking "how do computers work, really?", was the worst(best) question I ever asked
+> - [ ] Article Idea: Keybindings, keybindings, keybindings, the various cults/religions that divide all us powerusers
 > - [ ] Article Idea: The fantasy/reality of currency, (sub)the thoughts that hold you (and modern humans) back, but back from what?
