@@ -4,22 +4,27 @@
     font-weight: 900;
    /* background-color: #d8c586; */
     background-color: #e9ecef;
+    /* background: linear-gradient(to bottom right, #fbf0d9, #e9ecef); */
     /* comment out to work for now, will have to restructure bars and nodes to get this to work: */
     /* overflow-y: hidden; */
 }
 
 body {
     /* media query this to be sure */
+
+    background: linear-gradient(to bottom right, #fbf0d9, #e9ecef);
     overflow-y: hidden;
     text-align: center;
     background-image:
             url("../assets/circuit_board_vector.svg");
             height: 100vh;
+
 }
 
 #margin {
     opacity: 80%;
     background-color: #fbf0d9;
+
     border-right: 10px solid #d8c586;
     border-left: 10px solid #d8c586;
     border-radius: 5px;
@@ -328,6 +333,7 @@ img {
 }
 
 #welcometext {
+    user-select: none;
     color: #87651d;
     background-color: transparent;
     white-space: nowrap;
@@ -436,6 +442,7 @@ img {
 }
 
 #blogtext {
+    user-select: none;
     color: #87651d;
     background-color: transparent;
     white-space: nowrap;
