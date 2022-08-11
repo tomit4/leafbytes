@@ -116,7 +116,8 @@ img {
 }
 
 .nodeli {
-    padding-top: 0.25em;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
     list-style-type: none;
     background-color: #d8c586;
     /* background-color: red; */
@@ -130,7 +131,7 @@ img {
 .nodeList1:hover {
     opacity: 100%;
     position: fixed;
-    margin: 1em 0em 0em 1.5em;
+    margin: 1.25em 0em 0em 1.5em;
     z-index: 99;
     text-align: left;
     background-color: #d8c586;
@@ -145,6 +146,7 @@ img {
 
 .nodeList1Menu {
     padding-top: 0.10em;
+    padding-bottom: 0.10em;
     margin: 0em 0em 0em -1.75em;
     color: #87651d;
     background-color: #d8c586;
@@ -154,9 +156,23 @@ img {
     width: 32px;
 }
 
-.nodeList1Menu:hover {
+.node_list_menu_header {
+    text-decoration: none;
+    color: #87651d;
+    background-color: #d8c586;
+    width: 32px;
+    border: 2px solid  #d8c586;
+    /* text-align: left; */
+    /* list-style-type: none; */
+    /* width: 32px; */
+}
+
+/* .nodeList1Menu:hover { */
+.node_list_menu_header:hover {
     background-color: #87651d;
     color: #e9ecef;
+    border: 3px solid #87651d;
+    border-radius: 3px;
 }
 
 .nav_menu_items_01 {
@@ -172,6 +188,8 @@ img {
 .nav_menu_items_01:hover {
     background-color: #87651d;
     color: #e9ecef;
+    border: 3px solid #87651d;
+    border-radius: 3px;
 }
 
 #node2 {
