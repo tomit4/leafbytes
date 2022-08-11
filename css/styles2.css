@@ -2,12 +2,7 @@
     font-family: Courier New;
     font-size: 100%;
     font-weight: 900;
-   /* background-color: #d8c586; */
-    background-color: #e9ecef;
-    /* background: linear-gradient(to bottom right, #fbf0d9, #e9ecef); */
-    /* comment out to work for now, will have to restructure bars and nodes to get this to work: */
-    /* overflow-y: hidden; */
-    /* overflow-x: hidden; */
+    background-color: #f9ebd2;
 }
 
 body {
@@ -15,9 +10,12 @@ body {
 
     background: linear-gradient(to bottom right, #fbf0d9, #e9ecef);
     text-align: center;
+    background-color: #87651d;
+    opacity: 90%;
     background-image:
             url("../assets/circuit_board_vector.svg");
             height: 100vh;
+
     overflow: hidden;
 }
 
@@ -26,7 +24,7 @@ li {
 }
 
 #margin {
-    opacity: 80%;
+    opacity: 90%;
     background-color: #fbf0d9;
 
     border-right: 10px solid #d8c586;
