@@ -7,18 +7,18 @@
     /* background: linear-gradient(to bottom right, #fbf0d9, #e9ecef); */
     /* comment out to work for now, will have to restructure bars and nodes to get this to work: */
     /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
 }
 
 body {
     /* media query this to be sure */
 
     background: linear-gradient(to bottom right, #fbf0d9, #e9ecef);
-    overflow-y: hidden;
     text-align: center;
     background-image:
             url("../assets/circuit_board_vector.svg");
             height: 100vh;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 li {
@@ -33,8 +33,9 @@ li {
     border-left: 10px solid #d8c586;
     border-radius: 5px;
     width: 1185px;
-    margin: 0 auto;
+    margin: -0.5em auto auto auto;
     height: 100vh;
+    overflow: hidden;
 }
 
 #margin-left {
@@ -57,7 +58,7 @@ nav {
     align-content: center;
     justify-item: center;
     width: 800px;
-    margin: -0.5em 0em 0em 7em;
+    margin: 0em 0em 0em 7em;
     padding: 0.25em 5em 0.25em 5.75em;
     border: 1px solid #87651d;
     border-radius: 2px 2px 9px 9px;
