@@ -116,7 +116,7 @@ img {
     right: 125px;
 }
 
-.nodeli {
+.nodeli1 {
     padding-top: 0.15em;
     padding-bottom: 0.15em;
     list-style-type: none;
@@ -142,6 +142,10 @@ img {
 }
 
 .nodeListNavList {
+    background-color: #d8c586;
+}
+
+.nodeList1NavList {
     background-color: #d8c586;
 }
 
@@ -201,6 +205,86 @@ img {
     animation: fadebackGround 6s;
     animation-fill-mode: forwards;
     left: 720px;
+}
+
+.nodeli2 {
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+    list-style-type: none;
+    background-color: #d8c586;
+    text-align: right;
+    /* background-color: red; */
+    margin: 0em 0em 0em -3em;
+}
+
+.nodeList2 {
+    opacity: 0%;
+}
+
+.nodeList2:hover {
+    opacity: 100%;
+    position: fixed;
+    margin: 1.25em 0em 0em -14.25em;
+    z-index: 99;
+    background-color: #d8c586;
+    border: 3px solid  #87651d;
+    border-radius: 5px;
+    width: 210px;
+}
+
+.nodeList2NavList {
+    background-color: #d8c586;
+    margin: 0em 0em 0em -1.5em;
+    text-align: left;
+}
+
+.nodeList2Menu {
+    padding-top: 0.10em;
+    padding-bottom: 0.10em;
+    margin: 0em 0em 0em -1.75em;
+    color: #87651d;
+    background-color: #d8c586;
+    border: 2px solid  #d8c586;
+    text-align: left;
+    list-style-type: none;
+    width: 32px;
+}
+
+.node_list_menu_header {
+    text-decoration: none;
+    color: #87651d;
+    background-color: #d8c586;
+    width: 32px;
+    border: 2px solid  #d8c586;
+    text-decoration: underline;
+    /* text-align: left; */
+    /* list-style-type: none; */
+    /* width: 32px; */
+}
+
+/* .nodeList1Menu:hover { */
+.node_list_menu_header:hover {
+    background-color: #87651d;
+    color: #e9ecef;
+    border: 3px solid #87651d;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.nav_menu_items_02 {
+    font-weight: 900;
+    margin: 0.2em 10em 0em 1em;
+    color: #87651d;
+    background-color: #d8c586;
+    text-decoration: underline;
+}
+
+.nav_menu_items_02:hover {
+    background-color: #87651d;
+    color: #e9ecef;
+    text-decoration: none;
+    border: 3px solid #87651d;
+    border-radius: 3px;
 }
 
 #node3 {
@@ -593,7 +677,7 @@ img {
 
 @keyframes zap7 {
     from { height:0; }
-    to { height:410px;}
+    to { height:180px;}
 }
 
 @keyframes zap8 {
@@ -633,7 +717,7 @@ img {
 
 @keyframes zap15 {
      from { height:0; }
-     to { height:340px;}
+     to { height:140px;}
 }
 
 @keyframes zap16 {
