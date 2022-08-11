@@ -18,7 +18,11 @@ body {
     background-image:
             url("../assets/circuit_board_vector.svg");
             height: 100vh;
+    overflow-y: hidden;
+}
 
+li {
+    text-decoration: none;
 }
 
 #margin {
@@ -111,6 +115,65 @@ img {
     right: 125px;
 }
 
+.nodeli {
+    padding-top: 0.25em;
+    list-style-type: none;
+    background-color: #d8c586;
+    /* background-color: red; */
+    margin: 0em 0em 0em -3em;
+}
+
+.nodeList1 {
+    opacity: 0%;
+}
+
+.nodeList1:hover {
+    opacity: 100%;
+    position: fixed;
+    margin: 1em 0em 0em 1.5em;
+    z-index: 99;
+    text-align: left;
+    background-color: #d8c586;
+    border: 3px solid  #87651d;
+    border-radius: 5px;
+    width: 210px;
+}
+
+.nodeListNavList {
+    background-color: #d8c586;
+}
+
+.nodeList1Menu {
+    padding-top: 0.10em;
+    margin: 0em 0em 0em -1.75em;
+    color: #87651d;
+    background-color: #d8c586;
+    border: 2px solid  #d8c586;
+    text-align: left;
+    list-style-type: none;
+    width: 32px;
+}
+
+.nodeList1Menu:hover {
+    background-color: #87651d;
+    color: #e9ecef;
+}
+
+.nav_menu_items_01 {
+    font-weight: 900;
+    margin: 0.2em 0em 0em -0.5em;
+    color: #87651d;
+    background-color: #d8c586;
+    text-align: left;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.nav_menu_items_01:hover {
+    background-color: #87651d;
+    color: #e9ecef;
+}
+
 #node2 {
     bottom: 395px;
     animation: fadebackGround 6s;
@@ -140,7 +203,7 @@ img {
 }
 
 .bar {
-    position: absolute;
+    position: fixed;
     background: #87651d;
     border: 1px solid #87651d;
     border-radius: 3px;
@@ -148,7 +211,7 @@ img {
 }
 
 #bar1 {
-    margin: -55em 0em 0em 3.5em;
+    margin: -58em 0em 0em 5.5em;
     width: 7px;
     border-radius: 5em 5em 35em 5em;
     animation-delay: .2s;
@@ -165,6 +228,7 @@ img {
 }
 
 #bar3 {
+    z-index: 9;
     width: 4px;
     margin: -62em 0em 0em 13em;
     animation-delay: .2s;
@@ -477,7 +541,7 @@ img {
 
 @keyframes zap1 {
      0% {height:0;}
-     100% {height:380px;}
+     100% {height:180px;}
 }
 
 @keyframes zap2 {
@@ -552,7 +616,7 @@ img {
 
 @keyframes zap16 {
      from { height:0; }
-     to { height:390px;}
+     to { height:90px;}
 }
 
 @keyframes zap17 {
