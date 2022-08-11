@@ -92,6 +92,7 @@ img {
 }
 
 .node {
+    /* z-index: 999; */
     opacity: 0%;
     position: relative;
     background-color: #d8c586;
@@ -104,6 +105,7 @@ img {
 }
 
 .node:hover {
+    z-index: 999;
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -167,12 +169,8 @@ img {
     width: 32px;
     border: 2px solid  #d8c586;
     text-decoration: underline;
-    /* text-align: left; */
-    /* list-style-type: none; */
-    /* width: 32px; */
 }
 
-/* .nodeList1Menu:hover { */
 .node_list_menu_header:hover {
     background-color: #87651d;
     color: #e9ecef;
@@ -249,27 +247,6 @@ img {
     width: 32px;
 }
 
-.node_list_menu_header {
-    text-decoration: none;
-    color: #87651d;
-    background-color: #d8c586;
-    width: 32px;
-    border: 2px solid  #d8c586;
-    text-decoration: underline;
-    /* text-align: left; */
-    /* list-style-type: none; */
-    /* width: 32px; */
-}
-
-/* .nodeList1Menu:hover { */
-.node_list_menu_header:hover {
-    background-color: #87651d;
-    color: #e9ecef;
-    border: 3px solid #87651d;
-    border-radius: 3px;
-    text-decoration: none;
-}
-
 .nav_menu_items_02 {
     font-weight: 900;
     margin: 0.2em 10em 0em 1em;
@@ -291,6 +268,65 @@ img {
     animation: fadebackGround 5s;
     animation-fill-mode: forwards;
     left: 590px;
+}
+
+.nodeli3 {
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+    list-style-type: none;
+    background-color: #d8c586;
+    text-align: right;
+    /* background-color: red; */
+    margin: 0em 0em 0em -3em;
+}
+
+.nodeList3 {
+    opacity: 0%;
+}
+
+.nodeList3:hover {
+    opacity: 100%;
+    position: fixed;
+    margin: -1.5em 0em 0em -14.25em;
+    z-index: 99;
+    background-color: #d8c586;
+    border: 3px solid  #87651d;
+    border-radius: 5px;
+    width: 210px;
+}
+
+.nodeList3NavList {
+    background-color: #d8c586;
+    margin: 0em 0em 0em -1.5em;
+    text-align: left;
+}
+
+.nodeList3Menu {
+    padding-top: 0.10em;
+    padding-bottom: 0.10em;
+    margin: 0em 0em 0em -1.75em;
+    color: #87651d;
+    background-color: #d8c586;
+    border: 2px solid  #d8c586;
+    text-align: left;
+    list-style-type: none;
+    width: 32px;
+}
+
+.nav_menu_items_03 {
+    font-weight: 900;
+    margin: 0.2em 10em 0em 1em;
+    color: #87651d;
+    background-color: #d8c586;
+    text-decoration: underline;
+}
+
+.nav_menu_items_03:hover {
+    background-color: #87651d;
+    color: #e9ecef;
+    text-decoration: none;
+    border: 3px solid #87651d;
+    border-radius: 3px;
 }
 
 #node4 {
