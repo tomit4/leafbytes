@@ -24,7 +24,7 @@ li {
 }
 
 #margin {
-    opacity: 90%;
+    opacity: 93%;
     background-color: #fbf0d9;
 
     border-right: 10px solid #d8c586;
@@ -58,7 +58,8 @@ nav {
     width: 800px;
     margin: 0em 0em 0em 7em;
     padding: 0.25em 5em 0.25em 5.75em;
-    border: 1px solid #87651d;
+    border: 5px solid #d8c586;
+    border-top: 0px;
     border-radius: 2px 2px 9px 9px;
 }
 
