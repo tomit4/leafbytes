@@ -264,10 +264,10 @@ img {
 }
 
 #node3 {
-    bottom: 150px;
+    bottom: 140px;
     animation: fadebackGround 5s;
     animation-fill-mode: forwards;
-    left: 590px;
+    left: 580px;
 }
 
 .nodeli3 {
@@ -400,6 +400,32 @@ img {
     animation: fadebackGround 4s;
     animation-fill-mode: forwards;
     left: 300px;
+}
+
+.nodeList5 {
+    opacity: 0%;
+}
+
+.nodeList5:hover {
+    opacity: 100%;
+    position: fixed;
+    margin: 0.5em 0em 0em -1.5em;
+    z-index: 99;
+    background-color: #d8c586;
+    border: 3px solid  #87651d;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.nodeList5Menu {
+    padding-top: 0.10em;
+    padding-bottom: 0.10em;
+    margin: 0em 0em 0em -2.5em;
+    color: #87651d;
+    background-color: #d8c586;
+    border: 2px solid  #d8c586;
+    text-align: center;
+    list-style-type: none;
 }
 
 .bar {
