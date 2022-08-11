@@ -163,6 +163,7 @@ img {
     background-color: #d8c586;
     width: 32px;
     border: 2px solid  #d8c586;
+    text-decoration: underline;
     /* text-align: left; */
     /* list-style-type: none; */
     /* width: 32px; */
@@ -174,6 +175,7 @@ img {
     color: #e9ecef;
     border: 3px solid #87651d;
     border-radius: 3px;
+    text-decoration: none;
 }
 
 .nav_menu_items_01 {
@@ -182,13 +184,14 @@ img {
     color: #87651d;
     background-color: #d8c586;
     text-align: left;
-    text-decoration: none;
+    text-decoration: underline;
     list-style-type: none;
 }
 
 .nav_menu_items_01:hover {
     background-color: #87651d;
     color: #e9ecef;
+    text-decoration: none;
     border: 3px solid #87651d;
     border-radius: 3px;
 }
