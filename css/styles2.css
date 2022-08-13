@@ -5,6 +5,10 @@
     background-color: #f9ebd2;
 }
 
+/* chrome-specific css */
+/* @supports (-webkit-appearance:none) { */
+/* } */
+
 body {
     /* media query this to be sure */
 
