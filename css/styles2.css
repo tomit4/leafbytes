@@ -213,7 +213,7 @@ img {
     padding-bottom: 0.15em;
     list-style-type: none;
     background-color: #d8c586;
-    text-align: right;
+    /* text-align: right; */
     /* background-color: red; */
     margin: 0em 0em 0em -3em;
 }
@@ -246,14 +246,13 @@ img {
     color: #87651d;
     background-color: #d8c586;
     border: 2px solid  #d8c586;
-    text-align: left;
     list-style-type: none;
     width: 32px;
 }
 
 .nav_menu_items_02 {
     font-weight: 900;
-    margin: 0.2em 10em 0em 1em;
+    margin: 0em 0em 0em 1em;
     color: #87651d;
     background-color: #d8c586;
     text-decoration: underline;
@@ -302,7 +301,7 @@ img {
 .nodeList3NavList {
     background-color: #d8c586;
     margin: 0em 0em 0em -1.5em;
-    text-align: left;
+    text-align: right;
 }
 
 .nodeList3Menu {
@@ -319,7 +318,7 @@ img {
 
 .nav_menu_items_03 {
     font-weight: 900;
-    margin: 0.2em 10em 0em 1em;
+    margin: 0.2em 0.5em 0em 0em;
     color: #87651d;
     background-color: #d8c586;
     text-decoration: underline;
@@ -345,8 +344,7 @@ img {
     padding-bottom: 0.15em;
     list-style-type: none;
     background-color: #d8c586;
-    text-align: right;
-    /* background-color: red; */
+    text-align: left;
     margin: 0em 0em 0em -3em;
 }
 
@@ -367,8 +365,6 @@ img {
 
 .nodeList4NavList {
     background-color: #d8c586;
-    margin: 0em 0em 0em -1.5em;
-    text-align: left;
 }
 
 .nodeList4Menu {
@@ -385,7 +381,8 @@ img {
 
 .nav_menu_items_04 {
     font-weight: 900;
-    margin: 0.2em 10em 0em 1em;
+    text-align: left;
+    margin: 0em 0em 0em 0em;
     color: #87651d;
     background-color: #d8c586;
     text-decoration: underline;
@@ -620,7 +617,7 @@ img {
     width: 180px;
     height: 2px;
     border-radius: 5px 5px 25px 25px;
-    margin: -30.75em 0em 0em 4.25em;
+    margin: 0em 0em 0em 4.25em;
     animation: hzap1 1.8s, fadebackGround2 3s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
@@ -660,7 +657,7 @@ img {
 
 #hbar3 {
     opacity: 0%;
-    width: 170px;
+    width: 175px;
     height: 4px;
     border-radius: 25px 5px 25px 5px;
     margin: 3em 0em 0em 24.5em;
@@ -741,12 +738,12 @@ img {
     background-color: transparent;
     white-space: nowrap;
     overflow: hidden;
-    width: 200px;
+    width: 205px;
     height: 20px;
     font-family: sans-serif;
     font-weight: 900;
-    font-size: 99%;
-    margin: 1.5em 0em 0em 26.25em;
+    font-size: 95%;
+    margin: 1.5em 0em 0em 27em;
     animation: animated-text2 2s
     steps(29, end) 1s 1 normal both;
     animation-delay: 8s;
