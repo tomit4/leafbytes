@@ -20,7 +20,7 @@ body {
 }
 
 .hamburger {
-    /* visibility: hidden; */
+    visibility: hidden;
     content: url("./icons/hamburger-button.svg");
     display: flex;
     position: fixed;
@@ -88,7 +88,13 @@ body {
 }
 
 #contact {
-    content: url('./icons/contact.svg');
+    content: url('./icons/mail.svg');
+}
+
+#dots {
+    content: url('./icons/dots.svg');
+    margin: 0.4rem -0.9rem 0 0;
+    opacity: 70%;
 }
 
 .leafbytes {
@@ -125,6 +131,6 @@ body {
     position: fixed;
     top: 50vh;
     left: 50vw;
-    opacity: 30%;
+    opacity: 40%;
     transform: translate(-49%, -58%);
 }
