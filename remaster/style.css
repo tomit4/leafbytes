@@ -2,14 +2,14 @@ body {
     background-image: linear-gradient(280deg, #004b77 0%, #94fff4 120%);
 }
 
+
+/* circuit-board background image */
 .circuits {
     /* currently at ~576px, the image starts to scale up with no-repeat/cover on*/
-    background-image: url("./svg/circuit_board_vector.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("./svg/circuit_board_vector.svg"); background-repeat: no-repeat; background-size: cover;
     background-position: center center;
     /* links break without z-index set to -1 */
-    z-index: -1;
+    /* z-index: -1; */
     width: 98vw;
     height: 98vh;
     opacity: 25%;
@@ -88,4 +88,19 @@ body {
 
 #contact {
     content: url('./icons/contact.svg');
+}
+
+.logo {
+    background-image: url('./svg/logo2.svg');
+    width: 22rem;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    opacity: 60%;
+    transform: translate(-49%, -58%);
 }
