@@ -2,11 +2,12 @@ body {
     background-image: linear-gradient(280deg, #004b77 0%, #94fff4 120%);
 }
 
-html {
-    width: 100%;
-}
 .circuits {
+    /* currently at ~576px, the image starts to scale up with no-repeat/cover on*/
     background-image: url("./svg/circuit_board_vector.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     /* links break without z-index set to -1 */
     z-index: -1;
     width: 98vw;
@@ -14,10 +15,27 @@ html {
     opacity: 25%;
 }
 
+.hamburger {
+    /* visibility: hidden; */
+    content: url("./icons/hamburger-button.svg");
+    display: flex;
+    position: fixed;
+    width: 1.5em;
+    height: 1.5em;
+    background: #3c94aa;
+    border: 4px solid #004b77;
+    border-radius: 8px;
+    opacity: 80%;
+    margin: 0.5rem auto auto -0.15rem;
+    /* transition/animation should affect the 2rem element here */
+    padding: 0.35rem 2rem 0.4rem 0.5rem;
+
+}
+
 .navbar {
+    /* visibility: hidden; */
     display: flex;
     align-items: center;
-    display: flex;
     justify-content: center;
     margin: auto;
     padding: auto;
@@ -27,7 +45,7 @@ html {
 .navbar ul {
     background: #3c94aa;
     border: 4px solid #004b77;
-    border-radius: 10px;
+    border-radius: 8px;
     opacity: 80%;
     width: 85%;
     list-style: none;
@@ -36,6 +54,7 @@ html {
     position: fixed;
     z-index: 1;
     justify-content: center;
+    align-items: center;
     margin: 1rem auto;
     padding: auto;
 
