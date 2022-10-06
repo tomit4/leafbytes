@@ -57,6 +57,25 @@ a {
     padding: 0.25rem;
 
 }
+#home {
+    content: url('./icons/home-filled.svg');
+}
+
+#faq {
+    content: url('./icons/chat-bubble.svg');
+}
+
+#links {
+    content: url('./icons/brackets.svg');
+}
+
+#about {
+    content: url('./icons/about.svg');
+}
+
+#contact {
+    content: url('./icons/contact.svg');
+}
 
 /* main { */
     /* max-width: 38rem; */
