@@ -110,10 +110,11 @@ body {
 
 #dots {
     content: url('./icons/dots.svg');
-
-    /* margin-left: -1rem; */
-    padding-top: 0.6rem;
     opacity: 70%;
+}
+
+#dots:hover {
+    cursor: pointer;
 }
 
 /* footer & footer-icons */
