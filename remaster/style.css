@@ -238,7 +238,7 @@ html, body {
     position: fixed;
     background-image: linear-gradient(280deg, #62a5bf 0%, #2a7296 120%);
     z-index: 1;
-    opacity: 60%;
+    opacity: 70%;
     width: 85vw;
     height: 26vw;
     padding: 2vh 5vw 2vh 6vw;
@@ -371,7 +371,7 @@ html, body {
 .subtitle {
     /* visibility: hidden; */
     font-family: entsans;
-    font-size: clamp(110%, 5.5vw,120%);
+    font-size: clamp(110%, 6vw, 120%);
     width: 20rem;
     text-align: center;
     text-shadow: 4px 3px 0px #004b77;
@@ -386,8 +386,6 @@ html, body {
 
 .logo {
     background-image: url('./svg/logo2.svg');
-    /* width: 22rem; */
-    /* height: 30rem; */
     width: 90vw;
     height: 75vh;
     background-repeat: no-repeat;
