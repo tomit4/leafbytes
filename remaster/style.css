@@ -102,6 +102,7 @@ body {
 
 .icons {
     visibility: hidden;
+    /* opacity: 80%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,6 +111,35 @@ body {
     height: 1.25rem;
     width: 1.25rem;
     transform: translate(10%, -0%);
+}
+
+/* icon fade-in/out */
+
+.fade-in {
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+
+    }
+    to {
+        opacity: 80%;
+    }
+}
+
+.fade-out {
+    animation: fadeout 1s;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 80%;
+    }
+    to {
+        opacity: 0%;
+    }
 }
 
 /* nav icons */
@@ -122,7 +152,7 @@ body {
     content: url('./icons/chat-bubble.svg');
 }
 
-#links {
+#link {
     content: url('./icons/brackets.svg');
 }
 
@@ -136,8 +166,9 @@ body {
 
 .dots {
     visibility: hidden;
+    /* opacity: 0%; */
     content: url('./icons/dots.svg');
-    opacity: 70%;
+    /* opacity: 70%; */
 }
 
 #dots1 {
@@ -238,9 +269,15 @@ body {
     transform: translate(-49%, -58%);
 }
 
+/* hover events */
 .icons:hover,
 .hamburger:hover,
 .dots:hover {
     cursor: pointer;
 }
 
+/* onclick events */
+.scaled {
+    transform: scale(1.25);
+    transform-origin: bottom left;
+}
