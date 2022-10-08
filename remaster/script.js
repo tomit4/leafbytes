@@ -5,10 +5,15 @@ const dots = document.getElementsByClassName('dots')
 
 /* icon scale up */
 function scaleUp(e) {
+    for (let i = 0; i < icons.length; i++) {
+        /* see MDN article on DOMTokenList for contains documentation */
+        if (icons[i].classList.contains('scaled')) {
+            icons[i].classList.remove('scaled')
+        }
+    }
+
     const selectedIcon = document.getElementById(e.id)
     selectedIcon.classList.toggle('scaled')
-    /* check if other icons have been hit, and if so,
-     * remove scaled class from all icons except for one recently clicked */
 }
 
 /* navbar expansion/contraction */
