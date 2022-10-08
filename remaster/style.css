@@ -389,12 +389,12 @@ html, body {
     /* width: 22rem; */
     /* height: 30rem; */
     width: 90vw;
-    height: 140vw;
+    height: 75vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     position: fixed;
-    top: 48vh;
+    top: 53vh;
     left: 50vw;
     opacity: 40%;
     transform: translate(-49%, -58%);
