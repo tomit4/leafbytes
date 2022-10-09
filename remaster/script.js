@@ -1,7 +1,44 @@
+window.onload = loadPage()
+window.onload = loadTitle()
+
+/* navbar elements */
 const navi = document.querySelector('.navi')
 const hamburger = document.querySelector('.hamburger')
 const icons = document.getElementsByClassName('icons')
 const dots = document.getElementsByClassName('dots')
+
+/* circuit animation elements */
+const circuitOuter = document.querySelector('.circuit-outer')
+const circuitInner = document.querySelector('.circuit-inner')
+const current = document.querySelector('.current')
+
+/* title elements */
+const leafbytes = document.querySelector('.leafbytes')
+const subtitle = document.querySelector('.subtitle')
+
+/* on page load animation */
+
+/* extremely useful wait() function */
+function wait(ms) {
+    return new Promise(res => setTimeout(res, ms))
+}
+
+async function loadPage() {
+    await wait(500)
+    circuitOuter.classList.add('loadfade')
+    circuitInner.classList.add('loadfade')
+    current.classList.add('loadfade')
+    // return expand()
+}
+
+async function loadTitle() {
+    await wait(2400)
+    console.log('loadTitle invoked')
+    leafbytes.classList.add('loadtitlefade')
+    subtitle.classList.add('loadtitlefade')
+    await wait(250)
+    return expand()
+}
 
 /* icon scale up */
 function scaleUp(e) {
