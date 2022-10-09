@@ -29,6 +29,7 @@ const subtitle = document.querySelector('.subtitle')
 
 /* footer elements */
 const foot = document.querySelector('.foot')
+const footerIcons = document.getElementsByClassName('footer-icons')
 
 /* on page load animation */
 
@@ -78,6 +79,9 @@ function addArticleDiv() {
             }
             for (let j = 0; j < dots.length; j++) {
                 dots[j].style.visibility = "hidden"
+            }
+            for (let k = 0; k < footerIcons.length; k++) {
+                footerIcons[k].style.visibility = "hidden"
             }
             navi.classList.add('navbar-onscrollup')
             foot.classList.add('foot-onscrollup')

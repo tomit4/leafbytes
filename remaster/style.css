@@ -110,26 +110,20 @@ html, body {
     margin: 0.25rem auto;
     left: 0;
     right: 0;
-    /* transition: height 8s linear; */
 
 }
 
 .navbar-onscrollup {
     height: 0.01%;
     animation: navbar-onscrollup-animation 1.2s ease-in;
-    transition: height 8s linear;
 }
 
 @keyframes navbar-onscrollup-animation {
-    0% {
-        height: auto;
-    }
+    0% { height: auto; }
     20% { height: 3%; }
     50% { height: 1.5%; }
     70% { height: 0.75%; }
-    100% {
-        height: 0.1%;
-    }
+    100% { height: 0.1%; }
 }
 
 .icons {
@@ -272,9 +266,31 @@ html, body {
     right: 0;
 }
 
+/* .navbar-onscrollup { */
+    /* height: 0.01%; */
+    /* animation: navbar-onscrollup-animation 1.2s ease-in; */
+/* } */
+
+/* @keyframes navbar-onscrollup-animation { */
+    /* 0% { height: auto; } */
+    /* 20% { height: 3%; } */
+    /* 50% { height: 1.5%; } */
+    /* 70% { height: 0.75%; } */
+    /* 100% { height: 0.1%; } */
+/* } */
+
 .foot-onscrollup {
     height: 1vh;
     border: none;
+    animation: foot-onscrollup-animation 1.2s ease-in;
+}
+
+@keyframes foot-onscrollup-animation {
+    0% { height: 5vh; }
+    20% { height: 4vh; }
+    50% { height: 3vh; }
+    70% { height: 2vh; }
+    100% { height: 1vh; }
 }
 
 .footer-nav {
