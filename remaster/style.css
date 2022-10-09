@@ -186,10 +186,20 @@ html, body {
 /* article styling */
 
 .article {
-    width: 1rem;
-    height: 1rem;
-    background : red;
-
+    /* visibility: hidden; */
+    top: 50vh;
+    margin: -4.5rem auto auto auto;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-image: linear-gradient(280deg, #62a5bf 0%, #2a7296 120%);
+    z-index: 1;
+    opacity: 70%;
+    width: 93vw;
+    height: 14.25vh;
+    border: 6px solid #004b77;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 /* footer & footer-icons */

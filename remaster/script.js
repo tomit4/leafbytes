@@ -24,7 +24,6 @@ const subtitle = document.querySelector('.subtitle')
 /* footer elements */
 const foot = document.querySelector('.foot')
 
-
 /* on page load animation */
 
 /* extremely useful wait() function */
@@ -54,8 +53,10 @@ async function removeTitle() {
     subtitle.classList.remove('loadtitlefade')
     leafbytes.classList.add('loadtitlefadeout')
     subtitle.classList.add('loadtitlefadeout')
+    await wait (1600)
     leafbytes.remove()
     subtitle.remove()
+    circuitOuter.remove()
     addArticleDiv()
 }
 
