@@ -32,11 +32,11 @@ async function loadPage() {
 }
 
 async function loadTitle() {
-    await wait(2400)
+    await wait(2900)
     console.log('loadTitle invoked')
     leafbytes.classList.add('loadtitlefade')
     subtitle.classList.add('loadtitlefade')
-    await wait(250)
+    await wait(500)
     return expand()
 }
 
