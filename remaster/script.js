@@ -53,6 +53,7 @@ async function removeTitle() {
     subtitle.classList.remove('loadtitlefade')
     leafbytes.classList.add('loadtitlefadeout')
     subtitle.classList.add('loadtitlefadeout')
+    circuitOuter.classList.add('loadtitlefadeout')
     await wait (1600)
     leafbytes.remove()
     subtitle.remove()
