@@ -1,3 +1,9 @@
+    /* when position: fixed, use this trick to center it */
+    /* position: fixed; */
+    /* margin: 0.25rem auto; */
+    /* left: 0; */
+    /* right: 0; */
+
 @font-face {
     font-family: entsans;
     src: url('./fonts/entsans.ttf');
@@ -100,11 +106,13 @@ html, body {
     z-index: 2;
     justify-content: center;
     padding: 0rem 1rem 0rem 1rem;
-    /* when position: fixed, use this trick to center it */
     position: fixed;
     margin: 0.25rem auto;
     left: 0;
     right: 0;
+
+    /* adjust height when scroll up */
+    /* height: 0; */
 }
 
 .icons {
@@ -114,7 +122,6 @@ html, body {
     align-items: center;
     margin: 0.25rem 1rem 0.25rem 0.25rem;
     padding: 0.25rem;
-    height: 1.25rem;
     width: 1.25rem;
     transform: translate(10%, -0%);
 }
@@ -188,7 +195,6 @@ html, body {
 .article {
     /* visibility: hidden; */
     top: 50vh;
-    /* adjust margin and height to be animated after title is removed */
     margin: -42vh auto auto auto;
     left: 0;
     right: 0;
@@ -202,6 +208,10 @@ html, body {
     border-radius: 5px;
     overflow: hidden;
     animation: dropdown 1s ease-in-out;
+
+    /* on scroll down change to: */
+    /* margin: -48vh auto auto auto; */
+    /* height: 94vh; */
 }
 
 @keyframes dropdown {
@@ -228,7 +238,9 @@ html, body {
     margin: 0 auto;
     left: 0;
     right: 0;
-
+    /* on scroll change height and border to: */
+    /* height: 1vh; */
+    /* border: none; */
 }
 
 .footer-nav {
