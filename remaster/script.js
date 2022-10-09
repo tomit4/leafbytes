@@ -1,5 +1,6 @@
 window.onload = loadPage()
 window.onload = loadTitle()
+window.onload = removeTitle()
 
 /* navbar elements */
 const navi = document.querySelector('.navi')
@@ -38,6 +39,14 @@ async function loadTitle() {
     subtitle.classList.add('loadtitlefade')
     await wait(500)
     return expand()
+}
+
+async function removeTitle() {
+    await wait(5000)
+    leafbytes.classList.remove('loadtitlefade')
+    subtitle.classList.remove('loadtitlefade')
+    leafbytes.classList.add('loadtitlefadeout')
+    subtitle.classList.add('loadtitlefadeout')
 }
 
 /* icon scale up */

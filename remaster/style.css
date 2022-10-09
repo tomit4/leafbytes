@@ -420,6 +420,24 @@ html, body {
    }
 }
 
+.loadtitlefadeout {
+    animation: fadeouttitle 1.5s ease-in;
+    opacity: 0%;
+    visibility: hidden;
+}
+
+@keyframes fadeouttitle {
+   from {
+        opacity: 65%;
+        visibility: visible;
+
+   }
+   to {
+        opacity: 0;
+        visibility: hidden;
+   }
+}
+
 .logo {
     /* visibility: hidden; */
     background-image: url('./svg/logo2.svg');
