@@ -5,12 +5,18 @@ window.onload = removeTitle()
 /* selector for the entire html body */
 const body = document.querySelector('body')
 
+/* selectors of HTML elements by tag name */
+const li = document.getElementsByTagName('li')
+
 
 /* navbar elements */
 const navi = document.querySelector('.navi')
 const hamburger = document.querySelector('.hamburger')
 const icons = document.getElementsByClassName('icons')
 const dots = document.getElementsByClassName('dots')
+
+/* individual icon elements */
+const homeIcon = document.getElementById('home')
 
 /* circuit animation elements */
 const circuitOuter = document.querySelector('.circuit-outer')
@@ -59,13 +65,27 @@ async function removeTitle() {
     subtitle.remove()
     circuitOuter.remove()
     addArticleDiv()
+    homeIcon.classList.add('scaled')
 }
 
 function addArticleDiv() {
-    console.log('addArticleDiv invoked!')
     const article = document.createElement('div')
     article.classList.add('article')
-    // remove circuits here
+    article.addEventListener('scroll', () => {
+        if (article.scrollTop > 30) {
+            for (let i = 0; i < icons.length; i++) {
+                icons[i].style.visibility = "hidden"
+            }
+            for (let j = 0; j < dots.length; j++) {
+                dots[j].style.visibility = "hidden"
+            }
+            navi.classList.add('navbar-onscrollup')
+            foot.classList.add('foot-onscrollup')
+            article.classList.add('article-onscrollup')
+        }
+
+    })
+    article.innerHTML = "<h1>This is a test</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
     body.insertBefore(article, foot)
 }
 
