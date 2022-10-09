@@ -2,6 +2,10 @@ window.onload = loadPage()
 window.onload = loadTitle()
 window.onload = removeTitle()
 
+/* selector for the entire html body */
+const body = document.querySelector('body')
+
+
 /* navbar elements */
 const navi = document.querySelector('.navi')
 const hamburger = document.querySelector('.hamburger')
@@ -16,6 +20,10 @@ const current = document.querySelector('.current')
 /* title elements */
 const leafbytes = document.querySelector('.leafbytes')
 const subtitle = document.querySelector('.subtitle')
+
+/* footer elements */
+const foot = document.querySelector('.foot')
+
 
 /* on page load animation */
 
@@ -34,7 +42,6 @@ async function loadPage() {
 
 async function loadTitle() {
     await wait(2900)
-    console.log('loadTitle invoked')
     leafbytes.classList.add('loadtitlefade')
     subtitle.classList.add('loadtitlefade')
     await wait(500)
@@ -47,6 +54,17 @@ async function removeTitle() {
     subtitle.classList.remove('loadtitlefade')
     leafbytes.classList.add('loadtitlefadeout')
     subtitle.classList.add('loadtitlefadeout')
+    leafbytes.remove()
+    subtitle.remove()
+    addArticleDiv()
+}
+
+function addArticleDiv() {
+    console.log('addArticleDiv invoked!')
+    const article = document.createElement('div')
+    article.classList.add('article')
+    // remove circuits here
+    body.insertBefore(article, foot)
 }
 
 /* icon scale up */
