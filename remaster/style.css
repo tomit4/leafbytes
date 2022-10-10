@@ -17,6 +17,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    scrollbar-color: #004b77 #baf6ff;
 }
 
 /* circuit-board background image */
