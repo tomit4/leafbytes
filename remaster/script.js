@@ -11,7 +11,7 @@ const li = document.getElementsByTagName('li')
 
 /* navbar elements */
 const navi = document.querySelector('.navi')
-const hamburger = document.querySelector('.hamburger')
+const prompt = document.querySelector('.prompt')
 const icons = document.getElementsByClassName('icons')
 
 /* individual icon elements */
@@ -149,13 +149,13 @@ function scaleUp(e) {
 }
 
 /* navbar expansion/contraction */
-navi.addEventListener('click', expand)
+// navi.addEventListener('click', expand)
 
 function expand() {
     navi.classList.add('expanded')
     setTimeout(() => {
         navi.classList.add('navbar')
-        navi.classList.remove('expanded', 'hamburger')
+        navi.classList.remove('expanded', 'prompt')
         navi.removeEventListener('click', expand, false)
 
         for (let i = 0; i < icons.length; i++) {

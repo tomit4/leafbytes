@@ -33,9 +33,9 @@ html, body {
     opacity: 25%;
 }
 
-.hamburger {
+.prompt {
     /* visibility: hidden; */
-    content: url("./icons/hamburger-button.svg");
+    content: url("./icons/prompt.svg");
     z-index: 1;
     display: flex;
     list-style: none;
@@ -575,7 +575,7 @@ html, body {
 
 /* hover events */
 .icons:hover,
-.hamburger:hover,
+.prompt:hover,
 .dots:hover {
     cursor: pointer;
 }
