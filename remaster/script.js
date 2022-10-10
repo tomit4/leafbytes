@@ -27,6 +27,9 @@ const current = document.querySelector('.current')
 const leafbytes = document.querySelector('.leafbytes')
 const subtitle = document.querySelector('.subtitle')
 
+/* article elements */
+let article = document.querySelector('.article')
+
 /* footer elements */
 const foot = document.querySelector('.foot')
 const footerIcons = document.getElementsByClassName('footer-icons')
@@ -70,10 +73,20 @@ async function removeTitle() {
 }
 
 function addArticleDiv() {
-    const article = document.createElement('div')
+    article = document.createElement('div')
     article.classList.add('article')
+    article.innerHTML = "<h1>This is a test</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    body.insertBefore(article, foot)
+    activateScrollBehavior()
+}
+
+
+function activateScrollBehavior() {
+    let scrollPosition = 0
     article.addEventListener('scroll', () => {
-        if (article.scrollTop > 30) {
+        let sTop = article.scrollTop
+        // scrolling down
+        if (sTop > scrollPosition) {
             for (let i = 0; i < icons.length; i++) {
                 icons[i].style.visibility = "hidden"
             }
@@ -83,14 +96,30 @@ function addArticleDiv() {
             for (let k = 0; k < footerIcons.length; k++) {
                 footerIcons[k].style.visibility = "hidden"
             }
+            navi.classList.add('navbar-onscrolldown')
+            foot.classList.add('foot-onscrolldown')
+            article.classList.add('article-onscrolldown')
+        // scrolling up
+        } else {
+            for (let i = 0; i < icons.length; i++) {
+                icons[i].style.visibility = "visible"
+            }
+            for (let j = 0; j < dots.length; j++) {
+                dots[j].style.visibility = "visible"
+            }
+            for (let k = 0; k < footerIcons.length; k++) {
+                footerIcons[k].style.visibility = "visible"
+            }
             navi.classList.add('navbar-onscrollup')
             foot.classList.add('foot-onscrollup')
             article.classList.add('article-onscrollup')
-        }
 
-    })
-    article.innerHTML = "<h1>This is a test</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
-    body.insertBefore(article, foot)
+            navi.classList.remove('navbar-onscrolldown')
+            foot.classList.remove('foot-onscrolldown')
+            article.classList.remove('article-onscrolldown')
+        }
+        scrollPosition = sTop <= 0 ? 0 : sTop
+    }, false)
 }
 
 /* icon scale up */

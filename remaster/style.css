@@ -113,12 +113,12 @@ html, body {
 
 }
 
-.navbar-onscrollup {
+.navbar-onscrolldown {
     height: 0.01%;
-    animation: navbar-onscrollup-animation 1.2s ease-in;
+    animation: navbar-onscrolldown-animation 1.2s ease-in;
 }
 
-@keyframes navbar-onscrollup-animation {
+@keyframes navbar-onscrolldown-animation {
     0% { height: auto; }
     20% { height: 3%; }
     50% { height: 1.5%; }
@@ -231,14 +231,14 @@ html, body {
     }
 }
 
-.article-onscrollup {
+.article-onscrolldown {
     margin: -48vh auto auto auto;
     height: 94vh;
-    animation: article-onscrollup-animation 1.2s ease-in-out;
+    animation: article-onscrolldown-animation 1.2s ease-in-out;
 }
 
 
-@keyframes article-onscrollup-animation {
+@keyframes article-onscrolldown-animation {
     from {
         margin: -42vh auto auto auto;
         height: 83.5vh;
@@ -266,12 +266,12 @@ html, body {
     right: 0;
 }
 
-/* .navbar-onscrollup { */
+/* .navbar-onscrolldown { */
     /* height: 0.01%; */
-    /* animation: navbar-onscrollup-animation 1.2s ease-in; */
+    /* animation: navbar-onscrolldown-animation 1.2s ease-in; */
 /* } */
 
-/* @keyframes navbar-onscrollup-animation { */
+/* @keyframes navbar-onscrolldown-animation { */
     /* 0% { height: auto; } */
     /* 20% { height: 3%; } */
     /* 50% { height: 1.5%; } */
@@ -279,13 +279,13 @@ html, body {
     /* 100% { height: 0.1%; } */
 /* } */
 
-.foot-onscrollup {
+.foot-onscrolldown {
     height: 1vh;
     border: none;
-    animation: foot-onscrollup-animation 1.2s ease-in;
+    animation: foot-onscrolldown-animation 1.2s ease-in;
 }
 
-@keyframes foot-onscrollup-animation {
+@keyframes foot-onscrolldown-animation {
     0% { height: 5vh; }
     20% { height: 4vh; }
     50% { height: 3vh; }
