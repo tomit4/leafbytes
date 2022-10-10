@@ -82,7 +82,7 @@ function addArticleDiv() {
     xhttp.onload = function () {
         article.innerHTML = this.responseText
     }
-    xhttp.open('GET', './ajax_attempt.html', true)
+    xhttp.open('GET', './home.html', true)
     xhttp.send()
     body.insertBefore(article, foot)
     activateScrollBehavior()
