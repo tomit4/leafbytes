@@ -45,7 +45,6 @@ async function loadPage() {
     circuitOuter.classList.add('loadfade')
     circuitInner.classList.add('loadfade')
     current.classList.add('loadfade')
-    // return expand()
 }
 
 async function loadTitle() {
@@ -69,6 +68,10 @@ async function removeTitle() {
     circuitOuter.remove()
     addArticleDiv()
     homeIcon.classList.add('scaled')
+    for (let i = 0; i < icons.length; i++) {
+        icons[i].classList.remove('fade-in')
+    }
+
 }
 
 function addArticleDiv() {
@@ -97,10 +100,12 @@ function activateScrollBehavior() {
 
 function activateScrollDown() {
     for (let i = 0; i < icons.length; i++) {
-                icons[i].style.visibility = "hidden"
+        icons[i].style.visibility = "hidden"
+        icons[i].classList.remove('fade-in')
     }
     for (let k = 0; k < footerIcons.length; k++) {
-                footerIcons[k].style.visibility = "hidden"
+        footerIcons[k].style.visibility = "hidden"
+        footerIcons[k].classList.remove('fade-in')
     }
 
     // possibly add check for if classList already
@@ -127,9 +132,12 @@ async function activateScrollUp() {
     await wait(1200)
     for (let i = 0; i < icons.length; i++) {
         icons[i].style.visibility = "visible"
+        icons[i].classList.add('fade-in')
     }
+
     for (let k = 0; k < footerIcons.length; k++) {
         footerIcons[k].style.visibility = "visible"
+        footerIcons[k].classList.add('fade-in')
     }
 }
 
@@ -156,6 +164,11 @@ function expand() {
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.visibility = 'visible'
             icons[i].classList.add('fade-in')
+        }
+
+        for (let k = 0; k < footerIcons.length; k++) {
+            footerIcons[k].style.visibility = 'visible'
+            footerIcons[k].classList.add('fade-in')
         }
 
     }, 1250)
