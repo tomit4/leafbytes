@@ -74,10 +74,6 @@ html, body {
     }
 }
 
-.retracted {
-    animation: retract 1.25s;
-}
-
 @keyframes retract {
    from {
         /* width: 85%; */
@@ -200,19 +196,6 @@ html, body {
 
 #contact {
     content: url('./icons/mail.svg');
-}
-
-.dots {
-    visibility: hidden;
-    content: url('./icons/dots.svg');
-}
-
-#dots1 {
-    margin-right: -.1rem;
-}
-
-#dots2 {
-    margin-left: -.1rem;
 }
 
 /* article styling */

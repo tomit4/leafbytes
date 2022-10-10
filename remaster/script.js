@@ -13,7 +13,6 @@ const li = document.getElementsByTagName('li')
 const navi = document.querySelector('.navi')
 const hamburger = document.querySelector('.hamburger')
 const icons = document.getElementsByClassName('icons')
-const dots = document.getElementsByClassName('dots')
 
 /* individual icon elements */
 const homeIcon = document.getElementById('home')
@@ -100,9 +99,6 @@ function activateScrollDown() {
     for (let i = 0; i < icons.length; i++) {
                 icons[i].style.visibility = "hidden"
     }
-    for (let j = 0; j < dots.length; j++) {
-                dots[j].style.visibility = "hidden"
-    }
     for (let k = 0; k < footerIcons.length; k++) {
                 footerIcons[k].style.visibility = "hidden"
     }
@@ -133,9 +129,6 @@ async function activateScrollUp() {
             await wait(1200)
             for (let i = 0; i < icons.length; i++) {
                 icons[i].style.visibility = "visible"
-            }
-            for (let j = 0; j < dots.length; j++) {
-                dots[j].style.visibility = "visible"
             }
             for (let k = 0; k < footerIcons.length; k++) {
                 footerIcons[k].style.visibility = "visible"
@@ -170,33 +163,5 @@ function expand() {
             icons[i].classList.add('fade-in')
         }
 
-        for (let j = 0; j < dots.length; j++) {
-            dots[j].style.visibility = 'visible'
-            dots[j].classList.add('fade-in')
-            addDotEvents(j)
-        }
     }, 1250)
-}
-
-function addDotEvents(j) {
-    dots[j].addEventListener('click', e => {
-        e.stopPropagation()
-        navi.addEventListener('click', expand)
-
-        for (let i = 0; i < icons.length; i++) {
-            icons[i].style.visibility = 'hidden'
-            icons[i].classList.remove('fade-in', 'scaled')
-        }
-        for (let j = 0; j < dots.length; j++) {
-            dots[j].style.visibility = 'hidden'
-            dots[j].classList.remove('fade-in', 'scaled')
-        }
-
-        navi.classList.add('retracted')
-        setTimeout(() => {
-            navi.classList.remove('navbar')
-            navi.classList.add('hamburger')
-            navi.classList.remove('retracted')
-        }, 1250)
-    })
 }
