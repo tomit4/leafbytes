@@ -116,24 +116,21 @@ function activateScrollDown() {
 }
 
 async function activateScrollUp() {
-            // onscrollup animations
-            navi.classList.add('navbar-onscrollup')
-            foot.classList.add('foot-onscrollup')
-            article.classList.add('article-onscrollup')
-
-            // await wait() for these based off of scrollup animations
-            navi.classList.remove('navbar-onscrolldown')
-            foot.classList.remove('foot-onscrolldown')
-            article.classList.remove('article-onscrolldown')
-
-            await wait(1200)
-            for (let i = 0; i < icons.length; i++) {
-                icons[i].style.visibility = "visible"
-            }
-            for (let k = 0; k < footerIcons.length; k++) {
-                footerIcons[k].style.visibility = "visible"
-            }
-
+    // onscrollup animations
+    navi.classList.add('navbar-onscrollup')
+    foot.classList.add('foot-onscrollup')
+    article.classList.add('article-onscrollup')
+    // await wai    t() for these based off of scrollup animations
+    navi.classList.remove('navbar-onscrolldown')
+    foot.classList.remove('foot-onscrolldown')
+    article.classList.remove('article-onscrolldown')
+    await wait(1200)
+    for (let i = 0; i < icons.length; i++) {
+        icons[i].style.visibility = "visible"
+    }
+    for (let k = 0; k < footerIcons.length; k++) {
+        footerIcons[k].style.visibility = "visible"
+    }
 }
 
 /* icon scale up */
@@ -145,11 +142,9 @@ function scaleUp(e) {
             icons[i].classList.remove('scaled')
         } else
             selectedIcon.classList.toggle('scaled')
+            selectedIcon.classList.add('scaled')
     }
 }
-
-/* navbar expansion/contraction */
-// navi.addEventListener('click', expand)
 
 function expand() {
     navi.classList.add('expanded')
