@@ -80,27 +80,57 @@ function addArticleDiv() {
     activateScrollBehavior()
 }
 
-
 function activateScrollBehavior() {
     let scrollPosition = 0
     article.addEventListener('scroll', () => {
         let sTop = article.scrollTop
         // scrolling down
         if (sTop > scrollPosition) {
-            for (let i = 0; i < icons.length; i++) {
-                icons[i].style.visibility = "hidden"
-            }
-            for (let j = 0; j < dots.length; j++) {
-                dots[j].style.visibility = "hidden"
-            }
-            for (let k = 0; k < footerIcons.length; k++) {
-                footerIcons[k].style.visibility = "hidden"
-            }
-            navi.classList.add('navbar-onscrolldown')
-            foot.classList.add('foot-onscrolldown')
-            article.classList.add('article-onscrolldown')
+            activateScrollDown()
         // scrolling up
         } else {
+            activateScrollUp()
+
+        }
+        scrollPosition = sTop <= 0 ? 0 : sTop
+    }, false)
+}
+
+function activateScrollDown() {
+    for (let i = 0; i < icons.length; i++) {
+                icons[i].style.visibility = "hidden"
+    }
+    for (let j = 0; j < dots.length; j++) {
+                dots[j].style.visibility = "hidden"
+    }
+    for (let k = 0; k < footerIcons.length; k++) {
+                footerIcons[k].style.visibility = "hidden"
+    }
+
+    // possibly add check for if classList already
+    // contains/includes these classes (is more efficient???)
+    navi.classList.add('navbar-onscrolldown')
+    foot.classList.add('foot-onscrolldown')
+    article.classList.add('article-onscrolldown')
+
+    // remove onscrollup classes here
+    navi.classList.remove('navbar-onscrollup')
+    foot.classList.remove('foot-onscrollup')
+    article.classList.remove('article-onscrollup')
+}
+
+async function activateScrollUp() {
+            // onscrollup animations
+            navi.classList.add('navbar-onscrollup')
+            foot.classList.add('foot-onscrollup')
+            article.classList.add('article-onscrollup')
+
+            // await wait() for these based off of scrollup animations
+            navi.classList.remove('navbar-onscrolldown')
+            foot.classList.remove('foot-onscrolldown')
+            article.classList.remove('article-onscrolldown')
+
+            await wait(1200)
             for (let i = 0; i < icons.length; i++) {
                 icons[i].style.visibility = "visible"
             }
@@ -110,16 +140,7 @@ function activateScrollBehavior() {
             for (let k = 0; k < footerIcons.length; k++) {
                 footerIcons[k].style.visibility = "visible"
             }
-            navi.classList.add('navbar-onscrollup')
-            foot.classList.add('foot-onscrollup')
-            article.classList.add('article-onscrollup')
 
-            navi.classList.remove('navbar-onscrolldown')
-            foot.classList.remove('foot-onscrolldown')
-            article.classList.remove('article-onscrolldown')
-        }
-        scrollPosition = sTop <= 0 ? 0 : sTop
-    }, false)
 }
 
 /* icon scale up */
