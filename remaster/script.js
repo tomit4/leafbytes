@@ -87,7 +87,7 @@ async function loadArticles(e) {
     * but if directly inputted into url bar, will show as 404
     * this should directly link to a noscript version for
     * SEO/accessibility/functionality reasons*/
-    window.history.pushState({}, '', `${window.location.origin}#${e.id}`)
+    // window.history.pushState({}, '', `${window.location.origin}/${e.id}`)
 
     xhttp.open('GET', `./${e.id}.html`, true)
     xhttp.send()

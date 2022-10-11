@@ -1,0 +1,35 @@
+/* stytling for actual content of article
+ * consider changing based off of chromium/mozilla */
+
+@font-face {
+    font-family: LiberationMono;
+    src: url('./fonts/LiberationMono-Bold.ttf');
+}
+
+@font-face {
+    font-family: HussarBold;
+    src: url('./fonts/HussarBold-7mRE.otf');
+}
+
+.article-header {
+    color: #ffffff;
+    background-color: #002c46;
+    font-family: HussarBold;
+    font-size: 24px;
+    text-align: center;
+    width: 80vw;
+    /* margin: 0.5rem 0.25rem; */
+    margin: 0.5rem auto;
+    padding: 0.5rem 0rem 0rem 0.5rem;
+    border: 1px solid #002c46;
+    border-radius: 5px;
+
+}
+
+.article-content {
+    font-family: LiberationMono;
+    /* font-weight: 900; */
+    font-size: 18px;
+    color: #002c46;
+    margin: 0.5rem 0.25rem;
+}
