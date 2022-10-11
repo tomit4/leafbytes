@@ -316,6 +316,7 @@ html, body {
 .foot-onscrollup {
     height: 5vh;
     border: 4px solid #92dcdf;
+    border-bottom: none;
     animation: foot-onscrollup-animation 1.2s ease-in;
 }
 
