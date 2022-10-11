@@ -20,16 +20,77 @@
     width: 80vw;
     /* margin: 0.5rem 0.25rem; */
     margin: 0.5rem auto;
-    padding: 0.5rem 0rem 0rem 0.5rem;
+    padding: 0.5rem 0.25rem 0rem 0rem;
     border: 1px solid #002c46;
-    border-radius: 5px;
+    border-radius: 7px 7px 2px 2px;
+}
 
+.header3-content {
+    width: 90vw;
+    text-align: center;
+    font-family: LiberationMono;
+    color: #002c46;
+    margin: 0.5rem 0.5rem;
 }
 
 .article-content {
     font-family: LiberationMono;
-    /* font-weight: 900; */
-    font-size: 18px;
+    font-size: 16px;
     color: #002c46;
-    margin: 0.5rem 0.25rem;
+    margin: 1rem 0.5rem;
+}
+
+.directories {
+    font-family: LiberationMono;
+    font-size: 16px;
+    color: #002c46;
+    margin: 1rem 0.5rem;
+}
+
+.directories:hover {
+    cursor: pointer;
+}
+
+.article-links {
+    list-style: none;
+    /* text-align: center; */
+    margin: 1rem auto auto -2.5rem;
+}
+
+.link-item {
+    color: #002c46;
+    background-color: #ffffff;
+    opacity: 95%;
+    font-weight: 900;
+    font-size: 17px;
+    width: 60vw;
+    padding-top: 0.1rem;
+    padding-left: 1rem;
+    border: 3px solid #002c46;
+    border-radius: 5px 5px 0px 0px;
+    border-top: none;
+    border-right: none;
+}
+
+.link-item-extension {
+    position: absolute;
+    background-color: #ffffff;
+    z-index: -1;
+    width: 89vw;
+    height: 1em;
+    margin: -1rem 0 0 0.6vw;
+    border: 3px solid #002c46;
+    border-radius: 4px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.folder-extension {
+    background-color: #002c46;
+    width: 50vw;
+    height: 1px;
+    margin: -0.19rem 0 0 40vw;
+    border: 1px solid #002c46;
+    border-radius: 0px 0px 3px 3px;
 }
