@@ -28,7 +28,8 @@
 .header3-content {
     width: 90vw;
     text-align: center;
-    font-family: LiberationMono;
+    font-family: HussarBold;
+    font-size: 16px;
     color: #002c46;
     margin: 0.5rem 0.5rem;
 }
