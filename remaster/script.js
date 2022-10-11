@@ -66,7 +66,7 @@ async function removeTitle() {
     leafbytes.remove()
     subtitle.remove()
     circuitOuter.remove()
-    addArticleDiv()
+    loadArticles(home)
     homeIcon.classList.add('scaled')
     for (let i = 0; i < icons.length; i++) {
         icons[i].classList.remove('fade-in')
@@ -74,16 +74,32 @@ async function removeTitle() {
 
 }
 
-function addArticleDiv() {
-    article = document.createElement('div')
-    article.classList.add('article')
-
+/* loads id from HTML and adds it to routes object */
+async function loadArticles(e) {
+    await addArticleDiv()
+    scaleUp(e)
     const xhttp = new XMLHttpRequest()
-    xhttp.onload = function () {
+    xhttp.onload = function() {
         article.innerHTML = this.responseText
     }
-    xhttp.open('GET', './home.html', true)
+
+    /* changes url to show appropriate link followed
+    * but if directly inputted into url bar, will show as 404
+    * this should directly link to a noscript version for
+    * SEO/accessibility/functionality reasons*/
+    window.history.pushState({}, '', `${window.location.origin}#${e.id}`)
+
+    xhttp.open('GET', `./${e.id}.html`, true)
     xhttp.send()
+
+}
+
+function addArticleDiv() {
+    if (document.body.contains(article)) {
+        document.body.removeChild(article)
+    }
+    article = document.createElement('div')
+    article.classList.add('article')
     body.insertBefore(article, foot)
     activateScrollBehavior()
 }
