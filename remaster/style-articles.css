@@ -30,7 +30,7 @@
     font-family: HussarBold;
     font-size: 16px;
     color: #002c46;
-    margin: 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem -1rem 0.5rem;
 }
 
 .article-content {
@@ -44,7 +44,7 @@
     font-family: LiberationMono;
     font-size: 16px;
     color: #002c46;
-    margin: 1.3rem 0.5rem;
+    margin: 1.5rem 0.5rem;
 }
 
 .directories:hover {
@@ -89,17 +89,21 @@
 .folder-extension {
     background-color: #002c46;
     width: 50vw;
-    height: 1px;
+    height: 0.1rem;
     margin: -0.19rem 0 0 40vw;
     border: 1px solid #002c46;
     border-radius: 0px 0px 3px 3px;
 }
 
+.tree {
+    margin-bottom: 2rem;
+}
+
 .tree-vert {
     /* position: absolute; */
     background-color : #002c46;
-    width: 0.15rem;
-    height: 4.25rem;
+    width: 0.20rem;
+    height: 7.25rem;
     margin: 0rem 0 0rem 0.25rem;
 }
 
@@ -114,8 +118,29 @@
 
 .tree-subject {
     position: absolute;
+    color: #002c46;
+    text-decoration: none;
     font-weight: 600;
+    background-color: #ffffff;
+    opacity: 90%;
+    border: 3px solid #002c46;
+    /* border-radius: 5px 5px 1px 1px; */
+    border-radius: 5px;
+    border-right: none;
+    border-top: none;
+    padding: 0.1rem 0 0 0.3rem;
+
 }
+
+/* .tree-subject:hover { */
+    /* background-color: #ffffff; */
+    /* opacity: 90%; */
+    /* border: 3px solid #002c46; */
+    /* border-radius: 5px 5px 1px 1px; */
+    /* border-right: none; */
+    /* border-top: none; */
+    /* padding: 0.1rem 0 0 0.3rem; */
+/* } */
 
 #port-1 {
     width: 6rem;
@@ -123,7 +148,7 @@
 }
 
 #port-hbar-1 {
-    margin: -3rem 0 0 0.25rem;
+    margin: -6.25rem 0 0 0.25rem;
 }
 
 #port-2{
@@ -132,27 +157,23 @@
 }
 
 #port-hbar-2 {
-    margin: -1.5rem 0rem 0rem 0.25rem;
+    margin: -4.25rem 0rem 0rem 0.25rem;
 }
 
 #port-3 {
-    width: 3.5rem;
+    width: 7rem;
     margin: -0.5rem 0rem 0rem 1.1rem;
 }
 
 #port-hbar-3 {
-    margin: 0rem 0rem 0rem 0.3rem;
+    margin: -2.25rem 0rem 0rem 0.3rem;
 }
 
-#port-foot {
+#port-4 {
+    width: 9rem;
     margin: -0.5rem 0rem 0rem 1.1rem;
 }
 
-.tree-subject:hover {
-    background: #ffffff;
-    border: 3px solid #002c46;
-    border-radius: 5px 5px 1px 1px;
-    border-right: none;
-    border-top: none;
-    padding: 0.1rem 0 0 0.3rem;
+#port-hbar-4 {
+    margin: -0rem 0rem 0rem 0.25rem;
 }
