@@ -31,39 +31,42 @@ async function showTree(className) {
 
     for (let i = 0; i < treeName.length; i++) {
         if (treeName[i].closest('.linkItemToggled')) {
-            console.log('parent item with .linkItemToggled class found!')
             treeName[i].classList.remove(`${className}-tree-hidden`)
             treeName[i].classList.add(`${className}-tree-show`)
 
             for (let i = 0; i < vertTreeName.length; i++) {
+                vertTreeName[i].classList.remove(`${className}-tree-vert-hidden`)
                 vertTreeName[i].classList.add(`${className}-tree-vert-show`)
             }
 
             await wait(1000)
             for (let i = 0; i < horizTreeName.length; i++) {
+                horizTreeName[i].classList.remove(`${className}-tree-horiz-hidden`)
                 horizTreeName[i].classList.add(`${className}-tree-horiz-show`)
             }
             for (let i = 0; i < subjectTreeName.length; i++) {
+                subjectTreeName[i].classList.remove(`${className}-tree-subject-hidden`)
                 subjectTreeName[i].classList.add(`${className}-tree-subject-show`)
             }
 
+        /* add classNames that initiatte retracting animation here */
         } else {
-
-            for (let i = 0; i < treeName.length; i++) {
-                treeName[i].classList.add(`${className}-tree-hidden`)
-                treeName[i].classList.remove(`${className}-tree-show`)
-            }
-            for (let i = 0; i < vertTreeName.length; i++) {
-                vertTreeName[i].classList.remove(`${className}-tree-vert-show`)
-            }
-            for (let i = 0; i < horizTreeName.length; i++) {
-                horizTreeName[i].classList.remove(`${className}-tree-horiz-show`)
-            }
             for (let i = 0; i < subjectTreeName.length; i++) {
                 subjectTreeName[i].classList.remove(`${className}-tree-subject-show`)
+                subjectTreeName[i].classList.add(`${className}-tree-subject-hidden`)
             }
 
+            await wait(1000)
+            for (let i = 0; i < horizTreeName.length; i++) {
+                horizTreeName[i].classList.remove(`${className}-tree-horiz-show`)
+                horizTreeName[i].classList.add(`${className}-tree-horiz-hidden`)
             }
+
+            await wait(1000)
+            for (let i = 0; i < vertTreeName.length; i++) {
+                vertTreeName[i].classList.remove(`${className}-tree-vert-show`)
+                vertTreeName[i].classList.add(`${className}-tree-vert-hidden`)
+            }
+        }
     }
-
 }
