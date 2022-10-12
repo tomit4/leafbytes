@@ -168,7 +168,7 @@
     to { width: 0; visibility: hidden; opacity: 0%; }
 }
 
-.portfolio-tree-subject {
+.tree-subject {
     position: absolute;
     color: rgba(0, 44, 70, 1);
     text-decoration: none;
@@ -244,6 +244,7 @@
     100% {visibility: hidden; height: 0; margin-bottom: 0; }
 }
 
+/* portfolio subject stylings */
 #portfolio-subject-1 {
     margin: -.5rem 0rem 0rem 1.1rem;
 }
