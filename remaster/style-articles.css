@@ -221,6 +221,27 @@
 .portfolio-tree-hidden {
     visibility: hidden;
     height: 0;
+    animation: hide-portfolio-tree 1s ease-out;
+}
+
+/* crazy attempt to make retraction of tree smooth... */
+@keyframes hide-portfolio-tree {
+    0% { visibility: visible; height: 0; margin-bottom: 2rem; }
+    5% { visibility: visible; height: 0; margin-bottom: 1.9rem; }
+    15% { visibility: visible; height: 0; margin-bottom: 1.75rem; }
+    20% { visibility: visible; height: 0; margin-bottom: 1.6rem; }
+    25% { visibility: visible; height: 0; margin-bottom: 1.5rem; }
+    30% { visibility: visible; height: 0; margin-bottom: 1.35rem; }
+    35% { visibility: visible; height: 0; margin-bottom: 1.25rem; }
+    45% { visibility: visible; height: 0; margin-bottom: 1.1rem; }
+    50% { visibility: visible; height: 0; margin-bottom: 1rem; }
+    65% { visibility: visible; height: 0; margin-bottom: 0.75rem; }
+    70% { visibility: visible; height: 0; margin-bottom: 0.65rem; }
+    75% { visibility: visible; height: 0; margin-bottom: 0.5rem; }
+    85% { visibility: visible; height: 0; margin-bottom: 0.35rem; }
+    90% { visibility: visible; height: 0; margin-bottom: 0.25rem; }
+    95% { visibility: visible; height: 0; margin-bottom: 0.15rem; }
+    100% {visibility: hidden; height: 0; margin-bottom: 0; }
 }
 
 #portfolio-subject-1 {

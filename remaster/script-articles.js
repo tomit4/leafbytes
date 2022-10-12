@@ -67,6 +67,12 @@ async function showTree(className) {
                 vertTreeName[i].classList.remove(`${className}-tree-vert-show`)
                 vertTreeName[i].classList.add(`${className}-tree-vert-hidden`)
             }
+            await wait(1000)
+            for (let i = 0; i < treeName.length; i++) {
+                treeName[i].classList.remove(`${className}-tree-show`)
+                treeName[i].classList.add(`${className}-tree-hidden`)
+            }
+
         }
     }
 }
