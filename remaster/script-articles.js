@@ -1,11 +1,35 @@
 /* article-specific js */
+let treeToggled = false
+let linkItemToggled = false
+
+function scaleLinkItems(className) {
+    const linkItems = document.getElementsByClassName('link-item')
+    if (linkItemToggled === false) {
+        for (let i = 0; i < linkItems.length; i++) {
+            if (linkItems[i].classList.contains(className)) {
+                linkItems[i].style.transform = "scale(1.03)"
+                linkItemToggled = !linkItemToggled
+                console.log(`linkItems[i] selected is: ${linkItems[i]}`)
+                console.log(`className is ${className}`)
+                console.log(`linkItemToggled is ${linkItemToggled}`)
+            }
+        }
+    } else {
+        for (let i = 0; i < linkItems.length; i++) {
+            if (linkItems[i].classList.contains(className)) {
+                linkItems[i].style.transform = "scale(0.97)"
+                linkItemToggled = !linkItemToggled
+            }
+        }
+    }
+}
 
 function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
 
-let treeToggled = false
 async function showTree(className) {
+    scaleLinkItems(className)
     const treeName = document.getElementsByClassName(`${className}-tree`)
     const vertTreeName = document.getElementsByClassName(`${className}-tree-vert`)
     const horizTreeName = document.getElementsByClassName(`${className}-tree-horiz`)
