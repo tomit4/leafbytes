@@ -1,32 +1,25 @@
 /* article-specific js */
 let treeToggled = false
-let linkItemToggled = false
-
-function scaleLinkItems(className) {
-    const linkItems = document.getElementsByClassName('link-item')
-    // change this flag to a linkItems[i].classList.contains(uniqueFalseFlagClass)
-    // and use that instead of linkItemToggled
-    if (linkItemToggled === false) {
-        for (let i = 0; i < linkItems.length; i++) {
-            if (linkItems[i].classList.contains(className)) {
-                linkItems[i].style.transform = "scale(1.03)"
-                linkItemToggled = !linkItemToggled
-            }
-        }
-    } else {
-        for (let i = 0; i < linkItems.length; i++) {
-            if (linkItems[i].classList.contains(className)) {
-                linkItems[i].style.transform = "scale(1.0)"
-                linkItemToggled = !linkItemToggled
-            }
-        }
-    }
-}
 
 function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
 
+function scaleLinkItems(className) {
+    const linkItems = document.getElementsByClassName('link-item')
+    for (let i = 0; i < linkItems.length; i++) {
+        if (linkItems[i].classList.contains(className)) {
+            linkItems[i].classList.toggle('linkItemToggled')
+        }
+
+        if (linkItems[i].classList.contains('linkItemToggled')) {
+            linkItems[i].style.transform = "scale(1.03)"
+        } else
+            linkItems[i].style.transform = "scale(1.0)"
+    }
+}
+
+// refactor to be like scaleLinkItems above
 async function showTree(className) {
     scaleLinkItems(className)
     const treeName = document.getElementsByClassName(`${className}-tree`)
