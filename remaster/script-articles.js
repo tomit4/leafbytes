@@ -4,20 +4,19 @@ let linkItemToggled = false
 
 function scaleLinkItems(className) {
     const linkItems = document.getElementsByClassName('link-item')
+    // change this flag to a linkItems[i].classList.contains(uniqueFalseFlagClass)
+    // and use that instead of linkItemToggled
     if (linkItemToggled === false) {
         for (let i = 0; i < linkItems.length; i++) {
             if (linkItems[i].classList.contains(className)) {
                 linkItems[i].style.transform = "scale(1.03)"
                 linkItemToggled = !linkItemToggled
-                console.log(`linkItems[i] selected is: ${linkItems[i]}`)
-                console.log(`className is ${className}`)
-                console.log(`linkItemToggled is ${linkItemToggled}`)
             }
         }
     } else {
         for (let i = 0; i < linkItems.length; i++) {
             if (linkItems[i].classList.contains(className)) {
-                linkItems[i].style.transform = "scale(0.97)"
+                linkItems[i].style.transform = "scale(1.0)"
                 linkItemToggled = !linkItemToggled
             }
         }
