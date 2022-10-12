@@ -44,7 +44,11 @@
     font-family: LiberationMono;
     font-size: 16px;
     color: #002c46;
-    margin: 1.5rem 0.5rem;
+    margin: 1.25rem 0.5rem;
+}
+
+.portfolio {
+    margin-top: 3rem;
 }
 
 .directories:hover {
@@ -87,18 +91,27 @@
 }
 
 .folder-extension {
+    position: absolute;
     background-color: #002c46;
     width: 50vw;
-    /* height: 0.05rem; */
-    height: 2px;
+    height: 1px;
     margin: -0.19rem 0 0 40vw;
     border: 1px solid #002c46;
     border-radius: 0px 0px 3px 3px;
 }
 
-.tree {
-    margin-bottom: 2rem;
+.portfolio-tree-hidden {
+    visibility: hidden;
+    /* margin-bottom: 2rem; */
+    height: 0;
 }
+
+.portfolio-tree-show {
+    visibility: visibile;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
 
 .tree-vert {
     /* position: absolute; */
