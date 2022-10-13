@@ -57,7 +57,6 @@ async function showTree(className) {
                 subjectTreeName[i].classList.add(`${className}-tree-subject-hidden`)
             }
 
-            await wait(1000)
             for (let i = 0; i < horizTreeName.length; i++) {
                 horizTreeName[i].classList.remove(`${className}-tree-horiz-show`)
                 horizTreeName[i].classList.add(`${className}-tree-horiz-hidden`)
