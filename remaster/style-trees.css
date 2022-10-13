@@ -872,7 +872,7 @@
 .art-tree-vert-show {
     animation: art-show-vert-tree 1s ease-in-out;
     visibility: visible;
-    height: 7.25rem;
+    height: 1.25rem;
 }
 
 .art-tree-vert-hidden {
@@ -947,31 +947,7 @@
 }
 /* hbar may not have to be art specific... */
 #art-hbar-1 {
-    margin: -6.25rem 0 0 0.25rem;
-}
-
-#art-subject-2{
-    margin: -0.5rem 0rem 0rem 1.1rem;
-}
-
-#art-hbar-2 {
-    margin: -4.25rem 0rem 0rem 0.25rem;
-}
-
-#art-subject-3 {
-    margin: -0.5rem 0rem 0rem 1.1rem;
-}
-
-#art-hbar-3 {
-    margin: -2.25rem 0rem 0rem 0.3rem;
-}
-
-#art-subject-4 {
-    margin: -0.5rem 0rem 0rem 1.1rem;
-}
-
-#art-hbar-4 {
-    margin: -0rem 0rem 0rem 0.25rem;
+    margin: 0rem 0 0 0.25rem;
 }
 
 /*********************************/
@@ -983,14 +959,14 @@
         visibility: hidden;
     }
     to {
-        height: 7.25rem;
+        height: 1.25rem;
         visibility: visible;
     }
 }
 
 @keyframes art-hide-vert-tree {
     from {
-        height: 7.25rem;
+        height: 1.25rem;
         visibility: hidden;
     }
     to {
