@@ -104,6 +104,21 @@ function addArticleDiv() {
     activateScrollBehavior()
 }
 
+function renderArticle(articleId) {
+    // add classes for fade effect before removing article.textContent
+    article.textContent = ""
+    const xhttp = new XMLHttpRequest()
+    xhttp.onload = function() {
+        article.innerHTML = this.responseText
+    }
+
+    // window.history.pushState({}, '', `${window.location.origin}/articles/tech/${articlesId}`)
+
+    xhttp.open('GET', `./articles/tech/${articleId}.html`, true)
+    xhttp.send()
+
+}
+
 function activateScrollBehavior() {
     let scrollPosition = 0
     article.addEventListener('scroll', () => {
