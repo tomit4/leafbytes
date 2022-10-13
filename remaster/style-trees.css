@@ -16,13 +16,13 @@
 }
 
 .portfolio-tree-vert-show {
-    animation: show-vert-tree 1s ease-in-out;
+    animation: portfolio-show-vert-tree 1s ease-in-out;
     visibility: visible;
     height: 7.25rem;
 }
 
 .portfolio-tree-vert-hidden {
-    animation: hide-vert-tree 1s ease-in-out;
+    animation: portfolio-hide-vert-tree 1s ease-in-out;
     visibility: hidden;
     height: 0;
 }
@@ -123,7 +123,7 @@
 /*********************************/
 /* portfolio tree css animations */
 /*********************************/
-@keyframes show-vert-tree {
+@keyframes portfolio-show-vert-tree {
     from {
         height: 0;
         visibility: hidden;
@@ -134,7 +134,7 @@
     }
 }
 
-@keyframes hide-vert-tree {
+@keyframes portfolio-hide-vert-tree {
     from {
         height: 7.25rem;
         visibility: hidden;
@@ -193,9 +193,9 @@
     100% {visibility: hidden; height: 0; margin-bottom: 0; }
 }
 
-/***********************/
+/*****************/
 /* tech tree css */
-/***********************/
+/*****************/
 .tech-tree-vert {
     position: relative;
     background-color : rgba(0, 44, 70, 1);
@@ -204,13 +204,15 @@
 }
 
 .tech-tree-vert-show {
-    animation: show-vert-tree 1s ease-in-out;
+    animation: tech-show-vert-tree 1s ease-in-out;
     visibility: visible;
-    height: 7.25rem;
+    /* adjust tree-vert height and then adjust first margin parameter */
+    /* height: 7.25rem; */
+    height: 19rem;
 }
 
 .tech-tree-vert-hidden {
-    animation: hide-vert-tree 1s ease-in-out;
+    animation: tech-hide-vert-tree 1s ease-in-out;
     visibility: hidden;
     height: 0;
 }
@@ -277,11 +279,11 @@
 
 /* tech subject stylings */
 #tech-subject-1 {
-    margin: -.5rem 0rem 0rem 1.1rem;
+    margin: -0.5rem 0rem 0rem 1.1rem;
 }
-/* hbar may not have to be tech specific... */
+
 #tech-hbar-1 {
-    margin: -6.25rem 0 0 0.25rem;
+    margin: -18rem 0 0 0.25rem;
 }
 
 #tech-subject-2{
@@ -289,7 +291,7 @@
 }
 
 #tech-hbar-2 {
-    margin: -4.25rem 0rem 0rem 0.25rem;
+    margin: -16rem 0rem 0rem 0.25rem;
 }
 
 #tech-subject-3 {
@@ -297,7 +299,7 @@
 }
 
 #tech-hbar-3 {
-    margin: -2.25rem 0rem 0rem 0.3rem;
+    margin: -14rem 0rem 0rem 0.3rem;
 }
 
 #tech-subject-4 {
@@ -305,26 +307,74 @@
 }
 
 #tech-hbar-4 {
+    margin: -12rem 0rem 0rem 0.25rem;
+}
+
+#tech-subject-5 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#tech-hbar-5 {
+    margin: -10rem 0rem 0rem 0.25rem;
+}
+
+#tech-subject-6 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#tech-hbar-6 {
+    margin: -8rem 0rem 0rem 0.25rem;
+}
+
+#tech-subject-7 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#tech-hbar-7 {
+    margin: -6rem 0rem 0rem 0.25rem;
+}
+
+#tech-subject-8 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#tech-hbar-8 {
+    margin: -4rem 0rem 0rem 0.25rem;
+}
+
+#tech-subject-9 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#tech-hbar-9 {
+    margin: -2rem 0rem 0rem 0.25rem;
+}
+
+#tech-subject-10 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#tech-hbar-10 {
     margin: -0rem 0rem 0rem 0.25rem;
 }
 
-/*********************************/
+/****************************/
 /* tech tree css animations */
-/*********************************/
-@keyframes show-vert-tree {
+/****************************/
+@keyframes tech-show-vert-tree {
     from {
         height: 0;
         visibility: hidden;
     }
     to {
-        height: 7.25rem;
+        height: 19rem;
         visibility: visible;
     }
 }
 
-@keyframes hide-vert-tree {
+@keyframes tech-hide-vert-tree {
     from {
-        height: 7.25rem;
+        height: 19rem;
         visibility: hidden;
     }
     to {
@@ -392,13 +442,13 @@
 }
 
 .dev-tree-vert-show {
-    animation: show-vert-tree 1s ease-in-out;
+    animation: dev-show-vert-tree 1s ease-in-out;
     visibility: visible;
     height: 7.25rem;
 }
 
 .dev-tree-vert-hidden {
-    animation: hide-vert-tree 1s ease-in-out;
+    animation: dev-hide-vert-tree 1s ease-in-out;
     visibility: hidden;
     height: 0;
 }
@@ -465,7 +515,7 @@
 
 /* dev subject stylings */
 #dev-subject-1 {
-    margin: -.5rem 0rem 0rem 1.1rem;
+    margin: -0.5rem 0rem 0rem 1.1rem;
 }
 /* hbar may not have to be dev specific... */
 #dev-hbar-1 {
@@ -499,7 +549,7 @@
 /*********************************/
 /* dev tree css animations */
 /*********************************/
-@keyframes show-vert-tree {
+@keyframes dev-show-vert-tree {
     from {
         height: 0;
         visibility: hidden;
@@ -510,7 +560,7 @@
     }
 }
 
-@keyframes hide-vert-tree {
+@keyframes dev-hide-vert-tree {
     from {
         height: 7.25rem;
         visibility: hidden;
@@ -580,13 +630,13 @@
 }
 
 .use-tree-vert-show {
-    animation: show-vert-tree 1s ease-in-out;
+    animation: use-show-vert-tree 1s ease-in-out;
     visibility: visible;
     height: 7.25rem;
 }
 
 .use-tree-vert-hidden {
-    animation: hide-vert-tree 1s ease-in-out;
+    animation: use-hide-vert-tree 1s ease-in-out;
     visibility: hidden;
     height: 0;
 }
@@ -687,7 +737,7 @@
 /*********************************/
 /* use tree css animations */
 /*********************************/
-@keyframes show-vert-tree {
+@keyframes use-show-vert-tree {
     from {
         height: 0;
         visibility: hidden;
@@ -698,7 +748,7 @@
     }
 }
 
-@keyframes hide-vert-tree {
+@keyframes use-hide-vert-tree {
     from {
         height: 7.25rem;
         visibility: hidden;
@@ -768,13 +818,13 @@
 }
 
 .art-tree-vert-show {
-    animation: show-vert-tree 1s ease-in-out;
+    animation: art-show-vert-tree 1s ease-in-out;
     visibility: visible;
     height: 7.25rem;
 }
 
 .art-tree-vert-hidden {
-    animation: hide-vert-tree 1s ease-in-out;
+    animation: art-hide-vert-tree 1s ease-in-out;
     visibility: hidden;
     height: 0;
 }
@@ -875,7 +925,7 @@
 /*********************************/
 /* art tree css animations */
 /*********************************/
-@keyframes show-vert-tree {
+@keyframes art-show-vert-tree {
     from {
         height: 0;
         visibility: hidden;
@@ -886,7 +936,7 @@
     }
 }
 
-@keyframes hide-vert-tree {
+@keyframes art-hide-vert-tree {
     from {
         height: 7.25rem;
         visibility: hidden;
