@@ -21,11 +21,10 @@ function scaleLinkItems(className) {
     }
 }
 
-async function showTree(className) {
+async function showTree(className, waitTime = 1000) {
     scaleLinkItems(className)
 
     const treeName = document.getElementsByClassName(`${className}-tree`)
-    console.log(treeName)
     const vertTreeName = document.getElementsByClassName(`${className}-tree-vert`)
     const horizTreeName = document.getElementsByClassName(`${className}-tree-horiz`)
     const subjectTreeName = document.getElementsByClassName(`${className}-tree-subject`)
@@ -40,7 +39,7 @@ async function showTree(className) {
                 vertTreeName[i].classList.add(`${className}-tree-vert-show`)
             }
 
-            await wait(1000)
+            await wait(waitTime)
             for (let i = 0; i < horizTreeName.length; i++) {
                 horizTreeName[i].classList.remove(`${className}-tree-horiz-hidden`)
                 horizTreeName[i].classList.add(`${className}-tree-horiz-show`)
@@ -62,12 +61,12 @@ async function showTree(className) {
                 horizTreeName[i].classList.add(`${className}-tree-horiz-hidden`)
             }
 
-            await wait(1000)
+            await wait(waitTime)
             for (let i = 0; i < vertTreeName.length; i++) {
                 vertTreeName[i].classList.remove(`${className}-tree-vert-show`)
                 vertTreeName[i].classList.add(`${className}-tree-vert-hidden`)
             }
-            await wait(1000)
+            await wait(waitTime)
             for (let i = 0; i < treeName.length; i++) {
                 treeName[i].classList.remove(`${className}-tree-show`)
                 treeName[i].classList.add(`${className}-tree-hidden`)

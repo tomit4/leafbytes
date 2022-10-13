@@ -870,13 +870,13 @@
 }
 
 .art-tree-vert-show {
-    animation: art-show-vert-tree 1s ease-in-out;
+    animation: art-show-vert-tree 0.25s ease-in-out;
     visibility: visible;
     height: 1.25rem;
 }
 
 .art-tree-vert-hidden {
-    animation: art-hide-vert-tree 1s ease-in-out;
+    animation: art-hide-vert-tree 0.25s ease-in-out;
     visibility: hidden;
     height: 0;
 }
@@ -893,14 +893,14 @@
     opacity: 100%;
     width: 1rem;
     visibility: visible;
-    animation: show-horiz-tree 1s ease-in-out;
+    animation: show-horiz-tree 0.25s ease-in-out;
 }
 
 .art-tree-horiz-hidden {
     opacity: 0%;
     width: 0;
     visibility: hidden;
-    animation: hide-horiz-tree 1s ease-in-out;
+    animation: hide-horiz-tree 0.25s ease-in-out;
 }
 
 .tree-subject {
