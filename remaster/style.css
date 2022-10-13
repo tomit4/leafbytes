@@ -235,7 +235,13 @@ html, body {
     border-radius: 5px;
     overflow: scroll;
     animation: dropdown 1s ease-in-out;
+}
 
+.article-body {
+    background-color: #c8edff;
+    margin: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 5px;
 }
 
 @keyframes dropdown {
