@@ -619,9 +619,9 @@
     100% {visibility: hidden; height: 0; margin-bottom: 0; }
 }
 
-/***********************/
+/*****************/
 /* use tree css */
-/***********************/
+/*****************/
 .use-tree-vert {
     position: relative;
     background-color : rgba(0, 44, 70, 1);
@@ -632,7 +632,9 @@
 .use-tree-vert-show {
     animation: use-show-vert-tree 1s ease-in-out;
     visibility: visible;
-    height: 7.25rem;
+    /* adjust tree-vert height and then adjust first margin parameter */
+    /* height: 7.25rem; */
+    height: 19rem;
 }
 
 .use-tree-vert-hidden {
@@ -703,11 +705,11 @@
 
 /* use subject stylings */
 #use-subject-1 {
-    margin: -.5rem 0rem 0rem 1.1rem;
+    margin: -0.5rem 0rem 0rem 1.1rem;
 }
-/* hbar may not have to be use specific... */
+
 #use-hbar-1 {
-    margin: -6.25rem 0 0 0.25rem;
+    margin: -18rem 0 0 0.25rem;
 }
 
 #use-subject-2{
@@ -715,7 +717,7 @@
 }
 
 #use-hbar-2 {
-    margin: -4.25rem 0rem 0rem 0.25rem;
+    margin: -16rem 0rem 0rem 0.25rem;
 }
 
 #use-subject-3 {
@@ -723,7 +725,7 @@
 }
 
 #use-hbar-3 {
-    margin: -2.25rem 0rem 0rem 0.3rem;
+    margin: -14rem 0rem 0rem 0.3rem;
 }
 
 #use-subject-4 {
@@ -731,26 +733,74 @@
 }
 
 #use-hbar-4 {
+    margin: -12rem 0rem 0rem 0.25rem;
+}
+
+#use-subject-5 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#use-hbar-5 {
+    margin: -10rem 0rem 0rem 0.25rem;
+}
+
+#use-subject-6 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#use-hbar-6 {
+    margin: -8rem 0rem 0rem 0.25rem;
+}
+
+#use-subject-7 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#use-hbar-7 {
+    margin: -6rem 0rem 0rem 0.25rem;
+}
+
+#use-subject-8 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#use-hbar-8 {
+    margin: -4rem 0rem 0rem 0.25rem;
+}
+
+#use-subject-9 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#use-hbar-9 {
+    margin: -2rem 0rem 0rem 0.25rem;
+}
+
+#use-subject-10 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#use-hbar-10 {
     margin: -0rem 0rem 0rem 0.25rem;
 }
 
-/*********************************/
+/****************************/
 /* use tree css animations */
-/*********************************/
+/****************************/
 @keyframes use-show-vert-tree {
     from {
         height: 0;
         visibility: hidden;
     }
     to {
-        height: 7.25rem;
+        height: 19rem;
         visibility: visible;
     }
 }
 
 @keyframes use-hide-vert-tree {
     from {
-        height: 7.25rem;
+        height: 19rem;
         visibility: hidden;
     }
     to {
@@ -806,6 +856,8 @@
     95% { visibility: visible; height: 0; margin-bottom: 0.15rem; }
     100% {visibility: hidden; height: 0; margin-bottom: 0; }
 }
+
+
 
 /***********************/
 /* art tree css */
