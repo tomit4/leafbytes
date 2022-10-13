@@ -25,6 +25,7 @@ async function showTree(className) {
     scaleLinkItems(className)
 
     const treeName = document.getElementsByClassName(`${className}-tree`)
+    console.log(treeName)
     const vertTreeName = document.getElementsByClassName(`${className}-tree-vert`)
     const horizTreeName = document.getElementsByClassName(`${className}-tree-horiz`)
     const subjectTreeName = document.getElementsByClassName(`${className}-tree-subject`)

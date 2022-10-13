@@ -1,3 +1,13 @@
+/**********************/
+/* universal tree css */
+/**********************/
+.tree-subject:hover {
+    transform: scale(1.03);
+}
+
+/***********************/
+/* portfolio tree css */
+/***********************/
 .portfolio-tree-vert {
     position: relative;
     background-color : rgba(0, 44, 70, 1);
@@ -11,32 +21,10 @@
     height: 7.25rem;
 }
 
-@keyframes show-vert-tree {
-    from {
-        height: 0;
-        visibility: hidden;
-    }
-    to {
-        height: 7.25rem;
-        visibility: visible;
-    }
-}
-
 .portfolio-tree-vert-hidden {
     animation: hide-vert-tree 1s ease-in-out;
     visibility: hidden;
     height: 0;
-}
-
-@keyframes hide-vert-tree {
-    from {
-        height: 7.25rem;
-        visibility: hidden;
-    }
-    to {
-        height: 0;
-        visibility: visible;
-    }
 }
 
 .portfolio-tree-horiz  {
@@ -54,21 +42,11 @@
     animation: show-horiz-tree 1s ease-in-out;
 }
 
-@keyframes show-horiz-tree {
-    from { width: 0; visibility: hidden; opacity: 0%; }
-    to { width: 1rem; visibility: visible; opacity: 100%;}
-}
-
 .portfolio-tree-horiz-hidden {
     opacity: 0%;
     width: 0;
     visibility: hidden;
     animation: hide-horiz-tree 1s ease-in-out;
-}
-
-@keyframes hide-horiz-tree {
-    from { width: 1rem; visibility: visible; opacity: 100%;}
-    to { width: 0; visibility: hidden; opacity: 0%; }
 }
 
 .tree-subject {
@@ -92,27 +70,9 @@
     animation: portfolio-subject-show 1s ease-in-out;
 }
 
-@keyframes portfolio-subject-show {
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 95%;
-    }
-}
-
 .portfolio-tree-subject-hidden {
     opacity: 0%;
     animation: portfolio-subject-hidden 1s ease-in-out;
-}
-
-@keyframes portfolio-subject-hidden {
-    0% {
-        opacity: 95%;
-    }
-    100% {
-        opacity: 0%;
-    }
 }
 
 .portfolio-tree-show {
@@ -127,31 +87,11 @@
     animation: hide-portfolio-tree 1s ease-out;
 }
 
-/* crazy attempt to make retraction of tree smooth... */
-@keyframes hide-portfolio-tree {
-    0% { visibility: visible; height: 0; margin-bottom: 2rem; }
-    5% { visibility: visible; height: 0; margin-bottom: 1.9rem; }
-    15% { visibility: visible; height: 0; margin-bottom: 1.75rem; }
-    20% { visibility: visible; height: 0; margin-bottom: 1.6rem; }
-    25% { visibility: visible; height: 0; margin-bottom: 1.5rem; }
-    30% { visibility: visible; height: 0; margin-bottom: 1.35rem; }
-    35% { visibility: visible; height: 0; margin-bottom: 1.25rem; }
-    45% { visibility: visible; height: 0; margin-bottom: 1.1rem; }
-    50% { visibility: visible; height: 0; margin-bottom: 1rem; }
-    65% { visibility: visible; height: 0; margin-bottom: 0.75rem; }
-    70% { visibility: visible; height: 0; margin-bottom: 0.65rem; }
-    75% { visibility: visible; height: 0; margin-bottom: 0.5rem; }
-    85% { visibility: visible; height: 0; margin-bottom: 0.35rem; }
-    90% { visibility: visible; height: 0; margin-bottom: 0.25rem; }
-    95% { visibility: visible; height: 0; margin-bottom: 0.15rem; }
-    100% {visibility: hidden; height: 0; margin-bottom: 0; }
-}
-
 /* portfolio subject stylings */
 #portfolio-subject-1 {
     margin: -.5rem 0rem 0rem 1.1rem;
 }
-
+/* hbar may not have to be portfolio specific... */
 #portfolio-hbar-1 {
     margin: -6.25rem 0 0 0.25rem;
 }
@@ -180,7 +120,829 @@
     margin: -0rem 0rem 0rem 0.25rem;
 }
 
-.tree-subject:hover {
-    transform: scale(1.03);
+/*********************************/
+/* portfolio tree css animations */
+/*********************************/
+@keyframes show-vert-tree {
+    from {
+        height: 0;
+        visibility: hidden;
+    }
+    to {
+        height: 7.25rem;
+        visibility: visible;
+    }
 }
+
+@keyframes hide-vert-tree {
+    from {
+        height: 7.25rem;
+        visibility: hidden;
+    }
+    to {
+        height: 0;
+        visibility: visible;
+    }
+}
+
+@keyframes show-horiz-tree {
+    from { width: 0; visibility: hidden; opacity: 0%; }
+    to { width: 1rem; visibility: visible; opacity: 100%;}
+}
+
+@keyframes hide-horiz-tree {
+    from { width: 1rem; visibility: visible; opacity: 100%;}
+    to { width: 0; visibility: hidden; opacity: 0%; }
+}
+
+@keyframes portfolio-subject-show {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 95%;
+    }
+}
+
+@keyframes portfolio-subject-hidden {
+    0% {
+        opacity: 95%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+/* crazy attempt to make retraction of tree smooth... */
+@keyframes hide-portfolio-tree {
+    0% { visibility: visible; height: 0; margin-bottom: 2rem; }
+    5% { visibility: visible; height: 0; margin-bottom: 1.9rem; }
+    15% { visibility: visible; height: 0; margin-bottom: 1.75rem; }
+    20% { visibility: visible; height: 0; margin-bottom: 1.6rem; }
+    25% { visibility: visible; height: 0; margin-bottom: 1.5rem; }
+    30% { visibility: visible; height: 0; margin-bottom: 1.35rem; }
+    35% { visibility: visible; height: 0; margin-bottom: 1.25rem; }
+    45% { visibility: visible; height: 0; margin-bottom: 1.1rem; }
+    50% { visibility: visible; height: 0; margin-bottom: 1rem; }
+    65% { visibility: visible; height: 0; margin-bottom: 0.75rem; }
+    70% { visibility: visible; height: 0; margin-bottom: 0.65rem; }
+    75% { visibility: visible; height: 0; margin-bottom: 0.5rem; }
+    85% { visibility: visible; height: 0; margin-bottom: 0.35rem; }
+    90% { visibility: visible; height: 0; margin-bottom: 0.25rem; }
+    95% { visibility: visible; height: 0; margin-bottom: 0.15rem; }
+    100% {visibility: hidden; height: 0; margin-bottom: 0; }
+}
+
+/***********************/
+/* tech tree css */
+/***********************/
+.tech-tree-vert {
+    position: relative;
+    background-color : rgba(0, 44, 70, 1);
+    width: 0.20rem;
+    margin: 0rem 0 0rem 0.25rem;
+}
+
+.tech-tree-vert-show {
+    animation: show-vert-tree 1s ease-in-out;
+    visibility: visible;
+    height: 7.25rem;
+}
+
+.tech-tree-vert-hidden {
+    animation: hide-vert-tree 1s ease-in-out;
+    visibility: hidden;
+    height: 0;
+}
+
+.tech-tree-horiz  {
+    position: absolute;
+    background-color : rgba(0, 44, 70, 1);
+    visibility: hidden;
+    width: 0rem;
+    height: 0.15rem;
+}
+
+.tech-tree-horiz-show {
+    opacity: 100%;
+    width: 1rem;
+    visibility: visible;
+    animation: show-horiz-tree 1s ease-in-out;
+}
+
+.tech-tree-horiz-hidden {
+    opacity: 0%;
+    width: 0;
+    visibility: hidden;
+    animation: hide-horiz-tree 1s ease-in-out;
+}
+
+.tree-subject {
+    position: absolute;
+    color: rgba(0, 44, 70, 1);
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 95%;
+    border: 3px solid rgba(0, 44, 70, 1);
+    border-radius: 5px;
+    border-right: none;
+    border-top: none;
+    width: auto;
+    padding: 0.1rem 0 0 0.3rem;
+    white-space: nowrap;
+}
+
+.tech-tree-subject-show {
+    opacity: 95%;
+    animation: tech-subject-show 1s ease-in-out;
+}
+
+.tech-tree-subject-hidden {
+    opacity: 0%;
+    animation: tech-subject-hidden 1s ease-in-out;
+}
+
+.tech-tree-show {
+    visibility: visibile;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+.tech-tree-hidden {
+    visibility: hidden;
+    height: 0;
+    animation: hide-tech-tree 1s ease-out;
+}
+
+/* tech subject stylings */
+#tech-subject-1 {
+    margin: -.5rem 0rem 0rem 1.1rem;
+}
+/* hbar may not have to be tech specific... */
+#tech-hbar-1 {
+    margin: -6.25rem 0 0 0.25rem;
+}
+
+#tech-subject-2{
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#tech-hbar-2 {
+    margin: -4.25rem 0rem 0rem 0.25rem;
+}
+
+#tech-subject-3 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#tech-hbar-3 {
+    margin: -2.25rem 0rem 0rem 0.3rem;
+}
+
+#tech-subject-4 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#tech-hbar-4 {
+    margin: -0rem 0rem 0rem 0.25rem;
+}
+
+/*********************************/
+/* tech tree css animations */
+/*********************************/
+@keyframes show-vert-tree {
+    from {
+        height: 0;
+        visibility: hidden;
+    }
+    to {
+        height: 7.25rem;
+        visibility: visible;
+    }
+}
+
+@keyframes hide-vert-tree {
+    from {
+        height: 7.25rem;
+        visibility: hidden;
+    }
+    to {
+        height: 0;
+        visibility: visible;
+    }
+}
+
+@keyframes show-horiz-tree {
+    from { width: 0; visibility: hidden; opacity: 0%; }
+    to { width: 1rem; visibility: visible; opacity: 100%;}
+}
+
+@keyframes hide-horiz-tree {
+    from { width: 1rem; visibility: visible; opacity: 100%;}
+    to { width: 0; visibility: hidden; opacity: 0%; }
+}
+
+@keyframes tech-subject-show {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 95%;
+    }
+}
+
+@keyframes tech-subject-hidden {
+    0% {
+        opacity: 95%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+/* crazy attempt to make retraction of tree smooth... */
+@keyframes hide-tech-tree {
+    0% { visibility: visible; height: 0; margin-bottom: 2rem; }
+    5% { visibility: visible; height: 0; margin-bottom: 1.9rem; }
+    15% { visibility: visible; height: 0; margin-bottom: 1.75rem; }
+    20% { visibility: visible; height: 0; margin-bottom: 1.6rem; }
+    25% { visibility: visible; height: 0; margin-bottom: 1.5rem; }
+    30% { visibility: visible; height: 0; margin-bottom: 1.35rem; }
+    35% { visibility: visible; height: 0; margin-bottom: 1.25rem; }
+    45% { visibility: visible; height: 0; margin-bottom: 1.1rem; }
+    50% { visibility: visible; height: 0; margin-bottom: 1rem; }
+    65% { visibility: visible; height: 0; margin-bottom: 0.75rem; }
+    70% { visibility: visible; height: 0; margin-bottom: 0.65rem; }
+    75% { visibility: visible; height: 0; margin-bottom: 0.5rem; }
+    85% { visibility: visible; height: 0; margin-bottom: 0.35rem; }
+    90% { visibility: visible; height: 0; margin-bottom: 0.25rem; }
+    95% { visibility: visible; height: 0; margin-bottom: 0.15rem; }
+    100% {visibility: hidden; height: 0; margin-bottom: 0; }
+}
+
+/***********************/
+/* dev tree css */
+/***********************/
+.dev-tree-vert {
+    position: relative;
+    background-color : rgba(0, 44, 70, 1);
+    width: 0.20rem;
+    margin: 0rem 0 0rem 0.25rem;
+}
+
+.dev-tree-vert-show {
+    animation: show-vert-tree 1s ease-in-out;
+    visibility: visible;
+    height: 7.25rem;
+}
+
+.dev-tree-vert-hidden {
+    animation: hide-vert-tree 1s ease-in-out;
+    visibility: hidden;
+    height: 0;
+}
+
+.dev-tree-horiz  {
+    position: absolute;
+    background-color : rgba(0, 44, 70, 1);
+    visibility: hidden;
+    width: 0rem;
+    height: 0.15rem;
+}
+
+.dev-tree-horiz-show {
+    opacity: 100%;
+    width: 1rem;
+    visibility: visible;
+    animation: show-horiz-tree 1s ease-in-out;
+}
+
+.dev-tree-horiz-hidden {
+    opacity: 0%;
+    width: 0;
+    visibility: hidden;
+    animation: hide-horiz-tree 1s ease-in-out;
+}
+
+.tree-subject {
+    position: absolute;
+    color: rgba(0, 44, 70, 1);
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 95%;
+    border: 3px solid rgba(0, 44, 70, 1);
+    border-radius: 5px;
+    border-right: none;
+    border-top: none;
+    width: auto;
+    padding: 0.1rem 0 0 0.3rem;
+    white-space: nowrap;
+}
+
+.dev-tree-subject-show {
+    opacity: 95%;
+    animation: dev-subject-show 1s ease-in-out;
+}
+
+.dev-tree-subject-hidden {
+    opacity: 0%;
+    animation: dev-subject-hidden 1s ease-in-out;
+}
+
+.dev-tree-show {
+    visibility: visibile;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+.dev-tree-hidden {
+    visibility: hidden;
+    height: 0;
+    animation: hide-dev-tree 1s ease-out;
+}
+
+/* dev subject stylings */
+#dev-subject-1 {
+    margin: -.5rem 0rem 0rem 1.1rem;
+}
+/* hbar may not have to be dev specific... */
+#dev-hbar-1 {
+    margin: -6.25rem 0 0 0.25rem;
+}
+
+#dev-subject-2{
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#dev-hbar-2 {
+    margin: -4.25rem 0rem 0rem 0.25rem;
+}
+
+#dev-subject-3 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#dev-hbar-3 {
+    margin: -2.25rem 0rem 0rem 0.3rem;
+}
+
+#dev-subject-4 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#dev-hbar-4 {
+    margin: -0rem 0rem 0rem 0.25rem;
+}
+
+/*********************************/
+/* dev tree css animations */
+/*********************************/
+@keyframes show-vert-tree {
+    from {
+        height: 0;
+        visibility: hidden;
+    }
+    to {
+        height: 7.25rem;
+        visibility: visible;
+    }
+}
+
+@keyframes hide-vert-tree {
+    from {
+        height: 7.25rem;
+        visibility: hidden;
+    }
+    to {
+        height: 0;
+        visibility: visible;
+    }
+}
+
+@keyframes show-horiz-tree {
+    from { width: 0; visibility: hidden; opacity: 0%; }
+    to { width: 1rem; visibility: visible; opacity: 100%;}
+}
+
+@keyframes hide-horiz-tree {
+    from { width: 1rem; visibility: visible; opacity: 100%;}
+    to { width: 0; visibility: hidden; opacity: 0%; }
+}
+
+@keyframes dev-subject-show {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 95%;
+    }
+}
+
+@keyframes dev-subject-hidden {
+    0% {
+        opacity: 95%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+/* crazy attempt to make retraction of tree smooth... */
+@keyframes hide-dev-tree {
+    0% { visibility: visible; height: 0; margin-bottom: 2rem; }
+    5% { visibility: visible; height: 0; margin-bottom: 1.9rem; }
+    15% { visibility: visible; height: 0; margin-bottom: 1.75rem; }
+    20% { visibility: visible; height: 0; margin-bottom: 1.6rem; }
+    25% { visibility: visible; height: 0; margin-bottom: 1.5rem; }
+    30% { visibility: visible; height: 0; margin-bottom: 1.35rem; }
+    35% { visibility: visible; height: 0; margin-bottom: 1.25rem; }
+    45% { visibility: visible; height: 0; margin-bottom: 1.1rem; }
+    50% { visibility: visible; height: 0; margin-bottom: 1rem; }
+    65% { visibility: visible; height: 0; margin-bottom: 0.75rem; }
+    70% { visibility: visible; height: 0; margin-bottom: 0.65rem; }
+    75% { visibility: visible; height: 0; margin-bottom: 0.5rem; }
+    85% { visibility: visible; height: 0; margin-bottom: 0.35rem; }
+    90% { visibility: visible; height: 0; margin-bottom: 0.25rem; }
+    95% { visibility: visible; height: 0; margin-bottom: 0.15rem; }
+    100% {visibility: hidden; height: 0; margin-bottom: 0; }
+}
+
+/***********************/
+/* use tree css */
+/***********************/
+.use-tree-vert {
+    position: relative;
+    background-color : rgba(0, 44, 70, 1);
+    width: 0.20rem;
+    margin: 0rem 0 0rem 0.25rem;
+}
+
+.use-tree-vert-show {
+    animation: show-vert-tree 1s ease-in-out;
+    visibility: visible;
+    height: 7.25rem;
+}
+
+.use-tree-vert-hidden {
+    animation: hide-vert-tree 1s ease-in-out;
+    visibility: hidden;
+    height: 0;
+}
+
+.use-tree-horiz  {
+    position: absolute;
+    background-color : rgba(0, 44, 70, 1);
+    visibility: hidden;
+    width: 0rem;
+    height: 0.15rem;
+}
+
+.use-tree-horiz-show {
+    opacity: 100%;
+    width: 1rem;
+    visibility: visible;
+    animation: show-horiz-tree 1s ease-in-out;
+}
+
+.use-tree-horiz-hidden {
+    opacity: 0%;
+    width: 0;
+    visibility: hidden;
+    animation: hide-horiz-tree 1s ease-in-out;
+}
+
+.tree-subject {
+    position: absolute;
+    color: rgba(0, 44, 70, 1);
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 95%;
+    border: 3px solid rgba(0, 44, 70, 1);
+    border-radius: 5px;
+    border-right: none;
+    border-top: none;
+    width: auto;
+    padding: 0.1rem 0 0 0.3rem;
+    white-space: nowrap;
+}
+
+.use-tree-subject-show {
+    opacity: 95%;
+    animation: use-subject-show 1s ease-in-out;
+}
+
+.use-tree-subject-hidden {
+    opacity: 0%;
+    animation: use-subject-hidden 1s ease-in-out;
+}
+
+.use-tree-show {
+    visibility: visibile;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+.use-tree-hidden {
+    visibility: hidden;
+    height: 0;
+    animation: hide-use-tree 1s ease-out;
+}
+
+/* use subject stylings */
+#use-subject-1 {
+    margin: -.5rem 0rem 0rem 1.1rem;
+}
+/* hbar may not have to be use specific... */
+#use-hbar-1 {
+    margin: -6.25rem 0 0 0.25rem;
+}
+
+#use-subject-2{
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#use-hbar-2 {
+    margin: -4.25rem 0rem 0rem 0.25rem;
+}
+
+#use-subject-3 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#use-hbar-3 {
+    margin: -2.25rem 0rem 0rem 0.3rem;
+}
+
+#use-subject-4 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#use-hbar-4 {
+    margin: -0rem 0rem 0rem 0.25rem;
+}
+
+/*********************************/
+/* use tree css animations */
+/*********************************/
+@keyframes show-vert-tree {
+    from {
+        height: 0;
+        visibility: hidden;
+    }
+    to {
+        height: 7.25rem;
+        visibility: visible;
+    }
+}
+
+@keyframes hide-vert-tree {
+    from {
+        height: 7.25rem;
+        visibility: hidden;
+    }
+    to {
+        height: 0;
+        visibility: visible;
+    }
+}
+
+@keyframes show-horiz-tree {
+    from { width: 0; visibility: hidden; opacity: 0%; }
+    to { width: 1rem; visibility: visible; opacity: 100%;}
+}
+
+@keyframes hide-horiz-tree {
+    from { width: 1rem; visibility: visible; opacity: 100%;}
+    to { width: 0; visibility: hidden; opacity: 0%; }
+}
+
+@keyframes use-subject-show {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 95%;
+    }
+}
+
+@keyframes use-subject-hidden {
+    0% {
+        opacity: 95%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+/* crazy attempt to make retraction of tree smooth... */
+@keyframes hide-use-tree {
+    0% { visibility: visible; height: 0; margin-bottom: 2rem; }
+    5% { visibility: visible; height: 0; margin-bottom: 1.9rem; }
+    15% { visibility: visible; height: 0; margin-bottom: 1.75rem; }
+    20% { visibility: visible; height: 0; margin-bottom: 1.6rem; }
+    25% { visibility: visible; height: 0; margin-bottom: 1.5rem; }
+    30% { visibility: visible; height: 0; margin-bottom: 1.35rem; }
+    35% { visibility: visible; height: 0; margin-bottom: 1.25rem; }
+    45% { visibility: visible; height: 0; margin-bottom: 1.1rem; }
+    50% { visibility: visible; height: 0; margin-bottom: 1rem; }
+    65% { visibility: visible; height: 0; margin-bottom: 0.75rem; }
+    70% { visibility: visible; height: 0; margin-bottom: 0.65rem; }
+    75% { visibility: visible; height: 0; margin-bottom: 0.5rem; }
+    85% { visibility: visible; height: 0; margin-bottom: 0.35rem; }
+    90% { visibility: visible; height: 0; margin-bottom: 0.25rem; }
+    95% { visibility: visible; height: 0; margin-bottom: 0.15rem; }
+    100% {visibility: hidden; height: 0; margin-bottom: 0; }
+}
+
+/***********************/
+/* art tree css */
+/***********************/
+.art-tree-vert {
+    position: relative;
+    background-color : rgba(0, 44, 70, 1);
+    width: 0.20rem;
+    margin: 0rem 0 0rem 0.25rem;
+}
+
+.art-tree-vert-show {
+    animation: show-vert-tree 1s ease-in-out;
+    visibility: visible;
+    height: 7.25rem;
+}
+
+.art-tree-vert-hidden {
+    animation: hide-vert-tree 1s ease-in-out;
+    visibility: hidden;
+    height: 0;
+}
+
+.art-tree-horiz  {
+    position: absolute;
+    background-color : rgba(0, 44, 70, 1);
+    visibility: hidden;
+    width: 0rem;
+    height: 0.15rem;
+}
+
+.art-tree-horiz-show {
+    opacity: 100%;
+    width: 1rem;
+    visibility: visible;
+    animation: show-horiz-tree 1s ease-in-out;
+}
+
+.art-tree-horiz-hidden {
+    opacity: 0%;
+    width: 0;
+    visibility: hidden;
+    animation: hide-horiz-tree 1s ease-in-out;
+}
+
+.tree-subject {
+    position: absolute;
+    color: rgba(0, 44, 70, 1);
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 95%;
+    border: 3px solid rgba(0, 44, 70, 1);
+    border-radius: 5px;
+    border-right: none;
+    border-top: none;
+    width: auto;
+    padding: 0.1rem 0 0 0.3rem;
+    white-space: nowrap;
+}
+
+.art-tree-subject-show {
+    opacity: 95%;
+    animation: art-subject-show 1s ease-in-out;
+}
+
+.art-tree-subject-hidden {
+    opacity: 0%;
+    animation: art-subject-hidden 1s ease-in-out;
+}
+
+.art-tree-show {
+    visibility: visibile;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+.art-tree-hidden {
+    visibility: hidden;
+    height: 0;
+    animation: hide-art-tree 1s ease-out;
+}
+
+/* art subject stylings */
+#art-subject-1 {
+    margin: -.5rem 0rem 0rem 1.1rem;
+}
+/* hbar may not have to be art specific... */
+#art-hbar-1 {
+    margin: -6.25rem 0 0 0.25rem;
+}
+
+#art-subject-2{
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#art-hbar-2 {
+    margin: -4.25rem 0rem 0rem 0.25rem;
+}
+
+#art-subject-3 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#art-hbar-3 {
+    margin: -2.25rem 0rem 0rem 0.3rem;
+}
+
+#art-subject-4 {
+    margin: -0.5rem 0rem 0rem 1.1rem;
+}
+
+#art-hbar-4 {
+    margin: -0rem 0rem 0rem 0.25rem;
+}
+
+/*********************************/
+/* art tree css animations */
+/*********************************/
+@keyframes show-vert-tree {
+    from {
+        height: 0;
+        visibility: hidden;
+    }
+    to {
+        height: 7.25rem;
+        visibility: visible;
+    }
+}
+
+@keyframes hide-vert-tree {
+    from {
+        height: 7.25rem;
+        visibility: hidden;
+    }
+    to {
+        height: 0;
+        visibility: visible;
+    }
+}
+
+@keyframes show-horiz-tree {
+    from { width: 0; visibility: hidden; opacity: 0%; }
+    to { width: 1rem; visibility: visible; opacity: 100%;}
+}
+
+@keyframes hide-horiz-tree {
+    from { width: 1rem; visibility: visible; opacity: 100%;}
+    to { width: 0; visibility: hidden; opacity: 0%; }
+}
+
+@keyframes art-subject-show {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 95%;
+    }
+}
+
+@keyframes art-subject-hidden {
+    0% {
+        opacity: 95%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+/* crazy attempt to make retraction of tree smooth... */
+@keyframes hide-art-tree {
+    0% { visibility: visible; height: 0; margin-bottom: 2rem; }
+    5% { visibility: visible; height: 0; margin-bottom: 1.9rem; }
+    15% { visibility: visible; height: 0; margin-bottom: 1.75rem; }
+    20% { visibility: visible; height: 0; margin-bottom: 1.6rem; }
+    25% { visibility: visible; height: 0; margin-bottom: 1.5rem; }
+    30% { visibility: visible; height: 0; margin-bottom: 1.35rem; }
+    35% { visibility: visible; height: 0; margin-bottom: 1.25rem; }
+    45% { visibility: visible; height: 0; margin-bottom: 1.1rem; }
+    50% { visibility: visible; height: 0; margin-bottom: 1rem; }
+    65% { visibility: visible; height: 0; margin-bottom: 0.75rem; }
+    70% { visibility: visible; height: 0; margin-bottom: 0.65rem; }
+    75% { visibility: visible; height: 0; margin-bottom: 0.5rem; }
+    85% { visibility: visible; height: 0; margin-bottom: 0.35rem; }
+    90% { visibility: visible; height: 0; margin-bottom: 0.25rem; }
+    95% { visibility: visible; height: 0; margin-bottom: 0.15rem; }
+    100% {visibility: hidden; height: 0; margin-bottom: 0; }
+}
+
 
