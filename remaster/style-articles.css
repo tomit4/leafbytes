@@ -131,7 +131,8 @@
 @media (min-width: 20rem) {
     .article-content {
         margin: 1rem 1rem;
-        /* font-weight: 900; */
+        font-size: 15px;
+        font-weight: 600;
     }
 }
 
