@@ -93,6 +93,7 @@ async function loadArticles(e) {
     // window.history.pushState({}, '', `${window.location.origin}/${e.id}`)
 
     xhttp.open('GET', `./${e.id}.html`, true)
+    // Prism.highlightAll()
     xhttp.send()
 
 }
