@@ -28,7 +28,7 @@
 
 .article-entire {
     opacity: 100%;
-    animation: article-made-visible 1s ease-in-out;
+    animation: article-made-visible 1.5s ease-in-out;
 }
 
 @keyframes article-made-visible {
