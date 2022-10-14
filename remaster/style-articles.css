@@ -62,7 +62,11 @@
     font-family: LiberationMono;
     font-size: 16px;
     color: rgba(0, 44, 70, 1);
-    margin: 1rem 0.5rem;
+
+    margin: 1rem 1rem;
+    /* width: 1rem; */
+    /* margin: 0rem -1rem 0rem 0rem; */
+    /* min-width: 17rem; */
 }
 
 .directories {
@@ -114,9 +118,55 @@
 .folder-extension {
     position: absolute;
     background-color: rgba(0, 44, 70, 1);
-    width: 27.5vw;
+    width: 27vw;
     height: 3px;
     margin: -0rem 0 0 52vw;
     border: 1px solid rgba(0, 44, 70, 1);
     border-radius: 0px 0px 3px 3px;
+}
+
+/* media queries */
+
+/* 320 x 640 */
+@media (min-width: 20rem) {
+    .article-content {
+        margin: 1rem 1rem;
+        /* font-weight: 900; */
+    }
+}
+
+/* 360 x 800 */
+@media (min-width: 22.5rem) {
+    .article-content {
+        margin: 1rem 1.25rem;
+    }
+}
+
+@media (min-width: 39rem) {
+    .article-content {
+        margin: 1rem 2.5rem;
+    }
+}
+
+/* 640 x 320 */
+@media (min-width: 40rem) {
+
+    .article-content {
+        margin: 1rem 3rem;
+    }
+}
+
+
+/* 800 x 360 */
+@media (min-width: 50rem) {
+    .article-content {
+        margin: 1rem 3.5rem;
+    }
+}
+
+/* 926 x 428 */
+@media (min-width: 57rem) {
+    .article-content {
+        margin: 1rem 4.5rem;
+    }
 }
