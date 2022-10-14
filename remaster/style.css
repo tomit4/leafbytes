@@ -238,6 +238,7 @@ html, body {
 }
 
 .article-body {
+    /* visibility: hidden; */
     background-color: #c8edff;
     margin: 0.5rem;
     padding: 0.25rem;
