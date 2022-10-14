@@ -149,7 +149,7 @@ function activateScrollBehavior() {
     }, false)
 }
 
-function activateScrollDown() {
+async function activateScrollDown() {
     for (let i = 0; i < icons.length; i++) {
         icons[i].style.visibility = "hidden"
         icons[i].classList.remove('fade-in')
@@ -170,6 +170,7 @@ function activateScrollDown() {
     article.classList.remove('article-onscrollup')
 
     // fade effect on text fades in here
+    await wait(1000)
     for (let i = 0; i < fadeEffectTop.length; i++) {
 
         fadeEffectTop[i].classList.add('fade-in-effect')
