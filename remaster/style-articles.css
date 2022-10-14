@@ -73,7 +73,9 @@
     font-family: LiberationMono;
     font-size: 16px;
     color: rgba(0, 44, 70, 1);
-    margin: 1.25rem 0.5rem;
+    /* margin: 1.25rem 0.5rem; */
+    /* margin: 1.25rem 1.25rem; */
+    margin: 1.25rem 8vw;
 }
 
 .portfolio {
@@ -111,7 +113,8 @@
     z-index: -1;
     width: 26vw;
     height: 0.85em;
-    margin: -0.75rem 0 0 53vw;
+    margin: -0.75rem 0 0 47vw;
+    /* margin: -0.75rem 0 0 5vw; */
     border-radius: 4px 4px 0 0;
 }
 
@@ -120,7 +123,7 @@
     background-color: rgba(0, 44, 70, 1);
     width: 27vw;
     height: 3px;
-    margin: -0rem 0 0 52vw;
+    margin: -0rem 0 0 46.25vw;
     border: 1px solid rgba(0, 44, 70, 1);
     border-radius: 0px 0px 3px 3px;
 }
@@ -143,25 +146,43 @@
     }
 }
 
-@media (min-width: 39rem) {
+/* widths 630 to 640 (i.e. everything inbetween)*/
+@media (max-width: 39rem) {
     .article-content {
         margin: 1rem 2.5rem;
+    }
+    .link-item-extension {
+        margin: -0.75rem 0 0 50vw;
+    }
+    .folder-extension {
+        margin: -0rem 0 0 49.25vw;
     }
 }
 
 /* 640 x 320 */
 @media (min-width: 40rem) {
-
     .article-content {
         margin: 1rem 3rem;
     }
-}
+    .link-item-extension {
+        margin: -0.75rem 0 0 50vw;
+    }
+    .folder-extension {
+        margin: -0rem 0 0 49.25vw;
+    }
 
+}
 
 /* 800 x 360 */
 @media (min-width: 50rem) {
     .article-content {
         margin: 1rem 3.5rem;
+    }
+    .link-item-extension {
+        margin: -0.75rem 0 0 51vw;
+    }
+    .folder-extension {
+        margin: 0rem 0 0 50.25vw;
     }
 }
 
@@ -169,5 +190,11 @@
 @media (min-width: 57rem) {
     .article-content {
         margin: 1rem 4.5rem;
+    }
+    .link-item-extension {
+        margin: -0.75rem 0 0 52vw;
+    }
+    .folder-extension {
+        margin: 0rem 0 0 51.25vw;
     }
 }
