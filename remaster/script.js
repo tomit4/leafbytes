@@ -31,6 +31,7 @@ let article = document.querySelector('.article')
 const leafbytesBody = document.getElementsByClassName('leafbytes-body')
 const articleLinks= document.getElementsByClassName('article-links')
 const linkItem= document.getElementsByClassName('link-item')
+const fadeEffectTop = document.getElementsByClassName('fade-effect-top')
 
 /* footer elements */
 const foot = document.querySelector('.foot')
@@ -158,8 +159,7 @@ function activateScrollDown() {
         footerIcons[k].classList.remove('fade-in')
     }
 
-    // possibly add check for if classList already
-    // contains/includes these classes (is more efficient???)
+    // add onscrollup classes here
     navi.classList.add('navbar-onscrolldown')
     foot.classList.add('foot-onscrolldown')
     article.classList.add('article-onscrolldown')
@@ -168,6 +168,13 @@ function activateScrollDown() {
     navi.classList.remove('navbar-onscrollup')
     foot.classList.remove('foot-onscrollup')
     article.classList.remove('article-onscrollup')
+
+    // fade effect on text fades in here
+    for (let i = 0; i < fadeEffectTop.length; i++) {
+
+        fadeEffectTop[i].classList.add('fade-in-effect')
+        // console.log(fadeEffectTop[i].classList)
+    }
 }
 
 async function activateScrollUp() {
