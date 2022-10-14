@@ -10,6 +10,26 @@
     src: url('./fonts/HussarBold-7mRE.otf');
 }
 
+.article-links {
+    opacity: 100%;
+}
+
+.leafbytes-body {
+    opacity: 100%;
+}
+
+.leafbytes-fadeout-content {
+    opacity: 0%;
+    animation: fadeout-leafbytes-content 1s ease-in-out;
+}
+
+@keyframes fadeout-leafbytes-content {
+    from {
+        opacity: 100%;
+    }
+    to {opacity: 0%;;}
+}
+
 .article-header {
     color: rgba(255, 255, 255, 1);
     background-color: rgba(0, 44, 70, 1);

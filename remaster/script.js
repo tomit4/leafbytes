@@ -28,6 +28,9 @@ const subtitle = document.querySelector('.subtitle')
 
 /* article elements */
 let article = document.querySelector('.article')
+const leafbytesBody = document.getElementsByClassName('leafbytes-body')
+const articleLinks= document.getElementsByClassName('article-links')
+const linkItem= document.getElementsByClassName('link-item')
 
 /* footer elements */
 const foot = document.querySelector('.foot')
@@ -104,8 +107,20 @@ function addArticleDiv() {
     activateScrollBehavior()
 }
 
-function renderArticle(articleId) {
-    // add classes for fade effect before removing article.textContent
+async function renderArticle(articleId) {
+    // fade in the article
+
+    for (let i = 0; i< leafbytesBody.length; i++) {
+        leafbytesBody[i].classList.add('leafbytes-fadeout-content')
+    }
+    for (let i = 0; i< articleLinks.length; i++) {
+        articleLinks[i].classList.add('leafbytes-fadeout-content')
+    }
+    for (let i = 0; i< linkItem.length; i++) {
+        linkItem[i].classList.add('leafbytes-fadeout-content')
+    }
+
+    await wait(1000)
     article.textContent = ""
     const xhttp = new XMLHttpRequest()
     xhttp.onload = function() {
