@@ -62,19 +62,13 @@
     font-family: LiberationMono;
     font-size: 16px;
     color: rgba(0, 44, 70, 1);
-
     margin: 1rem 1rem;
-    /* width: 1rem; */
-    /* margin: 0rem -1rem 0rem 0rem; */
-    /* min-width: 17rem; */
 }
 
 .directories {
     font-family: LiberationMono;
     font-size: 16px;
     color: rgba(0, 44, 70, 1);
-    /* margin: 1.25rem 0.5rem; */
-    /* margin: 1.25rem 1.25rem; */
     margin: 1.25rem 8vw;
 }
 
@@ -149,19 +143,6 @@
 @media (min-width: 22.5rem) {
     .article-content {
         margin: 1rem 1.25rem;
-    }
-}
-
-/* widths 630 to 640 (i.e. everything inbetween)*/
-@media (max-width: 39rem) {
-    .article-content {
-        margin: 1rem 2.5rem;
-    }
-    .link-item-extension {
-        margin: -0.75rem 0 0 52vw;
-    }
-    .folder-extension {
-        margin: -0rem 0 0 51.25vw;
     }
 }
 
