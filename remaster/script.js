@@ -32,6 +32,7 @@ const leafbytesBody = document.getElementsByClassName('leafbytes-body')
 const articleLinks= document.getElementsByClassName('article-links')
 const linkItem= document.getElementsByClassName('link-item')
 const fadeEffectTop = document.getElementsByClassName('fade-effect-top')
+const fadeInEffect = document.getElementsByClassName('fade--in-effect')
 
 /* footer elements */
 const foot = document.querySelector('.foot')
@@ -172,9 +173,7 @@ async function activateScrollDown() {
     // fade effect on text fades in here
     await wait(1000)
     for (let i = 0; i < fadeEffectTop.length; i++) {
-
         fadeEffectTop[i].classList.add('fade-in-effect')
-        // console.log(fadeEffectTop[i].classList)
     }
 }
 
@@ -187,6 +186,11 @@ async function activateScrollUp() {
     navi.classList.remove('navbar-onscrolldown')
     foot.classList.remove('foot-onscrolldown')
     article.classList.remove('article-onscrolldown')
+
+    for (let i = 0; i < fadeEffectTop.length; i++) {
+        fadeEffectTop[i].classList.remove('fade-in-effect')
+    }
+
     await wait(1200)
     for (let i = 0; i < icons.length; i++) {
         icons[i].style.visibility = "visible"

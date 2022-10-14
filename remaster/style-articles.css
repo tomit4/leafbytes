@@ -60,10 +60,12 @@
 
 .fade-in-effect {
     position: fixed;
-    width: 86%;
-    top: 2.65vh;
-    /* height: 10rem; */
-    height: 15vh;
+    /* elements that will need media queries*/
+    width: 33rem;
+    margin: 0 2rem 0 2rem;
+    top: 2.75vh;
+
+    height: 10rem;
     background: linear-gradient(rgba(200, 237, 255, 1), rgba(200, 237, 255, 0));
     opacity: 100%;
     animation: fade-in-top 0.75s ease-in-out;
