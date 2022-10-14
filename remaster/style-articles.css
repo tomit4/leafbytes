@@ -58,29 +58,6 @@
     margin: 0.5rem 0.5rem -1rem 0.5rem;
 }
 
-.fade-in-effect {
-    position: fixed;
-    /* elements that will need media queries*/
-    width: 33rem;
-    margin: 0 2rem 0 2rem;
-    top: 2.75vh;
-
-    height: 10rem;
-    background: linear-gradient(rgba(200, 237, 255, 1), rgba(200, 237, 255, 0));
-    opacity: 100%;
-    animation: fade-in-top 0.75s ease-in-out;
-}
-
-@keyframes fade-in-top {
-    from {
-        opacity: 0%;
-    }
-    to {
-        opacity: 100%;
-    }
-
-}
-
 .article-content {
     font-family: LiberationMono;
     font-size: 16px;
