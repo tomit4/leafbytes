@@ -107,16 +107,16 @@
     z-index: -1;
     width: 26vw;
     height: 0.85em;
-    margin: -0.75rem 0 0 58.75vw;
+    margin: -0.75rem 0 0 53vw;
     border-radius: 4px 4px 0 0;
 }
 
 .folder-extension {
     position: absolute;
     background-color: rgba(0, 44, 70, 1);
-    width: 26vw;
-    height: 1px;
-    margin: -0rem 0 0 58.5vw;
+    width: 27.5vw;
+    height: 3px;
+    margin: -0rem 0 0 52vw;
     border: 1px solid rgba(0, 44, 70, 1);
     border-radius: 0px 0px 3px 3px;
 }
