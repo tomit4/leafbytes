@@ -10,10 +10,6 @@
     src: url('./fonts/HussarBold-7mRE.otf');
 }
 
-.article-links {
-    opacity: 100%;
-}
-
 .leafbytes-body {
     opacity: 100%;
 }
@@ -28,6 +24,16 @@
         opacity: 100%;
     }
     to {opacity: 0%;;}
+}
+
+.article-entire {
+    opacity: 100%;
+    animation: article-made-visible 1s ease-in-out;
+}
+
+@keyframes article-made-visible {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
 }
 
 .article-header {

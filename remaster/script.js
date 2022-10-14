@@ -108,8 +108,6 @@ function addArticleDiv() {
 }
 
 async function renderArticle(articleId) {
-    // fade in the article
-
     for (let i = 0; i< leafbytesBody.length; i++) {
         leafbytesBody[i].classList.add('leafbytes-fadeout-content')
     }
