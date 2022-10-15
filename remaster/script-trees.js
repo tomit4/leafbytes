@@ -1,3 +1,5 @@
+"use strict"
+
 /* article-specific js */
 let treeToggled = false
 

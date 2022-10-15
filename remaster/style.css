@@ -660,3 +660,27 @@ html, body {
         height: 96vh;
     }
 }
+
+/* 320 x 640 */
+@media (min-width: 20rem) {
+}
+
+/* 360 x 800 */
+@media (min-width: 22.5rem) {
+}
+
+/* widths 630 to 640 (i.e. everything inbetween)*/
+@media (min-width: 39rem) {
+}
+
+/* 640 x 320 */
+@media (min-width: 40rem) {
+}
+
+/* 800 x 360 */
+@media (min-width: 50rem) {
+}
+
+/* 926 x 428 */
+@media (min-width: 57rem) {
+}

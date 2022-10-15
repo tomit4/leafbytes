@@ -1,3 +1,5 @@
+"use strict"
+
 window.onload = loadPage()
 window.onload = loadTitle()
 window.onload = removeTitle()
