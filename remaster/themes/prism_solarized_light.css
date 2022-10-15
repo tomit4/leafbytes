@@ -65,16 +65,18 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 }
 
 /* Code blocks */
+/* change these here for margin width */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
+        /* margin: .5em 0; */
+        margin: .5em 1rem;
+        overflow: auto;
 	border-radius: 0.3em;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background-color: #fdf6e3; /* base3 */
+        background-color: #fdf6e3; /* base3 */
 }
 
 /* Inline code */
@@ -119,8 +121,8 @@ pre[class*="language-"] {
 }
 
 .token.entity {
-	color: #657b83; /* base00 */
-	background: #eee8d5; /* base2 */
+        color: #657b83; /* base00 */
+        background: #eee8d5; /* base2 */
 }
 
 .token.atrule,

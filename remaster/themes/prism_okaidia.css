@@ -33,16 +33,19 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
+/* change these here for margin width */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: .5em 0;
+	/* margin: .5em 0; */
+        /* use @media queries to dynamically change these depending on size */
+	margin: .5em 0.5rem;
 	overflow: auto;
-        background-color: #252525;
+        background-color: #002c46;
 	border-radius: 0.3em;
 }
 
 :not(pre) > code[class*="language-"],
-pre[class*="language-"] { background: #272822;
+pre[class*="language-"] { background: #002c46;
 }
 
 /* Inline code */
@@ -57,12 +60,12 @@ pre[class*="language-"] { background: #272822;
 .token.doctype,
 .token.cdata {
         color: #8292a2;
-        background-color: #252525;
+        background-color: #002c46;
 }
 
 .token.punctuation {
         color: #f8f8f2;
-        background-color: #252525;
+        background-color: #002c46;
 }
 
 .token.namespace {
@@ -75,13 +78,13 @@ pre[class*="language-"] { background: #272822;
 .token.symbol,
 .token.deleted {
         color: #f92672;
-        background-color: #252525;
+        background-color: #002c46;
 }
 
 .token.boolean,
 .token.number {
         color: #ae81ff;
-        background-color: #252525;
+        background-color: #002c46;
 }
 
 .token.selector,
@@ -91,7 +94,7 @@ pre[class*="language-"] { background: #272822;
 .token.builtin,
 .token.inserted {
         color: #a6e22e;
-        background-color: #252525;
+        background-color: #002c46;
 }
 
 .token.operator,
@@ -101,7 +104,7 @@ pre[class*="language-"] { background: #272822;
 .style .token.string,
 .token.variable {
         color: #f8f8f2;
-        background-color: #252525;
+        background-color: #002c46;
 }
 
 .token.atrule,
@@ -109,28 +112,27 @@ pre[class*="language-"] { background: #272822;
 .token.function,
 .token.class-name {
         color: #e6db74;
-        background-color: #252525;
+        background-color: #002c46;
 }
 
 .token.keyword {
         color: #66d9ef;
-        background-color: #252525;
 }
 
 .token.regex,
 .token.important {
         color: #fd971f;
-        background-color: #252525;
+        background-color: #002c46;
 }
 
 .token.important,
 .token.bold {
 	font-weight: bold;
-        background-color: #252525;
+        background-color: #002c46;
 }
 .token.italic {
         font-style: italic;
-        background-color: #252525;
+        background-color: #002c46;
 }
 
 .token.entity {

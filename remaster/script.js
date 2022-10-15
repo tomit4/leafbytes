@@ -84,6 +84,7 @@ async function loadArticles(e) {
     const xhttp = new XMLHttpRequest()
     xhttp.onload = function() {
         article.innerHTML = this.responseText
+        window.Prism.highlightAll()
     }
 
     /* changes url to show appropriate link followed
@@ -91,9 +92,7 @@ async function loadArticles(e) {
     * this should directly link to a noscript version for
     * SEO/accessibility/functionality reasons*/
     // window.history.pushState({}, '', `${window.location.origin}/${e.id}`)
-
     xhttp.open('GET', `./${e.id}.html`, true)
-    // Prism.highlightAll()
     xhttp.send()
 
 }
@@ -124,6 +123,7 @@ async function renderArticle(articleId) {
     const xhttp = new XMLHttpRequest()
     xhttp.onload = function() {
         article.innerHTML = this.responseText
+        window.Prism.highlightAll()
     }
 
     // window.history.pushState({}, '', `${window.location.origin}/articles/tech/${articlesId}`)
