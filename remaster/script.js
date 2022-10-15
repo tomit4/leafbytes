@@ -36,8 +36,6 @@ const linkItem= document.getElementsByClassName('link-item')
 const foot = document.querySelector('.foot')
 const footerIcons = document.getElementsByClassName('footer-icons')
 
-/* on page load animation */
-
 /* extremely useful wait() function */
 function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
@@ -74,27 +72,21 @@ async function removeTitle() {
     for (let i = 0; i < icons.length; i++) {
         icons[i].classList.remove('fade-in')
     }
-
 }
 
-/* loads id from HTML and adds it to routes object */
 async function loadArticles(e) {
     await addArticleDiv()
     scaleUp(e)
-    const xhttp = new XMLHttpRequest()
-    xhttp.onload = function() {
-        article.innerHTML = this.responseText
-        window.Prism.highlightAll()
-    }
+    await fetch(`./${e.id}.html`)
+        .then((res) => {
+            return res.text()
+        })
+        .then(((html) => {
+            article.innerHTML = html
+            window.Prism.highlightAll()
+        }))
 
-    /* changes url to show appropriate link followed
-    * but if directly inputted into url bar, will show as 404
-    * this should directly link to a noscript version for
-    * SEO/accessibility/functionality reasons*/
     // window.history.pushState({}, '', `${window.location.origin}/${e.id}`)
-    xhttp.open('GET', `./${e.id}.html`, true)
-    xhttp.send()
-
 }
 
 function addArticleDiv() {
@@ -107,7 +99,7 @@ function addArticleDiv() {
     activateScrollBehavior()
 }
 
-async function renderArticle(articleId) {
+async function renderArticles(articleId) {
     for (let i = 0; i< leafbytesBody.length; i++) {
         leafbytesBody[i].classList.add('leafbytes-fadeout-content')
     }
@@ -120,17 +112,15 @@ async function renderArticle(articleId) {
 
     await wait(1000)
     article.textContent = ""
-    const xhttp = new XMLHttpRequest()
-    xhttp.onload = function() {
-        article.innerHTML = this.responseText
-        window.Prism.highlightAll()
-    }
-
+    await fetch(`./articles/ttech/${articleId}.html`)
+        .then((res) => {
+            return res.text()
+        })
+        .then(((html) => {
+            article.innerHTML = html
+            window.Prism.highlightAll()
+        }))
     // window.history.pushState({}, '', `${window.location.origin}/articles/tech/${articlesId}`)
-
-    xhttp.open('GET', `./articles/tech/${articleId}.html`, true)
-    xhttp.send()
-
 }
 
 function activateScrollBehavior() {
