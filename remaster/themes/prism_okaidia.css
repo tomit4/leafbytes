@@ -3,7 +3,6 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 
 /* customized with custom colors */
 /* Languages Supported Specifically:  html, css, c, js, python, rust, sql, bash, json*/
-/* Plugins installed: line numbers, json, command line, normalize whitespace, copy to clipboard, diff highlight*/
 
 code[class*='language-'],
 pre[class*='language-'] {
