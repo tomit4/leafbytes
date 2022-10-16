@@ -237,9 +237,10 @@ html, body {
     left: 0;
     right: 0;
     position: fixed;
-    background-image: linear-gradient(280deg, #62a5bf 0%, #2a7296 120%);
-    z-index: 1;
-    opacity: 70%;
+    /* background-image: linear-gradient(280deg, #62a5bf 0%, #2a7296 120%); */
+    background-image: linear-gradient(280deg,  rgba(98, 165, 191, 0.2) 0%, rgba(42, 114, 150, 0.7) 120%);
+    /* z-index: 1; */
+    /* opacity: 70%; */
     width: 98vw;
     height: 85.5vh;
     border: 6px solid #004b77;
@@ -248,14 +249,13 @@ html, body {
     animation: dropdown 1s ease-in-out;
 }
 
+
 .article-body {
     margin: 0.5rem;
     padding: 0.25rem;
     border-radius: 5px;
-
-    /* visibility: hidden; */
-    background-color: #c8edff;
-    /* background: linear-gradient(to top, rgba(200,237,255,0) 0%, rgba(200,237,255,1) 80%); */
+    /* background-color: #c8edff; */
+    background-color: rgba(200, 237, 255, 0.5);
 }
 
 @keyframes dropdown {
