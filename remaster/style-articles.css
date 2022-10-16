@@ -71,11 +71,13 @@
 img {
     border: 4px solid #004b77;
     border-radius: 5px;
+    /* @media queries for margins */
+    margin: auto 0 auto -0.75rem;
 }
 
 figcaption {
     font-family: LiberationMono;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 900;
     color: #004b77;
     text-align: center;
@@ -83,9 +85,7 @@ figcaption {
 
 #olkb {
     width: 75vw;
-    /* max-width: */
-    /* @media queries for margins */
-    margin: auto -0.75rem;
+    max-width: 800px;
 }
 
 .directories {
@@ -161,12 +161,33 @@ figcaption {
     .folder-extension {
         width: 24vw;
     }
+    img {
+        margin: auto 0 auto -1.25rem;
+    }
 }
 
 /* 360 x 800 */
 @media (min-width: 22.5rem) {
     .article-content {
         margin: 1rem 1.25rem;
+    }
+    img {
+        margin: auto 0 auto -1.1rem;
+    }
+}
+
+@media (min-width: 23rem) {
+    .article-content {
+        margin: 1rem 2.5rem;
+    }
+    .link-item-extension {
+        margin: -0.75rem 0 0 52vw;
+    }
+    .folder-extension {
+        margin: -0rem 0 0 51.25vw;
+    }
+    img {
+        margin: auto 0 auto -0.25rem;
     }
 }
 
@@ -181,6 +202,9 @@ figcaption {
     .folder-extension {
         margin: -0rem 0 0 51.25vw;
     }
+    img {
+        margin: auto 0 auto 0.75rem;
+    }
 }
 
 /* 640 x 320 */
@@ -194,7 +218,9 @@ figcaption {
     .folder-extension {
         margin: -0rem 0 0 52.25vw;
     }
-
+    img {
+        margin: auto 0 auto 1rem;
+    }
 }
 
 /* 800 x 360 */
@@ -208,6 +234,9 @@ figcaption {
     .folder-extension {
         margin: 0rem 0 0 52.25vw;
     }
+    img {
+        margin: auto 0 auto 2rem;
+    }
 }
 
 /* 926 x 428 */
@@ -220,5 +249,8 @@ figcaption {
     }
     .folder-extension {
         margin: 0rem 0 0 53.25vw;
+    }
+    img {
+        margin: auto 0 auto 3rem;
     }
 }
