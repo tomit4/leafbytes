@@ -4,6 +4,10 @@
     /* left: 0; */
     /* right: 0; */
 
+/* * { */
+    /* border: 2px solid lime; */
+/* } */
+
 @font-face {
     font-family: entsans;
     src: url('./fonts/entsans.ttf');
@@ -594,6 +598,8 @@ html, body {
     /* visibility: hidden; */
     background-image: url('./svg/logo2.svg');
     width: 90vw;
+    max-width: 620px;
+    /* height needs media query */
     height: 75vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -603,6 +609,7 @@ html, body {
     left: 50vw;
     opacity: 40%;
     transform: translate(-49%, -58%);
+    /* transform: scale(1.0); */
     margin: 1rem auto;
     animation: logofadein 3s ease-in-out;
 }
@@ -662,25 +669,29 @@ html, body {
 }
 
 /* 320 x 640 */
-@media (min-width: 20rem) {
-}
+@media (min-width: 20rem) {}
 
 /* 360 x 800 */
-@media (min-width: 22.5rem) {
+@media (min-width: 22.5rem) {}
+
+/* 497px width logo scaling*/
+@media (min-width: 31rem) {
+    .logo {
+        margin-top: 7.75vh;
+        top: 50vh;
+        left: 50vw;
+        height: 84.5vh;
+    }
 }
 
 /* widths 630 to 640 (i.e. everything inbetween)*/
-@media (min-width: 39rem) {
-}
+@media (min-width: 39rem) {}
 
 /* 640 x 320 */
-@media (min-width: 40rem) {
-}
+@media (min-width: 40rem) {}
 
 /* 800 x 360 */
-@media (min-width: 50rem) {
-}
+@media (min-width: 50rem) {}
 
 /* 926 x 428 */
-@media (min-width: 57rem) {
-}
+@media (min-width: 57rem) {}
