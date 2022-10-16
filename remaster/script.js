@@ -101,7 +101,7 @@ function addArticleDiv() {
     activateScrollBehavior()
 }
 
-async function renderArticles(articleId) {
+async function renderArticle(articleId) {
     for (let i = 0; i< leafbytesBody.length; i++) {
         leafbytesBody[i].classList.add('leafbytes-fadeout-content')
     }
@@ -114,7 +114,7 @@ async function renderArticles(articleId) {
 
     await wait(1000)
     article.textContent = ""
-    await fetch(`./articles/ttech/${articleId}.html`)
+    await fetch(`./articles/tech/${articleId}.html`)
         .then((res) => {
             return res.text()
         })
