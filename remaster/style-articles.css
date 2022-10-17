@@ -125,6 +125,102 @@
     border-radius: 0px 0px 3px 3px;
 }
 
+/* contact-form related stylings */
+.forms {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    left: 50vw;
+
+}
+
+.contact-label {
+    font-family: HussarBold;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0.25rem;
+}
+
+input,
+textarea {
+    font-family: LiberationMono;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: LiberationMono;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+    text-align: center;
+}
+
+.contact-input {
+    border: 2.5px solid #004b77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    border-radius: 4px;
+    background-color: #c8edff;
+}
+
+.contact-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 40vh;
+    border: 2.5px solid #004b77;
+    border-radius: 4px;
+    background-color: #c8edff;
+}
+
+#contact-submit-btn {
+    display: flex;
+    margin: 0.25rem auto;
+    padding-top: 0.1rem;
+    font-family: HussarBold;
+    font-size: 14px;
+    font-weight: 900;
+    background-color: #004b77;
+    border: 7px solid #004b77;
+    border-radius: 5px;
+    color: #c8edff;
+    /* outline: none; */
+
+}
+
+/* image related stylings */
+img {
+    border: 4px solid #004b77;
+    border-radius: 5px;
+    /* @media queries for margins */
+    margin: auto 0 auto -0.75rem;
+}
+
+figcaption {
+    font-family: LiberationMono;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+    text-align: center;
+}
+
+#olkb {
+    width: 75vw;
+    max-width: 800px;
+}
 /* media queries */
 
 /* 320 x 640 */
@@ -233,101 +329,4 @@
     img {
         margin: auto 0 auto 3rem;
     }
-}
-
-/* contact-form related stylings */
-.forms {
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    left: 50vw;
-
-}
-
-.contact-label {
-    font-family: HussarBold;
-    font-size: 14px;
-    font-weight: 900;
-    color: #004b77;
-    top: 5px;
-    left: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0.25rem;
-}
-
-input,
-textarea {
-    font-family: LiberationMono;
-    font-size: 14px;
-    font-weight: 900;
-    color: #004b77;
-}
-
-input::placeholder,
-textarea::placeholder {
-    font-family: LiberationMono;
-    font-size: 14px;
-    font-weight: 900;
-    color: #004b77;
-    text-align: center;
-}
-
-.contact-input {
-    border: 2.5px solid #004b77;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14rem;
-    border-radius: 4px;
-    background-color: #c8edff;
-}
-
-.contact-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14rem;
-    height: 40vh;
-    border: 2.5px solid #004b77;
-    border-radius: 4px;
-    background-color: #c8edff;
-}
-
-#contact-submit-btn {
-    display: flex;
-    margin: 0.25rem auto;
-    padding-top: 0.1rem;
-    font-family: HussarBold;
-    font-size: 14px;
-    font-weight: 900;
-    background-color: #004b77;
-    border: 7px solid #004b77;
-    border-radius: 5px;
-    color: #c8edff;
-    /* outline: none; */
-
-}
-
-/* image related stylings */
-img {
-    border: 4px solid #004b77;
-    border-radius: 5px;
-    /* @media queries for margins */
-    margin: auto 0 auto -0.75rem;
-}
-
-figcaption {
-    font-family: LiberationMono;
-    font-size: 14px;
-    font-weight: 900;
-    color: #004b77;
-    text-align: center;
-}
-
-#olkb {
-    width: 75vw;
-    max-width: 800px;
 }
