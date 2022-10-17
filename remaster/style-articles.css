@@ -36,30 +36,59 @@
     to {opacity: 100%;}
 }
 
+.intro-header {
+    display: flex;
+    display: block;
+    /* justify-content: center; */
+    /* align-items: center; */
+    justify-content: flex-right;
+    align-items: flex-right;
+    position: absolute;
+    width: 98vw;
+    height: 8vh;
+    /* background-color: red; */
+}
+
 .prev-btn {
+    display: flex;
+    position: sticky;
     content: url("./icons/triangle-left.svg");
     width: 1.25rem;
     height: 1.25rem;
     padding: 0.25rem;
+    opacity: 70%;
     background-color: rgba(0, 44, 70, 1);
     border: 0px solid rgba(0, 44, 70, 1);
     border-radius: 4px;
+    margin-top: 2.5vh;
+    left: 1vw;
+    /* margin-right: 90vw; */
+
 }
 
 .next-btn {
+    display: flex;
+    /* justify-content: flex-right; */
+    /* align-items: flex-right; */
     content: url("./icons/triangle-right.svg");
-    position: absolute;
+    position: sticky;
     width: 1.25rem;
     height: 1.25rem;
     padding: 0.25rem;
+    opacity: 70%;
     background-color: rgba(0, 44, 70, 1);
     border: 0px solid rgba(0, 44, 70, 1);
     border-radius: 4px;
+    margin-top: 2.5vh;
+    right: 1vw;
+    /* margin-right: 4vw; */
+    float: right;
 }
 
 .prev-btn:hover,
 .next-btn:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 
