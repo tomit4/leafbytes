@@ -170,17 +170,14 @@ textarea::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 14rem;
+    width: 17rem;
     border-radius: 4px;
     background-color: #c8edff;
 }
 
 .contact-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14rem;
-    height: 40vh;
+    width: 17rem;
+    height: 45vh;
     border: 2.5px solid #004b77;
     border-radius: 4px;
     background-color: #c8edff;
@@ -189,7 +186,7 @@ textarea::placeholder {
 #contact-submit-btn {
     display: flex;
     margin: 0.25rem auto;
-    padding-top: 0.1rem;
+    padding-top: 0.2rem;
     font-family: HussarBold;
     font-size: 14px;
     font-weight: 900;
