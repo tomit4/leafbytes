@@ -286,7 +286,7 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 /* 360 x 800 */
 @media (min-width: 22.5rem) {
     pre[class*='language-'] {
-        margin: 0.5em 1.25rem;
+        margin: 0.5em 2.25rem;
     }
 }
 
