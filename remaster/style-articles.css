@@ -50,14 +50,22 @@
     border-radius: 7px 7px 2px 2px;
 }
 
+#home-header {
+    padding-top: 0.75rem;
+}
+
 .article-header3 {
-    width: 90vw;
+    color: rgba(255, 255, 255, 1);
     opacity: 65%;
-    text-align: center;
+    background-color: rgba(0, 44, 70, 1);
     font-family: HussarBold;
     font-size: 16px;
-    color: rgba(0, 44, 70, 1);
-    margin: 0.5rem 0.5rem -0.25rem 0.75rem;
+    text-align: center;
+    width: 80vw;
+    margin: -0.5rem auto 0rem auto;
+    padding-bottom: 0.5rem;
+    border: 1px solid rgba(0, 44, 70, 1);
+    border-radius: 2px 2px 7px 7px;
 }
 
 .article-content {
@@ -195,7 +203,10 @@ textarea::placeholder {
     border-radius: 5px;
     color: #c8edff;
     /* outline: none; */
+}
 
+#contact-submit-btn:hover {
+    cursor: pointer;
 }
 
 /* image related stylings */
