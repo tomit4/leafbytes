@@ -1,25 +1,78 @@
 <div class="article-entire">
     <h2 class="article-header">contact</h2>
+    <h3 class="article-header3">
+        let's make beautiful correspondence together!
+    </h3>
     <div class="article-body">
-        <p class="article-content">
-            Want to get in Touch? Send me an Email!
-        </p>
-        <form class="email" id="emailform">
-          <div>
-              <label for="">Your Name:<input type="text" placeholder="Your name" name="name" required /></label>
-          </div>
-          <div>
-            <label for="">Your Email:<input type="text" placeholder="Your email address" name="email" required /></label>
-          </div>
-          <div>
-            <label for="">Your Subject:<input type="text" placeholder="Subject" name="subject" required /></label>
-          </div>
-          <div>
-            <label for="">Your Message:<textarea placeholder="Your message" name="body" required></textarea></label>
-          </div>
-          <div>
-            <button id="submit">Send a message</button>
-          </div>
-        </form>
+        <div class="forms">
+            <form class="email" id="emailform">
+                <div>
+                    <label
+                        class="contact-label"
+                        id="contact-name-label"
+                        for="name"
+                        >Name:</label
+                    >
+                    <input
+                        class="contact-input"
+                        type="text"
+                        placeholder="John Doe"
+                        id="contact-name"
+                        name="name"
+                        required
+                    />
+                </div>
+                <div>
+                    <label
+                        class="contact-label"
+                        id="contact-email-label"
+                        for="email"
+                        >Email:</label
+                    >
+                    <input
+                        class="contact-input"
+                        type="text"
+                        placeholder="johndoe@emailaddress.com"
+                        id="contact-email"
+                        name="email"
+                        required
+                    />
+                </div>
+                <div>
+                    <label
+                        class="contact-label"
+                        id="contact-subject-label"
+                        for="subject"
+                        >Subject:</label
+                    >
+                    <input
+                        class="contact-input"
+                        type="text"
+                        placeholder="Topic Of Discussion"
+                        id="contact-subject"
+                        name="subject"
+                        required
+                    />
+                </div>
+                <div>
+                    <label
+                        class="contact-label"
+                        id="contact-message-label"
+                        for="body"
+                        >Message:</label
+                    >
+                    <textarea
+                        class="contact-body"
+                        placeholder="enter your message here"
+                        id="contact-message"
+                        name="body"
+                        required
+                    ></textarea>
+                <div>
+                </div>
+                    <button id="submit">Send a message</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

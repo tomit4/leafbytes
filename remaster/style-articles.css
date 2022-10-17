@@ -57,7 +57,7 @@
     font-family: HussarBold;
     font-size: 16px;
     color: rgba(0, 44, 70, 1);
-    margin: 0.5rem 0.5rem -1rem 0.5rem;
+    margin: 0.5rem 0.5rem -0.25rem 0.75rem;
 }
 
 .article-content {
@@ -68,25 +68,6 @@
     z-index: -1;
 }
 
-img {
-    border: 4px solid #004b77;
-    border-radius: 5px;
-    /* @media queries for margins */
-    margin: auto 0 auto -0.75rem;
-}
-
-figcaption {
-    font-family: LiberationMono;
-    font-size: 14px;
-    font-weight: 900;
-    color: #004b77;
-    text-align: center;
-}
-
-#olkb {
-    width: 75vw;
-    max-width: 800px;
-}
 
 .directories {
     font-family: LiberationMono;
@@ -123,7 +104,6 @@ figcaption {
     border-top: none;
     border-right: none;
 }
-
 
 .link-item-extension {
     position: absolute;
@@ -253,4 +233,102 @@ figcaption {
     img {
         margin: auto 0 auto 3rem;
     }
+}
+
+/* contact-form related stylings */
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-itetms: center;
+    left: 50vw;
+
+}
+
+.contact-label {
+    font-family: LiberationMono;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0.25rem;
+}
+
+input {
+    font-family: LiberationMono;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+    text-align: center;
+}
+
+input::placeholder {
+    font-family: LiberationMono;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+    text-align: center;
+}
+
+
+#contact-message-label {
+    /* margin-right: -1.1rem; */
+}
+
+.contact-input {
+    border: 2.5px solid #004b77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* left: 50vw; */
+    width: 14rem;
+    border-radius: 4px;
+    background-color: #c8edff;
+    /* margin: 0.25rem 0rem 0.25rem 5.25rem; */
+}
+
+.contact-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 40vh;
+    border: 2.5px solid #004b77;
+    border-radius: 4px;
+    background-color: #c8edff;
+}
+
+textarea::placeholder {
+    font-family: LiberationMono;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+    text-align: center;
+}
+
+/* image related stylings */
+
+img {
+    border: 4px solid #004b77;
+    border-radius: 5px;
+    /* @media queries for margins */
+    margin: auto 0 auto -0.75rem;
+}
+
+figcaption {
+    font-family: LiberationMono;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+    text-align: center;
+}
+
+#olkb {
+    width: 75vw;
+    max-width: 800px;
 }
