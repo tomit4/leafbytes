@@ -36,6 +36,33 @@
     to {opacity: 100%;}
 }
 
+.prev-btn {
+    content: url("./icons/triangle-left.svg");
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.25rem;
+    background-color: rgba(0, 44, 70, 1);
+    border: 0px solid rgba(0, 44, 70, 1);
+    border-radius: 4px;
+}
+
+.next-btn {
+    content: url("./icons/triangle-right.svg");
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.25rem;
+    background-color: rgba(0, 44, 70, 1);
+    border: 0px solid rgba(0, 44, 70, 1);
+    border-radius: 4px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    cursor: pointer;
+}
+
+
 .article-header {
     color: rgba(255, 255, 255, 1);
     opacity: 65%;
