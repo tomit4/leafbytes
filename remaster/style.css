@@ -240,7 +240,8 @@ html, body {
     height: 85.5vh;
     border: 6px solid #004b77;
     border-radius: 5px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     animation: dropdown 1s ease-in-out;
 }
 

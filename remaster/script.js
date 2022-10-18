@@ -133,10 +133,6 @@ function renderArticle(articleId) {
     }
     renderIt(articleId)
 }
-    // <div class="intro-header">
-    // <h2 class="article-header">why use linux</h2>
-    // <h3 class="article-header3">learning to love the penguin</h3>
-    // <div class="article-body">
 
 async function renderNext(articleId) {
     for (let i = 0; i < introHeader.length; i++) {
