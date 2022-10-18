@@ -23,7 +23,19 @@
     from {
         opacity: 100%;
     }
-    to {opacity: 0%;;}
+    to {opacity: 0%;}
+}
+
+.leafbytes-fadeout-content2 {
+    opacity: 0%;
+    animation: fadeout-leafbytes-content2 1s ease-in-out;
+}
+
+@keyframes fadeout-leafbytes-content2 {
+    from {
+        opacity: 70%;
+    }
+    to {opacity: 0%;}
 }
 
 .article-entire {

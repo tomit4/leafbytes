@@ -34,6 +34,12 @@ const leafbytesBody = document.getElementsByClassName('leafbytes-body')
 const articleLinks= document.getElementsByClassName('article-links')
 const linkItem= document.getElementsByClassName('link-item')
 
+/* article inner elements */
+const introHeader = document.getElementsByClassName('intro-header')
+const articleHeader = document.getElementsByClassName('article-header')
+const articleHeader3 = document.getElementsByClassName('article-header3')
+const articleBody= document.getElementsByClassName('article-body')
+
 /* footer elements */
 const foot = document.querySelector('.foot')
 const footerIcons = document.getElementsByClassName('footer-icons')
@@ -127,18 +133,46 @@ function renderArticle(articleId) {
     }
     renderIt(articleId)
 }
+    // <div class="intro-header">
+    // <h2 class="article-header">why use linux</h2>
+    // <h3 class="article-header3">learning to love the penguin</h3>
+    // <div class="article-body">
 
 async function renderNext(articleId) {
+    for (let i = 0; i < introHeader.length; i++) {
+        introHeader[i].classList.add('leafbytes-fadeout-content2')
+    }
+    for (let i = 0; i < articleHeader.length; i++) {
+        articleHeader[i].classList.add('leafbytes-fadeout-content2')
+    }
+    for (let i = 0; i < articleHeader3.length; i++) {
+        articleHeader3[i].classList.add('leafbytes-fadeout-content2')
+    }
+    for (let i = 0; i < articleBody.length; i++) {
+        articleBody[i].classList.add('leafbytes-fadeout-content2')
+    }
+
     articleId = articleId + 1;
     articleId = `tech-subject-${articleId}`
-    // add a fade out effect
     renderIt(articleId)
 }
 
 async function renderPrev(articleId) {
+    for (let i = 0; i < introHeader.length; i++) {
+        introHeader[i].classList.add('leafbytes-fadeout-content2')
+    }
+    for (let i = 0; i < articleHeader.length; i++) {
+        articleHeader[i].classList.add('leafbytes-fadeout-content2')
+    }
+    for (let i = 0; i < articleHeader3.length; i++) {
+        articleHeader3[i].classList.add('leafbytes-fadeout-content2')
+    }
+    for (let i = 0; i < articleBody.length; i++) {
+        articleBody[i].classList.add('leafbytes-fadeout-content2')
+    }
+
     articleId = articleId - 1;
     articleId = `tech-subject-${articleId}`
-    // add a fade out effect
     renderIt(articleId)
 }
 
