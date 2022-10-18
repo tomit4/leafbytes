@@ -37,16 +37,10 @@
 }
 
 .intro-header {
-    display: flex;
-    display: block;
-    /* justify-content: center; */
-    /* align-items: center; */
-    justify-content: flex-right;
     align-items: flex-right;
     position: absolute;
     width: 98vw;
     height: 8vh;
-    /* background-color: red; */
 }
 
 .prev-btn {
@@ -62,14 +56,11 @@
     border-radius: 4px;
     margin-top: 2.5vh;
     left: 1vw;
-    /* margin-right: 90vw; */
 
 }
 
 .next-btn {
     display: flex;
-    /* justify-content: flex-right; */
-    /* align-items: flex-right; */
     content: url("./icons/triangle-right.svg");
     position: sticky;
     width: 1.25rem;
@@ -79,9 +70,8 @@
     background-color: rgba(0, 44, 70, 1);
     border: 0px solid rgba(0, 44, 70, 1);
     border-radius: 4px;
-    margin-top: 2.5vh;
+    margin-top: 2.25vh;
     right: 1vw;
-    /* margin-right: 4vw; */
     float: right;
 }
 
@@ -118,10 +108,11 @@
     font-size: 16px;
     text-align: center;
     width: 80vw;
+    height: 2.1rem;
     margin: -0.5rem auto 0rem auto;
     padding-bottom: 0.5rem;
     border: 1px solid rgba(0, 44, 70, 1);
-    border-radius: 2px 2px 7px 7px;
+    border-radius: 0px 0px 7px 7px;
 }
 
 .article-content {
@@ -193,7 +184,6 @@
 .forms {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     left: 50vw;
 
 }
@@ -285,8 +275,8 @@ figcaption {
     width: 75vw;
     max-width: 800px;
 }
-/* media queries */
 
+/* media queries */
 /* 320 x 640 */
 @media (min-width: 20rem) {
     .article-content {

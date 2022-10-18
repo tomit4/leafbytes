@@ -206,8 +206,6 @@
 .tech-tree-vert-show {
     animation: tech-show-vert-tree 1s ease-in-out;
     visibility: visible;
-    /* adjust tree-vert height and then adjust first margin parameter */
-    /* height: 7.25rem; */
     height: 19rem;
 }
 
@@ -517,7 +515,7 @@
 #dev-subject-1 {
     margin: -0.5rem 0rem 0rem 1.1rem;
 }
-/* hbar may not have to be dev specific... */
+
 #dev-hbar-1 {
     margin: -6.25rem 0 0 0.25rem;
 }
@@ -632,8 +630,6 @@
 .use-tree-vert-show {
     animation: use-show-vert-tree 1s ease-in-out;
     visibility: visible;
-    /* adjust tree-vert height and then adjust first margin parameter */
-    /* height: 7.25rem; */
     height: 19rem;
 }
 
@@ -857,8 +853,6 @@
     100% {visibility: hidden; height: 0; margin-bottom: 0; }
 }
 
-
-
 /***********************/
 /* art tree css */
 /***********************/
@@ -945,7 +939,7 @@
 #art-subject-1 {
     margin: -.5rem 0rem 0rem 1.1rem;
 }
-/* hbar may not have to be art specific... */
+
 #art-hbar-1 {
     margin: 0rem 0 0 0.25rem;
 }
