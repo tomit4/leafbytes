@@ -101,17 +101,7 @@ function addArticleDiv() {
     activateScrollBehavior()
 }
 
-async function renderArticle(articleId) {
-    for (let i = 0; i< leafbytesBody.length; i++) {
-        leafbytesBody[i].classList.add('leafbytes-fadeout-content')
-    }
-    for (let i = 0; i< articleLinks.length; i++) {
-        articleLinks[i].classList.add('leafbytes-fadeout-content')
-    }
-    for (let i = 0; i< linkItem.length; i++) {
-        linkItem[i].classList.add('leafbytes-fadeout-content')
-    }
-
+async function renderIt(articleId) {
     await wait(1000)
     article.textContent = ""
     await fetch(`./articles/tech/${articleId}.html`)
@@ -123,6 +113,33 @@ async function renderArticle(articleId) {
             window.Prism.highlightAll()
         }))
     // window.history.pushState({}, '', `${window.location.origin}/articles/tech/${articlesId}`)
+}
+
+function renderArticle(articleId) {
+    for (let i = 0; i< leafbytesBody.length; i++) {
+        leafbytesBody[i].classList.add('leafbytes-fadeout-content')
+    }
+    for (let i = 0; i< articleLinks.length; i++) {
+        articleLinks[i].classList.add('leafbytes-fadeout-content')
+    }
+    for (let i = 0; i< linkItem.length; i++) {
+        linkItem[i].classList.add('leafbytes-fadeout-content')
+    }
+    renderIt(articleId)
+}
+
+async function renderNext(articleId) {
+    articleId = articleId + 1;
+    articleId = `tech-subject-${articleId}`
+    // add a fade out effect
+    renderIt(articleId)
+}
+
+async function renderPrev(articleId) {
+    articleId = articleId - 1;
+    articleId = `tech-subject-${articleId}`
+    // add a fade out effect
+    renderIt(articleId)
 }
 
 function activateScrollBehavior() {
