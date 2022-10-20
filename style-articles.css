@@ -183,7 +183,8 @@
 .article-content {
     font-family: LiberationMono;
     /* font-size: 0.95rem; */
-    font-size: 0.85rem;
+    /* font-size: 0.85rem; */
+    font-size: 0.75rem;
     font-weight: 600;
     color: #004b77;
     margin: 1rem 1rem;
@@ -354,7 +355,8 @@ figcaption {
 @media (max-width: 20rem) {
     .article-content {
         margin: 1rem 1rem;
-        font-size: 14px;
+        /* font-size: 14px; */
+        font-size: 12px;
         font-weight: 600;
     }
 
