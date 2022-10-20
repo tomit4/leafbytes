@@ -126,6 +126,65 @@
     border-radius: 0px 0px 7px 7px;
 }
 
+/* comments section */
+.comment-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5rem;
+}
+
+.comment-list {
+    list-style: none;
+}
+
+.comment-name {
+    font-family: HussarBold;
+    font-size: 15px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 1);
+    opacity: 75%;
+    background-color: rgba(0, 44, 70, 1);
+    border: 5px solid rgba(0, 44, 70, 1);
+    padding-top: 0.2rem;
+    padding-left: 0.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+}
+
+.comment-vbar {
+    background-color: #004b77;
+    opacity: 90%;
+    margin-left: 1.5rem;
+    width: 2px;
+    height: 0.75rem;
+}
+
+.comment-hbar {
+    background-color: #004b77;
+    opacity: 90%;
+    margin-left: 1.5rem;
+    width: 1rem;
+    height: 2px;
+}
+
+.comment-message {
+    font-family: LiberationMono;
+    font-size: 14px;
+    font-weight: 900;
+    color: #004b77;
+    background-color: #c8edff;
+    width: 17rem;
+    height: 4rem;
+    margin-left: 2.4rem;
+    margin-top: -0.2rem;
+    padding: 0.25rem;
+    border: 2px solid #004b77;
+    border-radius: 3px;
+}
+
 .article-content {
     font-family: LiberationMono;
     font-size: 16px;
@@ -133,7 +192,6 @@
     margin: 1rem 1rem;
     z-index: -1;
 }
-
 
 .directories {
     font-family: LiberationMono;
@@ -190,8 +248,10 @@
 /* contact-form related stylings */
 .forms {
     display: flex;
+    /* display: inline-block; */
     justify-content: center;
     left: 50vw;
+    /* margin-top: 17rem; */
 
 }
 
