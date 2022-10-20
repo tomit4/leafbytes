@@ -9,3 +9,4 @@ __Checklist__
 - [ ] Add a noscript tag and render your page as not a SPA for reasons of accessibility, privacy, and SEO friendliness
 - [ ] Watch/read [this tutorial](https://dev.to/thedevdrawer/single-page-application-routing-using-hash-or-url-9jh) on buidling a SPA without a framework
 - [ ] Figure out how to best handle <meta> tag shenanigans
+- [ ] For the sqlite database, you sqlcipher instead and require a PRAGMA-KEY via dotenv. Or look into encrypting the .db file
