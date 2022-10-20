@@ -153,6 +153,7 @@
     margin-bottom: -0.1rem;
     margin-left: 2.25rem;
     width: 17rem;
+    overflow: hidden;
 }
 
 .comment-vbar {
@@ -176,6 +177,7 @@
     padding: 0.25rem;
     border: 2px solid #004b77;
     border-radius: 3px;
+    overflow: hidden;
 }
 
 .article-content {
@@ -297,6 +299,14 @@ textarea::placeholder {
     background-color: #c8edff;
 }
 
+.comment-body {
+    width: 17rem;
+    height: 4rem;
+    border: 2.5px solid #004b77;
+    border-radius: 4px;
+    background-color: #c8edff;
+}
+
 #contact-submit-btn {
     display: flex;
     margin: 0.25rem auto;
@@ -313,6 +323,7 @@ textarea::placeholder {
 
 #contact-submit-btn:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* image related stylings */
