@@ -375,6 +375,8 @@ figcaption {
 @media (min-width: 22.5rem) {
     .article-content {
         margin: 1rem 1.25rem;
+        font-size: 12px;
+        font-weight: 600;
     }
     img {
         margin: auto 0 auto -1.1rem;
