@@ -56,7 +56,13 @@ function reloadCss() {
         if (link.rel === 'stylesheet') link.href += ''
     }
 }
-screen.orientation.addEventListener('change', reloadCss())
+const landscape = window.matchMedia('(orientation: landscape)')
+
+landscape.addEventListener('change', (e) => {
+    if (e.matches) reloadCss()
+})
+
+// screen.orientation.addEventListener('change', reloadCss())
 
 async function loadPage() {
     await wait(500)
