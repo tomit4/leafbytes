@@ -49,7 +49,8 @@ function wait(ms) {
 }
 
 /* reloads css when invoked */
-function reloadCss() {
+async function reloadCss() {
+    await wait(1000)
     const links = document.getElementsByTagName('link')
     for (let i in links) {
         if (links[i].rel === 'stylesheet') {
