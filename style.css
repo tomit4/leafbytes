@@ -659,7 +659,7 @@ html, body {
 @media (min-width: 22.5rem) {}
 
 /* 497px width logo scaling*/
-@media (min-width: 31rem) {
+@media (max-width: 31rem) {
     .logo {
         margin-top: 7.75vh;
         top: 50vh;
