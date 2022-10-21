@@ -69,7 +69,7 @@ function wait(ms) {
 
 // screen.orientation.addEventListener('change', reloadCss())
 
-window.screen.orientation.lock('portrait')
+// window.screen.orientation.lock('portrait')
 
 async function loadPage() {
     await wait(500)
