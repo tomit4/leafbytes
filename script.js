@@ -49,25 +49,27 @@ function wait(ms) {
 }
 
 /* reloads css when invoked */
-async function reloadCss() {
-    await wait(1000)
-    const links = document.getElementsByTagName('link')
-    for (let i in links) {
-        if (links[i].rel === 'stylesheet') {
-            let href = links[i].getAttribute('href').split('?')[0]
-            let newHref = href + '?version=' + new Date().getMilliseconds()
-            // console.log(newHref)
-            links[i].setAttribute('href', newHref)
-        }
-    }
-}
-const landscape = window.matchMedia('screen and (min-width:640px) and (orientation: landscape)')
+// async function reloadCss() {
+    // await wait(100)
+    // const links = document.getElementsByTagName('link')
+    // for (let i in links) {
+        // if (links[i].rel === 'stylesheet') {
+            // let href = links[i].getAttribute('href').split('?')[0]
+            // let newHref = href + '?version=' + new Date().getMilliseconds()
+            // // console.log(newHref)
+            // links[i].setAttribute('href', newHref)
+        // }
+    // }
+// }
+// const landscape = window.matchMedia('screen and (min-width:640px) and (orientation: landscape)')
 
-landscape.addEventListener('change', (e) => {
-    if (e.matches) reloadCss()
-})
+// landscape.addEventListener('change', (e) => {
+    // if (e.matches) reloadCss()
+// })
 
 // screen.orientation.addEventListener('change', reloadCss())
+
+window.screen.orientation.lock('portrait')
 
 async function loadPage() {
     await wait(500)
