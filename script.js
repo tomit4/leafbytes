@@ -56,12 +56,12 @@ async function reloadCss() {
         if (links[i].rel === 'stylesheet') {
             let href = links[i].getAttribute('href').split('?')[0]
             let newHref = href + '?version=' + new Date().getMilliseconds()
-            console.log(newHref)
+            // console.log(newHref)
             links[i].setAttribute('href', newHref)
         }
     }
 }
-const landscape = window.matchMedia('(orientation: landscape)')
+const landscape = window.matchMedia('screen and (min-width:640px) and (orientation: landscape)')
 
 landscape.addEventListener('change', (e) => {
     if (e.matches) reloadCss()
