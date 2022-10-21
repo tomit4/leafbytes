@@ -10,7 +10,6 @@ const body = document.querySelector('body')
 /* selectors of HTML elements by tag name */
 const li = document.getElementsByTagName('li')
 
-
 /* navbar elements */
 const navi = document.querySelector('.navi')
 const prompt = document.querySelector('.prompt')
@@ -57,7 +56,7 @@ function reloadCss() {
         if (link.rel === 'stylesheet') link.href += ''
     }
 }
-
+screen.orientation('change', reloadCss())
 
 async function loadPage() {
     await wait(500)
@@ -104,8 +103,6 @@ async function loadArticles(e) {
             window.Prism.highlightAll()
         }))
 
-    await wait(1000)
-    reloadCss()
     // window.history.pushState({}, '', `${window.location.origin}/${e.id}`)
 }
 
@@ -130,8 +127,6 @@ async function renderIt(articleId) {
             article.innerHTML = html
             window.Prism.highlightAll()
         }))
-    await wait(1000)
-    reloadCss()
     // window.history.pushState({}, '', `${window.location.origin}/articles/tech/${articlesId}`)
 }
 
