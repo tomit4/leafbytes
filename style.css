@@ -584,8 +584,9 @@ html, body {
     background-image: url('./svg/logo2.svg');
     width: 90vw;
     max-width: 620px;
+    max-height:1020px;
     /* height needs media query */
-    height: 75vh;
+    height: 77vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
