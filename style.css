@@ -583,8 +583,8 @@ html, body {
     /* visibility: hidden; */
     background-image: url('./svg/logo2.svg');
     width: 90vw;
-    max-width: 620px;
-    max-height:1020px;
+    max-width: 520px;
+    max-height: 920px;
     /* height needs media query */
     height: 77vh;
     background-repeat: no-repeat;
@@ -664,7 +664,7 @@ html, body {
         margin-top: 7.75vh;
         top: 50vh;
         left: 50vw;
-        height: 84.5vh;
+        height: 82.5vh;
     }
 }
 
