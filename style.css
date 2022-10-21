@@ -21,9 +21,11 @@ html, body {
     /* background-image: linear-gradient(280deg, #004b77 0%, #94fff4 120%); */
     /* less saturated version of background */
     background-image: linear-gradient(280deg, #004b77 0%, #baf6ff 120%);
-    height: 100%;
+    min-height: 100vh;
+    width: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 
     /* mozilla firefox styling of scrollbar */
     scrollbar-color: #004b77 #baf6ff;
@@ -53,6 +55,8 @@ html, body {
     background-size: cover;
     background-position: center center;
     width: 98vw;
+    max-width: 1440px;
+    margin: 0 auto;
     height: 98vh;
     opacity: 25%;
 }
@@ -134,6 +138,7 @@ html, body {
     justify-content: center;
     padding: 0rem 1rem 0rem 1rem;
     position: fixed;
+    max-width: 1440px;
     margin: 0.25rem auto;
     left: 0;
     right: 0;
@@ -231,6 +236,8 @@ html, body {
 .article {
     /* visibility: hidden; */
     top: 50vh;
+    /* throws article headers and article-tree off, adjust these elements when designing desktop*/
+    /* max-width: 1440px; */
     margin: -42vh auto auto auto;
     left: 0;
     right: 0;
@@ -248,6 +255,7 @@ html, body {
 .article-body {
     margin: 0.5rem;
     padding: 0.25rem;
+    /* max-width: 1440px; */
     border-radius: 5px;
     background-color: rgba(200, 237, 255, 0.5);
 }
@@ -301,6 +309,7 @@ html, body {
     border: 4px solid #92dcdf;
     border-radius: 8px;
     border-bottom: none;
+    max-width: 1440px;
     width: 96vw;
     height: 2.3rem;
     bottom: 0.25vh;
