@@ -227,7 +227,7 @@
     position: absolute;
     background-color: rgba(255, 255, 255, 1);
     z-index: -1;
-    width: 26vw;
+    width: 22vw;
     height: 0.85em;
     margin: -0.75rem 0 0 47vw;
     border-radius: 4px 4px 0 0;
@@ -236,7 +236,7 @@
 .folder-extension {
     position: absolute;
     background-color: rgba(0, 44, 70, 1);
-    width: 27vw;
+    width: 23vw;
     height: 3px;
     margin: -0rem 0 0 46.25vw;
     border: 1px solid rgba(0, 44, 70, 1);
