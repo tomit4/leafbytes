@@ -60,6 +60,7 @@ html, body {
     margin: 0 auto;
     height: 98vh;
     opacity: 25%;
+    overflow: hidden;
 }
 
 .prompt {
