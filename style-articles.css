@@ -197,7 +197,8 @@
     font-family: LiberationMono;
     font-size: 16px;
     color: rgba(0, 44, 70, 1);
-    margin: 1.25rem 8vw;
+    margin: 1.25rem auto;
+    margin-left: -2.5rem;
     opacity: 70%;
 }
 
@@ -207,7 +208,8 @@
 
 .article-links {
     list-style: none;
-    margin: 1rem auto auto -2.5rem;
+    position: relative;
+    /* margin: 1rem auto; */
 }
 
 .link-item {
@@ -216,10 +218,12 @@
     opacity: 95%;
     font-weight: 900;
     font-size: 17px;
-    width: 60vw;
+    width: 85vw;
+    max-width: 26rem;
     padding-top: 0.1rem;
     padding-left: 1rem;
     border: 3px solid rgba(0, 44, 70, 1);
+    margin: 0 auto;
     border-radius: 5px 5px 0px 0px;
     border-top: none;
     border-right: none;
@@ -227,11 +231,15 @@
 
 .link-item-extension {
     position: absolute;
+    position: fixed;
     background-color: rgba(255, 255, 255, 1);
     z-index: -1;
     width: 22vw;
     height: 0.85em;
-    margin: -0.75rem 0 0 47vw;
+    /* margin: -0.75rem 0 0 47vw; */
+    /* left: -10vw; */
+    right: -90vw;
+    margin-right: 1rem;
     border-radius: 4px 4px 0 0;
 }
 
@@ -240,7 +248,7 @@
     background-color: rgba(0, 44, 70, 1);
     width: 23vw;
     height: 3px;
-    margin: -0rem 0 0 46.25vw;
+    /* margin: -0rem 0 0 46.25vw; */
     border: 1px solid rgba(0, 44, 70, 1);
     border-radius: 0px 0px 3px 3px;
 }
