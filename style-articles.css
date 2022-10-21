@@ -375,7 +375,7 @@ figcaption {
 @media (min-width: 22.5rem) {
     .article-content {
         margin: 1rem 1.25rem;
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         font-weight: 600;
     }
     img {
@@ -418,7 +418,7 @@ figcaption {
 @media (max-width: 40rem) and (orientation:landscape) {
     .article-content {
         margin: 1rem 3rem;
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         font-weight: 600;
 
     }
@@ -436,9 +436,8 @@ figcaption {
 /* 800 x 360 */
 @media (min-width: 50rem) and (orientation:landscape) {
     .article-content {
-        /* background-color: red; */
         margin: 1rem 3.5rem;
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         font-weight: 600;
     }
     .link-item-extension {
