@@ -662,7 +662,7 @@ html, body {
 /* 497px width logo scaling*/
 @media (max-width: 31rem) {
     .logo {
-        margin-top: 7.75vh;
+        margin-top: 7.5vh;
         top: 50vh;
         left: 50vw;
         height: 82.5vh;
