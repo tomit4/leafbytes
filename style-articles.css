@@ -416,9 +416,12 @@ figcaption {
 }
 
 /* 640 x 320 */
-@media (min-width: 40rem) {
+@media (min-width: 40rem) and (orientation:landscape) {
     .article-content {
         margin: 1rem 3rem;
+        font-size: 12px;
+        font-weight: 600;
+
     }
     .link-item-extension {
         margin: -0.75rem 0 0 53vw;
@@ -432,9 +435,11 @@ figcaption {
 }
 
 /* 800 x 360 */
-@media (min-width: 50rem) {
+@media (min-width: 50rem) and (orientation:landscape) {
     .article-content {
         margin: 1rem 3.5rem;
+        font-size: 12px;
+        font-weight: 600;
     }
     .link-item-extension {
         margin: -0.75rem 0 0 53vw;
@@ -448,7 +453,7 @@ figcaption {
 }
 
 /* 926 x 428 */
-@media (min-width: 57rem) {
+@media (min-width: 57rem) and (orientation:landscape) {
     .article-content {
         margin: 1rem 4.5rem;
     }
