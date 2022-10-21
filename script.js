@@ -56,7 +56,7 @@ function reloadCss() {
         if (link.rel === 'stylesheet') link.href += ''
     }
 }
-screen.orientation('change', reloadCss())
+screen.orientation.addEventListener('change', reloadCss())
 
 async function loadPage() {
     await wait(500)
