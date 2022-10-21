@@ -49,6 +49,16 @@ function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
 
+/* reloads css when invoked */
+function reloadCss() {
+    const links = document.getElementsByTagName('link')
+    for (let cl in links) {
+        let link = links[cl]
+        if (link.rel === 'stylesheet') link.href += ''
+    }
+}
+
+
 async function loadPage() {
     await wait(500)
     circuitOuter.classList.add('loadfade')
@@ -92,6 +102,7 @@ async function loadArticles(e) {
         .then(((html) => {
             article.innerHTML = html
             window.Prism.highlightAll()
+            reloadCss()
         }))
 
     // window.history.pushState({}, '', `${window.location.origin}/${e.id}`)
@@ -117,6 +128,7 @@ async function renderIt(articleId) {
         .then(((html) => {
             article.innerHTML = html
             window.Prism.highlightAll()
+            reloadCss()
         }))
     // window.history.pushState({}, '', `${window.location.origin}/articles/tech/${articlesId}`)
 }
