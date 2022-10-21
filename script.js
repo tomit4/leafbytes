@@ -102,9 +102,10 @@ async function loadArticles(e) {
         .then(((html) => {
             article.innerHTML = html
             window.Prism.highlightAll()
-            reloadCss()
         }))
 
+    await wait(1000)
+    reloadCss()
     // window.history.pushState({}, '', `${window.location.origin}/${e.id}`)
 }
 
@@ -128,8 +129,9 @@ async function renderIt(articleId) {
         .then(((html) => {
             article.innerHTML = html
             window.Prism.highlightAll()
-            reloadCss()
         }))
+    await wait(1000)
+    reloadCss()
     // window.history.pushState({}, '', `${window.location.origin}/articles/tech/${articlesId}`)
 }
 
