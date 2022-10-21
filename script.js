@@ -51,9 +51,13 @@ function wait(ms) {
 /* reloads css when invoked */
 function reloadCss() {
     const links = document.getElementsByTagName('link')
-    for (let cl in links) {
-        let link = links[cl]
-        if (link.rel === 'stylesheet') link.href += ''
+    for (let i in links) {
+        if (links[i].rel === 'stylesheet') {
+            let href = links[i].getAttribute('href').split('?')[0]
+            let newHref = href + '?version=' + new Date().getMilliseconds()
+            console.log(newHref)
+            links[i].setAttribute('href', newHref)
+        }
     }
 }
 const landscape = window.matchMedia('(orientation: landscape)')
