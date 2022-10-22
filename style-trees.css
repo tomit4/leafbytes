@@ -34,13 +34,9 @@
 }
 
 .tree-container{
-    width: 26rem;
-    /* height: 30rem; */
-    /* margin: 0 auto 0 10rem; */
-    /* left: 50vw; */
-    margin: 0 auto 0 auto;
-    /* background-color: red; */
-
+    max-width: 26rem;
+    display: flex;
+    margin: 0 auto;
 }
 
 .portfolio-tree-horiz  {
@@ -49,16 +45,15 @@
     visibility: hidden;
     height: 0.15rem;
     top: 8.75rem;
-    /* left: 12rem; */
-    /* right: 0rem; */
-    /* display: block; */
-    /* margin: 0rem auto; */
+    display: flex;
+    margin: 0 auto;
 }
 
-/* @media (max-width: 67rem) { */
-    /* .portfolio-tree-horiz { */
-    /* } */
-/* } */
+@media (max-width: 486px) {
+    .tree-container {
+    max-width: 85vw;
+    }
+}
 
 .portfolio-tree-horiz-show {
     opacity: 100%;
