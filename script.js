@@ -4,6 +4,14 @@ window.onload = loadPage()
 window.onload = loadTitle()
 window.onload = removeTitle()
 
+/* event listener that determines size of screen
+* and then inserts span elements before each navbar li*/
+window.addEventListener('resize', () => {
+    if (window.matchMedia('(min-width: 500px)').matches) {
+        console.log('Screen width is at least 500px')
+    } else console.log('Screen less than 500px')
+})
+
 /* selector for the entire html body */
 const body = document.querySelector('body')
 

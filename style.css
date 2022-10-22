@@ -197,6 +197,11 @@ html, body {
     text-decoration-thickness: 0.1rem;
 }
 
+.navbar-menu-item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 /* icon fade-in/out */
 .fade-in {
     animation: fadein 1s ease-in-out;
@@ -697,15 +702,9 @@ html, body {
 /* 926 x 428 */
 @media (min-width: 57rem) {}
 
-@media (min-height: 67rem) {
+/* height: 1080) */
+@media (min-height: 67.5rem) {
     .navbar {
         padding-right: 3rem;
     }
-
-    .navbar-menu-item:hover {
-        transform: scale(1.1);
-        cursor: pointer;
-    }
-
-    /* use js to add class to .icons with hover animation */
 }
