@@ -8,12 +8,17 @@
 /***********************/
 /* portfolio tree css */
 /***********************/
+
+/* .portfolio { */
+    /* position: relative; */
+/* } */
+
 .portfolio-tree-vert {
     position: relative;
     background-color : rgba(0, 44, 70, 1);
     width: 0.20rem;
     /* margin: 0 auto; */
-    margin: 0rem 0 0rem 0.25rem;
+    /* margin: 0rem 0 0rem 1.75rem; */
 }
 
 .portfolio-tree-vert-show {
@@ -28,12 +33,24 @@
     height: 0;
 }
 
+.tree-container{
+    width: 26rem;
+    /* height: 30rem; */
+    /* margin: 0 auto 0 10rem; */
+    /* left: 50vw; */
+    margin: 0 auto 0 auto;
+    /* background-color: red; */
+
+}
+
 .portfolio-tree-horiz  {
     position: absolute;
     background-color : rgba(0, 44, 70, 1);
     visibility: hidden;
     height: 0.15rem;
-    left: 19rem;
+    top: 8.75rem;
+    /* left: 12rem; */
+    /* right: 0rem; */
     /* display: block; */
     /* margin: 0rem auto; */
 }
