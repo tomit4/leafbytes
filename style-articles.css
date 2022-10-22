@@ -363,7 +363,7 @@ figcaption {
 @media (max-width: 20rem) {
     .article-content {
         margin: 1rem 1rem;
-        /* font-size: 0.85rem; */
+        font-size: 0.65rem;
         font-weight: 600;
     }
 
@@ -382,7 +382,7 @@ figcaption {
 @media (min-width: 22.5rem) {
     .article-content {
         margin: 1rem 1.25rem;
-        /* font-size: 0.85rem; */
+        font-size: 0.65rem;
         font-weight: 600;
     }
     img {
@@ -425,7 +425,7 @@ figcaption {
 @media (max-width: 40rem) and (orientation:landscape) {
     .article-content {
         margin: 1rem 3rem;
-        /* font-size: 0.85rem; */
+        font-size: 0.65rem;
         font-weight: 600;
 
     }
@@ -444,7 +444,7 @@ figcaption {
 @media (min-width: 50rem) and (orientation:landscape) {
     .article-content {
         margin: 1rem 3.5rem;
-        /* font-size: 0.85rem; */
+        font-size: 0.65rem;
         font-weight: 600;
     }
     .link-item-extension {
