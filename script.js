@@ -104,6 +104,23 @@ async function removeTitle() {
     }
 }
 
+// function hover(el, enter, leave) {
+    // el.addEventListener('mouseenter', enter)
+    // el.addEventListener('mouseleave', leave)
+// }
+(function iconsScaleOnHover() {
+    for (let i = 0; i < icons.length; i++) {
+        if (!icons[i].classList.contains('scaled')) {
+            icons[i].addEventListener('mouseenter', () => {
+                icons[i].classList.add('scaled')
+            })
+            icons[i].addEventListener('mouseleave', () => {
+                icons[i].classList.remove('scaled')
+            })
+        }
+    }
+})()
+
 async function loadArticles(e) {
     await addArticleDiv()
     scaleUp(e)

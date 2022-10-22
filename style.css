@@ -104,28 +104,25 @@ html, body {
         width: 15%;
     }
     to {
-        /* media query?? depends if phone or small tablet... */
-        /* width: 85%; */
-        /* mobile */
         width: 85vw;
         margin-left: -0.1em;
     }
 }
 
-@keyframes retract {
-   from {
-        /* width: 85%; */
-        left: 5vw;
-        right: 0;
-        width: 80%;
-   }
-   to {
-        /* width: 7%; */
-        width: 9%;
-        left: 5vw;
-        right: 95vw;
-   }
-}
+/* @keyframes retract { */
+   /* from { */
+        /* [> width: 85%; <] */
+        /* left: 5vw; */
+        /* right: 0; */
+        /* width: 80%; */
+   /* } */
+   /* to { */
+        /* [> width: 7%; <] */
+        /* width: 9%; */
+        /* left: 5vw; */
+        /* right: 95vw; */
+   /* } */
+/* } */
 
 .nav {
     position: fixed;
@@ -189,6 +186,15 @@ html, body {
     min-height: 27px;
     max-height: 29px;
     transform: translate(10%, -0%);
+}
+
+.navbar-menu-item {
+    margin-top: 0.5rem;
+    font-family: HussarBold;
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
 }
 
 /* icon fade-in/out */
@@ -621,9 +627,7 @@ html, body {
 }
 
 /* hover events */
-.icons:hover,
-.prompt:hover,
-.dots:hover {
+.icons:hover {
     cursor: pointer;
 }
 
@@ -689,3 +693,15 @@ html, body {
 
 /* 926 x 428 */
 @media (min-width: 57rem) {}
+
+@media (min-height: 67rem) {
+    .navbar {
+        padding-right: 3rem;
+    }
+
+    .navbar-menu-item:hover {
+        transform: scale(1.1);
+    }
+
+    /* use js to add class to .icons with hover animation */
+}

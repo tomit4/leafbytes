@@ -304,7 +304,7 @@ textarea::placeholder {
 
 .contact-body {
     width: 17rem;
-    height: 45vh;
+    height: 30vh;
     border: 2.5px solid #004b77;
     border-radius: 4px;
     background-color: #c8edff;
