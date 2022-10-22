@@ -184,8 +184,7 @@
 .article-content {
     display: flex;
     font-family: LiberationMono;
-    /* font-size: 0.95rem; */
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #004b77;
     margin: 1rem 1rem;
@@ -364,7 +363,7 @@ figcaption {
 @media (max-width: 20rem) {
     .article-content {
         margin: 1rem 1rem;
-        font-size: 0.85rem;
+        /* font-size: 0.85rem; */
         font-weight: 600;
     }
 
@@ -383,7 +382,7 @@ figcaption {
 @media (min-width: 22.5rem) {
     .article-content {
         margin: 1rem 1.25rem;
-        font-size: 0.85rem;
+        /* font-size: 0.85rem; */
         font-weight: 600;
     }
     img {
@@ -426,7 +425,7 @@ figcaption {
 @media (max-width: 40rem) and (orientation:landscape) {
     .article-content {
         margin: 1rem 3rem;
-        font-size: 0.85rem;
+        /* font-size: 0.85rem; */
         font-weight: 600;
 
     }
@@ -445,7 +444,7 @@ figcaption {
 @media (min-width: 50rem) and (orientation:landscape) {
     .article-content {
         margin: 1rem 3.5rem;
-        font-size: 0.85rem;
+        /* font-size: 0.85rem; */
         font-weight: 600;
     }
     .link-item-extension {
