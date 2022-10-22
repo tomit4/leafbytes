@@ -629,6 +629,9 @@ html, body {
 /* hover events */
 .icons:hover {
     cursor: pointer;
+    animation: sscaleup .5s;
+    transform: scale(1.25);
+    transform-origin: bottom left;
 }
 
 /* onclick events */
@@ -701,6 +704,7 @@ html, body {
 
     .navbar-menu-item:hover {
         transform: scale(1.1);
+        cursor: pointer;
     }
 
     /* use js to add class to .icons with hover animation */
