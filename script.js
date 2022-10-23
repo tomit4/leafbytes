@@ -59,29 +59,6 @@ function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
 
-/* reloads css when invoked */
-// async function reloadCss() {
-    // await wait(100)
-    // const links = document.getElementsByTagName('link')
-    // for (let i in links) {
-        // if (links[i].rel === 'stylesheet') {
-            // let href = links[i].getAttribute('href').split('?')[0]
-            // let newHref = href + '?version=' + new Date().getMilliseconds()
-            // // console.log(newHref)
-            // links[i].setAttribute('href', newHref)
-        // }
-    // }
-// }
-// const landscape = window.matchMedia('screen and (min-width:640px) and (orientation: landscape)')
-
-// landscape.addEventListener('change', (e) => {
-    // if (e.matches) reloadCss()
-// })
-
-// screen.orientation.addEventListener('change', reloadCss())
-
-// window.screen.orientation.lock('portrait')
-
 async function loadPage() {
     await wait(500)
     circuitOuter.classList.add('loadfade')
@@ -247,7 +224,6 @@ async function activateScrollUp() {
     navi.classList.add('navbar-onscrollup')
     foot.classList.add('foot-onscrollup')
     article.classList.add('article-onscrollup')
-    // await wai    t() for these based off of scrollup animations
     navi.classList.remove('navbar-onscrolldown')
     foot.classList.remove('foot-onscrolldown')
     article.classList.remove('article-onscrolldown')
@@ -268,7 +244,6 @@ async function activateScrollUp() {
 function scaleUp(e) {
     const selectedIcon = document.getElementById(e.id)
     for (let i = 0; i < icons.length; i++) {
-        /* see MDN article on DOMTokenList for contains documentation */
         if (icons[i].classList.contains('scaled')) {
             icons[i].classList.remove('scaled')
         } else
