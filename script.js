@@ -4,16 +4,6 @@ window.onload = loadPage()
 window.onload = loadTitle()
 window.onload = removeTitle()
 
-/* event listener that determines size of screen
-* and then inserts a ul of desktop-menu-items(essentially 2nd navbar)
-* with contact,about,home,comments,links list in it */
-
-window.addEventListener('resize', () => {
-    if (window.matchMedia('(min-width: 927px)').matches) {
-        // render desktop-menu-items here
-        console.log('Screen width is more than or equal to 927px')
-    } else console.log('Screen width less than 927px')
-})
 
 /* selector for the entire html body */
 const body = document.querySelector('body')
@@ -38,6 +28,9 @@ const current = document.querySelector('.current')
 const leafbytes = document.querySelector('.leafbytes')
 const subtitle = document.querySelector('.subtitle')
 
+/* grab nav elements for generating html desktop navbar */
+const nav = document.getElementsByTagName('nav')
+
 /* article elements */
 let article = document.querySelector('.article')
 const leafbytesBody = document.getElementsByClassName('leafbytes-body')
@@ -58,6 +51,17 @@ const footerIcons = document.getElementsByClassName('footer-icons')
 function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
+
+/* event listener that determines size of screen
+* and then inserts a ul of desktop-menu-items(essentially 2nd navbar)
+* with contact,about,home,comments,links list in it */
+
+window.addEventListener('resize', () => {
+    if (window.matchMedia('(min-width: 927px)').matches) {
+        // render desktop-menu-items here
+        console.log('Screen width is more than or equal to 927px')
+    } else console.log('Screen width less than 927px')
+})
 
 async function loadPage() {
     await wait(500)
