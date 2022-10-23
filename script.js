@@ -28,8 +28,10 @@ const current = document.querySelector('.current')
 const leafbytes = document.querySelector('.leafbytes')
 const subtitle = document.querySelector('.subtitle')
 
-/* grab nav elements for generating html desktop navbar */
-const nav = document.getElementsByTagName('nav')
+/* grab ul elements for generating html desktop navbar */
+// <ul class="desktop-menu-items">
+// const desktopMenuItems = document.getElementsByClassName('desktop-menu-items')
+const desktopMenuItems = document.querySelector('.desktop-menu-items')
 
 /* article elements */
 let article = document.querySelector('.article')
@@ -60,7 +62,19 @@ window.addEventListener('resize', () => {
     if (window.matchMedia('(min-width: 927px)').matches) {
         // render desktop-menu-items here
         console.log('Screen width is more than or equal to 927px')
-    } else console.log('Screen width less than 927px')
+        // createt a for loop that iterates over an
+        // object or array and creates these elements and adjusts
+        // the navbar styles
+        const node = document.createElement('li')
+        node.classList.add('navbar-menu-item')
+        node.id = 'menu-contact'
+        node.innerHTML = 'Contact'
+        node.addEventListener('click', loadArticles(contact))
+        desktopMenuItems.appendChild(node)
+    } else {
+        console.log('Screen width less than 927px')
+        desktopMenuItems.innerHTML = ''
+    }
 })
 
 async function loadPage() {
