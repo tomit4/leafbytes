@@ -109,7 +109,7 @@ html, body {
     }
 }
 
-.navi {
+.nav {
     position: fixed;
 }
 
@@ -123,8 +123,8 @@ html, body {
     width: 80vw;
 
     /* mobile */
-    /* height: 2.5rem; */
-    /* desktop */
+    height: 2.5rem;
+    /* desktop/tablet */
     height: 4rem;
 
     list-style: none;
@@ -154,7 +154,10 @@ html, body {
 }
 
 .navbar-onscrollup {
-    height: 2.5rem;
+    /* mobile */
+    /* height: 2.5rem; */
+    /* desktop/tablet */
+    height: 4rem;
     animation: navbar-onscrollup-animation 1.5s ease-in;
 }
 
@@ -171,12 +174,12 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
 
     /* mobile */
     /* margin: 0.25rem 1rem 0.25rem 0.25rem; */
     /* desktop/tablet */
     margin: 0.25rem 1.75rem 0.25rem 1.85rem;
-
 
     padding: 0.25rem;
     min-height: 27px;
@@ -184,11 +187,11 @@ html, body {
     transform: translate(10%, -0%);
 }
 
+
 .desktop-menu-items {
     position: absolute;
     display: flex;
     justify-content: center;
-    z-index: 2;
     left: 0;
     right: 0;
     margin: 0.5rem 1rem auto 0rem;
@@ -198,12 +201,20 @@ html, body {
 .navbar-menu-item {
     /* visibility: hidden; */
     margin: 2rem 2.25rem 0rem 0rem;
+    z-index: 2;
     display: inline-block;
     font-family: HussarBold;
     font-size: 0.85rem;
     color: #ffffff;
     text-decoration: underline;
     text-decoration-thickness: 0.1rem;
+}
+
+.icons:hover {
+    cursor: pointer;
+    animation: sscaleup .5s;
+    transform: scale(1.25);
+    transform-origin: bottom left;
 }
 
 .navbar-menu-item:hover {
@@ -646,12 +657,6 @@ html, body {
 }
 
 /* hover events */
-.icons:hover {
-    cursor: pointer;
-    animation: sscaleup .5s;
-    transform: scale(1.25);
-    transform-origin: bottom left;
-}
 
 /* onclick events */
 .scaled {
@@ -714,7 +719,9 @@ html, body {
 @media (min-width: 50rem) {}
 
 /* 926 x 428 */
-@media (min-width: 57rem) {}
+@media (min-width: 57rem) {
+    /* put the tablet/desktop settings here */
+}
 
 /* height: 1080) */
 @media (min-height: 67.5rem) {}
