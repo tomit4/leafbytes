@@ -75,15 +75,17 @@ window.addEventListener('resize', () => {
         // }
 
         // render desktop-menu-items here
-        // createt a for loop that iterates over an
-        // object or array and creates these elements and adjusts
-        // the navbar styles
-        const node = document.createElement('li')
-        node.classList.add('navbar-menu-item')
-        node.id = 'menu-contact'
-        node.innerHTML = 'Contact'
-        node.addEventListener('click', loadArticles(contact))
-        desktopMenuItems.appendChild(node)
+        const navList = { 'contact': contact, 'about': about, 'home': home, 'comments': comments, 'link': link }
+
+        for (let key in navList) {
+            // const value = navList[key]
+            const node = document.createElement('li')
+            node.classList.add('navbar-menu-item')
+            node.innerHTML = `${key[0].toUpperCase()}${key.substring(1,key.length)}`
+            node.addEventListener('click', loadArticles(navList[key]))
+            desktopMenuItems.appendChild(node)
+        }
+
     } else {
         console.log('Screen width less than 927px')
 
