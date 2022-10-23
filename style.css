@@ -125,7 +125,7 @@ html, body {
     /* mobile */
     height: 2.5rem;
     /* desktop/tablet */
-    height: 4rem;
+    /* height: 4rem; */
 
     list-style: none;
     top: 0%;
@@ -155,9 +155,9 @@ html, body {
 
 .navbar-onscrollup {
     /* mobile */
-    /* height: 2.5rem; */
+    height: 2.5rem;
     /* desktop/tablet */
-    height: 4rem;
+    /* height: 4rem; */
     animation: navbar-onscrollup-animation 1.5s ease-in;
 }
 
@@ -177,9 +177,9 @@ html, body {
     z-index: 3;
 
     /* mobile */
-    /* margin: 0.25rem 1rem 0.25rem 0.25rem; */
+    margin: 0.25rem 1rem 0.25rem 0.25rem;
     /* desktop/tablet */
-    margin: 0.25rem 1.75rem 0.25rem 1.85rem;
+    /* margin: 0.25rem 1.75rem 0.25rem 1.85rem; */
 
     padding: 0.25rem;
     min-height: 27px;
@@ -199,7 +199,7 @@ html, body {
 }
 
 .navbar-menu-item {
-    /* visibility: hidden; */
+    visibility: hidden;
     margin: 2rem 2.25rem 0rem 0rem;
     z-index: 2;
     display: inline-block;
