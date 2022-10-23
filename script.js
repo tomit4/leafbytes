@@ -5,11 +5,14 @@ window.onload = loadTitle()
 window.onload = removeTitle()
 
 /* event listener that determines size of screen
-* and then inserts span elements before each navbar li*/
+* and then inserts a ul of desktop-menu-items(essentially 2nd navbar)
+* with contact,about,home,comments,links list in it */
+
 window.addEventListener('resize', () => {
-    if (window.matchMedia('(min-width: 500px)').matches) {
-        console.log('Screen width is at least 500px')
-    } else console.log('Screen less than 500px')
+    if (window.matchMedia('(min-width: 927px)').matches) {
+        // render desktop-menu-items here
+        console.log('Screen width is more than or equal to 927px')
+    } else console.log('Screen width less than 927px')
 })
 
 /* selector for the entire html body */
