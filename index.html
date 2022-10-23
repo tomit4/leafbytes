@@ -15,11 +15,18 @@
     <body>
         <nav>
             <ul class="navi prompt">
-                    <span class="navbar-menu-item" onclick="loadArticles(contact)">Contacts</span><li class="icons" id="contact" onresize="loadArticles(contact)" onclick="loadArticles(contact)"></li>
-                    <span class="navbar-menu-item" onclick="loadArticles(about)">About</span><li class="icons" id="about" onresize="loadArticles(about)" onclick="loadArticles(about)"></li>
-                    <span class="navbar-menu-item" onclick="loadArticles(home)">Home</span><li class="icons" id="home" onresize="loadArticles(home)" onclick="loadArticles(home)"></li>
-                    <span class="navbar-menu-item" onclick="loadArticles(comments)">Comments</span><li class="icons" id="comments" onresize="loadArticles(comments)" onclick="loadArticles(comments)"></li>
-                    <span class="navbar-menu-item" onclick="loadArticles(link)">Links</span><li class="icons" id="link" onresize="loadArticles(link)" onclick="loadArticles(link)"></li>
+                <li class="icons" id="contact" onclick="loadArticles(contact)"></li>
+                <li class="icons" id="about" onclick="loadArticles(about)"></li>
+                <li class="icons" id="home" onclick="loadArticles(home)"></li>
+                <li class="icons" id="comments" onclick="loadArticles(comments)"></li>
+                <li class="icons" id="link" onclick="loadArticles(link)"></li>
+            </ul>
+            <ul class="desktop-menu-items">
+                <li class="navbar-menu-item" id="menu-contact" onclick="loadArticles(contact)">Contact</li>
+                <li class="navbar-menu-item" id="menu-about" onclick="loadArticles(about)">About</li>
+                <li class="navbar-menu-item" id="menu-home" onclick="loadArticles(home)">Home</li>
+                <li class="navbar-menu-item" id="menu-comments" onclick="loadArticles(comments)">Comments</li>
+                <li class="navbar-menu-item" id="menu-link" onclick="loadArticles(link)">Links</li>
             </ul>
         </nav>
 
