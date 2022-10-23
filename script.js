@@ -13,6 +13,8 @@ const li = document.getElementsByTagName('li')
 
 /* navbar elements */
 const navi = document.querySelector('.navi')
+const navBar = document.querySelector('.navbar')
+const navBarOnScrollUp = document.querySelector('.navbar-onscrollup')
 const prompt = document.querySelector('.prompt')
 const icons = document.getElementsByClassName('icons')
 
@@ -60,8 +62,19 @@ function wait(ms) {
 
 window.addEventListener('resize', () => {
     if (window.matchMedia('(min-width: 927px)').matches) {
-        // render desktop-menu-items here
         console.log('Screen width is more than or equal to 927px')
+
+        for (let i = 0; i < icons.length; i++) {
+            icons[i].style.margin = '0.25rem 1.75rem 0.25rem 1.85rem'
+        }
+
+        navi.style.height = '4rem'
+        // doesn't work for some yet known reason...
+        // if (navi.classList.contains('navbar')) {
+            // navBarOnScrollUp.style.height = '4rem'
+        // }
+
+        // render desktop-menu-items here
         // createt a for loop that iterates over an
         // object or array and creates these elements and adjusts
         // the navbar styles
@@ -73,6 +86,13 @@ window.addEventListener('resize', () => {
         desktopMenuItems.appendChild(node)
     } else {
         console.log('Screen width less than 927px')
+
+        for (let i = 0; i < icons.length; i++) {
+            icons[i].style.margin = '0.25rem 1rem 0.25rem 0.25rem'
+        }
+
+        navi.style.height = '2.5rem'
+
         desktopMenuItems.innerHTML = ''
     }
 })
