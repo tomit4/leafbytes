@@ -56,45 +56,40 @@ function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
 
-/* event listener that determines size of screen
-* and then inserts a ul of desktop-menu-items(essentially 2nd navbar)
-* with contact,about,home,comments,links list in it */
-
 window.addEventListener('resize', () => {
     if (window.matchMedia('(min-width: 927px)').matches) {
         console.log('Screen width is more than or equal to 927px')
-
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.margin = '0.25rem 1.75rem 0.25rem 1.85rem'
         }
-
         navi.style.height = '4rem'
-        // doesn't work for some yet known reason...
-        // if (navi.classList.contains('navbar')) {
+        // if (navi.classList.contains('navbar-onscrollup')) {
             // navBarOnScrollUp.style.height = '4rem'
         // }
-
         // render desktop-menu-items here
         const navList = { 'contact': contact, 'about': about, 'home': home, 'comments': comments, 'link': link }
 
         for (let key in navList) {
-            // const value = navList[key]
             const node = document.createElement('li')
             node.classList.add('navbar-menu-item')
+            node.id = `menu-${key}`
             node.innerHTML = `${key[0].toUpperCase()}${key.substring(1,key.length)}`
-            node.addEventListener('click', loadArticles(navList[key]))
+            node.addEventListener('click', (e) => {
+                e.preventDefault()
+                loadArticles(navList[key])
+            })
             desktopMenuItems.appendChild(node)
         }
-
     } else {
         console.log('Screen width less than 927px')
-
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.margin = '0.25rem 1rem 0.25rem 0.25rem'
         }
-
         navi.style.height = '2.5rem'
-
+        if (navi.classList.contains('navbar-onscrollup')) {
+            // navBarOnScrollUp.style.height = '2.5rem'
+            // console.log(navBarOnScrollUp)
+        }
         desktopMenuItems.innerHTML = ''
     }
 })
