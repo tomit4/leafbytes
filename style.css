@@ -58,8 +58,7 @@ html, body {
 /* circuit-board background image */
 .circuits {
     background-image: url("./svg/circuit_board_vector.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center center;
     width: 98vw;
     max-width: 1440px;
