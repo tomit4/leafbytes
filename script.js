@@ -4,7 +4,6 @@ window.onload = loadPage()
 window.onload = loadTitle()
 window.onload = removeTitle()
 
-
 /* selector for the entire html body */
 const body = document.querySelector('body')
 
@@ -14,7 +13,7 @@ const li = document.getElementsByTagName('li')
 /* navbar elements */
 const navi = document.querySelector('.navi')
 const navBar = document.querySelector('.navbar')
-const navBarOnScrollUp = document.querySelector('.navbar-onscrollup')
+const navBarOnScrollUp = document.getElementsByClassName('navbar-onscrollup')
 const prompt = document.querySelector('.prompt')
 const icons = document.getElementsByClassName('icons')
 
@@ -56,7 +55,15 @@ function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
 
+window.addEventListener('load', () => {
+    renderDesktopNav()
+})
+
 window.addEventListener('resize', () => {
+    renderDesktopNav()
+})
+
+function renderDesktopNav() {
     if (window.matchMedia('(min-width: 927px)').matches) {
         desktopMenuItems.innerHTML = ''
 
@@ -64,9 +71,11 @@ window.addEventListener('resize', () => {
             icons[i].style.margin = '0.25rem 1.75rem 0.25rem 1.85rem'
         }
         navi.style.height = '4rem'
-        // if (navi.classList.contains('navbar-onscrollup')) {
-            // navBarOnScrollUp.style.height = '4rem'
-        // }
+        if (navi.classList.contains('navbar-onscrollup')) {
+             for (let i = 0; i < navBarOnScrollUp.length; i++) {
+                navBarOnScrollUp[i].style.height = '4rem'
+            }
+        }
 
         const navList = {
             'contact': contact,
@@ -94,12 +103,13 @@ window.addEventListener('resize', () => {
         }
         navi.style.height = '2.5rem'
         if (navi.classList.contains('navbar-onscrollup')) {
-            // navBarOnScrollUp.style.height = '2.5rem'
-            // console.log(navBarOnScrollUp)
+            for (let i = 0; i < navBarOnScrollUp.length; i++) {
+                navBarOnScrollUp[i].style.height = '2.5rem'
+            }
         }
         desktopMenuItems.innerHTML = ''
     }
-})
+}
 
 async function loadPage() {
     await wait(500)
