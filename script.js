@@ -63,6 +63,9 @@ window.addEventListener('resize', () => {
 
 function renderDesktopNav() {
     if (window.matchMedia('(min-width: 927px)').matches) {
+        if (!navi.classList.contains('navi-desktop')) {
+            navi.classList.add('navi-desktop')
+        }
         desktopMenuItems.innerHTML = ''
 
         for (let i = 0; i < icons.length; i++) {
@@ -97,6 +100,9 @@ function renderDesktopNav() {
         }
 
     } else {
+        if (navi.classList.contains('navi-desktop')) {
+            navi.classList.remove('navi-desktop')
+        }
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.margin = '0.25rem 1rem 0.25rem 0.25rem'
         }
@@ -268,6 +274,8 @@ async function activateScrollDown() {
     article.classList.add('article-onscrolldown')
 
     // remove onscrollup classes here
+    desktopMenuItems.innerHTML = ''
+    navi.style.height = '0'
     navi.classList.remove('navbar-onscrollup')
     foot.classList.remove('foot-onscrollup')
     article.classList.remove('article-onscrollup')
@@ -286,6 +294,10 @@ async function activateScrollUp() {
     for (let i = 0; i < icons.length; i++) {
         icons[i].style.visibility = "visible"
         icons[i].classList.add('fade-in')
+    }
+
+    if (navi.classList.contains('navi-desktop')) {
+        renderDesktopNav()
     }
 
     for (let k = 0; k < footerIcons.length; k++) {
