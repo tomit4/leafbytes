@@ -298,7 +298,7 @@ async function activateScrollUp() {
 
     if (navi.classList.contains('navi-desktop')) {
         renderDesktopNav()
-    }
+    } else navi.style.height = '2.5rem'
 
     for (let k = 0; k < footerIcons.length; k++) {
         footerIcons[k].style.visibility = "visible"
