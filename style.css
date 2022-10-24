@@ -286,7 +286,7 @@ html, body {
 .article {
     /* visibility: hidden; */
     top: 50vh;
-    margin: -42vh auto auto auto;
+    margin: -44vh auto auto auto;
     left: 0;
     right: 0;
     position: fixed;
