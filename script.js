@@ -13,6 +13,7 @@ const li = document.getElementsByTagName('li')
 /* navbar elements */
 const navi = document.querySelector('.navi')
 const navBar = document.querySelector('.navbar')
+const navBarMenuItem = document.getElementsByClassName('navbar-menu-item')
 const navBarOnScrollUp = document.getElementsByClassName('navbar-onscrollup')
 const prompt = document.querySelector('.prompt')
 const icons = document.getElementsByClassName('icons')
@@ -61,7 +62,7 @@ window.addEventListener('resize', () => {
     renderDesktopNav()
 })
 
-function renderDesktopNav() {
+async function renderDesktopNav() {
     if (window.matchMedia('(min-width: 927px)').matches) {
         if (!navi.classList.contains('navi-desktop')) {
             navi.classList.add('navi-desktop')
@@ -98,7 +99,10 @@ function renderDesktopNav() {
             })
             desktopMenuItems.appendChild(node)
         }
-
+        await wait(1250)
+        for (let i = 0; i < navBarMenuItem.length; i++) {
+            navBarMenuItem[i].classList.add('fade-in')
+        }
     } else {
         if (navi.classList.contains('navi-desktop')) {
             navi.classList.remove('navi-desktop')

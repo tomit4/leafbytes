@@ -201,7 +201,7 @@ html, body {
 }
 
 .navbar-menu-item {
-    /* visibility: hidden; */
+    visibility: hidden;
     margin: 2rem 2.25rem 0rem 0rem;
     z-index: 2;
     display: inline-block;
@@ -227,17 +227,25 @@ html, body {
     cursor: pointer;
 }
 
+.fade-in {
+    visibility: visible;
+    animation: fadein 1s;
+}
+
 @keyframes fadein {
     from {
+        visibility: hidden;
         opacity: 0%;
 
     }
     to {
+        visibility: visible;
         opacity: 80%;
     }
 }
 
 .fade-out {
+    visibility: hidden;
     animation: fadeout 1s;
 }
 
