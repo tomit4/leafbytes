@@ -30,8 +30,6 @@ const leafbytes = document.querySelector('.leafbytes')
 const subtitle = document.querySelector('.subtitle')
 
 /* grab ul elements for generating html desktop navbar */
-// <ul class="desktop-menu-items">
-// const desktopMenuItems = document.getElementsByClassName('desktop-menu-items')
 const desktopMenuItems = document.querySelector('.desktop-menu-items')
 
 /* article elements */
