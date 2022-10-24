@@ -85,7 +85,7 @@ async function renderDesktopNav() {
             'about': about,
             'home': home,
             'comments': comments,
-            'links': links
+            'links': link
         }
 
         for (let key in navList) {
@@ -95,25 +95,16 @@ async function renderDesktopNav() {
             node.innerHTML = `${key[0].toUpperCase()}${key.substring(1,key.length)}`
             node.addEventListener('click', (e) => {
                 e.preventDefault()
-                loadArticles(navList[key])
-            })
-            node.addEventListener('mouseenter', () => {
                 for (let i = 0; i < icons.length; i++) {
-                    if (icons[i].id === key) {
+                    if (icons[i].id === key && !icons[i].classList.contains('scaled')) {
                         icons[i].classList.add('scaled')
                     }
                 }
-            })
-            node.addEventListener('mouseleave', () => {
-                for (let i = 0; i < icons.length; i++) {
-                    if (icons[i].id === key) {
-                        icons[i].classList.remove('scaled')
-                    }
-                }
+                loadArticles(navList[key])
             })
             desktopMenuItems.appendChild(node)
         }
-        await wait(1250)
+        await wait(2500)
         for (let i = 0; i < navBarMenuItem.length; i++) {
             navBarMenuItem[i].classList.add('fade-in')
         }
