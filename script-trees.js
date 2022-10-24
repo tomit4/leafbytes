@@ -1,14 +1,26 @@
 "use strict"
-
 /* article-specific js */
-let treeToggled = false
 
 function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
 
+const linkItems = document.getElementsByClassName('link-item')
+window.onload = listClassesOfLinkItems()
+
+async function listClassesOfLinkItems() {
+    await wait (7000)
+    const treeSubjs = []
+    for (let i = 0; i < linkItems.length; i++) {
+        treeSubjs.push(linkItems[i].classList[1])
+    }
+    for (let i = 0; i < treeSubjs.length; i++) {
+        showTree(treeSubjs[i], 1000)
+    }
+}
+
 function scaleLinkItems(className) {
-    const linkItems = document.getElementsByClassName('link-item')
+    // const linkItems = document.getElementsByClassName('link-item')
     const directories = document.getElementsByClassName('directories')
 
     for (let i = 0; i < linkItems.length; i++) {
