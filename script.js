@@ -58,7 +58,8 @@ function wait(ms) {
 
 window.addEventListener('resize', () => {
     if (window.matchMedia('(min-width: 927px)').matches) {
-        console.log('Screen width is more than or equal to 927px')
+        desktopMenuItems.innerHTML = ''
+
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.margin = '0.25rem 1.75rem 0.25rem 1.85rem'
         }
@@ -66,8 +67,14 @@ window.addEventListener('resize', () => {
         // if (navi.classList.contains('navbar-onscrollup')) {
             // navBarOnScrollUp.style.height = '4rem'
         // }
-        // render desktop-menu-items here
-        const navList = { 'contact': contact, 'about': about, 'home': home, 'comments': comments, 'link': link }
+
+        const navList = {
+            'contact': contact,
+            'about': about,
+            'home': home,
+            'comments': comments,
+            'links': link
+        }
 
         for (let key in navList) {
             const node = document.createElement('li')
@@ -80,8 +87,8 @@ window.addEventListener('resize', () => {
             })
             desktopMenuItems.appendChild(node)
         }
+
     } else {
-        console.log('Screen width less than 927px')
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.margin = '0.25rem 1rem 0.25rem 0.25rem'
         }
