@@ -9,7 +9,7 @@ const linkItems = document.getElementsByClassName('link-item')
 window.onload = openAllSubjTrees()
 
 async function openAllSubjTrees() {
-    await wait (7000)
+    await wait(7000)
     const treeSubjs = []
     for (let i = 0; i < linkItems.length; i++) {
         treeSubjs.push(linkItems[i].classList[1])
@@ -21,7 +21,6 @@ async function openAllSubjTrees() {
 
 function scaleLinkItems(className) {
     const directories = document.getElementsByClassName('directories')
-
     for (let i = 0; i < linkItems.length; i++) {
         if (linkItems[i].classList.contains(className)) {
             directories[i].classList.toggle('linkItemToggled')

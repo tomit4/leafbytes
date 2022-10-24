@@ -179,7 +179,7 @@ html, body {
     z-index: 3;
 
     /* mobile */
-    margin: 0.25rem 1rem 0.25rem 0.25rem;
+    /* margin: 0.25rem 1rem 0.25rem 0.25rem; */
     /* desktop/tablet */
     /* margin: 0.25rem 1.75rem 0.25rem 1.85rem; */
 
@@ -740,6 +740,12 @@ html, body {
         left: 40rem;
     }
 
+    .icons {
+        padding: 0.25rem 1rem;
+    }
+    .navbar-menu-item {
+        margin: 2rem 3rem 2rem 1rem;
+    }
     /* .leafbytes {} */
     /* .subtitle {} */
 }
