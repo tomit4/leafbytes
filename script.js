@@ -70,6 +70,7 @@ function renderDesktopNav() {
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.margin = '0.25rem 1.75rem 0.25rem 1.85rem'
         }
+
         navi.style.height = '4rem'
         if (navi.classList.contains('navbar-onscrollup')) {
              for (let i = 0; i < navBarOnScrollUp.length; i++) {
@@ -101,12 +102,15 @@ function renderDesktopNav() {
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.margin = '0.25rem 1rem 0.25rem 0.25rem'
         }
+
         navi.style.height = '2.5rem'
+
         if (navi.classList.contains('navbar-onscrollup')) {
             for (let i = 0; i < navBarOnScrollUp.length; i++) {
                 navBarOnScrollUp[i].style.height = '2.5rem'
             }
         }
+
         desktopMenuItems.innerHTML = ''
     }
 }
