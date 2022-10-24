@@ -85,7 +85,7 @@ async function renderDesktopNav() {
             'about': about,
             'home': home,
             'comments': comments,
-            'links': link
+            'links': links
         }
 
         for (let key in navList) {
@@ -96,6 +96,20 @@ async function renderDesktopNav() {
             node.addEventListener('click', (e) => {
                 e.preventDefault()
                 loadArticles(navList[key])
+            })
+            node.addEventListener('mouseenter', () => {
+                for (let i = 0; i < icons.length; i++) {
+                    if (icons[i].id === key) {
+                        icons[i].classList.add('scaled')
+                    }
+                }
+            })
+            node.addEventListener('mouseleave', () => {
+                for (let i = 0; i < icons.length; i++) {
+                    if (icons[i].id === key) {
+                        icons[i].classList.remove('scaled')
+                    }
+                }
             })
             desktopMenuItems.appendChild(node)
         }

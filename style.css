@@ -215,7 +215,7 @@ html, body {
 
 .icons:hover {
     cursor: pointer;
-    animation: sscaleup .5s;
+    animation: scaleup .5s;
     transform: scale(1.25);
     transform-origin: bottom left;
 }
@@ -259,7 +259,7 @@ html, body {
 }
 
 /* nav icons */
-#link {
+#links {
     content: url('./icons/brackets.svg');
     padding-right: 1.75rem;
 }
@@ -666,8 +666,6 @@ html, body {
         opacity: 40%;
     }
 }
-
-/* hover events */
 
 /* onclick events */
 .scaled {
