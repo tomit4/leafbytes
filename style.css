@@ -207,7 +207,9 @@ html, body {
     display: inline-block;
     font-family: HussarBold;
     font-size: 0.85rem;
-    color: #ffffff;
+    font-weight: 900;
+    color: #002c46;
+    opacity: 70%;
     text-decoration: underline;
     text-decoration-thickness: 0.1rem;
 }
@@ -219,6 +221,8 @@ html, body {
     transform-origin: bottom left;
 }
 
+/* add event listener that scales the icons
+ * as well whenever the menu-item is hovered over */
 .navbar-menu-item:hover {
     transform: scale(1.1);
     cursor: pointer;
