@@ -127,6 +127,11 @@
     border-radius: 0px 0px 7px 7px;
 }
 
+.article-header:hover,
+.article-header3:hover {
+    cursor: default;
+}
+
 /* comments section */
 .comment-section {
     display: flex;
