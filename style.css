@@ -89,8 +89,6 @@ html, body {
     top: 0;
     /* mobile */
     left: 5vw;
-    /* desktop/tablet */
-    /* left: 40rem; */
     right: 0;
 }
 
@@ -98,8 +96,6 @@ html, body {
     content: "";
      /* mobile */
     left: 5vw;
-    /* desktop/tablet */
-    /* left: 40rem; */
     right: 0;
     animation: expand 1.25s;
 
@@ -729,3 +725,21 @@ html, body {
 
 /* height: 1080) */
 @media (min-height: 67.5rem) {}
+
+/* fullscreen desktop */
+@media (min-width: 1440px) {
+    .prompt {
+        left: 40rem;
+    }
+
+    .expanded {
+        left: 40rem;
+    }
+
+    .article {
+        margin: -42vh auto auto auto;
+    }
+
+    /* .leafbytes {} */
+    /* .subtitle {} */
+}
