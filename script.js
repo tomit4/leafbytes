@@ -62,13 +62,13 @@ function wait(ms) {
 window.addEventListener('load', () => {
     determineIfAtDesktopDimensions()
     renderDesktopNav(true)
-    renderArticleDesktop()
+    addArticleDivDesktop(true)
 })
 
 window.addEventListener('resize', () => {
     determineIfAtDesktopDimensions()
     renderDesktopNav(false)
-    renderArticleDesktop()
+    addArticleDivDesktop(false)
 })
 
 function determineIfAtDesktopDimensions() {
@@ -147,23 +147,6 @@ async function renderDesktopNav(onInitialLoad) {
     }
 }
 
-async function renderArticleDesktop() {
-    if (isAtDesktopDimensions) {
-        if (resizeCount >= 1) return
-        const node = document.createElement('div')
-        node.classList.add('article-desktop')
-        body.insertBefore(node, article)
-        body.insertBefore(node, foot)
-        resizeCount++
-    }
-
-    if (!isAtDesktopDimensions) {
-        for (let i = 0; i < articleDesktop.length; i++) {
-            body.removeChild(articleDesktop[i])
-        }
-        resizeCount = 0
-    }
-}
 
 async function loadPage() {
     await wait(500)
@@ -211,6 +194,25 @@ async function loadArticles(e) {
         }))
 
     // window.history.pushState({}, '', `${window.location.origin}/${e.id}`)
+}
+
+async function addArticleDivDesktop(onInitialLoad) {
+    if (onInitialLoad) await wait(7000)
+    if (isAtDesktopDimensions) {
+        if (resizeCount >= 1) return
+        const node = document.createElement('div')
+        node.classList.add('article-desktop')
+        body.insertBefore(node, article)
+        // body.insertBefore(node, foot)
+        resizeCount++
+    }
+
+    if (!isAtDesktopDimensions) {
+        for (let i = 0; i < articleDesktop.length; i++) {
+            body.removeChild(articleDesktop[i])
+        }
+        resizeCount = 0
+    }
 }
 
 function addArticleDiv() {
