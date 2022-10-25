@@ -39,8 +39,7 @@ html, body {
     scrollbar-color: #004b77 #baf6ff;
 }
 
-/* chromium styling of scrollbar
- * currently doesn't play nicely with .article overflow: scroll*/
+/* chromium styling of scrollbar */
 
 *::-webkit-scrollbar {
     width: 3px;

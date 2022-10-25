@@ -45,6 +45,7 @@ const articleHeader = document.getElementsByClassName('article-header')
 const articleHeader3 = document.getElementsByClassName('article-header3')
 const articleBody= document.getElementsByClassName('article-body')
 const articleDesktop = document.getElementsByClassName('article-desktop')
+// const articleDesktop = document.querySelector('.article-desktop')
 
 /* footer elements */
 const foot = document.querySelector('.foot')
@@ -189,7 +190,18 @@ async function loadArticles(e) {
             return res.text()
         })
         .then(((html) => {
-            article.innerHTML = html
+            if (isAtDesktopDimensions) {
+                article.innerHTML = html
+                for (let i = 0; i < articleDesktop.length; i++) {
+                    articleDesktop[i].innerHTML = html
+                }
+            }
+            else {
+                article.innerHTML += html
+                for (let i = 0; i < articleDesktop.length; i++) {
+                    body.removeChild(articleDesktop[i])
+                }
+            }
             window.Prism.highlightAll()
         }))
 
@@ -202,8 +214,7 @@ async function addArticleDivDesktop(onInitialLoad) {
         if (resizeCount >= 1) return
         const node = document.createElement('div')
         node.classList.add('article-desktop')
-        body.insertBefore(node, article)
-        // body.insertBefore(node, foot)
+        body.insertBefore(node, foot)
         resizeCount++
     }
 
@@ -233,7 +244,18 @@ async function renderIt(articleId) {
             return res.text()
         })
         .then(((html) => {
-            article.innerHTML = html
+            if (isAtDesktopDimensions) {
+                article.innerHTML = html
+                for (let i = 0; i < articleDesktop.length; i++) {
+                    articleDesktop[i].innerHTML = html
+                }
+            }
+            else {
+                article.innerHTML += html
+                for (let i = 0; i < articleDesktop.length; i++) {
+                    body.removeChild(articleDesktop[i])
+                }
+            }
             window.Prism.highlightAll()
         }))
     // window.history.pushState({}, '', `${window.location.origin}/articles/tech/${articlesId}`)
