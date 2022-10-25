@@ -6,18 +6,6 @@ function wait(ms) {
 }
 
 const linkItems = document.getElementsByClassName('link-item')
-window.onload = openAllSubjTrees()
-
-async function openAllSubjTrees() {
-    await wait(7000)
-    const treeSubjs = []
-    for (let i = 0; i < linkItems.length; i++) {
-        treeSubjs.push(linkItems[i].classList[1])
-    }
-    for (let i = 0; i < treeSubjs.length; i++) {
-        showTree(treeSubjs[i], 1000)
-    }
-}
 
 function scaleLinkItems(className) {
     const directories = document.getElementsByClassName('directories')
