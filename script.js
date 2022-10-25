@@ -191,7 +191,6 @@ async function loadArticles(e) {
         })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
-                // article.innerHTML = html
                 await fetch('./home.html')
                     .then((res) => {
                         return res.text()
@@ -252,7 +251,6 @@ async function renderIt(articleId) {
         })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
-                // article.innerHTML = html
                 await fetch('./home.html')
                     .then((res) => {
                         return res.text()
