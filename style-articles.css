@@ -470,3 +470,10 @@ figcaption {
         margin: auto 0 auto 3rem;
     }
 }
+
+@media (min-width: 1440px) {
+    .article-content {
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+}
