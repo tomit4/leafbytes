@@ -100,7 +100,7 @@
     font-size: 24px;
     text-align: center;
     width: 80vw;
-    max-width: 440px;
+    max-width: 400px;
     margin: 0.5rem auto;
     padding: 0.5rem 0.25rem 0rem 0rem;
     border: 1px solid rgba(0, 44, 70, 1);
@@ -119,7 +119,7 @@
     font-size: 16px;
     text-align: center;
     width: 80vw;
-    max-width: 440px;
+    max-width: 400px;
     height: 2.1rem;
     margin: -0.5rem auto 0rem auto;
     padding-bottom: 0.5rem;
