@@ -189,15 +189,22 @@ async function loadArticles(e) {
         .then((res) => {
             return res.text()
         })
-        .then(((html) => {
+        .then((async (html) => {
             if (isAtDesktopDimensions) {
-                article.innerHTML = html
+                // article.innerHTML = html
+                await fetch('./home.html')
+                    .then((res) => {
+                        return res.text()
+                    })
+                    .then((html) => {
+                        article.innerHTML = html
+                    })
                 for (let i = 0; i < articleDesktop.length; i++) {
                     articleDesktop[i].innerHTML = html
                 }
             }
             else {
-                article.innerHTML += html
+                article.innerHTML = html
                 for (let i = 0; i < articleDesktop.length; i++) {
                     body.removeChild(articleDesktop[i])
                 }
@@ -243,15 +250,22 @@ async function renderIt(articleId) {
         .then((res) => {
             return res.text()
         })
-        .then(((html) => {
+        .then((async (html) => {
             if (isAtDesktopDimensions) {
-                article.innerHTML = html
+                // article.innerHTML = html
+                await fetch('./home.html')
+                    .then((res) => {
+                        return res.text()
+                    })
+                    .then((html) => {
+                        article.innerHTML = html
+                    })
                 for (let i = 0; i < articleDesktop.length; i++) {
                     articleDesktop[i].innerHTML = html
                 }
             }
             else {
-                article.innerHTML += html
+                article.innerHTML = html
                 for (let i = 0; i < articleDesktop.length; i++) {
                     body.removeChild(articleDesktop[i])
                 }
