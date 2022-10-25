@@ -73,7 +73,7 @@ window.addEventListener('resize', () => {
 })
 
 function determineIfAtDesktopDimensions() {
-    if (window.matchMedia('(min-width: 927px)').matches) isAtDesktopDimensions = true
+    if (window.matchMedia('(min-width: 1920px)').matches) isAtDesktopDimensions = true
     else isAtDesktopDimensions = false
 }
 
