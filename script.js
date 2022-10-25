@@ -55,14 +55,18 @@ function wait(ms) {
 }
 
 window.addEventListener('load', () => {
-    renderDesktopNav()
+    renderDesktopNav(true)
 })
 
 window.addEventListener('resize', () => {
-    renderDesktopNav()
+    renderDesktopNav(false)
 })
 
-async function renderDesktopNav() {
+async function renderDesktopNav(onInitialLoad) {
+    let delay
+    if (onInitialLoad) delay = 3000
+    else delay = 0
+
     if (window.matchMedia('(min-width: 927px)').matches) {
         if (!navi.classList.contains('navi-desktop')) {
             navi.classList.add('navi-desktop')
@@ -104,7 +108,7 @@ async function renderDesktopNav() {
             })
             desktopMenuItems.appendChild(node)
         }
-        await wait(2500)
+        await wait(delay)
         for (let i = 0; i < navBarMenuItem.length; i++) {
             navBarMenuItem[i].classList.add('fade-in')
         }
