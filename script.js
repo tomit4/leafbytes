@@ -44,10 +44,15 @@ const introHeader = document.getElementsByClassName('intro-header')
 const articleHeader = document.getElementsByClassName('article-header')
 const articleHeader3 = document.getElementsByClassName('article-header3')
 const articleBody= document.getElementsByClassName('article-body')
+const articleDesktop = document.getElementsByClassName('article-desktop')
 
 /* footer elements */
 const foot = document.querySelector('.foot')
 const footerIcons = document.getElementsByClassName('footer-icons')
+
+/* flag that checks if at desktop dimensions */
+let isAtDesktopDimensions = false
+let resizeCount = 0
 
 /* extremely useful wait() function */
 function wait(ms) {
@@ -55,19 +60,29 @@ function wait(ms) {
 }
 
 window.addEventListener('load', () => {
+    determineIfAtDesktopDimensions()
     renderDesktopNav(true)
+    renderArticleDesktop()
 })
 
 window.addEventListener('resize', () => {
+    determineIfAtDesktopDimensions()
     renderDesktopNav(false)
+    renderArticleDesktop()
 })
+
+function determineIfAtDesktopDimensions() {
+    if (window.matchMedia('(min-width: 927px)').matches) isAtDesktopDimensions = true
+    else isAtDesktopDimensions = false
+}
 
 async function renderDesktopNav(onInitialLoad) {
     let delay
     if (onInitialLoad) delay = 3000
     else delay = 0
 
-    if (window.matchMedia('(min-width: 927px)').matches) {
+
+    if (isAtDesktopDimensions) {
         if (!navi.classList.contains('navi-desktop')) {
             navi.classList.add('navi-desktop')
         }
@@ -129,6 +144,24 @@ async function renderDesktopNav(onInitialLoad) {
         }
 
         desktopMenuItems.innerHTML = ''
+    }
+}
+
+async function renderArticleDesktop() {
+    if (isAtDesktopDimensions) {
+        if (resizeCount >= 1) return
+        const node = document.createElement('div')
+        node.classList.add('article-desktop')
+        body.insertBefore(node, article)
+        body.insertBefore(node, foot)
+        resizeCount++
+    }
+
+    if (!isAtDesktopDimensions) {
+        for (let i = 0; i < articleDesktop.length; i++) {
+            body.removeChild(articleDesktop[i])
+        }
+        resizeCount = 0
     }
 }
 

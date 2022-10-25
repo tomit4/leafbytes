@@ -292,6 +292,25 @@ html, body {
     animation: dropdown 1s ease-in-out;
 }
 
+.article-desktop {
+    /* visibility: hidden; */
+    top: 50vh;
+    margin: -42vh auto auto auto;
+    left: 24vw;
+    right: 0;
+    position: fixed;
+    /* background-color: red; */
+    background-image: linear-gradient(280deg,  rgba(98, 165, 191, 0.2) 0%, rgba(42, 114, 150, 0.7) 120%);
+    width: 97.5vw;
+    max-width: 1140px;
+    height: 83.5vh;
+    border: 6px solid #004b77;
+    border-radius: 5px;
+    /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
+    /* animation: dropdown 1s ease-in-out; */
+}
+
 .article-body {
     padding: 0.25rem;
     max-width: 840px;
