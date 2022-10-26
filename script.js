@@ -45,7 +45,6 @@ const articleHeader = document.getElementsByClassName('article-header')
 const articleHeader3 = document.getElementsByClassName('article-header3')
 const articleBody= document.getElementsByClassName('article-body')
 const articleDesktop = document.getElementsByClassName('article-desktop')
-// const articleDesktop = document.querySelector('.article-desktop')
 
 /* footer elements */
 const foot = document.querySelector('.foot')
@@ -193,6 +192,22 @@ async function loadArticles(e) {
         })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
+                if (`${e.id}` === 'home') {
+                    // replace about.html with a welcome page only visible from desktop site
+                    await fetch('./about.html')
+                        .then((res) => {
+                            return res.text()
+                        })
+                        .then((html) => {
+                            for (let i = 0; i < articleDesktop.length; i++) {
+                                articleDesktop[i].innerHTML = html
+                            }
+                        })
+                } else {
+                    for (let i = 0; i < articleDesktop.length; i++) {
+                        articleDesktop[i].innerHTML = html
+                    }
+                }
                 await fetch('./home.html')
                     .then((res) => {
                         return res.text()
@@ -200,9 +215,6 @@ async function loadArticles(e) {
                     .then((html) => {
                         article.innerHTML = html
                     })
-                for (let i = 0; i < articleDesktop.length; i++) {
-                    articleDesktop[i].innerHTML = html
-                }
             }
             else {
                 article.innerHTML = html
@@ -223,6 +235,17 @@ async function addArticleDivDesktop(onInitialLoad) {
         const node = document.createElement('div')
         node.classList.add('article-desktop')
         body.insertBefore(node, foot)
+        // replace about.html with a welcome page only visible from desktop site
+        await fetch('./about.html')
+            .then((res) => {
+                return res.text()
+            })
+            .then((html) => {
+                for (let i = 0; i < articleDesktop.length; i++) {
+                    articleDesktop[i].innerHTML = html
+                }
+        })
+
         resizeCount++
     }
 
@@ -232,6 +255,7 @@ async function addArticleDivDesktop(onInitialLoad) {
         }
         resizeCount = 0
     }
+    activateScrollBehavior(articleDesktop)
 }
 
 function addArticleDiv() {
@@ -241,7 +265,7 @@ function addArticleDiv() {
     article = document.createElement('div')
     article.classList.add('article')
     body.insertBefore(article, foot)
-    activateScrollBehavior()
+    activateScrollBehavior(article)
 }
 
 async function renderIt(articleId) {
@@ -326,20 +350,35 @@ async function renderPrev(articleId) {
     renderIt(articleId)
 }
 
-function activateScrollBehavior() {
+function activateScrollBehavior(articleDiv) {
     let scrollPosition = 0
-    article.addEventListener('scroll', () => {
-        let sTop = article.scrollTop
-        // scrolling down
-        if (sTop > scrollPosition) {
-            activateScrollDown()
-        // scrolling up
-        } else {
-            activateScrollUp()
-
+    if (articleDiv === article) {
+        article.addEventListener('scroll', () => {
+            let sTop = article.scrollTop
+            // scrolling down
+            if (sTop > scrollPosition) {
+                activateScrollDown()
+            // scrolling up
+            } else {
+                activateScrollUp()
+            }
+            scrollPosition = sTop <= 0 ? 0 : sTop
+        }, false)
+    } else if (articleDiv === articleDesktop) {
+        for (let i = 0; i < articleDesktop.length; i++) {
+            articleDesktop[i].addEventListener('scroll', () => {
+                let sTop = articleDesktop[i].scrollTop
+                // scrolling down
+                if (sTop > scrollPosition) {
+                    activateScrollDown()
+                // scrolling up
+                } else {
+                    activateScrollUp()
+                }
+                scrollPosition = sTop <= 0 ? 0 : sTop
+            }, false)
         }
-        scrollPosition = sTop <= 0 ? 0 : sTop
-    }, false)
+    }
 }
 
 async function activateScrollDown() {
@@ -356,6 +395,11 @@ async function activateScrollDown() {
     navi.classList.add('navbar-onscrolldown')
     foot.classList.add('foot-onscrolldown')
     article.classList.add('article-onscrolldown')
+    if (isAtDesktopDimensions) {
+        for (let i = 0; i < articleDesktop.length; i++) {
+            articleDesktop[i].classList.add('article-onscrolldown')
+        }
+    }
 
     // remove onscrollup classes here
     desktopMenuItems.innerHTML = ''
@@ -363,6 +407,12 @@ async function activateScrollDown() {
     navi.classList.remove('navbar-onscrollup')
     foot.classList.remove('foot-onscrollup')
     article.classList.remove('article-onscrollup')
+    if (isAtDesktopDimensions) {
+        for (let i = 0; i < articleDesktop.length; i++) {
+            articleDesktop[i].classList.remove('article-onscrollup')
+        }
+    }
+
 }
 
 async function activateScrollUp() {
@@ -370,9 +420,20 @@ async function activateScrollUp() {
     navi.classList.add('navbar-onscrollup')
     foot.classList.add('foot-onscrollup')
     article.classList.add('article-onscrollup')
+    if (isAtDesktopDimensions) {
+        for (let i = 0; i < articleDesktop.length; i++) {
+            articleDesktop[i].classList.add('article-onscrollup')
+        }
+    }
+
     navi.classList.remove('navbar-onscrolldown')
     foot.classList.remove('foot-onscrolldown')
     article.classList.remove('article-onscrolldown')
+    if (isAtDesktopDimensions) {
+        for (let i = 0; i < articleDesktop.length; i++) {
+            articleDesktop[i].classList.remove('article-onscrolldown')
+        }
+    }
 
     await wait(1200)
     for (let i = 0; i < icons.length; i++) {

@@ -753,7 +753,7 @@ html, body {
 @media (min-height: 67.5rem) {}
 
 /* fullscreen desktop */
-@media (min-width: 1440px) {
+@media (min-width: 1920px) and (min-height: 1080px){
     .prompt {
         left: 40rem;
     }
@@ -786,5 +786,7 @@ html, body {
 
     .article-onscrolldown {
         margin: -48vh auto auto auto;
+        height: 96vh;
+        animation: article-onscrolldown-animation 1.2s ease-in-out;
     }
 }
