@@ -422,6 +422,10 @@ figcaption {
     img {
         margin: auto 0 auto 0.75rem;
     }
+    #olkb {
+        margin: 0 3rem;
+    }
+
 }
 
 /* 640 x 320 */
@@ -454,6 +458,7 @@ figcaption {
     img {
         margin: auto 0 auto 2rem;
     }
+
 }
 
 /* 926 x 428 */
@@ -470,6 +475,7 @@ figcaption {
     img {
         margin: auto 0 auto 3rem;
     }
+
 }
 
 @media (min-width: 1440px) {

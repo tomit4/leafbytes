@@ -784,9 +784,18 @@ html, body {
         width: 20vw;
     }
 
+    .article-body {
+        max-width: 1040px;
+    }
+
     .article-onscrolldown {
         margin: -48vh auto auto auto;
         height: 96vh;
         animation: article-onscrolldown-animation 1.2s ease-in-out;
     }
+
+    img {
+        margin-left: 9rem !important;
+    }
+
 }
