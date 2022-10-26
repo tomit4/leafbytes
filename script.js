@@ -330,8 +330,7 @@ async function renderNext(articleId) {
         articleBody[i].classList.add('leafbytes-fadeout-content2')
     }
 
-    articleId = articleId + 1;
-    articleId = `tech-subject-${articleId}`
+    articleId = `tech-subject-${articleId + 1}`
     renderIt(articleId)
 }
 
@@ -349,8 +348,7 @@ async function renderPrev(articleId) {
         articleBody[i].classList.add('leafbytes-fadeout-content2')
     }
 
-    articleId = articleId - 1;
-    articleId = `tech-subject-${articleId}`
+    articleId = `tech-subject-${articleId - 1}`
     renderIt(articleId)
 }
 
