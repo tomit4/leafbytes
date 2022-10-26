@@ -718,39 +718,32 @@ html, body {
 }
 
 /* widths 630 to 640 (i.e. everything inbetween)*/
-@media (min-width: 39rem) {}
+/* @media (min-width: 39rem) {} */
 
 /* 640 x 320 */
-@media (min-width: 40rem) {}
+/* @media (min-width: 40rem) {} */
 
 /* 800 x 360 */
-@media (min-width: 50rem) and (max-height: 21rem){
+/* @media (maxwidth: 50rem) and (max-height: 21rem){} */
+
+/* 926 x 428 */
+@media (max-height: 26rem) {
+    /* put the tablet/desktop settings here */
+    /* .navbar { */
+        /* background-color: red; */
+    /* } */
     .leafbytes {
-        top: 55vh;
+        top: 57vh;
         left: 49vw;
     }
     .subtitle {
-        top: 55vh;
+        top: 57vh;
         left: 48vw;
-    }
-
-}
-
-/* 926 x 428 */
-@media (min-width: 56rem) {
-    /* put the tablet/desktop settings here */
-    .leafbytes {
-        top: 55vh;
-        /* left: 49vw; */
-    }
-    .subtitle {
-        top: 55vh;
-        /* left: 48vw; */
     }
 }
 
 /* height: 1080) */
-@media (min-height: 67.5rem) {}
+/* @media (min-height: 67.5rem) {} */
 
 /* fullscreen desktop */
 @media (min-width: 1920px) and (min-height: 980px){
@@ -770,12 +763,12 @@ html, body {
     }
 
     .leafbytes {
-        top: 49.5vh;
-        left: 49.5vw;
+        top: 49.5vh !important;
+        left: 49.5vw !important;
     }
     .subtitle {
-        top: 49.5vh;
-        left: 49.5vw;
+        top: 49.5vh !important;
+        left: 49.5vw !important;
     }
 
     .article {
