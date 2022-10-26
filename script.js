@@ -7,6 +7,9 @@ window.onload = removeTitle()
 /* selector for the entire html body */
 const body = document.querySelector('body')
 
+/* all divs */
+const divElements = document.getElementsByTagName('div')
+
 /* selectors of HTML elements by tag name */
 const li = document.getElementsByTagName('li')
 
@@ -52,7 +55,6 @@ const footerIcons = document.getElementsByClassName('footer-icons')
 
 /* flag that checks if at desktop dimensions */
 let isAtDesktopDimensions = false
-let resizeCount = 0
 
 /* extremely useful wait() function */
 function wait(ms) {
@@ -231,7 +233,9 @@ async function loadArticles(e) {
 async function addArticleDivDesktop(onInitialLoad) {
     if (onInitialLoad) await wait(7000)
     if (isAtDesktopDimensions) {
-        if (resizeCount >= 1) return
+        for (let i = 0; i < divElements.length; i++) {
+            if (divElements[i].classList.contains('article-desktop')) return
+        }
         const node = document.createElement('div')
         node.classList.add('article-desktop')
         body.insertBefore(node, foot)
@@ -245,15 +249,12 @@ async function addArticleDivDesktop(onInitialLoad) {
                     articleDesktop[i].innerHTML = html
                 }
         })
-
-        resizeCount++
     }
 
     if (!isAtDesktopDimensions) {
         for (let i = 0; i < articleDesktop.length; i++) {
             body.removeChild(articleDesktop[i])
         }
-        resizeCount = 0
     }
     activateScrollBehavior(articleDesktop)
 }
