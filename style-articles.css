@@ -128,7 +128,8 @@
 }
 
 .article-header:hover,
-.article-header3:hover {
+.article-header3:hover,
+.article-content:hover {
     cursor: default;
 }
 
