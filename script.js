@@ -188,9 +188,6 @@ async function removeTitle() {
     }
 }
 
-// need a separate but similar function to render
-// .article vs .articleDesktop if (isAtDesktopDimensions)
-
 async function loadArticles(e) {
     await addArticleDiv()
     scaleUp(e)
@@ -276,26 +273,18 @@ function addArticleDiv() {
 }
 
 async function renderIt(articleId) {
-    await wait(1000)
-    article.textContent = ""
     await fetch(`./articles/tech/${articleId}.html`)
         .then((res) => {
             return res.text()
         })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
-                await fetch('./home.html')
-                    .then((res) => {
-                        return res.text()
-                    })
-                    .then((html) => {
-                        article.innerHTML = html
-                    })
                 for (let i = 0; i < articleDesktop.length; i++) {
                     articleDesktop[i].innerHTML = html
                 }
             }
             else {
+                await wait(1000)
                 article.innerHTML = html
                 for (let i = 0; i < articleDesktop.length; i++) {
                     body.removeChild(articleDesktop[i])
@@ -307,17 +296,17 @@ async function renderIt(articleId) {
 }
 
 function renderArticle(articleId) {
-    for (let i = 0; i< leafbytesBody.length; i++) {
-        leafbytesBody[i].classList.add('leafbytes-fadeout-content')
+    if (!isAtDesktopDimensions) {
+        for (let i = 0; i< leafbytesBody.length; i++) {
+            leafbytesBody[i].classList.add('leafbytes-fadeout-content')
+        }
+        for (let i = 0; i< articleLinks.length; i++) {
+            articleLinks[i].classList.add('leafbytes-fadeout-content')
+        }
+        for (let i = 0; i< linkItem.length; i++) {
+            linkItem[i].classList.add('leafbytes-fadeout-content')
+        }
     }
-    for (let i = 0; i< articleLinks.length; i++) {
-        articleLinks[i].classList.add('leafbytes-fadeout-content')
-    }
-    for (let i = 0; i< linkItem.length; i++) {
-        linkItem[i].classList.add('leafbytes-fadeout-content')
-    }
-    // possibly add if statement that checks for
-    // dimension widths here and renderIt2 can initiate instead?
     renderIt(articleId)
 }
 
@@ -336,8 +325,6 @@ async function renderNext(articleId) {
     }
 
     articleId = `tech-subject-${articleId + 1}`
-    // possibly add if statement that checks for
-    // dimension widths here and renderIt2 can initiate instead?
     renderIt(articleId)
 }
 
@@ -356,8 +343,6 @@ async function renderPrev(articleId) {
     }
 
     articleId = `tech-subject-${articleId - 1}`
-    // possibly add if statement that checks for
-    // dimension widths here and renderIt2 can initiate instead?
     renderIt(articleId)
 }
 
