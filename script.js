@@ -188,6 +188,9 @@ async function removeTitle() {
     }
 }
 
+// need a separate but similar function to render
+// .article vs .articleDesktop if (isAtDesktopDimensions)
+
 async function loadArticles(e) {
     await addArticleDiv()
     scaleUp(e)
