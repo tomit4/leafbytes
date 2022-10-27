@@ -38,10 +38,6 @@
     to {opacity: 0%;}
 }
 
-.article-entire-home {
-    opacity: 100%;
-}
-
 .article-entire {
     opacity: 100%;
     animation: article-made-visible 1.5s ease-in-out;

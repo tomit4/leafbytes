@@ -316,6 +316,8 @@ function renderArticle(articleId) {
     for (let i = 0; i< linkItem.length; i++) {
         linkItem[i].classList.add('leafbytes-fadeout-content')
     }
+    // possibly add if statement that checks for
+    // dimension widths here and renderIt2 can initiate instead?
     renderIt(articleId)
 }
 
@@ -334,6 +336,8 @@ async function renderNext(articleId) {
     }
 
     articleId = `tech-subject-${articleId + 1}`
+    // possibly add if statement that checks for
+    // dimension widths here and renderIt2 can initiate instead?
     renderIt(articleId)
 }
 
@@ -352,6 +356,8 @@ async function renderPrev(articleId) {
     }
 
     articleId = `tech-subject-${articleId - 1}`
+    // possibly add if statement that checks for
+    // dimension widths here and renderIt2 can initiate instead?
     renderIt(articleId)
 }
 
