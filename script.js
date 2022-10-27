@@ -314,16 +314,17 @@ async function renderNext(articleId) {
     for (let i = 0; i < introHeader.length; i++) {
         introHeader[i].classList.add('leafbytes-fadeout-content2')
     }
-    for (let i = 0; i < articleHeader.length; i++) {
-        articleHeader[i].classList.add('leafbytes-fadeout-content2')
-    }
-    for (let i = 0; i < articleHeader3.length; i++) {
-        articleHeader3[i].classList.add('leafbytes-fadeout-content2')
-    }
     for (let i = 0; i < articleBody.length; i++) {
         articleBody[i].classList.add('leafbytes-fadeout-content2')
     }
-
+    if (!isAtDesktopDimensions) {
+        for (let i = 0; i < articleHeader.length; i++) {
+            articleHeader[i].classList.add('leafbytes-fadeout-content2')
+        }
+        for (let i = 0; i < articleHeader3.length; i++) {
+            articleHeader3[i].classList.add('leafbytes-fadeout-content2')
+        }
+    }
     articleId = `tech-subject-${articleId + 1}`
     renderIt(articleId)
 }
@@ -332,16 +333,17 @@ async function renderPrev(articleId) {
     for (let i = 0; i < introHeader.length; i++) {
         introHeader[i].classList.add('leafbytes-fadeout-content2')
     }
-    for (let i = 0; i < articleHeader.length; i++) {
-        articleHeader[i].classList.add('leafbytes-fadeout-content2')
-    }
-    for (let i = 0; i < articleHeader3.length; i++) {
-        articleHeader3[i].classList.add('leafbytes-fadeout-content2')
-    }
     for (let i = 0; i < articleBody.length; i++) {
         articleBody[i].classList.add('leafbytes-fadeout-content2')
     }
-
+    if (!isAtDesktopDimensions) {
+        for (let i = 0; i < articleHeader.length; i++) {
+            articleHeader[i].classList.add('leafbytes-fadeout-content2')
+        }
+        for (let i = 0; i < articleHeader3.length; i++) {
+            articleHeader3[i].classList.add('leafbytes-fadeout-content2')
+        }
+    }
     articleId = `tech-subject-${articleId - 1}`
     renderIt(articleId)
 }
