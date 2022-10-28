@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
     addArticleDivDesktop(true)
 })
 
+/* add if() that loadArticles(lastArticleIwasOn) upon resize, right now reloads home only*/
 window.addEventListener('resize', () => {
     determineIfAtDesktopDimensions()
     if (isAtDesktopDimensions)
