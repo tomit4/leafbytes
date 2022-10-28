@@ -217,7 +217,6 @@ async function loadArticles(e) {
                     }
                 }
                 if (article.innerHTML === '') {
-                    console.log(article)
                     await fetch('./home.html')
                         .then((res) => {
                             return res.text()
