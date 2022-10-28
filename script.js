@@ -189,13 +189,6 @@ async function removeTitle() {
     }
 }
 
-/* loadArticles is called whenever a navigation icon is hit
-    it currently reloads the main navigation window whenever hit,
-    an undesired bahvior.
-    renderArticle() had a similar issue that we recently solved.
-    Take a close look at this function
-    and adjust its behavior if (isAtDesktopDimensions)*/
-
 async function loadArticles(e) {
     if (initialPageLoad) await addArticleDiv()
     initialPageLoad = false
