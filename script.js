@@ -7,16 +7,12 @@ window.addEventListener('load', () => {
     determineIfAtDesktopDimensions()
     renderDesktopNav(true)
     addArticleDivDesktop(true)
-    if (!isAtDesktopDimensions) {
-        window.scrollBy(0, 10)
-    }
 })
 
 window.addEventListener('resize', () => {
     determineIfAtDesktopDimensions()
-    if (isAtDesktopDimensions) {
+    if (isAtDesktopDimensions)
         loadArticles(home)
-    } else window.scrollBy(0, 10)
     renderDesktopNav(false)
     addArticleDivDesktop(false)
 })
