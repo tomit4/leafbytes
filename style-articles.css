@@ -129,7 +129,9 @@
 
 .article-header:hover,
 .article-header3:hover,
-.article-content:hover {
+.article-content:hover,
+input:hover,
+textarea:hover {
     cursor: default;
 }
 
