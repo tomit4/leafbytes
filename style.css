@@ -287,6 +287,7 @@ html, body {
     border: 6px solid #004b77;
     border-radius: 5px;
     overflow-y: scroll;
+    overscroll-behavior: none;
     overflow-x: hidden;
     scroll-behavior: smooth;
     animation: dropdown 1s ease-in-out;
