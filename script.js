@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
 window.addEventListener('resize', () => {
     determineIfAtDesktopDimensions()
     if (isAtDesktopDimensions)
+        initialPageLoad = true
         loadArticles(home)
     renderDesktopNav(false)
     addArticleDivDesktop(false)
