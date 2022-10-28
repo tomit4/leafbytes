@@ -1,8 +1,25 @@
 "use strict"
 
-window.onload = loadPage()
-window.onload = loadTitle()
-window.onload = removeTitle()
+window.addEventListener('load', () => {
+    loadPage()
+    loadTitle()
+    removeTitle()
+    determineIfAtDesktopDimensions()
+    renderDesktopNav(true)
+    addArticleDivDesktop(true)
+    if (!isAtDesktopDimensions) {
+        window.scrollBy(0, 10)
+    }
+})
+
+window.addEventListener('resize', () => {
+    determineIfAtDesktopDimensions()
+    if (isAtDesktopDimensions) {
+        loadArticles(home)
+    } else window.scrollBy(0, 10)
+    renderDesktopNav(false)
+    addArticleDivDesktop(false)
+})
 
 /* selector for the entire html body */
 const body = document.querySelector('body')
@@ -60,21 +77,6 @@ let isAtDesktopDimensions = false
 function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
-
-window.addEventListener('load', () => {
-    determineIfAtDesktopDimensions()
-    renderDesktopNav(true)
-    addArticleDivDesktop(true)
-})
-
-window.addEventListener('resize', () => {
-    determineIfAtDesktopDimensions()
-    if (isAtDesktopDimensions) {
-        loadArticles(home)
-    }
-    renderDesktopNav(false)
-    addArticleDivDesktop(false)
-})
 
 function determineIfAtDesktopDimensions() {
     if (window.matchMedia('(min-width: 1920px)').matches &&
@@ -187,6 +189,13 @@ async function removeTitle() {
         icons[i].classList.remove('fade-in')
     }
 }
+
+/* loadArticles is called whenever a navigation icon is hit
+    it currently reloads the main navigation window whenever hit,
+    an undesired bahvior.
+    renderArticle() had a similar issue that we recently solved.
+    Take a close look at this function
+    and adjust its behavior if (isAtDesktopDimensions)*/
 
 async function loadArticles(e) {
     await addArticleDiv()
