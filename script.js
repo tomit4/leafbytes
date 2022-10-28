@@ -389,7 +389,6 @@ function activateScrollBehavior(articleDiv) {
 }
 
 async function activateScrollDown() {
-    window.scrollTo(0, 50)
     for (let i = 0; i < icons.length; i++) {
         icons[i].style.visibility = "hidden"
         icons[i].classList.remove('fade-in')
