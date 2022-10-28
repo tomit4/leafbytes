@@ -68,6 +68,8 @@ const footerIcons = document.getElementsByClassName('footer-icons')
 
 /* flag that checks if at desktop dimensions */
 let isAtDesktopDimensions = false
+/* flag that checks if initalPageLoad is complete (i.e. loadArticles has loaded once)*/
+let initialPageLoad = true
 
 /* extremely useful wait() function */
 function wait(ms) {
@@ -179,7 +181,7 @@ async function removeTitle() {
     leafbytes.remove()
     subtitle.remove()
     circuitOuter.remove()
-    loadArticles(home)
+    await loadArticles(home)
     homeIcon.classList.add('scaled')
     for (let i = 0; i < icons.length; i++) {
         icons[i].classList.remove('fade-in')
@@ -194,7 +196,8 @@ async function removeTitle() {
     and adjust its behavior if (isAtDesktopDimensions)*/
 
 async function loadArticles(e) {
-    await addArticleDiv()
+    if (initialPageLoad) await addArticleDiv()
+    initialPageLoad = false
     scaleUp(e)
     await fetch(`./${e.id}.html`)
         .then((res) => {
@@ -218,13 +221,16 @@ async function loadArticles(e) {
                         articleDesktop[i].innerHTML = html
                     }
                 }
-                await fetch('./home.html')
-                    .then((res) => {
-                        return res.text()
-                    })
-                    .then((html) => {
-                        article.innerHTML = html
-                    })
+                if (article.innerHTML === '') {
+                    console.log(article)
+                    await fetch('./home.html')
+                        .then((res) => {
+                            return res.text()
+                        })
+                        .then((html) => {
+                            article.innerHTML = html
+                        })
+                }
             }
             else {
                 article.innerHTML = html
