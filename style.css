@@ -288,6 +288,7 @@ html, body {
     border-radius: 5px;
     overflow-y: scroll;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     animation: dropdown 1s ease-in-out;
 }
 
