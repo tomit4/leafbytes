@@ -99,7 +99,7 @@ async function renderDesktopNav(onInitialLoad) {
         desktopMenuItems.innerHTML = ''
         desktopFooterItems.innerHTML = ''
 
-        // navi.style.height = '4rem'
+        navi.style.height = '4rem'
         if (navi.classList.contains('navbar-onscrollup')) {
              for (let i = 0; i < navBarOnScrollUp.length; i++) {
                 navBarOnScrollUp[i].style.height = '4rem'

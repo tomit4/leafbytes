@@ -785,10 +785,14 @@ html, body {
 
     .icons {
         padding: 0.25rem 1rem;
-        margin: 0.25rem 1.75rem 0.25rem 1.85rem;
+        margin: 0.25rem 1.75rem 0.25rem 1.85rem !important;
     }
 
     .navi {
+        height: 4rem;
+    }
+
+    .navi-desktop {
         height: 4rem;
     }
 
