@@ -486,3 +486,15 @@ figcaption {
         font-weight: 600;
     }
 }
+
+
+@media (min-width: 1920px) and (min-height: 980px)
+{
+    .next-btn {
+        right: 14vw;
+    }
+
+    .prev-btn {
+        left: 14vw;
+    }
+}
