@@ -69,7 +69,6 @@ html, body {
 }
 
 .prompt {
-    /* visibility: hidden; */
     content: url("./icons/prompt.svg");
     z-index: 1;
     display: flex;
@@ -433,7 +432,7 @@ html, body {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: -0.75rem auto auto auto;
+    margin: -1rem auto auto auto;
     padding-right: 3rem;
     left: 0;
     right: 0;
@@ -786,15 +785,43 @@ html, body {
 
     .icons {
         padding: 0.25rem 1rem;
+        margin: 0.25rem 1.75rem 0.25rem 1.85rem;
     }
+
+    .navi {
+        height: 4rem;
+    }
+
     .navbar-menu-item {
         margin: 2rem 3rem 2rem 1rem;
+    }
+
+    .navbar-onscrollup {
+        height: 4rem;
+        animation: navbar-onscrollup-animation 1.5s ease-in;
+    }
+
+    @keyframes navbar-onscrolldown-animation {
+        0% { height: 4rem; }
+        20% { height: 3rem; }
+        50% { height: 2rem; }
+        70% { height: 1rem; }
+        100% { height: 0; }
+    }
+
+    @keyframes navbar-onscrollup-animation {
+        0% { height: 0; }
+        20% { height: 1rem; }
+        50% { height: 2rem; }
+        70% { height: 3rem; }
+        100% { height: 4rem; }
     }
 
     .leafbytes {
         top: 49.5vh !important;
         left: 49.5vw !important;
     }
+
     .subtitle {
         top: 49.5vh !important;
         left: 49.5vw !important;
@@ -821,15 +848,32 @@ html, body {
     }
 
     .foot {
-        height: 4.6rem;
+        height: 4rem;
     }
 
     .foot-onscrollup {
-        height: 4.6rem;
+        height: 4rem;
     }
 
     .foot-onscrolldown {
         height: 0.5rem;
+    }
+
+    @keyframes foot-onscrolldown-animation {
+        0% { height: 4rem; }
+        20% { height: 3.75rem; }
+        50% { height: 2.5rem; }
+        70% { height: 1.25em; }
+        100% { height: 0.5rem; }
+    }
+
+
+    @keyframes foot-onscrollup-animation {
+        0% { height: 0.5rem; }
+        20% { height: 1.25rem; }
+        50% { height: 2.5rem; }
+        70% { height: 3.75rem; }
+        100% { height: 4rem; }
     }
 
     .footer-icons {
