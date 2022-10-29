@@ -48,8 +48,9 @@ const current = document.querySelector('.current')
 const leafbytes = document.querySelector('.leafbytes')
 const subtitle = document.querySelector('.subtitle')
 
-/* grab ul elements for generating html desktop navbar */
+/* grab ul elements for generating html desktop navbar/footer */
 const desktopMenuItems = document.querySelector('.desktop-menu-items')
+const desktopFooterItems = document.querySelector('.desktop-footer-items')
 
 /* article elements */
 let article = document.querySelector('.article')
@@ -96,6 +97,7 @@ async function renderDesktopNav(onInitialLoad) {
             navi.classList.add('navi-desktop')
         }
         desktopMenuItems.innerHTML = ''
+        desktopFooterItems.innerHTML = ''
 
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.margin = '0.25rem 1.75rem 0.25rem 1.85rem'
@@ -116,11 +118,17 @@ async function renderDesktopNav(onInitialLoad) {
             'links': link
         }
 
+        const footList = {
+            'github': git,
+            'linkedin': linkedin,
+            'resume': resume,
+        }
+
         for (let key in navList) {
             const node = document.createElement('li')
             node.classList.add('navbar-menu-item')
             node.id = `menu-${key}`
-            node.innerHTML = `${key[0].toUpperCase()}${key.substring(1,key.length)}`
+            node.innerHTML = `${key[0].toUpperCase()}${key.substring(1, key.length)}`
             node.addEventListener('click', (e) => {
                 e.preventDefault()
                 for (let i = 0; i < icons.length; i++) {
@@ -132,6 +140,15 @@ async function renderDesktopNav(onInitialLoad) {
             })
             desktopMenuItems.appendChild(node)
         }
+
+        for (let key in footList) {
+            const node = document.createElement('li')
+            node.classList.add('footer-menu-item')
+            node.id = `foot-${key}`
+            node.innerHTML = `${key[0].toUpperCase()}${key.substring(1, key.length)}`
+            desktopFooterItems.appendChild(node)
+        }
+
         await wait(delay)
         for (let i = 0; i < navBarMenuItem.length; i++) {
             navBarMenuItem[i].classList.add('fade-in')
@@ -153,6 +170,7 @@ async function renderDesktopNav(onInitialLoad) {
         }
 
         desktopMenuItems.innerHTML = ''
+        desktopFooterItems.innerHTML = ''
     }
 }
 

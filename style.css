@@ -169,7 +169,7 @@ html, body {
     padding: 0.25rem;
     min-height: 27px;
     max-height: 29px;
-    transform: translate(10%, -0%);
+    /* transform: translate(10%, -0%); */
 }
 
 
@@ -196,7 +196,8 @@ html, body {
     text-decoration-thickness: 0.1rem;
 }
 
-.icons:hover {
+.icons:hover,
+.footer-icons:hover {
     cursor: pointer;
     animation: scaleup .5s;
     transform: scale(1.25);
@@ -205,7 +206,8 @@ html, body {
 
 /* add event listener that scales the icons
  * as well whenever the menu-item is hovered over */
-.navbar-menu-item:hover {
+.navbar-menu-item:hover,
+.footer-menu-item:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -431,14 +433,11 @@ html, body {
     display: flex;
     justify-content: center;
     list-style: none;
-    background-color: red;
-
-    margin: -1rem auto auto auto;
-
+    margin: -0.75rem auto auto auto;
+    padding-right: 3rem;
     left: 0;
     right: 0;
     max-width: 1240px;
-
 }
 
 .footer-menu-item {
@@ -819,6 +818,15 @@ html, body {
         margin: -48vh auto auto auto;
         height: 96vh;
         animation: article-onscrolldown-animation 1.2s ease-in-out;
+    }
+
+    .foot {
+        height: 4.6rem;
+    }
+
+    .footer-icons {
+        margin-top: 0.25rem;
+        margin: 0.25rem 4rem 0rem 3.4rem;
     }
 
     img {
