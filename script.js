@@ -68,6 +68,7 @@ const articleDesktop = document.getElementsByClassName('article-desktop')
 /* footer elements */
 const foot = document.querySelector('.foot')
 const footerIcons = document.getElementsByClassName('footer-icons')
+const footerMenuItems = document.getElementsByClassName('footer-menu-item')
 
 /* flag that checks if at desktop dimensions */
 let isAtDesktopDimensions = false
@@ -404,12 +405,14 @@ function activateScrollBehavior(articleDiv) {
 
 async function activateScrollDown() {
     for (let i = 0; i < icons.length; i++) {
-        icons[i].style.visibility = "hidden"
+        icons[i].style.visibility = 'hidden'
         icons[i].classList.remove('fade-in')
     }
     for (let k = 0; k < footerIcons.length; k++) {
-        footerIcons[k].style.visibility = "hidden"
+        footerIcons[k].style.visibility = 'hidden'
         footerIcons[k].classList.remove('fade-in')
+        footerMenuItems[k].style.visibility = 'hidden'
+        footerMenuItems[k].classList.remove('fade-in')
     }
 
     // add onscrollup classes here
@@ -467,8 +470,10 @@ async function activateScrollUp() {
     } else navi.style.height = '2.5rem'
 
     for (let k = 0; k < footerIcons.length; k++) {
-        footerIcons[k].style.visibility = "visible"
+        footerIcons[k].style.visibility = 'visible'
         footerIcons[k].classList.add('fade-in')
+        footerMenuItems[k].style.visibility = 'visible'
+        footerMenuItems[k].classList.add('fade-in')
     }
 }
 
@@ -499,6 +504,8 @@ function expand() {
         for (let k = 0; k < footerIcons.length; k++) {
             footerIcons[k].style.visibility = 'visible'
             footerIcons[k].classList.add('fade-in')
+            footerMenuItems[k].style.visibility = 'visible'
+            footerMenuItems[k].classList.add('fade-in')
         }
 
     }, 1250)

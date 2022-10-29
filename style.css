@@ -441,7 +441,7 @@ html, body {
 }
 
 .footer-menu-item {
-    /* visibility: hidden; */
+    visibility: hidden;
     z-index: 2;
     margin: 0 2.5rem;
     font-family: HussarBold;
