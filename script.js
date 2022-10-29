@@ -92,7 +92,6 @@ async function renderDesktopNav(onInitialLoad) {
     if (onInitialLoad) delay = 3000
     else delay = 0
 
-
     if (isAtDesktopDimensions) {
         if (!navi.classList.contains('navi-desktop')) {
             navi.classList.add('navi-desktop')
@@ -154,6 +153,12 @@ async function renderDesktopNav(onInitialLoad) {
         for (let i = 0; i < navBarMenuItem.length; i++) {
             navBarMenuItem[i].classList.add('fade-in')
         }
+
+        for (let i = 0; i < footerMenuItems.length; i++) {
+            footerMenuItems[i].style.visibility = "visible"
+            footerMenuItems[i].classList.add('fade-in')
+        }
+
     } else {
         if (navi.classList.contains('navi-desktop')) {
             navi.classList.remove('navi-desktop')
@@ -411,8 +416,11 @@ async function activateScrollDown() {
     for (let k = 0; k < footerIcons.length; k++) {
         footerIcons[k].style.visibility = 'hidden'
         footerIcons[k].classList.remove('fade-in')
-        footerMenuItems[k].style.visibility = 'hidden'
-        footerMenuItems[k].classList.remove('fade-in')
+    }
+
+    for (let j = 0; j < footerMenuItems.length; j++) {
+        footerMenuItems[j].style.visibility = 'hidden'
+        footerMenuItems[j].classList.remove('fade-in')
     }
 
     // add onscrollup classes here
@@ -472,8 +480,10 @@ async function activateScrollUp() {
     for (let k = 0; k < footerIcons.length; k++) {
         footerIcons[k].style.visibility = 'visible'
         footerIcons[k].classList.add('fade-in')
-        footerMenuItems[k].style.visibility = 'visible'
-        footerMenuItems[k].classList.add('fade-in')
+    }
+    for (let j = 0; j < footerMenuItems.length; j++) {
+        footerMenuItems[j].style.visibility = 'visible'
+        footerMenuItems[j].classList.add('fade-in')
     }
 }
 
@@ -504,8 +514,10 @@ function expand() {
         for (let k = 0; k < footerIcons.length; k++) {
             footerIcons[k].style.visibility = 'visible'
             footerIcons[k].classList.add('fade-in')
-            footerMenuItems[k].style.visibility = 'visible'
-            footerMenuItems[k].classList.add('fade-in')
+        }
+        for (let j = 0; j < footerMenuItems.length; j++) {
+            footerMenuItems[j].style.visibility = 'visible'
+            footerMenuItems[j].classList.add('fade-in')
         }
 
     }, 1250)
