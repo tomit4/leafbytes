@@ -215,6 +215,7 @@ async function removeTitle() {
         icon.classList.remove('fade-in'))
 }
 
+// refactor this into multiple functions
 async function loadArticles(e) {
     if (initialPageLoad) await addArticleDiv()
     initialPageLoad = false
@@ -361,22 +362,20 @@ function activateScrollBehavior(articleDiv) {
     if (articleDiv === article) {
         article.addEventListener('scroll', () => {
             let sTop = article.scrollTop
-            if (sTop > scrollPosition) {
+            if (sTop > scrollPosition)
                 activateScrollDown()
-            } else {
+             else
                 activateScrollUp()
-            }
             scrollPosition = sTop <= 0 ? 0 : sTop
         }, false)
     } else if (articleDiv === articleDesktop) {
         for (let i = 0; i < articleDesktop.length; i++) {
             articleDesktop[i].addEventListener('scroll', () => {
                 let sTop = articleDesktop[i].scrollTop
-                if (sTop > scrollPosition) {
+                if (sTop > scrollPosition)
                     activateScrollDown()
-                } else {
+                 else
                     activateScrollUp()
-                }
                 scrollPosition = sTop <= 0 ? 0 : sTop
             }, false)
         }
@@ -439,9 +438,10 @@ async function activateScrollUp() {
         icon.classList.add('fade-in')
     })
 
-    if (navi.classList.contains('navi-desktop')) {
+    if (navi.classList.contains('navi-desktop'))
         renderDesktopNavAndFoot()
-    } else navi.style.height = '2.5rem'
+     else
+        navi.style.height = '2.5rem'
 
     footerIcons.forEach((footerIcon) => {
         footerIcon.style.visibility = 'visible'
@@ -458,8 +458,10 @@ async function activateScrollUp() {
 function scaleUp(e) {
     const selectedIcon = document.getElementById(e.id)
     icons.forEach((icon) => {
-        if (icon.classList.contains('scaled')) icon.classList.remove('scaled')
-        else selectedIcon.classList.toggle('scaled')
+        if (icon.classList.contains('scaled'))
+            icon.classList.remove('scaled')
+        else
+            selectedIcon.classList.toggle('scaled')
         selectedIcon.classList.add('scaled')
         }
     )

@@ -1,8 +1,6 @@
 "use strict"
 /* article-specific js */
 
-// linkItems = document.getElementsByClassName('link-item')
-
 function scaleLinkItems(className) {
     const directories = document.getElementsByClassName('directories')
     for (let i = 0; i < linkItems.length; i++) {
