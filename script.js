@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
     addArticleDivDesktop(true)
 })
 
-/* add if() that loadArticles(lastArticleIwasOn) upon resize, right now reloads home only*/
 window.addEventListener('resize', () => {
     determineIfAtDesktopDimensions()
     if (isAtDesktopDimensions)
@@ -49,9 +48,9 @@ const desktopFooterItems = document.querySelector('.desktop-footer-items')
 
 /* article elements */
 let article = document.querySelector('.article')
-const leafbytesBody = document.querySelectorAll('.leafbytes-body')
-const articleLinks= document.querySelectorAll('.article-links')
-let linkItems = document.querySelectorAll('.link-item')
+const leafbytesBody = document.getElementsByClassName('leafbytes-body')
+const articleLinks= document.getElementsByClassName('article-links')
+const linkItems = document.getElementsByClassName('link-item')
 
 /* article inner elements */
 const introHeader = document.querySelectorAll('.intro-header')
@@ -131,13 +130,13 @@ function resizeNavBar() {
     if (isAtDesktopDimensions) {
         navi.style.height = '4rem'
         if (navi.classList.contains('navbar-onscrollup'))
-            navBarOnScrollUp.forEach((i) =>
-                navBarOnScrollUp[i].style.height = '4rem')
+            navBarOnScrollUp.forEach((navBarItem) =>
+                navBarItem.style.height = '4rem')
     } else {
         navi.style.height = '2.5rem'
         if (navi.classList.contains('navbar-onscrollup'))
-            navBarOnScrollUp.forEach((i) =>
-                navBarOnScrollUp[i].style.height = '2.5rem')
+            navBarOnScrollUp.forEach((navBarItem) =>
+                navBarItem.style.height = '2.5rem')
     }
 }
 
@@ -317,12 +316,12 @@ async function renderIt(articleId) {
 
 function renderArticle(articleId) {
     if (!isAtDesktopDimensions) {
-        leafbytesBody.forEach((bodyElem) =>
-            bodyElem.classList.add('leafbytes-fadeout-content'))
-        articleLinks.forEach((articleLink =>
-            articleLink.classList.add('leafbytes-fadeout-content')))
-        linkItems.forEach((linkItem) =>
-            linkItem.classList.add('leafbytes-fadeout-content'))
+        for (let i = 0; i < leafbytesBody.length; i++)
+            leafbytesBody[i].classList.add('leafbytes-fadeout-content')
+        for (let i = 0; i < articleLinks.length; i++)
+            articleLinks[i].classList.add('leafbytes-fadeout-content')
+        for (let i = 0; i < linkItems.length; i++)
+            linkItems[i].classList.add('leafbytes-fadeout-content')
     }
     renderIt(articleId)
 }
@@ -415,6 +414,7 @@ async function activateScrollDown() {
     if (isAtDesktopDimensions)
         for (let i = 0; i < articleDesktop.length; i++)
             articleDesktop[i].classList.remove('article-onscrollup')
+
 }
 
 async function activateScrollUp() {

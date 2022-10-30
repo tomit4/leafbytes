@@ -1,7 +1,7 @@
 "use strict"
 /* article-specific js */
 
-linkItems = document.getElementsByClassName('link-item')
+// linkItems = document.getElementsByClassName('link-item')
 
 function scaleLinkItems(className) {
     const directories = document.getElementsByClassName('directories')
@@ -9,7 +9,10 @@ function scaleLinkItems(className) {
         if (linkItems[i].classList.contains(className))
             directories[i].classList.toggle('linkItemToggled')
 
-        linkItems[i].style.transform = (directories[i].classList.contains('linkItemToggled')) ? "scale(1.03)" : "scale(1.0)"
+        linkItems[i].style.transform =
+            (directories[i].classList.contains('linkItemToggled'))
+            ? "scale(1.03)"
+            : "scale(1.0)"
     }
 }
 
