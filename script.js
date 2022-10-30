@@ -297,9 +297,7 @@ async function addArticleDivDesktop(onInitialLoad) {
 }
 
 function addArticleDiv() {
-    if (document.body.contains(article)) {
-        document.body.removeChild(article)
-    }
+    if (document.body.contains(article)) document.body.removeChild(article)
     article = document.createElement('div')
     article.classList.add('article')
     body.insertBefore(article, foot)
@@ -452,10 +450,10 @@ async function activateScrollUp() {
     }
 
     await wait(1200)
-    for (let i = 0; i < icons.length; i++) {
-        icons[i].style.visibility = "visible"
-        icons[i].classList.add('fade-in')
-    }
+    icons.forEach((icon) => {
+        icon.style.visibility = "visible"
+        icon.classList.add('fade-in')
+    })
 
     if (navi.classList.contains('navi-desktop')) {
         renderDesktopNavAndFoot()
