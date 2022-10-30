@@ -102,6 +102,26 @@ function determineIfAtDesktopDimensions() {
     else isAtDesktopDimensions = false
 }
 
+/* main function called onload and onresize that renders navbar/footer */
+async function renderDesktopNavAndFoot(onInitialLoad) {
+    let delay
+    if (onInitialLoad) delay = 3000
+    else delay = 0
+
+    if (isAtDesktopDimensions) {
+        clearPrevRenderedDesktopItems()
+        resizeNavBar()
+        renderDesktopNavItems()
+        renderDesktopFootItems()
+
+        await wait(delay)
+        makeDesktopItemsVisible()
+    } else {
+        clearPrevRenderedDesktopItems()
+        resizeNavBar()
+    }
+}
+
 function clearPrevRenderedDesktopItems() {
     if (isAtDesktopDimensions) {
         if (!navi.classList.contains('navi-desktop')) {
@@ -122,7 +142,7 @@ function resizeNavBar() {
     if (isAtDesktopDimensions) {
         navi.style.height = '4rem'
         if (navi.classList.contains('navbar-onscrollup')) {
-             for (let i = 0; i < navBarOnScrollUp.length; i++) {
+            for (let i = 0; i < navBarOnScrollUp.length; i++) {
                 navBarOnScrollUp[i].style.height = '4rem'
             }
         }
@@ -136,7 +156,7 @@ function resizeNavBar() {
     }
 }
 
-/* render the Desktop Menu Items, called in renderDesktopNavAndFoot() */
+/* render the Desktop NavBar Menu Items, called in renderDesktopNavAndFoot() */
 function renderDesktopNavItems() {
     for (let key in navList) {
         const node = document.createElement('li')
@@ -156,6 +176,7 @@ function renderDesktopNavItems() {
     }
 }
 
+/* render the Desktop Footer Menu Items, called in renderDesktopNavAndFoot() */
 function renderDesktopFootItems() {
     for (let key in footList) {
         const node = document.createElement('li')
@@ -166,7 +187,7 @@ function renderDesktopFootItems() {
     }
 }
 
-function letDesktopNavAndFootItemsBeVisible() {
+function makeDesktopItemsVisible() {
     for (let i = 0; i < navBarMenuItem.length; i++) {
         navBarMenuItem[i].classList.add('fade-in')
     }
@@ -176,26 +197,6 @@ function letDesktopNavAndFootItemsBeVisible() {
         footerMenuItems[i].classList.add('fade-in')
     }
 }
-
-async function renderDesktopNavAndFoot(onInitialLoad) {
-    let delay
-    if (onInitialLoad) delay = 3000
-    else delay = 0
-
-    if (isAtDesktopDimensions) {
-        clearPrevRenderedDesktopItems()
-        resizeNavBar()
-        renderDesktopNavItems()
-        renderDesktopFootItems()
-
-        await wait(delay)
-        letDesktopNavAndFootItemsBeVisible()
-    } else {
-        clearPrevRenderedDesktopItems()
-        resizeNavBar()
-    }
-}
-
 
 async function loadPage() {
     await wait(500)
@@ -297,9 +298,7 @@ async function addArticleDivDesktop(onInitialLoad) {
                     articleDesktop[i].innerHTML = html
                 }
         })
-    }
-
-    if (!isAtDesktopDimensions) {
+    } else {
         for (let i = 0; i < articleDesktop.length; i++) {
             body.removeChild(articleDesktop[i])
         }
