@@ -66,7 +66,8 @@ const footerMenuItems = document.getElementsByClassName('footer-menu-item')
 
 /* flag that checks if at desktop dimensions */
 let isAtDesktopDimensions = false
-/* flag that checks if initalPageLoad is complete (i.e. loadArticles has loaded once)*/
+/* flag that checks if initalPageLoad is complete
+* (i.e. loadArticles has loaded once)*/
 let initialPageLoad = true
 
 const navList = {
@@ -217,7 +218,8 @@ async function removeTitle() {
 
 // refactor this into multiple functions
 async function loadArticles(e) {
-    if (initialPageLoad) await addArticleDiv()
+    if (initialPageLoad)
+        await addArticleDiv()
     initialPageLoad = false
     scaleUp(e)
     await fetch(`./${e.id}.html`)
