@@ -1,6 +1,7 @@
 "use strict"
 
 window.addEventListener('load', () => {
+    // console.log(icons)
     loadPage()
     loadTitle()
     removeTitle()
@@ -32,10 +33,9 @@ const li = document.getElementsByTagName('li')
 const navi = document.querySelector('.navi')
 const navBar = document.querySelector('.navbar')
 const navBarMenuItem = document.getElementsByClassName('navbar-menu-item')
-// const navBarOnScrollUp = document.getElementsByClassName('navbar-onscrollup')
 const navBarOnScrollUp = document.querySelectorAll('.navbar-onscrollup')
 const prompt = document.querySelector('.prompt')
-const icons = document.getElementsByClassName('icons')
+const icons = document.querySelectorAll('.icons')
 
 /* individual icon elements */
 const homeIcon = document.getElementById('home')
@@ -162,11 +162,11 @@ function renderDesktopNavItems() {
         node.innerHTML = `${key[0].toUpperCase()}${key.substring(1, key.length)}`
         node.addEventListener('click', (e) => {
             e.preventDefault()
-            for (let i = 0; i < icons.length; i++) {
-                if (icons[i].id === key && !icons[i].classList.contains('scaled')) {
-                    icons[i].classList.add('scaled')
+            icons.forEach((icon) => {
+                if (icon.id === key && !icon.classList.contains('scaled')) {
+                    icon.classList.add('scaled')
                 }
-            }
+            })
             loadArticles(navList[key])
         })
         desktopMenuItems.appendChild(node)
@@ -421,10 +421,10 @@ function activateScrollBehavior(articleDiv) {
 }
 
 async function activateScrollDown() {
-    for (let i = 0; i < icons.length; i++) {
-        icons[i].style.visibility = 'hidden'
-        icons[i].classList.remove('fade-in')
-    }
+    icons.forEach((icon) => {
+        icon.style.visibility = 'hidden'
+        icon.classList.remove('fade-in')
+    })
     for (let k = 0; k < footerIcons.length; k++) {
         footerIcons[k].style.visibility = 'hidden'
         footerIcons[k].classList.remove('fade-in')
@@ -502,13 +502,12 @@ async function activateScrollUp() {
 /* icon scale up */
 function scaleUp(e) {
     const selectedIcon = document.getElementById(e.id)
-    for (let i = 0; i < icons.length; i++) {
-        if (icons[i].classList.contains('scaled')) {
-            icons[i].classList.remove('scaled')
-        } else
-            selectedIcon.classList.toggle('scaled')
-            selectedIcon.classList.add('scaled')
-    }
+    icons.forEach((icon) => {
+        if (icon.classList.contains('scaled')) icon.classList.remove('scaled')
+        else selectedIcon.classList.toggle('scaled')
+        selectedIcon.classList.add('scaled')
+        }
+    )
 }
 
 function expand() {
@@ -518,10 +517,10 @@ function expand() {
         navi.classList.remove('expanded', 'prompt')
         navi.removeEventListener('click', expand, false)
 
-        for (let i = 0; i < icons.length; i++) {
-            icons[i].style.visibility = 'visible'
-            icons[i].classList.add('fade-in')
-        }
+        icons.forEach((icon) => {
+            icon.style.visibility = 'visible'
+            icon.classList.add('fade-in')
+        })
 
         for (let k = 0; k < footerIcons.length; k++) {
             footerIcons[k].style.visibility = 'visible'
