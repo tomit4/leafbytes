@@ -10,14 +10,10 @@ linkItems = document.getElementsByClassName('link-item')
 function scaleLinkItems(className) {
     const directories = document.getElementsByClassName('directories')
     for (let i = 0; i < linkItems.length; i++) {
-        if (linkItems[i].classList.contains(className)) {
+        if (linkItems[i].classList.contains(className))
             directories[i].classList.toggle('linkItemToggled')
-        }
 
-        if (directories[i].classList.contains('linkItemToggled')) {
-            linkItems[i].style.transform = "scale(1.03)"
-        } else
-            linkItems[i].style.transform = "scale(1.0)"
+        linkItems[i].style.transform = (directories[i].classList.contains('linkItemToggled')) ? "scale(1.03)" : "scale(1.0)"
     }
 }
 

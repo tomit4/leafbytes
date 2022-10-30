@@ -1,7 +1,6 @@
 "use strict"
 
 window.addEventListener('load', () => {
-    // console.log(icons)
     loadPage()
     loadTitle()
     removeTitle()
@@ -15,7 +14,6 @@ window.addEventListener('resize', () => {
     determineIfAtDesktopDimensions()
     if (isAtDesktopDimensions)
         initialPageLoad = true
-        loadArticles(home)
     renderDesktopNavAndFoot(false)
     addArticleDivDesktop(false)
 })
@@ -93,17 +91,13 @@ function wait(ms) {
 
 /* simple bool @media check for 1920px x 980px */
 function determineIfAtDesktopDimensions() {
-    if (window.matchMedia('(min-width: 1920px)').matches &&
-        window.matchMedia('(min-height: 980px)').matches)
-        isAtDesktopDimensions = true
-    else isAtDesktopDimensions = false
+    isAtDesktopDimensions = (window.matchMedia('(min-width: 1920px)').matches &&
+        window.matchMedia('(min-height: 980px)').matches) ? true : false
 }
 
 /* main function called onload and onresize that renders navbar/footer */
 async function renderDesktopNavAndFoot(onInitialLoad) {
-    let delay
-    if (onInitialLoad) delay = 3000
-    else delay = 0
+    let delay = (onInitialLoad) ? 3000 : 0
 
     if (isAtDesktopDimensions) {
         clearPrevRenderedDesktopItems()
@@ -121,15 +115,13 @@ async function renderDesktopNavAndFoot(onInitialLoad) {
 
 function clearPrevRenderedDesktopItems() {
     if (isAtDesktopDimensions) {
-        if (!navi.classList.contains('navi-desktop')) {
+        if (!navi.classList.contains('navi-desktop'))
             navi.classList.add('navi-desktop')
-        }
         desktopMenuItems.innerHTML = ''
         desktopFooterItems.innerHTML = ''
     } else {
-        if (navi.classList.contains('navi-desktop')) {
+        if (navi.classList.contains('navi-desktop'))
             navi.classList.remove('navi-desktop')
-        }
         desktopMenuItems.innerHTML = ''
         desktopFooterItems.innerHTML = ''
     }
@@ -138,14 +130,14 @@ function clearPrevRenderedDesktopItems() {
 function resizeNavBar() {
     if (isAtDesktopDimensions) {
         navi.style.height = '4rem'
-        if (navi.classList.contains('navbar-onscrollup')) {
-            navBarOnScrollUp.forEach((i) => navBarOnScrollUp[i].style.height = '4rem')
-        }
+        if (navi.classList.contains('navbar-onscrollup'))
+            navBarOnScrollUp.forEach((i) =>
+                navBarOnScrollUp[i].style.height = '4rem')
     } else {
         navi.style.height = '2.5rem'
-        if (navi.classList.contains('navbar-onscrollup')) {
-            navBarOnScrollUp.forEach((i) => navBarOnScrollUp[i].style.height = '2.5rem')
-        }
+        if (navi.classList.contains('navbar-onscrollup'))
+            navBarOnScrollUp.forEach((i) =>
+                navBarOnScrollUp[i].style.height = '2.5rem')
     }
 }
 
@@ -159,7 +151,8 @@ function renderDesktopNavItems() {
         node.addEventListener('click', (e) => {
             e.preventDefault()
             icons.forEach((icon) => {
-                if (icon.id === key && !icon.classList.contains('scaled')) {
+                if (icon.id === key &&
+                    !icon.classList.contains('scaled')) {
                     icon.classList.add('scaled')
                 }
             })
@@ -182,7 +175,8 @@ function renderDesktopFootItems() {
 
 function makeDesktopItemsVisible() {
     const navBarMenuItem = document.querySelectorAll('.navbar-menu-item')
-    navBarMenuItem.forEach((menuItem) => menuItem.classList.add('fade-in'))
+    navBarMenuItem.forEach((menuItem) =>
+        menuItem.classList.add('fade-in'))
 
     for (let i = 0; i < footerMenuItems.length; i++) {
         footerMenuItems[i].style.visibility = "visible"
@@ -218,7 +212,8 @@ async function removeTitle() {
     circuitOuter.remove()
     await loadArticles(home)
     homeIcon.classList.add('scaled')
-    icons.forEach((icon) => icon.classList.remove('fade-in'))
+    icons.forEach((icon) =>
+        icon.classList.remove('fade-in'))
 }
 
 async function loadArticles(e) {
@@ -238,14 +233,12 @@ async function loadArticles(e) {
                             return res.text()
                         })
                         .then((html) => {
-                            for (let i = 0; i < articleDesktop.length; i++) {
+                            for (let i = 0; i < articleDesktop.length; i++)
                                 articleDesktop[i].innerHTML = html
-                            }
                         })
                 } else {
-                    for (let i = 0; i < articleDesktop.length; i++) {
+                    for (let i = 0; i < articleDesktop.length; i++)
                         articleDesktop[i].innerHTML = html
-                    }
                 }
                 if (article.innerHTML === '') {
                     await fetch('./home.html')
@@ -259,9 +252,8 @@ async function loadArticles(e) {
             }
             else {
                 article.innerHTML = html
-                for (let i = 0; i < articleDesktop.length; i++) {
+                for (let i = 0; i < articleDesktop.length; i++)
                     body.removeChild(articleDesktop[i])
-                }
             }
             window.Prism.highlightAll()
         }))
@@ -272,9 +264,8 @@ async function loadArticles(e) {
 async function addArticleDivDesktop(onInitialLoad) {
     if (onInitialLoad) await wait(7000)
     if (isAtDesktopDimensions) {
-        for (let i = 0; i < divElements.length; i++) {
+        for (let i = 0; i < divElements.length; i++)
             if (divElements[i].classList.contains('article-desktop')) return
-        }
         const node = document.createElement('div')
         node.classList.add('article-desktop')
         body.insertBefore(node, foot)
@@ -284,20 +275,19 @@ async function addArticleDivDesktop(onInitialLoad) {
                 return res.text()
             })
             .then((html) => {
-                for (let i = 0; i < articleDesktop.length; i++) {
+                for (let i = 0; i < articleDesktop.length; i++)
                     articleDesktop[i].innerHTML = html
-                }
         })
     } else {
-        for (let i = 0; i < articleDesktop.length; i++) {
+        for (let i = 0; i < articleDesktop.length; i++)
             body.removeChild(articleDesktop[i])
-        }
     }
     activateScrollBehavior(articleDesktop)
 }
 
 function addArticleDiv() {
-    if (document.body.contains(article)) document.body.removeChild(article)
+    if (document.body.contains(article))
+        document.body.removeChild(article)
     article = document.createElement('div')
     article.classList.add('article')
     body.insertBefore(article, foot)
@@ -311,16 +301,14 @@ async function renderIt(articleId) {
         })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
-                for (let i = 0; i < articleDesktop.length; i++) {
+                for (let i = 0; i < articleDesktop.length; i++)
                     articleDesktop[i].innerHTML = html
-                }
             }
             else {
                 await wait(1000)
                 article.innerHTML = html
-                for (let i = 0; i < articleDesktop.length; i++) {
+                for (let i = 0; i < articleDesktop.length; i++)
                     body.removeChild(articleDesktop[i])
-                }
             }
             window.Prism.highlightAll()
         }))
@@ -329,32 +317,41 @@ async function renderIt(articleId) {
 
 function renderArticle(articleId) {
     if (!isAtDesktopDimensions) {
-        leafbytesBody.forEach((bodyElem) => bodyElem.classList.add('leafbytes-fadeout-content'))
-        articleLinks.forEach((articleLink => articleLink.classList.add('leafbytes-fadeout-content')))
-        linkItems.forEach((linkItem) => linkItem.classList.add('leafbytes-fadeout-content'))
+        leafbytesBody.forEach((bodyElem) =>
+            bodyElem.classList.add('leafbytes-fadeout-content'))
+        articleLinks.forEach((articleLink =>
+            articleLink.classList.add('leafbytes-fadeout-content')))
+        linkItems.forEach((linkItem) =>
+            linkItem.classList.add('leafbytes-fadeout-content'))
     }
     renderIt(articleId)
 }
 
 async function renderNext(articleId) {
-    introHeader.forEach((header) => header.classList.add('leafbytes-fadeout-content2'))
-    articleBody.forEach((bodyElem) => bodyElem.classList.add('leafbytes-fadeout-content2'))
+    introHeader.forEach((header) =>
+        header.classList.add('leafbytes-fadeout-content2'))
+    articleBody.forEach((bodyElem) =>
+        bodyElem.classList.add('leafbytes-fadeout-content2'))
     if (!isAtDesktopDimensions) {
-        articleHeader.forEach((header) => header.classList.add('leafbytes-fadeout-content2'))
-        articleHeader3.forEach((header3) => header3.classList.add('leafbytes-fadeout-content2'))
+        articleHeader.forEach((header) =>
+            header.classList.add('leafbytes-fadeout-content2'))
+        articleHeader3.forEach((header3) =>
+            header3.classList.add('leafbytes-fadeout-content2'))
     }
     articleId = `tech-subject-${articleId + 1}`
     renderIt(articleId)
 }
 
 async function renderPrev(articleId) {
-    for (let i = 0; i < introHeader.length; i++) {
+    for (let i = 0; i < introHeader.length; i++)
         introHeader[i].classList.add('leafbytes-fadeout-content2')
-    }
-    articleBody.forEach((bodyElem) => bodyElem.classList.add('leafbytes-fadeout-content2'))
+    articleBody.forEach((bodyElem) =>
+        bodyElem.classList.add('leafbytes-fadeout-content2'))
     if (!isAtDesktopDimensions) {
-        articleHeader.forEach((header) => header.classList.add('leafbytes-fadeout-content2'))
-        articleHeader3.forEach((header3) => header3.classList.add('leafbytes-fadeout-content2'))
+        articleHeader.forEach((header) =>
+            header.classList.add('leafbytes-fadeout-content2'))
+        articleHeader3.forEach((header3) =>
+            header3.classList.add('leafbytes-fadeout-content2'))
     }
     articleId = `tech-subject-${articleId - 1}`
     renderIt(articleId)
@@ -365,10 +362,8 @@ function activateScrollBehavior(articleDiv) {
     if (articleDiv === article) {
         article.addEventListener('scroll', () => {
             let sTop = article.scrollTop
-            // scrolling down
             if (sTop > scrollPosition) {
                 activateScrollDown()
-            // scrolling up
             } else {
                 activateScrollUp()
             }
@@ -378,10 +373,8 @@ function activateScrollBehavior(articleDiv) {
         for (let i = 0; i < articleDesktop.length; i++) {
             articleDesktop[i].addEventListener('scroll', () => {
                 let sTop = articleDesktop[i].scrollTop
-                // scrolling down
                 if (sTop > scrollPosition) {
                     activateScrollDown()
-                // scrolling up
                 } else {
                     activateScrollUp()
                 }
@@ -409,11 +402,9 @@ async function activateScrollDown() {
     navi.classList.add('navbar-onscrolldown')
     foot.classList.add('foot-onscrolldown')
     article.classList.add('article-onscrolldown')
-    if (isAtDesktopDimensions) {
-        for (let i = 0; i < articleDesktop.length; i++) {
+    if (isAtDesktopDimensions)
+        for (let i = 0; i < articleDesktop.length; i++)
             articleDesktop[i].classList.add('article-onscrolldown')
-        }
-    }
 
     // remove onscrollup classes here
     desktopMenuItems.innerHTML = ''
@@ -421,12 +412,9 @@ async function activateScrollDown() {
     navi.classList.remove('navbar-onscrollup')
     foot.classList.remove('foot-onscrollup')
     article.classList.remove('article-onscrollup')
-    if (isAtDesktopDimensions) {
-        for (let i = 0; i < articleDesktop.length; i++) {
+    if (isAtDesktopDimensions)
+        for (let i = 0; i < articleDesktop.length; i++)
             articleDesktop[i].classList.remove('article-onscrollup')
-        }
-    }
-
 }
 
 async function activateScrollUp() {
@@ -434,20 +422,16 @@ async function activateScrollUp() {
     navi.classList.add('navbar-onscrollup')
     foot.classList.add('foot-onscrollup')
     article.classList.add('article-onscrollup')
-    if (isAtDesktopDimensions) {
-        for (let i = 0; i < articleDesktop.length; i++) {
+    if (isAtDesktopDimensions)
+        for (let i = 0; i < articleDesktop.length; i++)
             articleDesktop[i].classList.add('article-onscrollup')
-        }
-    }
 
     navi.classList.remove('navbar-onscrolldown')
     foot.classList.remove('foot-onscrolldown')
     article.classList.remove('article-onscrolldown')
-    if (isAtDesktopDimensions) {
-        for (let i = 0; i < articleDesktop.length; i++) {
+    if (isAtDesktopDimensions)
+        for (let i = 0; i < articleDesktop.length; i++)
             articleDesktop[i].classList.remove('article-onscrolldown')
-        }
-    }
 
     await wait(1200)
     icons.forEach((icon) => {
