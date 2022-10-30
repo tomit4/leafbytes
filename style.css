@@ -114,10 +114,10 @@ html, body {
 .navbar {
     /* visibility: hidden; */
     position: fixed;
-    background: #3c94aa;
-    border: 4px solid #004b77;
+    background: #004b77;
+    border: 4px solid #92dcdf;
     border-radius: 8px;
-    opacity: 80%;
+    opacity: 60%;
     width: 80vw;
     height: 2.5rem;
     list-style: none;
