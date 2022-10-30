@@ -32,7 +32,8 @@ const li = document.getElementsByTagName('li')
 const navi = document.querySelector('.navi')
 const navBar = document.querySelector('.navbar')
 const navBarMenuItem = document.getElementsByClassName('navbar-menu-item')
-const navBarOnScrollUp = document.getElementsByClassName('navbar-onscrollup')
+// const navBarOnScrollUp = document.getElementsByClassName('navbar-onscrollup')
+const navBarOnScrollUp = document.querySelectorAll('.navbar-onscrollup')
 const prompt = document.querySelector('.prompt')
 const icons = document.getElementsByClassName('icons')
 
@@ -142,16 +143,12 @@ function resizeNavBar() {
     if (isAtDesktopDimensions) {
         navi.style.height = '4rem'
         if (navi.classList.contains('navbar-onscrollup')) {
-            for (let i = 0; i < navBarOnScrollUp.length; i++) {
-                navBarOnScrollUp[i].style.height = '4rem'
-            }
+            navBarOnScrollUp.forEach((i) => navBarOnScrollUp[i].style.height = '4rem')
         }
     } else {
         navi.style.height = '2.5rem'
         if (navi.classList.contains('navbar-onscrollup')) {
-            for (let i = 0; i < navBarOnScrollUp.length; i++) {
-                navBarOnScrollUp[i].style.height = '2.5rem'
-            }
+            navBarOnScrollUp.forEach((i) => navBarOnScrollUp[i].style.height = '2.5rem')
         }
     }
 }
