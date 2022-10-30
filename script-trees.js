@@ -1,10 +1,6 @@
 "use strict"
 /* article-specific js */
 
-function wait(ms) {
-    return new Promise(res => setTimeout(res, ms))
-}
-
 linkItems = document.getElementsByClassName('link-item')
 
 function scaleLinkItems(className) {
