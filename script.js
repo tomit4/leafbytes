@@ -26,9 +26,6 @@ const body = document.querySelector('body')
 /* all divs */
 const divElements = document.getElementsByTagName('div')
 
-/* selectors of HTML elements by tag name */
-// const li = document.getElementsByTagName('li')
-
 /* navbar elements */
 const navi = document.querySelector('.navi')
 const navBar = document.querySelector('.navbar')
@@ -55,19 +52,19 @@ const desktopFooterItems = document.querySelector('.desktop-footer-items')
 /* article elements */
 let article = document.querySelector('.article')
 const leafbytesBody = document.querySelectorAll('.leafbytes-body')
-const articleLinks= document.getElementsByClassName('article-links')
-const linkItem= document.getElementsByClassName('link-item')
+const articleLinks= document.querySelectorAll('.article-links')
+let linkItems = document.querySelectorAll('.link-item')
 
 /* article inner elements */
-const introHeader = document.getElementsByClassName('intro-header')
-const articleHeader = document.getElementsByClassName('article-header')
-const articleHeader3 = document.getElementsByClassName('article-header3')
-const articleBody= document.getElementsByClassName('article-body')
+const introHeader = document.querySelectorAll('.intro-header')
+const articleHeader = document.querySelectorAll('.article-header')
+const articleHeader3 = document.querySelectorAll('.article-header3')
+const articleBody= document.querySelectorAll('.article-body')
 const articleDesktop = document.getElementsByClassName('article-desktop')
 
 /* footer elements */
 const foot = document.querySelector('.foot')
-const footerIcons = document.getElementsByClassName('footer-icons')
+const footerIcons = document.querySelectorAll('.footer-icons')
 const footerMenuItems = document.getElementsByClassName('footer-menu-item')
 
 /* flag that checks if at desktop dimensions */
@@ -221,9 +218,7 @@ async function removeTitle() {
     circuitOuter.remove()
     await loadArticles(home)
     homeIcon.classList.add('scaled')
-    for (let i = 0; i < icons.length; i++) {
-        icons[i].classList.remove('fade-in')
-    }
+    icons.forEach((icon) => icon.classList.remove('fade-in'))
 }
 
 async function loadArticles(e) {
@@ -336,32 +331,19 @@ async function renderIt(articleId) {
 
 function renderArticle(articleId) {
     if (!isAtDesktopDimensions) {
-        leafbytesBody.forEach((bodyElem) => bodyElem.classList.add('leafbytes-fadeout-content')
-        )
-        for (let i = 0; i< articleLinks.length; i++) {
-            articleLinks[i].classList.add('leafbytes-fadeout-content')
-        }
-        for (let i = 0; i< linkItem.length; i++) {
-            linkItem[i].classList.add('leafbytes-fadeout-content')
-        }
+        leafbytesBody.forEach((bodyElem) => bodyElem.classList.add('leafbytes-fadeout-content'))
+        articleLinks.forEach((articleLink => articleLink.classList.add('leafbytes-fadeout-content')))
+        linkItems.forEach((linkItem) => linkItem.classList.add('leafbytes-fadeout-content'))
     }
     renderIt(articleId)
 }
 
 async function renderNext(articleId) {
-    for (let i = 0; i < introHeader.length; i++) {
-        introHeader[i].classList.add('leafbytes-fadeout-content2')
-    }
-    for (let i = 0; i < articleBody.length; i++) {
-        articleBody[i].classList.add('leafbytes-fadeout-content2')
-    }
+    introHeader.forEach((header) => header.classList.add('leafbytes-fadeout-content2'))
+    articleBody.forEach((bodyElem) => bodyElem.classList.add('leafbytes-fadeout-content2'))
     if (!isAtDesktopDimensions) {
-        for (let i = 0; i < articleHeader.length; i++) {
-            articleHeader[i].classList.add('leafbytes-fadeout-content2')
-        }
-        for (let i = 0; i < articleHeader3.length; i++) {
-            articleHeader3[i].classList.add('leafbytes-fadeout-content2')
-        }
+        articleHeader.forEach((header) => header.classList.add('leafbytes-fadeout-content2'))
+        articleHeader3.forEach((header3) => header3.classList.add('leafbytes-fadeout-content2'))
     }
     articleId = `tech-subject-${articleId + 1}`
     renderIt(articleId)
@@ -371,16 +353,10 @@ async function renderPrev(articleId) {
     for (let i = 0; i < introHeader.length; i++) {
         introHeader[i].classList.add('leafbytes-fadeout-content2')
     }
-    for (let i = 0; i < articleBody.length; i++) {
-        articleBody[i].classList.add('leafbytes-fadeout-content2')
-    }
+    articleBody.forEach((bodyElem) => bodyElem.classList.add('leafbytes-fadeout-content2'))
     if (!isAtDesktopDimensions) {
-        for (let i = 0; i < articleHeader.length; i++) {
-            articleHeader[i].classList.add('leafbytes-fadeout-content2')
-        }
-        for (let i = 0; i < articleHeader3.length; i++) {
-            articleHeader3[i].classList.add('leafbytes-fadeout-content2')
-        }
+        articleHeader.forEach((header) => header.classList.add('leafbytes-fadeout-content2'))
+        articleHeader3.forEach((header3) => header3.classList.add('leafbytes-fadeout-content2'))
     }
     articleId = `tech-subject-${articleId - 1}`
     renderIt(articleId)
@@ -422,11 +398,10 @@ async function activateScrollDown() {
         icon.style.visibility = 'hidden'
         icon.classList.remove('fade-in')
     })
-    for (let k = 0; k < footerIcons.length; k++) {
-        footerIcons[k].style.visibility = 'hidden'
-        footerIcons[k].classList.remove('fade-in')
-    }
-
+    footerIcons.forEach((footerIcon) => {
+        footerIcon.style.visibility = 'hidden'
+        footerIcon.classList.remove('fade-in')
+    })
     for (let j = 0; j < footerMenuItems.length; j++) {
         footerMenuItems[j].style.visibility = 'hidden'
         footerMenuItems[j].classList.remove('fade-in')
@@ -486,10 +461,11 @@ async function activateScrollUp() {
         renderDesktopNavAndFoot()
     } else navi.style.height = '2.5rem'
 
-    for (let k = 0; k < footerIcons.length; k++) {
-        footerIcons[k].style.visibility = 'visible'
-        footerIcons[k].classList.add('fade-in')
-    }
+    footerIcons.forEach((footerIcon) => {
+        footerIcon.style.visibility = 'visible'
+        footerIcon.classList.add('fade-in')
+    })
+
     for (let j = 0; j < footerMenuItems.length; j++) {
         footerMenuItems[j].style.visibility = 'visible'
         footerMenuItems[j].classList.add('fade-in')
@@ -519,10 +495,11 @@ function expand() {
             icon.classList.add('fade-in')
         })
 
-        for (let k = 0; k < footerIcons.length; k++) {
-            footerIcons[k].style.visibility = 'visible'
-            footerIcons[k].classList.add('fade-in')
-        }
+        footerIcons.forEach((footerIcon) => {
+            footerIcon.style.visibility = 'visible'
+            footerIcon.classList.add('fade-in')
+        })
+
         for (let j = 0; j < footerMenuItems.length; j++) {
             footerMenuItems[j].style.visibility = 'visible'
             footerMenuItems[j].classList.add('fade-in')

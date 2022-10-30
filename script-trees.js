@@ -5,7 +5,7 @@ function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
 
-const linkItems = document.getElementsByClassName('link-item')
+linkItems = document.getElementsByClassName('link-item')
 
 function scaleLinkItems(className) {
     const directories = document.getElementsByClassName('directories')
