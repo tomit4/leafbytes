@@ -27,12 +27,11 @@ const body = document.querySelector('body')
 const divElements = document.getElementsByTagName('div')
 
 /* selectors of HTML elements by tag name */
-const li = document.getElementsByTagName('li')
+// const li = document.getElementsByTagName('li')
 
 /* navbar elements */
 const navi = document.querySelector('.navi')
 const navBar = document.querySelector('.navbar')
-const navBarMenuItem = document.getElementsByClassName('navbar-menu-item')
 const navBarOnScrollUp = document.querySelectorAll('.navbar-onscrollup')
 const prompt = document.querySelector('.prompt')
 const icons = document.querySelectorAll('.icons')
@@ -55,7 +54,7 @@ const desktopFooterItems = document.querySelector('.desktop-footer-items')
 
 /* article elements */
 let article = document.querySelector('.article')
-const leafbytesBody = document.getElementsByClassName('leafbytes-body')
+const leafbytesBody = document.querySelectorAll('.leafbytes-body')
 const articleLinks= document.getElementsByClassName('article-links')
 const linkItem= document.getElementsByClassName('link-item')
 
@@ -185,9 +184,8 @@ function renderDesktopFootItems() {
 }
 
 function makeDesktopItemsVisible() {
-    for (let i = 0; i < navBarMenuItem.length; i++) {
-        navBarMenuItem[i].classList.add('fade-in')
-    }
+    const navBarMenuItem = document.querySelectorAll('.navbar-menu-item')
+    navBarMenuItem.forEach((menuItem) => menuItem.classList.add('fade-in'))
 
     for (let i = 0; i < footerMenuItems.length; i++) {
         footerMenuItems[i].style.visibility = "visible"
@@ -338,9 +336,8 @@ async function renderIt(articleId) {
 
 function renderArticle(articleId) {
     if (!isAtDesktopDimensions) {
-        for (let i = 0; i< leafbytesBody.length; i++) {
-            leafbytesBody[i].classList.add('leafbytes-fadeout-content')
-        }
+        leafbytesBody.forEach((bodyElem) => bodyElem.classList.add('leafbytes-fadeout-content')
+        )
         for (let i = 0; i< articleLinks.length; i++) {
             articleLinks[i].classList.add('leafbytes-fadeout-content')
         }
