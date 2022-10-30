@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     loadTitle()
     removeTitle()
     determineIfAtDesktopDimensions()
-    renderDesktopNav(true)
+    renderDesktopNavAndFoot(true)
     addArticleDivDesktop(true)
 })
 
@@ -15,7 +15,7 @@ window.addEventListener('resize', () => {
     if (isAtDesktopDimensions)
         initialPageLoad = true
         loadArticles(home)
-    renderDesktopNav(false)
+    renderDesktopNavAndFoot(false)
     addArticleDivDesktop(false)
 })
 
@@ -75,11 +75,26 @@ let isAtDesktopDimensions = false
 /* flag that checks if initalPageLoad is complete (i.e. loadArticles has loaded once)*/
 let initialPageLoad = true
 
+const navList = {
+    'contact': contact,
+    'about': about,
+    'home': home,
+    'comments': comments,
+    'links': link
+}
+
+const footList = {
+    'github': git,
+    'linkedin': linkedin,
+    'resume': resume,
+}
+
 /* extremely useful wait() function */
 function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
 }
 
+/* simple bool @media check for 1920px x 980px */
 function determineIfAtDesktopDimensions() {
     if (window.matchMedia('(min-width: 1920px)').matches &&
         window.matchMedia('(min-height: 980px)').matches)
@@ -87,92 +102,97 @@ function determineIfAtDesktopDimensions() {
     else isAtDesktopDimensions = false
 }
 
-async function renderDesktopNav(onInitialLoad) {
-    let delay
-    if (onInitialLoad) delay = 3000
-    else delay = 0
-
+function clearPrevRenderedDesktopItems() {
     if (isAtDesktopDimensions) {
         if (!navi.classList.contains('navi-desktop')) {
             navi.classList.add('navi-desktop')
         }
         desktopMenuItems.innerHTML = ''
         desktopFooterItems.innerHTML = ''
+    } else {
+        if (navi.classList.contains('navi-desktop')) {
+            navi.classList.remove('navi-desktop')
+        }
+        desktopMenuItems.innerHTML = ''
+        desktopFooterItems.innerHTML = ''
+    }
+}
 
+function resizeNavBar() {
+    if (isAtDesktopDimensions) {
         navi.style.height = '4rem'
         if (navi.classList.contains('navbar-onscrollup')) {
              for (let i = 0; i < navBarOnScrollUp.length; i++) {
                 navBarOnScrollUp[i].style.height = '4rem'
             }
         }
-
-        const navList = {
-            'contact': contact,
-            'about': about,
-            'home': home,
-            'comments': comments,
-            'links': link
-        }
-
-        const footList = {
-            'github': git,
-            'linkedin': linkedin,
-            'resume': resume,
-        }
-
-        for (let key in navList) {
-            const node = document.createElement('li')
-            node.classList.add('navbar-menu-item')
-            node.id = `menu-${key}`
-            node.innerHTML = `${key[0].toUpperCase()}${key.substring(1, key.length)}`
-            node.addEventListener('click', (e) => {
-                e.preventDefault()
-                for (let i = 0; i < icons.length; i++) {
-                    if (icons[i].id === key && !icons[i].classList.contains('scaled')) {
-                        icons[i].classList.add('scaled')
-                    }
-                }
-                loadArticles(navList[key])
-            })
-            desktopMenuItems.appendChild(node)
-        }
-
-        for (let key in footList) {
-            const node = document.createElement('li')
-            node.classList.add('footer-menu-item')
-            node.id = `foot-${key}`
-            node.innerHTML = `${key[0].toUpperCase()}${key.substring(1, key.length)}`
-            desktopFooterItems.appendChild(node)
-        }
-
-        await wait(delay)
-        for (let i = 0; i < navBarMenuItem.length; i++) {
-            navBarMenuItem[i].classList.add('fade-in')
-        }
-
-        for (let i = 0; i < footerMenuItems.length; i++) {
-            footerMenuItems[i].style.visibility = "visible"
-            footerMenuItems[i].classList.add('fade-in')
-        }
-
     } else {
-        if (navi.classList.contains('navi-desktop')) {
-            navi.classList.remove('navi-desktop')
-        }
-        for (let i = 0; i < icons.length; i++) {
-            icons[i].style.margin = '0.25rem 1rem 0.25rem 0.25rem'
-        }
-
         navi.style.height = '2.5rem'
-
         if (navi.classList.contains('navbar-onscrollup')) {
             for (let i = 0; i < navBarOnScrollUp.length; i++) {
                 navBarOnScrollUp[i].style.height = '2.5rem'
             }
         }
+    }
+}
 
-        desktopMenuItems.innerHTML = ''
-        desktopFooterItems.innerHTML = ''
+/* render the Desktop Menu Items, called in renderDesktopNavAndFoot() */
+function renderDesktopNavItems() {
+    for (let key in navList) {
+        const node = document.createElement('li')
+        node.classList.add('navbar-menu-item')
+        node.id = `menu-${key}`
+        node.innerHTML = `${key[0].toUpperCase()}${key.substring(1, key.length)}`
+        node.addEventListener('click', (e) => {
+            e.preventDefault()
+            for (let i = 0; i < icons.length; i++) {
+                if (icons[i].id === key && !icons[i].classList.contains('scaled')) {
+                    icons[i].classList.add('scaled')
+                }
+            }
+            loadArticles(navList[key])
+        })
+        desktopMenuItems.appendChild(node)
+    }
+}
+
+function renderDesktopFootItems() {
+    for (let key in footList) {
+        const node = document.createElement('li')
+        node.classList.add('footer-menu-item')
+        node.id = `foot-${key}`
+        node.innerHTML = `${key[0].toUpperCase()}${key.substring(1, key.length)}`
+        desktopFooterItems.appendChild(node)
+    }
+}
+
+function letDesktopNavAndFootItemsBeVisible() {
+    for (let i = 0; i < navBarMenuItem.length; i++) {
+        navBarMenuItem[i].classList.add('fade-in')
+    }
+
+    for (let i = 0; i < footerMenuItems.length; i++) {
+        footerMenuItems[i].style.visibility = "visible"
+        footerMenuItems[i].classList.add('fade-in')
+    }
+}
+
+async function renderDesktopNavAndFoot(onInitialLoad) {
+    let delay
+    if (onInitialLoad) delay = 3000
+    else delay = 0
+
+    if (isAtDesktopDimensions) {
+        clearPrevRenderedDesktopItems()
+        resizeNavBar()
+        renderDesktopNavItems()
+        renderDesktopFootItems()
+
+        await wait(delay)
+        letDesktopNavAndFootItemsBeVisible()
+    } else {
+        clearPrevRenderedDesktopItems()
+        resizeNavBar()
     }
 }
 
@@ -470,7 +490,7 @@ async function activateScrollUp() {
     }
 
     if (navi.classList.contains('navi-desktop')) {
-        renderDesktopNav()
+        renderDesktopNavAndFoot()
     } else navi.style.height = '2.5rem'
 
     for (let k = 0; k < footerIcons.length; k++) {

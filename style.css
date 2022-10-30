@@ -168,6 +168,7 @@ html, body {
     padding: 0.25rem;
     min-height: 27px;
     max-height: 29px;
+    margin: 0.25rem 1rem 0.25rem 0.25rem;
     /* transform: translate(10%, -0%); */
 }
 
@@ -786,14 +787,6 @@ html, body {
     .icons {
         padding: 0.25rem 1rem;
         margin: 0.25rem 1.75rem 0.25rem 1.85rem !important;
-    }
-
-    .navi {
-        height: 4rem;
-    }
-
-    .navi-desktop {
-        height: 4rem;
     }
 
     .navbar-menu-item {
