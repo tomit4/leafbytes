@@ -291,11 +291,13 @@ async function addArticleDivDesktop(onInitialLoad) {
                 fetchWelcomePage()
         article.innerHTML = ''
         fetchHomePage()
+        window.Prism.highlightAll()
     } else {
         for (let i = 0; i < articleDesktop.length; i++)
             body.removeChild(articleDesktop[i])
         if (cachedArticle !== undefined)
             article.innerHTML = cachedArticle
+        window.Prism.highlightAll()
     }
     activateScrollBehavior(articleDesktop)
 }
