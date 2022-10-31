@@ -198,13 +198,15 @@ async function fetchWelcomePage() {
         })
 }
 
-async function fetchHomePage() {
+async function fetchHomePage(waitTime = 0) {
     await fetch('./home.html')
         .then((res) => { return res.text() })
-        .then((html) => {
+        .then(async (html) => {
             homePageCache = html
             article.innerHTML = html
         })
+    showTreeOnInitialPageLoad(waitTime)
+
 }
 
 async function loadPage() {
@@ -234,6 +236,7 @@ async function removeTitle() {
     subtitle.remove()
     circuitOuter.remove()
     await loadArticles(home)
+    showTreeOnInitialPageLoad()
     homeIcon.classList.add('scaled')
     icons.forEach((icon) =>
         icon.classList.remove('fade-in'))

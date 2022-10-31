@@ -1,6 +1,8 @@
 "use strict"
 /* article-specific js */
 
+
+
 function scaleLinkItems(className) {
     const directories = document.getElementsByClassName('directories')
     for (let i = 0; i < linkItems.length; i++) {
@@ -14,6 +16,7 @@ function scaleLinkItems(className) {
     }
 }
 
+/* needs to be refactored */
 async function showTree(className, waitTime = 1000) {
     scaleLinkItems(className)
 
@@ -42,7 +45,7 @@ async function showTree(className, waitTime = 1000) {
                 subjectTreeName[i].classList.add(`${className}-tree-subject-show`)
             }
 
-        /* add classNames that initiatte retracting animation here */
+        /* add classNames that initiate retracting animation here */
         } else {
             for (let i = 0; i < subjectTreeName.length; i++) {
                 subjectTreeName[i].classList.remove(`${className}-tree-subject-show`)
@@ -66,5 +69,13 @@ async function showTree(className, waitTime = 1000) {
             }
 
         }
+    }
+}
+
+const treeSubjects = ['portfolio', 'tech', 'dev', 'use', 'art']
+async function showTreeOnInitialPageLoad(waitTime = 0) {
+    await wait(waitTime)
+    for (let i = 0; i < treeSubjects.length; i++) {
+        showTree(treeSubjects[i])
     }
 }
