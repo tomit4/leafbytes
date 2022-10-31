@@ -303,3 +303,10 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
         margin: 0.5em 5rem;
     }
 }
+
+/* fullscreen desktop */
+@media (min-width: 1920px) and (min-height: 980px) {
+    pre[class*='language-'] {
+        margin: 0.5em 12rem;
+    }
+}
