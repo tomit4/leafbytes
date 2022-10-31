@@ -223,17 +223,13 @@ async function loadArticles(e) {
     initialPageLoad = false
     scaleUp(e)
     await fetch(`./${e.id}.html`)
-        .then((res) => {
-            return res.text()
-        })
+        .then((res) => { return res.text() })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
                 if (`${e.id}` === 'home') {
                     // replace about.html with a welcome page only visible from desktop site
                     await fetch('./about.html')
-                        .then((res) => {
-                            return res.text()
-                        })
+                        .then((res) => { return res.text() })
                         .then((html) => {
                             for (let i = 0; i < articleDesktop.length; i++)
                                 articleDesktop[i].innerHTML = html
@@ -244,12 +240,8 @@ async function loadArticles(e) {
                 }
                 if (article.innerHTML === '') {
                     await fetch('./home.html')
-                        .then((res) => {
-                            return res.text()
-                        })
-                        .then((html) => {
-                            article.innerHTML = html
-                        })
+                        .then((res) => { return res.text() })
+                        .then((html) => { article.innerHTML = html })
                 }
             }
             else {
@@ -273,13 +265,17 @@ async function addArticleDivDesktop(onInitialLoad) {
         body.insertBefore(node, foot)
         // replace about.html with a welcome page only visible from desktop site
         await fetch('./about.html')
-            .then((res) => {
-                return res.text()
-            })
+            .then((res) => { return res.text() })
             .then((html) => {
                 for (let i = 0; i < articleDesktop.length; i++)
                     articleDesktop[i].innerHTML = html
         })
+        article.innerHTML = ''
+        await fetch('./home.html')
+            .then((res) => { return res.text() })
+            .then((html) => {
+                article.innerHTML = html
+            })
     } else {
         for (let i = 0; i < articleDesktop.length; i++)
             body.removeChild(articleDesktop[i])
@@ -298,9 +294,7 @@ function addArticleDiv() {
 
 async function renderIt(articleId) {
     await fetch(`./articles/tech/${articleId}.html`)
-        .then((res) => {
-            return res.text()
-        })
+        .then((res) => { return res.text() })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
                 for (let i = 0; i < articleDesktop.length; i++)
