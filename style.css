@@ -246,28 +246,22 @@ html, body {
 /* nav icons */
 #link {
     content: url('./icons/brackets.svg');
-    padding-right: 0.5rem;
-    /* padding-left: 1.75rem; */
 }
 
 #comments {
     content: url('./icons/chat-bubble.svg');
-    padding-left: 1.75rem;
 }
 
 #home {
     content: url('./icons/home-filled.svg');
-    padding-right: 0.9rem;
 }
 
 #about {
     content: url('./icons/about.svg');
-    padding-right: .6rem;
 }
 
 #contact {
     content: url('./icons/mail.svg');
-    padding-left: 1.75rem;
 }
 
 #menu-contact {
@@ -791,6 +785,26 @@ html, body {
     .icons {
         padding: 0.25rem 1rem;
         margin: 0.25rem 1.75rem 0.25rem 1.85rem !important;
+    }
+
+    #link {
+        padding-right: 0.5rem;
+    }
+
+    #comments {
+        padding-left: 1.75rem;
+    }
+
+    #home {
+        padding-right: 0.9rem;
+    }
+
+    #about {
+        padding-right: .6rem;
+    }
+
+    #contact {
+        padding-left: 1.75rem;
     }
 
     .navbar-menu-item {
