@@ -72,6 +72,7 @@ let initialPageLoad = true
 /* cache article so it doesn't
 * re-render fetched html upon page resize */
 let cachedArticle = undefined
+let homePageCache = undefined
 
 const navList = {
     'contact': contact,
@@ -200,7 +201,10 @@ async function fetchWelcomePage() {
 async function fetchHomePage() {
     await fetch('./home.html')
         .then((res) => { return res.text() })
-        .then((html) => { article.innerHTML = html })
+        .then((html) => {
+            homePageCache = html
+            article.innerHTML = html
+        })
 }
 
 async function loadPage() {
@@ -247,6 +251,7 @@ async function loadArticles(e) {
                 if (`${e.id}` === 'home')
                     fetchWelcomePage()
                 else
+                    cachedArticle = html
                     for (let i = 0; i < articleDesktop.length; i++)
                         articleDesktop[i].innerHTML = html
                 if (article.innerHTML === '')
@@ -254,6 +259,9 @@ async function loadArticles(e) {
             }
             else {
                 article.innerHTML = html
+                if (`${e.id}` !== 'home')
+                    scaleUp(e)
+                    cachedArticle = html
                 for (let i = 0; i < articleDesktop.length; i++)
                     body.removeChild(articleDesktop[i])
             }
@@ -273,8 +281,11 @@ async function addArticleDivDesktop(onInitialLoad) {
         if (cachedArticle === undefined)
             fetchWelcomePage()
         else
-            for (let i = 0; i < articleDesktop.length; i++)
-                articleDesktop[i].innerHTML = cachedArticle
+            if (cachedArticle !== homePageCache)
+                for (let i = 0; i < articleDesktop.length; i++)
+                    articleDesktop[i].innerHTML = cachedArticle
+            else
+                fetchWelcomePage()
         article.innerHTML = ''
         fetchHomePage()
     } else {
