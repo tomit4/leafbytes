@@ -246,19 +246,23 @@ html, body {
 /* nav icons */
 #link {
     content: url('./icons/brackets.svg');
-    padding-right: 1.75rem;
+    padding-right: 0.5rem;
+    /* padding-left: 1.75rem; */
 }
 
 #comments {
     content: url('./icons/chat-bubble.svg');
+    padding-left: 1.75rem;
 }
 
 #home {
     content: url('./icons/home-filled.svg');
+    padding-right: 0.9rem;
 }
 
 #about {
     content: url('./icons/about.svg');
+    padding-right: .6rem;
 }
 
 #contact {
@@ -699,7 +703,7 @@ html, body {
 .scaled {
     animation: scaleup .5s;
     transform: scale(1.25);
-    transform-origin: bottom left;
+    transform-origin: center;
 }
 
 @keyframes scaleup {
@@ -708,7 +712,7 @@ html, body {
     }
     to {
         transform: scale(1.25);
-        transform-origin: bottom left;
+        transform-origin: center;
     }
 }
 
