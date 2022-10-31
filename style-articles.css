@@ -487,9 +487,18 @@ figcaption {
     }
 }
 
+@media (min-width: 800px) {
+    .next-btn {
+        right: 19.5vw;
+    }
 
-@media (min-width: 1920px) and (min-height: 980px)
-{
+    .prev-btn {
+        left: 19.5vw;
+    }
+}
+
+
+@media (min-width: 1920px) and (min-height: 980px) {
     .next-btn {
         right: 14vw;
     }
