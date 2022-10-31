@@ -185,6 +185,21 @@ function makeDesktopItemsVisible() {
     }
 }
 
+async function fetchWelcomePage() {
+    await fetch('./about.html')
+        .then((res) => { return res.text() })
+        .then((html) => {
+            for (let i = 0; i < articleDesktop.length; i++)
+                articleDesktop[i].innerHTML = html
+        })
+}
+
+async function fetchHomePage() {
+    await fetch('./home.html')
+        .then((res) => { return res.text() })
+        .then((html) => { article.innerHTML = html })
+}
+
 async function loadPage() {
     await wait(500)
     circuitOuter.classList.add('loadfade')
@@ -227,23 +242,13 @@ async function loadArticles(e) {
         .then((res) => { return res.text() })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
-                if (`${e.id}` === 'home') {
-                    // replace about.html with a welcome page only visible from desktop site
-                    await fetch('./about.html')
-                        .then((res) => { return res.text() })
-                        .then((html) => {
-                            for (let i = 0; i < articleDesktop.length; i++)
-                                articleDesktop[i].innerHTML = html
-                        })
-                } else {
+                if (`${e.id}` === 'home')
+                    fetchWelcomePage()
+                else
                     for (let i = 0; i < articleDesktop.length; i++)
                         articleDesktop[i].innerHTML = html
-                }
-                if (article.innerHTML === '') {
-                    await fetch('./home.html')
-                        .then((res) => { return res.text() })
-                        .then((html) => { article.innerHTML = html })
-                }
+                if (article.innerHTML === '')
+                    fetchHomePage()
             }
             else {
                 article.innerHTML = html
@@ -263,23 +268,13 @@ async function addArticleDivDesktop(onInitialLoad) {
         const node = document.createElement('div')
         node.classList.add('article-desktop')
         body.insertBefore(node, foot)
-        if (cachedArticle === undefined) {
-            // replace about.html with a welcome page only visible from desktop site
-            await fetch('./about.html')
-                .then((res) => { return res.text() })
-                .then((html) => {
-                    for (let i = 0; i < articleDesktop.length; i++)
-                        articleDesktop[i].innerHTML = html
-            })
-        } else
+        if (cachedArticle === undefined)
+            fetchWelcomePage()
+        else
             for (let i = 0; i < articleDesktop.length; i++)
                 articleDesktop[i].innerHTML = cachedArticle
         article.innerHTML = ''
-        await fetch('./home.html')
-            .then((res) => { return res.text() })
-            .then((html) => {
-                article.innerHTML = html
-            })
+        fetchHomePage()
     } else {
         for (let i = 0; i < articleDesktop.length; i++)
             body.removeChild(articleDesktop[i])
