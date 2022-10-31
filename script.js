@@ -198,14 +198,14 @@ async function fetchWelcomePage() {
         })
 }
 
-async function fetchHomePage(waitTime = 0) {
+async function fetchHomePage() {
     await fetch('./home.html')
         .then((res) => { return res.text() })
         .then(async (html) => {
             homePageCache = html
             article.innerHTML = html
         })
-    showTreeOnInitialPageLoad(waitTime)
+    showTreeOnInitialPageLoad()
 
 }
 
@@ -236,7 +236,7 @@ async function removeTitle() {
     subtitle.remove()
     circuitOuter.remove()
     await loadArticles(home)
-    showTreeOnInitialPageLoad()
+    // showTreeOnInitialPageLoad()
     homeIcon.classList.add('scaled')
     icons.forEach((icon) =>
         icon.classList.remove('fade-in'))
@@ -267,6 +267,8 @@ async function loadArticles(e) {
                 if (`${e.id}` !== 'home') {
                     scaleUp(e)
                     cachedArticle = html
+                } else {
+                    showTreeOnInitialPageLoad()
                 }
                 for (let i = 0; i < articleDesktop.length; i++)
                     body.removeChild(articleDesktop[i])
