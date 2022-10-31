@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: entsans;
-    src: url('./fonts/entsans.ttf');
+    src: url('../fonts/entsans.ttf');
 }
 
 * {
@@ -57,7 +57,7 @@ html, body {
 
 /* circuit-board background image */
 .circuits {
-    background-image: url("./svg/circuit_board_vector.svg");
+    background-image: url("../svg/circuit_board_vector.svg");
     background-size: contain;
     background-position: center center;
     width: 98vw;
@@ -69,7 +69,7 @@ html, body {
 }
 
 .prompt {
-    content: url("./icons/prompt.svg");
+    content: url("../icons/prompt.svg");
     z-index: 1;
     display: flex;
     list-style: none;
@@ -245,23 +245,23 @@ html, body {
 
 /* nav icons */
 #link {
-    content: url('./icons/brackets.svg');
+    content: url('../icons/brackets.svg');
 }
 
 #comments {
-    content: url('./icons/chat-bubble.svg');
+    content: url('../icons/chat-bubble.svg');
 }
 
 #home {
-    content: url('./icons/home-filled.svg');
+    content: url('../icons/home-filled.svg');
 }
 
 #about {
-    content: url('./icons/about.svg');
+    content: url('../icons/about.svg');
 }
 
 #contact {
-    content: url('./icons/mail.svg');
+    content: url('../icons/mail.svg');
 }
 
 #menu-contact {
@@ -451,15 +451,15 @@ html, body {
 }
 
 #git {
-    content: url('./icons/git.svg');
+    content: url('../icons/git.svg');
 }
 
 #resume {
-    content: url('./icons/resume.svg');
+    content: url('../icons/resume.svg');
 }
 
 #linkedin {
-    content: url('./icons/linkedin.svg');
+    content: url('../icons/linkedin.svg');
 }
 
 /* logo/title */
@@ -665,7 +665,7 @@ html, body {
 
 .logo {
     /* visibility: hidden; */
-    background-image: url('./svg/logo2.svg');
+    background-image: url('../svg/logo2.svg');
     width: 90vw;
     max-width: 520px;
     max-height: 920px;

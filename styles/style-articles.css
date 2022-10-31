@@ -2,12 +2,12 @@
  * consider changing based off of chromium/mozilla */
 
 @font-face {
-    font-family: LiberationMono; src: url('./fonts/LiberationMono-Bold.ttf');
+    font-family: LiberationMono; src: url('../fonts/LiberationMono-Bold.ttf');
 }
 
 @font-face {
     font-family: HussarBold;
-    src: url('./fonts/HussarBold-7mRE.otf');
+    src: url('../fonts/HussarBold-7mRE.otf');
 }
 
 .leafbytes-body {
@@ -58,7 +58,7 @@
 .prev-btn {
     display: flex;
     position: sticky;
-    content: url("./icons/triangle-left.svg");
+    content: url("../icons/triangle-left.svg");
     width: 1.25rem;
     height: 1.25rem;
     padding: 0.25rem;
@@ -72,7 +72,7 @@
 
 .next-btn {
     display: flex;
-    content: url("./icons/triangle-right.svg");
+    content: url("../icons/triangle-right.svg");
     position: sticky;
     width: 1.25rem;
     height: 1.25rem;
