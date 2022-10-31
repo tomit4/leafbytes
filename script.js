@@ -248,20 +248,23 @@ async function loadArticles(e) {
         .then((res) => { return res.text() })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
-                if (`${e.id}` === 'home')
+                if (`${e.id}` === 'home') {
                     fetchWelcomePage()
-                else
+                    cachedArticle = undefined
+                } else {
                     cachedArticle = html
                     for (let i = 0; i < articleDesktop.length; i++)
                         articleDesktop[i].innerHTML = html
+                }
                 if (article.innerHTML === '')
                     fetchHomePage()
             }
             else {
                 article.innerHTML = html
-                if (`${e.id}` !== 'home')
+                if (`${e.id}` !== 'home') {
                     scaleUp(e)
                     cachedArticle = html
+                }
                 for (let i = 0; i < articleDesktop.length; i++)
                     body.removeChild(articleDesktop[i])
             }
