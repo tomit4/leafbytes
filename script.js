@@ -283,6 +283,8 @@ async function addArticleDivDesktop(onInitialLoad) {
     } else {
         for (let i = 0; i < articleDesktop.length; i++)
             body.removeChild(articleDesktop[i])
+        if (cachedArticle !== undefined)
+            article.innerHTML = cachedArticle
     }
     activateScrollBehavior(articleDesktop)
 }
