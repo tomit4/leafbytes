@@ -201,7 +201,7 @@ html, body {
     cursor: pointer;
     animation: scaleup .5s;
     transform: scale(1.25);
-    transform-origin: bottom left;
+    transform-origin: center;
 }
 
 /* add event listener that scales the icons
