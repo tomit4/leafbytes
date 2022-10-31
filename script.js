@@ -373,7 +373,6 @@ async function renderPrev(articleId) {
     }
     articleId = `tech-subject-${articleId - 1}`
     renderIt(articleId)
-    console.log(cachedArticle)
 }
 
 function activateScrollBehavior(articleDiv) {
