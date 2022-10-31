@@ -69,6 +69,7 @@ let isAtDesktopDimensions = false
 /* flag that checks if initalPageLoad is complete
 * (i.e. loadArticles has loaded once)*/
 let initialPageLoad = true
+let cachedArticle = undefined
 
 const navList = {
     'contact': contact,
@@ -251,7 +252,6 @@ async function loadArticles(e) {
             }
             window.Prism.highlightAll()
         }))
-
     // window.history.pushState({}, '', `${window.location.origin}/${e.id}`)
 }
 
@@ -263,13 +263,17 @@ async function addArticleDivDesktop(onInitialLoad) {
         const node = document.createElement('div')
         node.classList.add('article-desktop')
         body.insertBefore(node, foot)
-        // replace about.html with a welcome page only visible from desktop site
-        await fetch('./about.html')
-            .then((res) => { return res.text() })
-            .then((html) => {
-                for (let i = 0; i < articleDesktop.length; i++)
-                    articleDesktop[i].innerHTML = html
-        })
+        if (cachedArticle === undefined) {
+            // replace about.html with a welcome page only visible from desktop site
+            await fetch('./about.html')
+                .then((res) => { return res.text() })
+                .then((html) => {
+                    for (let i = 0; i < articleDesktop.length; i++)
+                        articleDesktop[i].innerHTML = html
+            })
+        } else
+            for (let i = 0; i < articleDesktop.length; i++)
+                articleDesktop[i].innerHTML = cachedArticle
         article.innerHTML = ''
         await fetch('./home.html')
             .then((res) => { return res.text() })
@@ -297,17 +301,20 @@ async function renderIt(articleId) {
         .then((res) => { return res.text() })
         .then((async (html) => {
             if (isAtDesktopDimensions) {
+                cachedArticle = html
                 for (let i = 0; i < articleDesktop.length; i++)
                     articleDesktop[i].innerHTML = html
             }
             else {
                 await wait(1000)
+                cachedArticle = html
                 article.innerHTML = html
                 for (let i = 0; i < articleDesktop.length; i++)
                     body.removeChild(articleDesktop[i])
             }
             window.Prism.highlightAll()
         }))
+    return cachedArticle
     // window.history.pushState({}, '', `${window.location.origin}/articles/tech/${articlesId}`)
 }
 
@@ -351,6 +358,7 @@ async function renderPrev(articleId) {
     }
     articleId = `tech-subject-${articleId - 1}`
     renderIt(articleId)
+    console.log(cachedArticle)
 }
 
 function activateScrollBehavior(articleDiv) {
