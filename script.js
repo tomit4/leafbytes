@@ -69,6 +69,8 @@ let isAtDesktopDimensions = false
 /* flag that checks if initalPageLoad is complete
 * (i.e. loadArticles has loaded once)*/
 let initialPageLoad = true
+/* cache article so it doesn't
+* re-render fetched html upon page resize */
 let cachedArticle = undefined
 
 const navList = {
@@ -186,6 +188,7 @@ function makeDesktopItemsVisible() {
 }
 
 async function fetchWelcomePage() {
+    /* replace about.html with a custom welcome.html page */
     await fetch('./about.html')
         .then((res) => { return res.text() })
         .then((html) => {
@@ -232,7 +235,6 @@ async function removeTitle() {
         icon.classList.remove('fade-in'))
 }
 
-// refactor this into multiple functions
 async function loadArticles(e) {
     if (initialPageLoad)
         await addArticleDiv()
