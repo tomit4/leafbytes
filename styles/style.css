@@ -450,6 +450,10 @@ html, body {
     text-decoration-thickness: 0.1rem;
 }
 
+#sun {
+    content: url('../icons/sun-fill.svg');
+}
+
 #git {
     content: url('../icons/git.svg');
 }
@@ -460,6 +464,10 @@ html, body {
 
 #linkedin {
     content: url('../icons/linkedin.svg');
+}
+
+#moon {
+    content: url('../icons/moon-solid.svg');
 }
 
 /* logo/title */

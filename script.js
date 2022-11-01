@@ -514,3 +514,7 @@ function expand() {
 
     }, 1250)
 }
+
+function toggleDark() {
+    console.log('this is where the toggleDark function will go')
+}
