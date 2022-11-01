@@ -815,6 +815,22 @@ html, body {
         padding-left: 1.75rem;
     }
 
+    #moon {
+        transform: scale(1.5);
+        margin-top: 0.75rem;
+    }
+
+    #sun {
+        transform: scale(1.5);
+        margin-top: 0.75rem;
+    }
+
+    #moon:hover,
+    #sun:hover {
+        cursor: pointer;
+        transform: scale(1.5) !important;
+    }
+
     .navbar-menu-item {
         margin: 2rem 3rem 2rem 1rem;
     }
