@@ -489,11 +489,11 @@ figcaption {
 
 @media (min-width: 800px) {
     .next-btn {
-        right: 19.5vw;
+        right: 17.5vw;
     }
 
     .prev-btn {
-        left: 19.5vw;
+        left: 17.5vw;
     }
 }
 
