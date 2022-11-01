@@ -517,8 +517,16 @@ function expand() {
 
 function toggleLight() {
     console.log('this is where the toggleLight function will go')
+    DarkReader.disable()
 }
 
+/* some additional styling will have to be done,
+* but this is a good start */
 function toggleDark() {
     console.log('this is where the toggleDark function will go')
+    DarkReader.enable({
+         brightness: 100,
+         contrast: 80,
+        // sepia: 10
+        });
 }
