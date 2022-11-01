@@ -17,6 +17,9 @@ window.addEventListener('resize', () => {
     addArticleDivDesktop(false)
 })
 
+/* grab head elements for adjust dark/light css themes */
+const head = document.getElementsByTagName('HEAD')
+
 /* selector for the entire html body */
 const body = document.querySelector('body')
 
@@ -66,13 +69,18 @@ const footerMenuItems = document.getElementsByClassName('footer-menu-item')
 
 /* flag that checks if at desktop dimensions */
 let isAtDesktopDimensions = false
+
 /* flag that checks if initalPageLoad is complete
 * (i.e. loadArticles has loaded once)*/
 let initialPageLoad = true
+
 /* cache article so it doesn't
 * re-render fetched html upon page resize */
 let cachedArticle = undefined
 let homePageCache = undefined
+
+/* for use with toggleDark() toggleLight() */
+let hasDarkCSS = false
 
 const navList = {
     'contact': contact,
@@ -516,17 +524,19 @@ function expand() {
 }
 
 function toggleLight() {
-    console.log('this is where the toggleLight function will go')
-    DarkReader.disable()
+    if (!hasDarkCSS) return
+    head[0].removeChild(head[0].lastChild)
+    hasDarkCSS = !hasDarkCSS
 }
 
 /* some additional styling will have to be done,
 * but this is a good start */
 function toggleDark() {
-    console.log('this is where the toggleDark function will go')
-    DarkReader.enable({
-         brightness: 100,
-         contrast: 80,
-        // sepia: 10
-        });
+    if (hasDarkCSS) return
+    const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.type = 'text/css'
+    link.href = 'styles/darkreader.css'
+    head[0].appendChild(link)
+    hasDarkCSS = !hasDarkCSS
 }
