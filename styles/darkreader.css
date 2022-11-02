@@ -44,10 +44,15 @@ body {
 }
 
 .prompt {
+    content: url("../dark_icons/prompt.svg");
     list-style-image: none;
     background-color: #9ad7ff;
     background-image: none;
     border-color: #9ad7ff;
+}
+
+.expanded {
+    content: "";
 }
 
 .navbar {

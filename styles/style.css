@@ -94,7 +94,6 @@ html, body {
     left: 5vw;
     right: 0;
     animation: expand 1.25s;
-
 }
 
 @keyframes expand {
@@ -112,7 +111,6 @@ html, body {
 }
 
 .navbar {
-    /* visibility: hidden; */
     position: fixed;
     background: #004b77;
     border: 4px solid #004b77;
@@ -130,7 +128,6 @@ html, body {
     margin: 0.25rem auto;
     left: 0;
     right: 0;
-
 }
 
 .navbar-onscrolldown {
