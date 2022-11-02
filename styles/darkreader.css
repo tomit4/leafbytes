@@ -23,18 +23,21 @@ html,
 body {
     background-image: linear-gradient(
         280deg,
-        rgb(25, 74, 102) 0%,
-        rgb(25, 90, 99) 120%
+        #39738c,
+        #194a66
     );
 }
+
 ::-webkit-scrollbar-track {
     background-color: rgb(25, 90, 99);
     background-image: none;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: rgb(25, 74, 102);
     border-color: rgb(25, 136, 201);
 }
+
 .circuits {
     background-image: url('../svg/circuit_board_vector.svg');
 }
