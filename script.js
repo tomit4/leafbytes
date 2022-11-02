@@ -67,6 +67,9 @@ const foot = document.querySelector('.foot')
 const footerIcons = document.querySelectorAll('.footer-icons')
 const footerMenuItems = document.getElementsByClassName('footer-menu-item')
 
+/* all script tags */
+const scripts = document.getElementsByTagName('script')
+
 /* flag that checks if at desktop dimensions */
 let isAtDesktopDimensions = false
 
@@ -525,18 +528,47 @@ function expand() {
 
 function toggleLight() {
     if (!hasDarkCSS) return
+
     head[0].removeChild(head[0].lastChild)
+    head[0].removeChild(head[0].lastChild)
+    body.removeChild(scripts[0])
+
+    const newScript = document.createElement('script')
+    newScript.src = './prism_js/prism_solarized.js'
+    console.log(newScript)
+    body.insertBefore(newScript, scripts[0])
+
+    const prismLink = document.createElement('link')
+    prismLink.rel = 'stylesheet'
+    prismLink.type = 'text/css'
+    prismLink.href = 'styles/prism_solarized.css'
+    head[0].appendChild(prismLink)
+
     hasDarkCSS = !hasDarkCSS
 }
 
-/* some additional styling will have to be done,
-* but this is a good start */
 function toggleDark() {
     if (hasDarkCSS) return
-    const link = document.createElement('link')
-    link.rel = 'stylesheet'
-    link.type = 'text/css'
-    link.href = 'styles/darkreader.css'
-    head[0].appendChild(link)
+
+    head[0].removeChild(head[0].lastChild)
+    body.removeChild(scripts[0])
+
+    const newScript = document.createElement('script')
+    newScript.src = './prism_js/prism_okaidia.js'
+    console.log(newScript)
+    body.insertBefore(newScript, scripts[0])
+
+    const prismLink = document.createElement('link')
+    prismLink.rel = 'stylesheet'
+    prismLink.type = 'text/css'
+    prismLink.href = 'styles/prism_okaidia.css'
+    head[0].appendChild(prismLink)
+
+    const darkLink = document.createElement('link')
+    darkLink.rel = 'stylesheet'
+    darkLink.type = 'text/css'
+    darkLink.href = 'styles/darkreader.css'
+    head[0].appendChild(darkLink)
+
     hasDarkCSS = !hasDarkCSS
 }
