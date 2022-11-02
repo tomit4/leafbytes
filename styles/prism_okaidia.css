@@ -4,6 +4,10 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 /* customized with custom colors */
 /* Languages Supported Specifically:  html, css, c, js, python, rust, sql, bash, json*/
 
+pre:hover {
+    cursor: default;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
     color: #f8f8f2;
