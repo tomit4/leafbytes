@@ -42,9 +42,10 @@ pre[class*='language-'] {
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
     /* background: #272822; */
-    background: #002c46;
+    /* background: #002c46; */
+    background: #222f48;
     border: 3px solid #9ad7ff;
-    opacity: 75%;
+    opacity: 65%;
 }
 :not(pre) > code[class*='language-'] {
     padding: 0.1em;

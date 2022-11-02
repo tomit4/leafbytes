@@ -64,8 +64,8 @@ body {
 .article {
     background-image: linear-gradient(
         280deg,
-        rgba(68, 113, 130, 0.2) 0%,
-        rgba(53, 98, 122, 0.7) 120%
+        rgba(75, 138, 161, 0.2),
+        rgba(38, 69, 103, 0.7)
     );
     border-color: rgb(25, 136, 201);
     border-color: #73aece;
@@ -74,8 +74,8 @@ body {
 .article-desktop {
     background-image: linear-gradient(
         280deg,
-        rgba(68, 113, 130, 0.2) 0%,
-        rgba(53, 98, 122, 0.7) 120%
+        rgba(75, 138, 161, 0.2),
+        rgba(38, 69, 103, 0.7)
     );
     border-color: #73aece;
 }
