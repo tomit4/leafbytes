@@ -166,19 +166,26 @@ body {
 }
 
 .comment-name {
-    color: rgb(211, 210, 207);
-    background-color: rgb(25, 53, 70);
-    border-color: rgb(128, 121, 110);
+    /* color: rgb(211, 210, 207); */
+    color: #222f48;
+    /* background-color: rgb(25, 53, 70); */
+    background-color: #73aece;
+    /* border-color: rgb(128, 121, 110); */
+    border-color: #73aece
 }
 
 .comment-vbar {
-    background-color: rgb(25, 74, 102);
+    /* background-color: rgb(25, 74, 102); */
+    background-color: #73aece;
 }
 
 .comment-message {
-    color: rgb(122, 190, 230);
-    background-color: rgb(25, 71, 93);
-    border-color: rgb(25, 136, 201);
+    /* color: rgb(122, 190, 230); */
+    color: #9ad7ff;
+    /* background-color: rgb(25, 71, 93); */
+    background-color: #222f48;
+    /* border-color: rgb(25, 136, 201); */
+    border-color: #73aece
 }
 
 .article-content {
@@ -223,8 +230,10 @@ textarea::placeholder {
 }
 
 .contact-input {
-    border-color: rgb(25, 136, 201);
-    background-color: rgb(25, 71, 93);
+    /* border-color: rgb(25, 136, 201); */
+    /* background-color: rgb(25, 71, 93); */
+    border-color: #9ad7ff;
+    background-color: #222f48;
 }
 
 .contact-body {
@@ -233,14 +242,25 @@ textarea::placeholder {
 }
 
 .comment-body {
-    border-color: rgb(25, 136, 201);
-    background-color: rgb(25, 71, 93);
+    /* border-color: rgb(25, 136, 201); */
+    border-color: #73aece;
+    /* background-color: rgb(25, 71, 93); */
+    background-color: #222f48;
 }
 
 #contact-submit-btn {
-    background-color: rgb(25, 74, 102);
-    border-color: rgb(25, 136, 201);
-    color: rgb(158, 206, 230);
+    /* background-color: rgb(25, 74, 102); */
+    /* border-color: rgb(25, 136, 201); */
+    border-color: #73aece;
+    background-color: #73aece;
+
+    /* color: rgb(158, 206, 230); */
+    color: #222f48;
+}
+
+#contact-message {
+    border-color: #73aece;
+    background-color: #222f48;
 }
 
 img {
