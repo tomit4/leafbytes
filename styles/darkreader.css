@@ -112,26 +112,38 @@ body {
 }
 
 .circuit-outer {
-    background-image: linear-gradient(
+    /* background-image: linear-gradient( */
+        /* 280deg, */
+        /* rgb(68, 113, 130) 0%, */
+        /* rgb(53, 98, 122) 120% */
+    /* ); */
+   background-image: linear-gradient(
         280deg,
-        rgb(68, 113, 130) 0%,
-        rgb(53, 98, 122) 120%
+        rgba(75, 138, 161, 0.2),
+        rgba(38, 69, 103, 0.7)
     );
 }
 
 .current {
-    background-color: rgb(25, 74, 102);
+    /* background-color: rgb(25, 74, 102); */
+    background-color: #9ad7ff;
     background-image: none;
 }
 
 .leafbytes {
-    text-shadow: rgba(25, 74, 102, 0.7) 5px 4px 0px;
-    color: rgb(211, 210, 207);
+    /* text-shadow: rgba(25, 74, 102, 0.7) 5px 4px 0px; */
+    /* color: rgb(211, 210, 207); */
+    /* text-shadow: #73aece; */
+    /* color: #222f48; */
+    text-shadow: #222f48;
+    color: #c5e8ff;
 }
 
 .subtitle {
-    text-shadow: rgba(25, 74, 102, 0.7) 5px 4px 0px;
-    color: rgb(211, 210, 207);
+    /* text-shadow: rgba(25, 74, 102, 0.7) 5px 4px 0px; */
+    /* color: rgb(211, 210, 207); */
+    text-shadow: #222f48;
+    color: #c5e8ff;
 }
 
 .logo {
@@ -169,25 +181,18 @@ body {
 }
 
 .comment-name {
-    /* color: rgb(211, 210, 207); */
     color: #222f48;
-    /* background-color: rgb(25, 53, 70); */
     background-color: #73aece;
-    /* border-color: rgb(128, 121, 110); */
     border-color: #73aece
 }
 
 .comment-vbar {
-    /* background-color: rgb(25, 74, 102); */
     background-color: #73aece;
 }
 
 .comment-message {
-    /* color: rgb(122, 190, 230); */
     color: #9ad7ff;
-    /* background-color: rgb(25, 71, 93); */
     background-color: #222f48;
-    /* border-color: rgb(25, 136, 201); */
     border-color: #73aece
 }
 
