@@ -26,6 +26,7 @@ body {
         #39738c,
         #194a66
     );
+    scrollbar-color: #222f48 #9ad7ff;
 }
 
 ::-webkit-scrollbar-track {
@@ -112,11 +113,6 @@ body {
 }
 
 .circuit-outer {
-    /* background-image: linear-gradient( */
-        /* 280deg, */
-        /* rgb(68, 113, 130) 0%, */
-        /* rgb(53, 98, 122) 120% */
-    /* ); */
    background-image: linear-gradient(
         280deg,
         rgba(75, 138, 161, 0.2),
@@ -125,23 +121,16 @@ body {
 }
 
 .current {
-    /* background-color: rgb(25, 74, 102); */
     background-color: #9ad7ff;
     background-image: none;
 }
 
 .leafbytes {
-    /* text-shadow: rgba(25, 74, 102, 0.7) 5px 4px 0px; */
-    /* color: rgb(211, 210, 207); */
-    /* text-shadow: #73aece; */
-    /* color: #222f48; */
     text-shadow: #222f48;
     color: #c5e8ff;
 }
 
 .subtitle {
-    /* text-shadow: rgba(25, 74, 102, 0.7) 5px 4px 0px; */
-    /* color: rgb(211, 210, 207); */
     text-shadow: #222f48;
     color: #c5e8ff;
 }
