@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
     loadPage()
     loadTitle()
     removeTitle()
+    determineIfPrefersDarkMode()
     determineIfAtDesktopDimensions()
     renderDesktopNavAndFoot(true)
     addArticleDivDesktop(true)
@@ -102,6 +103,12 @@ const footList = {
 /* extremely useful wait() function */
 function wait(ms) {
     return new Promise(res => setTimeout(res, ms))
+}
+
+function determineIfPrefersDarkMode() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        toggleDark()
+    }
 }
 
 /* simple bool @media check for 1920px x 980px */
