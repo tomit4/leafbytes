@@ -4,7 +4,7 @@
     <head>
         <noscript>
             <meta http-equiv="refresh" content="0; url=noscript/home.html" />
-            <p>You have JavaScript Disabled. Please follow URL above for NoScript Version of this Site.</p>
+            <p aria-label="noscript" role="navigation">You have JavaScript Disabled. Please follow URL above for NoScript Version of this Site.</p>
         </noscript>
         <meta charset="utf-8">
         <meta name="HandheldFriendly" content="true" />
@@ -19,11 +19,11 @@
     <body>
         <nav>
             <ul class="navi prompt">
-                <li class="icons" id="contact" onclick="loadArticles(contact)"></li>
-                <li class="icons" id="about" onclick="loadArticles(about)"></li>
-                <li class="icons" id="home" onclick="loadArticles(home)"></li>
-                <li class="icons" id="comments" onclick="loadArticles(comments)"></li>
-                <li class="icons" id="link" onclick="loadArticles(link)"></li>
+                <li aria-label="contact" role="navigation" class="icons" id="contact" onclick="loadArticles(contact)"></li>
+                <li aria-label="about" role="navigation" class="icons" id="about" onclick="loadArticles(about)"></li>
+                <li aria-label="home" role="navigation" class="icons" id="home" onclick="loadArticles(home)"></li>
+                <li aria-label="comments" role="navigation" class="icons" id="comments" onclick="loadArticles(comments)"></li>
+                <li aria-label="link" role="navigation" class="icons" id="link" onclick="loadArticles(link)"></li>
             </ul>
             <!-- this gets generated at min-width: 927px -->
             <ul class="desktop-menu-items">
@@ -55,11 +55,11 @@
         <footer class="foot">
             <ul>
                 <div class="footer-nav">
-                    <li><div class="footer-icons" id="sun" onclick="toggleLight()"></div></li>
-                    <li><a class="footer-icons" id="git" href="/"></a></li>
-                    <li><a class="footer-icons" id="linkedin" href="/"></a></li>
-                    <li><a class="footer-icons" id="resume" href="/"></a></li>
-                    <li><div class="footer-icons" id="moon" onclick="toggleDark()"></div></li>
+                    <li><div aria-label="light-mode" class="footer-icons" id="sun" onclick="toggleLight()"></div></li>
+                    <li><a aria-label="github" role="link" class="footer-icons" id="git" href="/"></a></li>
+                    <li><a aria-label="linkedin" role="link" class="footer-icons" id="linkedin" href="/"></a></li>
+                    <li><a aria-label="resume" role="link" class="footer-icons" id="resume" href="/"></a></li>
+                    <li><div aria-label="dark-mode" class="footer-icons" id="moon" onclick="toggleDark()"></div></li>
                 </div>
             </ul>
             <!-- starting point to desktop footer navigation menu items -->
