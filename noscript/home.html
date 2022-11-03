@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="overflow-y: scroll;">
     <head>
         <meta charset="utf-8">
         <meta name="HandheldFriendly" content="true" />
@@ -7,20 +7,22 @@
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
         <title>leafbytes</title>
         <link rel="shortcut icon" href="../icons/favicon.svg" type="image/x-icon">
-        <!-- simplify style-trees.css so that tree remains open here -->
-        <!-- <link rel="stylesheet" href="../styles/style.css"> -->
-        <!-- <link rel="stylesheet" href="../styles/style-articles.css"> -->
-        <!-- <link rel="stylesheet" href="../styles/style-trees.css"> -->
-        <!-- <link rel="stylesheet" href="../styles/prism_okaidia.css"> -->
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/style-articles.css">
+        <link rel="stylesheet" href="../styles/style-trees.css">
     </head>
     <body>
         <nav>
-            <ul class="navi prompt">
-                <li class="icons" id="contact"><a href="contact.html">Contact</a></li>
-                <li class="icons" id="about"><a href="about.html">About</a></li>
-                <li class="icons" id="home"><a href="home.html">Home</a></li>
-                <li class="icons" id="comments"><a href="comments.html">Comments</a></li>
-                <li class="icons" id="link"><a href="link.html">Links</a></li>
+            <ul class="navbar" style="position: static;">
+                <li><a href="contact.html" style="color: #ffffff;">Contact</a></li>
+                <span style="margin-right: 1rem;"></span>
+                <li><a href="about.html" style="color: #ffffff;">About</a></li>
+                <span style="margin-right: 1rem;"></span>
+                <li><a href="home.html" style="color: #ffffff;">Home</a></li>
+                <span style="margin-right: 1rem;"></span>
+                <li><a href="comments.html" style="color: #ffffff;">Comments</a></li>
+                <span style="margin-right: 1rem;"></span>
+                <li><a href="link.html" style="color: #ffffff;">Links</a></li>
             </ul>
         </nav>
         <div class="article-entire">
@@ -33,18 +35,18 @@
                         <!-- 22 character limit on titles for subjects -->
                         <div class="portfolio-tree">
                             <div class="tree-container">
-                            <div class="portfolio-tree-vert portfolio-tree-vert-hidden"></div>
-                                <div class="portfolio-tree-horiz portfolio-tree-horiz-hidden" id="portfolio-hbar-1">
-                                    <a class="tree-subject portfolio-tree-subject portfolio-tree-subject-hidden" id="portfolio-subject-1" target="_blank" rel="noopener noreferrer" href="">todo list</a>
+                            <div class="portfolio-tree-vert portfolio-tree-vert-show"></div>
+                                <div class="portfolio-tree-horiz portfolio-tree-horiz-show" id="portfolio-hbar-1">
+                                    <a class="tree-subject portfolio-tree-subject portfolio-tree-subject-show" id="portfolio-subject-1" target="_blank" rel="noopener noreferrer" href="">todo list</a>
                                 </div>
-                                <div class="portfolio-tree-horiz portfolio-tree-horiz-hidden" id="portfolio-hbar-2">
-                                    <a class="tree-subject portfolio-tree-subject portfolio-tree-subject-hidden" id="portfolio-subject-2" target="_blank" rel="noopener noreferrer" href="#">vue todo list</a>
+                                <div class="portfolio-tree-horiz portfolio-tree-horiz-show" id="portfolio-hbar-2">
+                                    <a class="tree-subject portfolio-tree-subject portfolio-tree-subject-show" id="portfolio-subject-2" target="_blank" rel="noopener noreferrer" href="#">vue todo list</a>
                                 </div>
-                                <div class="portfolio-tree-horiz portfolio-tree-horiz-hidden" id="portfolio-hbar-3">
-                                    <a class="tree-subject portfolio-tree-subject portfolio-tree-subject-hidden" id="portfolio-subject-3" target="_blank" rel="noopener noreferrer" href="#">project #3</a>
+                                <div class="portfolio-tree-horiz portfolio-tree-horiz-show" id="portfolio-hbar-3">
+                                    <a class="tree-subject portfolio-tree-subject portfolio-tree-subject-show" id="portfolio-subject-3" target="_blank" rel="noopener noreferrer" href="#">project #3</a>
                                 </div>
-                                <div class="portfolio-tree-horiz portfolio-tree-horiz-hidden" id="portfolio-hbar-4">
-                                    <a class="tree-subject portfolio-tree-subject portfolio-tree-subject-hidden" id="portfolio-subject-4" target="_blank" rel="noopener noreferrer" href="#">other projects</a>
+                                <div class="portfolio-tree-horiz portfolio-tree-horiz-show" id="portfolio-hbar-4">
+                                    <a class="tree-subject portfolio-tree-subject portfolio-tree-subject-show" id="portfolio-subject-4" target="_blank" rel="noopener noreferrer" href="#">other projects</a>
                                 </div>
                             </div>
                         </div>
@@ -54,35 +56,35 @@
                         </div>
                         <div class="tech-tree">
                             <div class="tree-container">
-                            <div class="tech-tree-vert tech-tree-vert-hidden"></div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-1">
+                            <div class="tech-tree-vert tech-tree-vert-show"></div>
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-1">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-1"><a href="./articles/tech/tech-subject-1.html">command line</a></div>
                             </div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-2">
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-2">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-2"><a href="./articles/tech/tech-subject-2.html">why use linux</a></div>
                             </div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-3">
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-3">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-3"><a href="./articles/tech/tech-subject-3.html">musings on neovim</a></div>
                             </div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-4">
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-4">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-4"><a href="./articles/tech/tech-subject-4.html">suckless philosophy</a></div>
                             </div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-5">
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-5">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-5"><a href="./articles/tech/tech-subject-5.html">bgit, beginner's git</a></div>
                             </div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-6">
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-6">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-6"><a href="./articles/tech/tech-subject-6.html">systemd or systemdon't</a></div>
                             </div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-7">
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-7">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-7"><a href="./articles/tech/tech-subject-7.html">privacy vs convenience</a></div>
                             </div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-8">
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-8">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-8"><a href="./articles/tech/tech-subject-8.html">librewolf and brave</a></div>
                             </div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-9">
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-9">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-9"><a href="./articles/tech/tech-subject-9.html">ortholinear keyboards</a></div>
                             </div>
-                            <div class="tech-tree-horiz tech-tree-horiz-hidden" id="tech-hbar-10">
+                            <div class="tech-tree-horiz tech-tree-horiz-show" id="tech-hbar-10">
                                 <div class="tree-subject tech-tree-subject" id="tech-subject-10"><a href="#">other articles</a></div>
                             </div>
                             </div>
@@ -93,18 +95,18 @@
                         </div>
                         <div class="dev-tree">
                             <div class="tree-container">
-                            <div class="dev-tree-vert dev-tree-vert-hidden"></div>
-                            <div class="dev-tree-horiz dev-tree-horiz-hidden" id="dev-hbar-1">
-                                <a class="tree-subject dev-tree-subject dev-tree-subject-hidden" id="dev-subject-1" target="_blank" rel="noopener noreferrer" href="https://artixlinux.org">artix linux: arch/runit</a>
+                            <div class="dev-tree-vert dev-tree-vert-show"></div>
+                            <div class="dev-tree-horiz dev-tree-horiz-show" id="dev-hbar-1">
+                                <a class="tree-subject dev-tree-subject dev-tree-subject-show" id="dev-subject-1" target="_blank" rel="noopener noreferrer" href="https://artixlinux.org">artix linux: arch/runit</a>
                             </div>
-                            <div class="dev-tree-horiz dev-tree-horiz-hidden" id="dev-hbar-2">
-                                <a class="tree-subject dev-tree-subject dev-tree-subject-hidden" id="dev-subject-2" target="_blank" rel="noopener noreferrer" href="https://github.com/baskerville/bspwm">bspwm: window manager</a>
+                            <div class="dev-tree-horiz dev-tree-horiz-show" id="dev-hbar-2">
+                                <a class="tree-subject dev-tree-subject dev-tree-subject-show" id="dev-subject-2" target="_blank" rel="noopener noreferrer" href="https://github.com/baskerville/bspwm">bspwm: window manager</a>
                             </div>
-                            <div class="dev-tree-horiz dev-tree-horiz-hidden" id="dev-hbar-3">
-                                <a class="tree-subject dev-tree-subject dev-tree-subject-hidden" id="dev-subject-3" target="_blank" rel="noopener noreferrer" href="https://neovim.io/">neovim: text editor</a>
+                            <div class="dev-tree-horiz dev-tree-horiz-show" id="dev-hbar-3">
+                                <a class="tree-subject dev-tree-subject dev-tree-subject-show" id="dev-subject-3" target="_blank" rel="noopener noreferrer" href="https://neovim.io/">neovim: text editor</a>
                             </div>
-                            <div class="dev-tree-horiz dev-tree-horiz-hidden" id="dev-hbar-4">
-                                <a class="tree-subject dev-tree-subject dev-tree-subject-hidden" id="dev-subject-4" target="_blank" rel="noopener noreferrer" href="https://espanso.org/">espanso: text expander</a>
+                            <div class="dev-tree-horiz dev-tree-horiz-show" id="dev-hbar-4">
+                                <a class="tree-subject dev-tree-subject dev-tree-subject-show" id="dev-subject-4" target="_blank" rel="noopener noreferrer" href="https://espanso.org/">espanso: text expander</a>
                             </div>
                             </div>
                         </div>
@@ -114,36 +116,36 @@
                         </div>
                         <div class="use-tree">
                             <div class="tree-container">
-                            <div class="use-tree-vert use-tree-vert-hidden"></div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-1">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-1" target="_blank" rel="noopener noreferrer" href="https://www.linuxquestions.org/">linux questions forums</a>
+                            <div class="use-tree-vert use-tree-vert-show"></div>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-1">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-1" target="_blank" rel="noopener noreferrer" href="https://www.linuxquestions.org/">linux questions forums</a>
                             </div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-2">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-2" target="_blank" rel="noopener noreferrer" href="https://artixlinux.org/">artix linux distro</a>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-2">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-2" target="_blank" rel="noopener noreferrer" href="https://artixlinux.org/">artix linux distro</a>
                             </div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-3">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-3" target="_blank" rel="noopener noreferrer" href="https://neovim.io/">neovim text editor</a>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-3">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-3" target="_blank" rel="noopener noreferrer" href="https://neovim.io/">neovim text editor</a>
                             </div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-4">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-4" target="_blank" rel="noopener noreferrer" href="https://github.com/baskerville/bspwm">bspwm github page</a>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-4">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-4" target="_blank" rel="noopener noreferrer" href="https://github.com/baskerville/bspwm">bspwm github page</a>
                             </div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-5">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-5" target="_blank" rel="noopener noreferrer" href="https://espanso.org/">espanso text expander</a>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-5">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-5" target="_blank" rel="noopener noreferrer" href="https://espanso.org/">espanso text expander</a>
                             </div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-6">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-6" target="_blank" rel="noopener noreferrer" href="https://gitlab.com/raphaelbastide/libre-foundries">libre fonts</a>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-6">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-6" target="_blank" rel="noopener noreferrer" href="https://gitlab.com/raphaelbastide/libre-foundries">libre fonts</a>
                             </div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-7">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-7" target="_blank" rel="noopener noreferrer" href="https://suckless.org">suckless software</a>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-7">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-7" target="_blank" rel="noopener noreferrer" href="https://suckless.org">suckless software</a>
                             </div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-8">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-8" target="_blank" rel="noopener noreferrer" href="https://iconify.design/">iconify foss icons</a>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-8">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-8" target="_blank" rel="noopener noreferrer" href="https://iconify.design/">iconify foss icons</a>
                             </div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-9">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-9" target="_blank" rel="noopener noreferrer" href="https://prismjs.com">prismjs code blocks</a>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-9">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-9" target="_blank" rel="noopener noreferrer" href="https://prismjs.com">prismjs code blocks</a>
                             </div>
-                            <div class="use-tree-horiz use-tree-horiz-hidden" id="use-hbar-10">
-                                <a class="tree-subject use-tree-subject use-tree-subject-hidden" id="use-subject-10" target="_blank" rel="noopener noreferrer" href="#">other resources</a>
+                            <div class="use-tree-horiz use-tree-horiz-show" id="use-hbar-10">
+                                <a class="tree-subject use-tree-subject use-tree-subject-show" id="use-subject-10" target="_blank" rel="noopener noreferrer" href="#">other resources</a>
                             </div>
                             </div>
                         </div>
@@ -153,9 +155,9 @@
                         </div>
                         <div class="art-tree">
                             <div class="tree-container">
-                            <div class="art-tree-vert art-tree-vert-hidden"></div>
-                            <div class="art-tree-horiz art-tree-horiz-hidden" id="art-hbar-1">
-                                <a class="tree-subject art-tree-subject art-tree-subject-hidden" id="art-subject-1" target="_blank" rel="noopener noreferrer" href="#">artwork</a>
+                            <div class="art-tree-vert art-tree-vert-show"></div>
+                            <div class="art-tree-horiz art-tree-horiz-show" id="art-hbar-1">
+                                <a class="tree-subject art-tree-subject art-tree-subject-show" id="art-subject-1" target="_blank" rel="noopener noreferrer" href="#">artwork</a>
                             </div>
                             </div>
                         </div>
