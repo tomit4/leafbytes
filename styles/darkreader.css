@@ -204,6 +204,10 @@ body {
     color: rgb(122, 190, 230);
 }
 
+.article-outside-links {
+    color: #cca700;
+}
+
 .directories {
     color: rgb(194, 190, 186);
 }
