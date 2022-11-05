@@ -16,200 +16,260 @@
             />
             <figcaption>The Bash Logo</figcaption>
         </figure>
-        <p class="article-content">Work In Progress...</p>
+        <blockquote class="article-quotes" cite="https://www.cs.princeton.edu/~bwk/memoir.html">
+            "By this point, the shell had become a real programming language, suitable for writing
+            pretty much anything that could reasonably be formulated as a sequence of commands.
+            It could often do this well enough that there was no need to write a C program."
+            <br> - Brian Kernighan
+        </blockquote>
         <p class="article-content">
-            Learning any new skill can be daunting. Especially for adults, who
-            are often reluctant to engage in something that they are not already
-            well versed in. Many people make the mistake believing that once
-            they have acquired a certain skill, it is simply a matter of keeping
-            up to date with the latest trends in that skill, or, worse yet,
-            simply rest on the laurels that their journey in learning has been
-            completed. That, at least in regards to the skill that they have
-            acquired, that there is somehow nothing left to learn or that those
-            last few lessons aren't worth learning, those last few skills not
-            worth acquiring.
+Learning to Program can be an intimidating venture. Not only is there a plethora of programming languages, libraries, frameworks, text editors, and more, there is also the overwhelming amount of opinions amongst more experienced programmers one might consider when deciding between which of these tools is best. Navigating all of this is no easy task and it is something I still struggle with when examining a field of software development I have little knowledge of (pretty much all of it).
         </p>
         <p class="article-content">
-            Learning to utilize the computer is, in my opinion, even more
-            daunting for an adult to learn. The subject of Computers, Computer
-            Science, and the many many subjects that are encompassed under the
-            umbrella term, 'Computers,' is indeed so vast that it would take a
-            person a lifetime to learn one aspect of it. This leaves many who
-            are looking to change careers into systems administration, software
-            development, data analytics, and, in my case, web development, at a
-            bit of a loss as to where to start. Of course, we live in a day and
-            age where any question we have, for the most part, can be fielded
-            with some degree of authority, by the modern search engine. Simply
-            typing into any of the popular search engines the query "how to
-            learn" followed by your desired subject will yield a plethora of
-            results on how to get started. This is especially true of web
-            development, as the desire by many to land a lucrative paying job
-            that is not labor intensive (at least, not manually labor
-            intensive), is currently held by a vast multitude of people.
+How does one know which text editor to choose? Which programming language should I learn first? Should I use MacOS or Windows? (hint: neither). One of the more uncommon (although not necessarily rare) questions asked amongst beginner developers is, which shell should I use?
         </p>
         <p class="article-content">
-            I am a "self taught" web developer. I use quotations around the
-            term, as I believe that all forms of education are both "taught" and
-            "self taught." In that I mean that while no one learns entirely by
-            themselves (even if you invent an entirely new subject, you are
-            still taught/informed by previous subjects as an orientation to this
-            new subject, but I digress). Conversely, no one is entirely reliant
-            on others to integrate new information. That "aha" moment is due to
-            your own mind struggling, and then succeeding, in understanding new
-            information, which is conveyed to you via another person in the
-            world or the physical world itself.
+Before I dive into this topic, I feel like it may be prudent to address the simple question of, what is a shell?
         </p>
         <p class="article-content">
-            When one enters the query "How to learn to be a web developer" or
-            "How to learn to code" into a modern search engine, one eventually
-            finds themselves at Free Code Camp, The Odin Project, and many many
-            YouTube tutorials. These are all fine introductions, and are more
-            than worth investigating as they provide one with a plethora of
-            inforation that is useful to the modern web developer. All that
-            said, learning to work with Computers, in my opinion, first starts
-            with understanding how to 'speak' to the computer, to communicate
-            your desires to the computer in a way that the computer can
-            "understand," or interpret. These desires are conveyed to the
-            computer by means of input, often through a keyboard or a mouse, and
-            the results are usually conveyed back to the user via output, often
-            through a visual screen display or audio device.
+If you have done any amount of beginner programming, systems administration, database management, or other computer related work, it is likely you have already interacted with The Terminal (Emulator), The Command Line and its close companion, The Shell. I shall very briefly address what each of these are, and why, together, they are the most important tool for anyone interested in interacting with computers at any meaningful level.
         </p>
         <p class="article-content">
-            Most of the common utilizations of computers these days are visually
-            oriented tools presented in graphical user interfaces(GUIs) that are
-            meant to be pleasing to the eye, designed and organized to present
-            data to the user in a way that is visually appealing. Many of these
-            interfaces now take place within a web browser, rather than a stand
-            alone program. Increasingly these applications have adopted either a
-            mouse or touch based interface, so as to abstract away from the
-            utilization of the keyboard as well, or to minimize the amount of
-            input necessary from the user that requires the skill of typing. All
-            of these abstractions, in my opinion, are beautiful designs and
-            cosmetic wrappings over what is the true skeleton of the a program,
-            a simple execution of a very large amoun of zeros and ones.
+In Windows, it is known as The Command Prompt(or Powershell), in MacOS it is known as The Terminal, and in Linux and BSD, it is also known simply as the Terminal. The history of the terminal is extensive, and I would only doing you a disservice to you were I to attempt to explain it in depth to you. For the sake of brevity, I shall simply explain how The Command Line and shell pertain to you, the prospective Computer Programmer, and why it is so important for all programmers to become familiar with it.
         </p>
         <p class="article-content">
-            It is hard for me to imagine what it must have been like developing
-            some of the first computers. Computers, originally, were people who
-            executed a large amount of computations. A computer, originally, was
-            not a thing, it was a person, a profession. The history of the first
-            machines that were the ancestors of the modern computer is extremely
-            well documented, and I will not go into detail here. The amount of
-            work necessary to get even to the modern terminal interface was
-            vast, as the original Operating Systems Engineers were adamantly
-            trying to get to a point where a user could simply invoke commands
-            from a command line prompt, and have the desired results displayed
-            back to them in a human readable format.
+If you were to open up Command Prompt in Windows, or the Terminal in MacOS, you would be presented with a black (or blue) colored screen, usually prefaced by a series of characters known as a prompt, and a cursor indicating the program is awaiting you to type something (to provide input via the keyboard). To the uninitiated, this is intimidating, especially after inputting something and getting a mean looking error message (oftentimes highlighted in red). I must admit, whenever anyone who is unfamiliar with computers has seen me working in the terminal, they have often thrown around terms like "hacker," which I find to be so funny, because it simply shows how the mainstream media has failed to portray technology in an accurate light (save for modern exceptions like Mr. Robot, Halt and Catch Fire, and Silicon Valley).
         </p>
         <p class="article-content">
-            There were many contenders in the early days of Operating Systems,
-            but long story short, the Unix Programming Interface won out. While
-            one could argue that Windows PowerShell is a modern competitor to
-            the Unix Shell, it would be a farcical argument (as evidenced by the
-            existence of The Windows Subsystem for Linux). If you utilize MacOS
-            and type anything into the terminal, you are interfacing with a Unix
-            Environment. This is also true of the BSD variants. Linux, while
-            technically a Unix Like environment, in the case of working with the
-            command line, and its shell, bash, may be considered working within
-            a Unix environment in regards to this overview.
+When I first began programming, I started focusing mainly on the tool of the text editor. It was only when I began to seriously dive into the world of Linux that I began to seriously play around in the terminal. Even in my earliest days playing around in Linux, however, I rarely interacted with the Terminal. This is partially because for at least some time at the beginning, typing in the shell felt laborious, more boring than programming (which it still is), and not worth investigating beyond the few times I had to invoke a command, or start a program. And it's true that the shell is just a tool that allows you to invoke commands that call other programs...but that's why it will always be one of the best pieces of software ever written.
         </p>
         <p class="article-content">
-            At this point, you, my dear reader, may be wondering, "so what are
-            you getting at?" Simply put, I am arguing that if you wish to learn
-            about computers (in any of its many subjects) you should first learn
-            to utilize the command line, specifically within a Unix based
-            environment. Learning how to use the command line is the entry point
-            to programming, and understanding it at a non-trivial level is
-            essential if you wish to work within DevOps or Systems
-            Administration.
+Just like everything in the world of programming, there is rarely just one option when it comes to tools, and almost never just one way to do things. The same is true of shells, but just like these other aspects of the programming world, it doesn't mean there haven't been some clear winners in that space as well.
         </p>
         <p class="article-content">
-            Many of those already familiar with the world of Computers and its
-            multitude of subjects will find this article boring, as the above
-            assertion will be more than obvious, but please bare in mind that I
-            only started looking into the world of computers a short three years
-            ago at the time of this writing, and prior to that was simply a
-            Windows "power user," having never even typed a basic "ls" into a
-            terminal before. When I finally did start to investigate how
-            computers worked, I was pleasantly surprised at how quickly I took
-            to loving the command line, as it had been a point of contention and
-            pain for me for a long time prior to this.
+Although I know I will get some push back on this from Windows Users, it simply is the case that the UNIX-style shell won out. Specifically the BASH shell is the one most utilized by default in nearly all Linux Distributions, and was also the primary shell utilized in MacOS until recently (which currently utilizes the Z shell). Regardless of which shell you utilize, many of them have similar commands that perform a plethora of operations via your operating system. It is due to this common history with the BASH Shell, and the features that are available specifically within the BASH shell scripting language, that it is worthwhile to dive deep into the subject of the shell and shell scripting, as it is your direct link to working on and with the operating system while utilizing a high level language to do so. BASH, while not a full featured programming language, is an extremely powerful scripting language which owes its (somewhat niche) popularity to the simple fact that GNU/Linux is everywhere, and thusly, so is its default shell, bash. Indeed, it is due to the basic UNIX tool set and the eventual choice by the maintainers of GNU/Linux, BSD, and MacOS that BASH proliferated.
         </p>
         <p class="article-content">
-            I had been using Windows when I first attempted to learn how to
-            code. Using the standard tools. VS Code and Google Chrome to put
-            together a basic BattleShip Game from the instructions in the book,
-            Head First JavaScript. I had no understanding of the command line at
-            this point, and was working hard solely in understanding the basic
-            syntax of HTML, CSS, and JavaScript, and, of course what was
-            happening in the browser. At one point I had become frustrated with
-            the interface of Windows in general, and a good friend of mine who
-            is a veteran software developer told me that if I wanted a challenge
-            to install Arch Linux (wow, what a jump into the deep end). I ended
-            up installing the much easier Manjaro Linux, and while I didn't stay
-            with that particular distribution of Linux for long, it did
-            introduce me to the terminal, and in all honesty, my life changed
-            because of it.
+At this point in the article I will digress on the subject of scripting, as a beginner is best suited to learning a few basic commands, understanding some of BASH's basic features, and how the use of the terminal in programming is essential. Please note that while you can follow along in Windows, I will not be covering Windows specific Powershell commands. Unfortunately Windows does not have BASH in its software suite by default, and you must install Windows SubSystem For Linux or Cygwin to utilize many of the same commands.
         </p>
         <p class="article-content">
-            It was only a couple months of using Manjaro Linux that I learned
-            the basic commands. "ls" is usually the first command one learns. It
-            shows all the files within one's current directory(folder). "cd"
-            allows you to change directories. A good example is "cd Documents"
-            will navigate your "current directory" from your "home" directory
-            into your "Documents directory. "cd .." will navigate you up one
-            directory in your directory hiearchy. "touch newfile" will create a
-            file called "newfile". "rm oldfile" will delete a file called
-            "oldfile." There are many many more commands, but these are the very
-            basics to interfacing with your operating system.
+Following the instructions below, note the effects.
         </p>
         <p class="article-content">
-            To the uninitiated, this may seem trivial. "So what? I can simply
-            hit ta few buttons in my Windows Explorer and do the same thing."
-            And you'd be right, but becoming more competent at utilizing the
-            command line can greatly increase your productivity in ways that are
-            unprecedented to any "power user." Say you're working on a website,
-            with alot of similarly titled articles (article-1.html,
-            article-2.html, etc.). Let's also say you need to create... one
-            hundred of these. I suppose you could just keep clicking on "New
-            File" and name them one by one. The uninitiated might say "Yeah,
-            it's annoying, but so what? You just type 'touch article-1.html' and
-            then 'touch article-2.html', I don't care how fast a typist you are,
-            that still takes alot of time." And you'd be right...but the command
-            line isn't just an interface, it's a basic programming
-            language...and if there's anything computers do really well, it's
-            repetitive tasks:
+Navigate to your operating systems main menu
+            <ul class="article-lists">
+                <li>(MacOS - Click the Launchpad Icon in the Dock, type Terminal and click Terminal)</li>
+                <li>(Linux/BSD - Look up which Terminal Emulator your distribution uses by default and open it)</li>
+            </ul>
         </p>
-        <pre><code class="language-bash">touch article-{1-100}.html</code></pre>
+        <!-- <pre><code class="language-bash">touch article-{1-100}.html</code></pre> -->
         <p class="article-content">
-            And behold, I have just created 100 files, appropriatetly labeled
-            and ready to go on my massive project. Others might say "Yeah,
-            that's great, but I'm trying to learn such and such programming
-            language, and I only need to know the basics when it comes to the
-            command line, why bother getting into the weeds with all this stuff,
-            isn't that mainly for SysAdmins and DevOps guys?" Again, you'd be
-            right...but I'd argue that the command line, and the shell language
-            usually used for it, Bash, is worth learning. The command line is
-            not just an interface, but also a great introduction to computer
-            programming.
+You will be presented with a simple black, amber, or blue colored window with a prompt ending in either % or $ (ZSH uses %, BASH uses $). There is also usually a rectangular cursor indicating the shell is awaiting input from you. Typing just anything into the terminal and getting error messages gets old quick, so let's explore our first command, ls:
         </p>
-        <!-- cover brief history of bash here -->
-        <p class="article-content">What is Bash?</p>
+        <pre><code class="language-bash">[~]$ ls</code></pre>
+        <figure>
+            <img
+                id="ls_command"
+                src="../../assets/ss_ls_command.png"
+                alt="Results of the ls command"
+                title="ls command results"
+                loading="lazy"
+            />
+            <figcaption>Results of the ls command</figcaption>
+        </figure>
         <p class="article-content">
-            Many argue that Python is a better language to learn programming,
-            and I would concur completely...except for the simple fact that Bash
-            is already installed on most systems, and remains the main shell
-            utilized by all Linux/BSD distributions (and MacOS's zsh is close
-            enough when it comes to the command line itself). This isn't to say
-            that one should just learn Bash. While a fine scripting language, it
-            can only accomplish so much and eventually you'll want to learn at
-            least some Python, if not JavaScript and some C. Learning the
-            command line (and subsequently, bash) is simply a pre-requisite
-            (whether you like it or not, if you work with computers, at some
-            point you will interface with it, and thusly should become at least
-            somewhat familiar with it).
+Colloquially, each command will, in theory, be an abbreviation or shortened anagram for a word that will remind you of the action often associated with the command. In this case ls stands simply for 'list' as in 'list all my files and directories'. Here you can see that when I type in ls, I am presented with the contents of what is known as my $HOME directory (we'll cover the $ later). Usually, the ls command has been slightly modified so that colors appear on some of the results, indicating the type of file the result is, or whether or not the result is a directory.
         </p>
-        <p class="article-content"></p>
+        <p class="article-content">
+If we then, for our second command, type 'ls' again, but this time follow it with a '-a', we are presented with slightly different results:
+        </p>
+        <figure>
+            <img
+                id="ls_command"
+                src="../../assets/ss_ls_with_aflag.png"
+                alt="Results of the ls command with -a"
+                title="ls command with -a results"
+                loading="lazy"
+            />
+            <figcaption>Results of the ls command with -a flag</figcaption>
+        </figure>
+        <p class="article-content">
+Here we see that we now have alot more files and directories, many preceded with a '.', which are our 'hidden' files and directories. There have been more than a few discussions on the concept of hidden files, but needless to say, these files/directories are not visible without the '-a' appended to our 'ls' command. I point this out more as an introduction to the concept of flags '-a' is considered a flag of the 'ls' command that changes the results in some fashion. In this case it stands for 'all', as in show 'list all of my files, yes even the hidden ones.'
+        </p>
+        <p class="article-content">
+Many commands, although not all commands, have flags which somehow change the behavior of the program being called.
+        </p>
+        <p class="article-content">
+I won't go into all the commands available in the shell as there are quite a lot, but I will provide you with some standard commands to research and become familiar with, as they will become invaluable later on:
+            <ul class="article-lists">
+                <li>man</li>
+                <li>cd</li>
+                <li>mkdir/rmdir</li>
+                <li>touch/rm</li>
+                <li>cp</li>
+                <li>mv</li>
+                <li>echo/print/printf</li>
+                <li>cat/tac</li>
+                <li>less</li>
+                <li>head/less</li>
+                <li>read</li>
+                <li>find</li>
+                <li>sed</li>
+                <li>grep</li>
+                <li>awk</li>
+                <li>tr</li>
+                <li>df</li>
+                <li>top</li>
+                <li>ps</li>
+                <li>diff</li>
+                <li>dd</li>
+                <li>who</li>
+            </ul>
+        </p>
+        <p class="article-content">
+Now, all of these tools are great, but lack luster by comparison to your standard Graphical User Interface (GUI) programs that most users interact with on their desktops. The power of the shell isn't in that it can execute programs (although that is its main purpose), it is its ability to chain together and redirect and manipulate the input and output of various programs to yield a desired result...that's right, the BASH shell is a scripting language, which with the use of various operators can chain together to manipulate textual inputs and outputs. Take this simple example:
+        </p>
+        <pre><code class="language-bash">[~]$ echo 'this text is inputted from the command line' \
+> from_the_command_line.txt</code></pre>
+        <p class="article-content">
+Here we simultaneously created a file called 'from_the_command_line.txt' and wrote the text 'this text is inputted from the command line' into it. If we then inspect the contents of this file using cat:
+        </p>
+        <pre><code class="language-bash">[~]$ cat from_the_command_line.txt</code></pre>
+        <p class="article-content">
+        </p>
+        <figure>
+            <img
+                id="ls_command"
+                src="../../assets/ss_redirection_01.png"
+                alt="Results of the cat command on file"
+                title="cat command results"
+                loading="lazy"
+            />
+            <figcaption>Results of the cat command on file</figcaption>
+        </figure>
+        <p class="article-content">
+We'll see that indeed, the text 'this text is inputted from the command line' is indeed there. What is happening here?
+        </p>
+        <p class="article-content">
+        Well just like every problem in programming, we divide the program up into sizeable chunks, and explain each part to the best of our abilities (and hopefully our peers very kindly correct us if we are wrong).
+        </p>
+        <p class="article-content">
+Firstly, what does echo do? Well if you researched my list up above a bit, you'll know that the first recommended command was the 'man' command. Why? well it's the manual of course! Any command you wish to know more about can be investigated by invoking 'man' before the command you wish to know more about, if you type:
+        </p>
+        <pre><code class="language-bash">[~]$ man echo</code></pre>
+        <p class="article-content">
+You'll see an extensive explanation of the 'echo' command and its various flags. A relatively easy to understand program, echo simply displays any text following the command back to you. So the input that was entered after the 'echo' command is also the output of the command. Thusly invoking:
+        </p>
+        <pre><code class="language-bash">[~]$ echo 'this litle sheep went bah'</code></pre>
+        <p class="article-content">
+Displays:
+        </p>
+        <figure>
+            <img
+                id="ls_command"
+                src="../../assets/ss_echo_command.png"
+                alt="Results of echo command"
+                title="echo command results"
+                loading="lazy"
+            />
+            <figcaption>Results of the echo command on file</figcaption>
+        </figure>
+        <p class="article-content">
+        But what about the '>' character in our initial example? Well this is what is known as a redirection operator. This '>' will 'redirect' whatever is the output of the first command(echo) as the input written to the following file or program. Please note that this will overwrite any existing text already present in the file, so don't experiment on any file with valuable information to you. If you do wish to append to the file, without overwriting its existing text, simply double up on the greater than symbol:
+        </p>
+        <p class="article-content">
+        <pre><code class="language-bash">[~]$ echo 'appended text' >> from_the_command_line.txt</code></pre>
+        </p>
+        <figure>
+            <img
+                id="ls_command"
+                src="../../assets/ss_echo_append.png"
+                alt="Results of echo with append command"
+                title="echo with append command results"
+                loading="lazy"
+            />
+            <figcaption>Results of the echo with append command on file</figcaption>
+        </figure>
+        <p class="article-content">
+If you wish to research one of the most powerful operators in bash, research the pipe ('|') operator!
+        </p>
+        <p class="article-content">
+Hopefully at this point, you are starting to understand the role of the shell and the command line a bit better. For this next example, I am going to demonstrate how many programs have a command line interface with which one may interact, or at least initialize, a program, be it a Graphical or Terminal based application.
+        </p>
+        <p class="article-content">
+One of the first epiphanies for me regarding the terminal was when I realized I could invoke pretty much any program in my operating system with simple commands. If I wished to open my browser (librewolf), I simply had to type into the terminal its name:
+        </p>
+        <figure>
+            <img
+                id="ls_command"
+                src="../../assets/ss_librewolf.png"
+                alt="firefox being called from the command line"
+                title="firefox being called from the command line"
+                loading="lazy"
+            />
+            <figcaption>Firefox Browser being called from The Command Line</figcaption>
+        </figure>
+        <p class="article-content">
+While this may not seem like a big deal to some, it was upon doing this that I realized why the terminal was powerful, it allowed any program to be invoked as long as you knew its name. Rather than clicking through a myriad of nested directories to find where I had put an executable (like when using Windows File Explorer), I simply had to type it out and it would open up on my screen.
+        </p>
+        <p class="article-content">
+When I first installed Linux, the first piece of graphical software I had become familiar with was the backup utility, Timeshift, which essentially takes a 'snapshot' of the current state of your desktop and allows you to 'revert' back to that snapshot should you want/need to.
+        </p>
+        <p class="article-content">
+Timeshift has both a Graphical User Interface(GUI) as well as a Command Line Interface(CLI). I first learned to use Timeshift utilizing the GUI, but then I became curiouos about the CLI. It wasn't long before I realized that most of the information available via the GUI interface could be accessed via the CLI. I really only needed four commands from the CLI, these were:
+            <ul class="article-lists">
+                <li>timeshift --create</li>
+                <li>timeshift --delete</li>
+                <li>timeshift --list</li>
+                <li>timeshift --restore</li>
+            </ul>
+        </p>
+        <p class="article-content">
+And every once in a while, after an update on my system, I would invoke the 'timeshift create' command to create a snapshot of my current system. Timeshift has occasionally saved me from big mistakes I've made, and is a good piece of software.
+        </p>
+        <p class="article-content">
+The reason I point this out is that even though timeshift isn't a part of the shell as a subject, I am simply pointing it out as a practical example of when utilizing the text interface of Timeshift's CLI, via the shell, became more useful to me than interfacing with the GUI version. This became even more the case when I discovered the existence of shell aliases.
+        </p>
+        <p class="article-content">
+Of course, I've provided you now with the knowledge of how to do your own research regarding any command, so be sure to pull up:
+        </p>
+        <pre><code class="language-bash">[~]$ man alias</code></pre>
+        <p class="article-content">
+And do more research, but I'll give you a general idea of why this is such a powerful tool for anyone invested in computers to know. Essentially aliases are a series of commands invoked by a custom command of your naming.
+        </p>
+        <p class="article-content">
+If you invoke:
+        </p>
+        <pre><code class="language-bash">[~]$ alias cdls="cd ~/Documents & ls"</code></pre>
+        <p class="article-content">
+You will navigate into your Documents directory and then list out its contents after invoking your custom command, 'cdls'
+        </p>
+        <p class="article-content">
+The '&' is another operator that waits for one command to complete before then invoking the following command.The '&' command can be chained as many times as desired and when applied to an alias, essentially condenses a very long command into a shorter command (unless you name your alias something very long I suppose).
+        </p>
+        <p class="article-content">
+Now, the somewhat annoying thing is that these aliases, when created this way, are forgotten as soon as you close the terminal or your shell session somehow ends. Aliases can be saved, however, by placing them in your ~/.bashrc file. This configuration file, is checked by the shell prior to initiation, including alias assignments. Thusly, if you simply append:
+        </p>
+        <pre><code class="language-bash">[~]$ alias cdls="cd ~/Documents & ls"</code></pre>
+        <p class="article-content">
+To the end of your ~/.bashrc file, you will have created a custom command that persists even after you have closed your terminal and shut down your computer.
+        </p>
+        <p class="article-content">
+This is the very essentials of scripting, the chaining of programs together to create different results. An alias is essentially a one line script.
+        </p>
+        <p class="article-content">
+While it wasn't one of my first aliases I ever wrote, I do have a single alias I will share with you that I use often, it simply invokes timeshift three times, once to delete the old backup, once to create a new backup, and once to list out all backups so I can confirm that the backup was made, I called it tshift, this is the command in my .bashrc:
+        </p>
+        <pre><code class="language-bash">[~]$ alias tshift="sudo timeshift --delete && sudo timeshift --create && sudo timeshift --list"</code></pre>
+        <p class="article-content">
+As you can see, tshift is far less characters to type, and it is a very handy, but very simple, alias I have created for myself. (if you are on Linux and unfamiliar with the sudo command, please see the man pages for sudo, if you are on MacOs, a simple query into your favorite search engine I am sure will yield good results).
+        </p>
+        <p class="article-content">
+Aliases is where I leave this short introduction to the Command Line and shell. It is at this point that the subject of BASH scripting should be covered, and that is an extensive topic of its own.
+        </p>
+        <p class="article-content">
+I do hope that you have now gained a better understanding and appreciation for the command line and the shell. The shell provides a direct, unobfuscated, and elegantly simple interface through which all computer users can accomplish more with less, and is one of the best tools you can become familiar with. So get comfy in it!
+        </p>
     </div>
     <div class="spacer"></div>
 </div>

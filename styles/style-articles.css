@@ -398,7 +398,12 @@ figcaption {
     text-align: center;
 }
 
+#me {
+    max-width: 350px;
+}
+
 #home_row,
+#ls_command,
 #olkb {
     max-width: 650px;
 }
@@ -407,9 +412,6 @@ figcaption {
     max-width: 350px;
 }
 
-#me {
-    max-width: 350px;
-}
 /* media queries */
 /* 320 x 640 */
 @media (max-width: 20rem) {
@@ -542,6 +544,6 @@ figcaption {
     }
 
     .article-quotes {
-        margin: 0 3rem;
+        margin: 0 9rem;
     }
 }
