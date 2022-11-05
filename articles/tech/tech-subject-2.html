@@ -248,7 +248,7 @@ You will navigate into your Documents directory and then list out its contents a
 The '&' is another operator that waits for one command to complete before then invoking the following command.The '&' operator can be chained as many times as desired and when applied to an alias, essentially condenses a very long command into a shorter command (unless you name your alias something very long I suppose).
         </p>
         <p class="article-content">
-Now, the somewhat annoying thing is that these aliases, when created this way, are forgotten as soon as you close the terminal or your shell session somehow ends. Aliases can be saved, however, by placing them in your ~/.bashrc file. This configuration file, is checked by the shell prior to initiation, including alias assignments. Thusly, if you simply append:
+Now, the somewhat annoying thing is that these aliases, when created this way, are forgotten as soon as you close the terminal or your shell session somehow ends. Aliases can be saved, however, by placing them in your ~/.bashrc file. This configuration file is checked by the shell prior to initiation, including alias assignments. Thusly, if you simply append:
         </p>
         <pre><code class="language-bash">[~]$ alias cdls="cd ~/Documents & ls"</code></pre>
         <p class="article-content">
