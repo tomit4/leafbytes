@@ -375,6 +375,9 @@ figcaption {
     max-width: 350px;
 }
 
+#me {
+    max-width: 480px;
+}
 /* media queries */
 /* 320 x 640 */
 @media (max-width: 20rem) {
