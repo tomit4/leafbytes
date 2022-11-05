@@ -190,9 +190,7 @@ textarea:hover {
 }
 
 .article-content {
-    display: flex;
     font-family: LiberationMono;
-    font-size: 0.90rem;
     font-size: 1rem;
     font-weight: 600;
     color: #004b77;
@@ -217,6 +215,40 @@ textarea:hover {
     list-style: none;
     position: relative;
     /* margin: 1rem auto; */
+}
+
+.article-quotes {
+    font-family: LiberationMono;
+    color: rgba(255, 255, 255, 1);
+    opacity: 65%;
+    background-color: rgba(0, 44, 70, 1);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 44, 70, 1);
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 10rem;
+    z-index: -1;
+}
+
+.article-outside-links {
+    text-decoration: none;
+}
+
+.article-lists {
+    list-style: none;
+    font-family: LiberationMono;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #004b77;
+    margin: 1rem 8rem;
+    z-index: -1;
+}
+
+.spacer {
+    height: 5rem;
+    background: transparent;
 }
 
 .link-item {
@@ -367,6 +399,7 @@ figcaption {
     text-align: center;
 }
 
+#home_row,
 #olkb {
     max-width: 650px;
 }
