@@ -228,7 +228,6 @@ textarea:hover {
     border-radius: 5px;
     padding: 1rem;
     text-align: center;
-    margin: 1rem 10rem;
     z-index: -1;
 }
 
@@ -526,6 +525,10 @@ figcaption {
     .prev-btn {
         left: 17.5vw;
     }
+
+    .article-quotes {
+        margin: 0 3rem;
+    }
 }
 
 
@@ -536,5 +539,9 @@ figcaption {
 
     .prev-btn {
         left: 14vw;
+    }
+
+    .article-quotes {
+        margin: 0 3rem;
     }
 }
