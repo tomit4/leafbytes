@@ -430,12 +430,6 @@ figcaption {
 
 /* 360 x 800 */
 @media (min-width: 22.5rem) {
-    .article-content {
-        margin: 1rem 0.25rem;
-        font-size: 0.95rem;
-        font-weight: 600;
-        line-height: 1.25rem;
-    }
     img {
         margin: auto 0 auto -1.1rem;
     }
@@ -459,8 +453,12 @@ figcaption {
 /* widths 630 to 640 (i.e. everything inbetween)*/
 @media (min-width: 39rem) {
     .article-content {
-        margin: 1rem 2.5rem;
+        margin: 1rem 0.25rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        line-height: 1.25rem;
     }
+
     .link-item-extension {
         margin: -0.75rem 0 0 52vw;
     }
