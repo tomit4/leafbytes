@@ -720,7 +720,7 @@ html, body {
 
 .welcome {
     font-family: entsans;
-    font-size: clamp(250%, 1.5rem, 300%);
+    font-size: clamp(200%, 1.5rem, 300%);
     text-align: center;
     text-shadow: 5px 4px 0px rgba(0, 75, 119, 0.7);
     display: flex;
@@ -732,7 +732,7 @@ html, body {
     z-index: 2;
     position: fixed;
     top: 47%;
-    left: 52.5%;
+    left: 54%;
 }
 
 .loadwelcomefade {
@@ -744,7 +744,7 @@ html, body {
 
 .sub-welcome {
     font-family: entsans;
-    font-size: clamp(110%, 6vw, 120%);
+    font-size: clamp(110%, 1rem, 120%);
     width: 20rem;
     text-align: center;
     text-shadow: 5px 4px 0px rgba(0, 75, 119, 0.7);
@@ -752,7 +752,7 @@ html, body {
     z-index: 2;
     opacity: 80%;
     position: fixed;
-    top: 52vh;
+    top: 51.5vh;
     left: 54.5vw;
 }
 

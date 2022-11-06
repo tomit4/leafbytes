@@ -156,13 +156,15 @@ body {
 .welcome {
     color: #c5e8ff;
     text-shadow: 5px 4px 0px #222f48;
-    opacity: 90%;
+    /* opacity: 90%; */
+    opacity: 100%;
 }
 
 .sub-welcome {
     color: #c5e8ff;
     text-shadow: 5px 4px 0px #222f48;
-    opacity: 90%;
+    /* opacity: 90%; */
+    opacity: 100%;
 }
 
 .next-btn,
