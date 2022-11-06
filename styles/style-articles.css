@@ -422,6 +422,9 @@ figcaption {
         font-weight: 600;
         line-height: 1.25rem;
     }
+    .article-quotes {
+        margin: 0 3rem;
+    }
 
     .article-lists {
         font-size: 0.95rem;
@@ -455,6 +458,9 @@ figcaption {
         font-weight: 600;
         line-height: 1.25rem;
     }
+    .article-quotes {
+        margin: 0 3rem;
+    }
 
     .link-item-extension {
         margin: -0.75rem 0 0 52vw;
@@ -474,6 +480,9 @@ figcaption {
         font-size: 0.95rem;
         font-weight: 600;
         line-height: 1.25rem;
+    }
+    .article-quotes {
+        margin: 0 3rem;
     }
 
     .link-item-extension {
@@ -498,6 +507,9 @@ figcaption {
         font-weight: 600;
         line-height: 1.25rem;
     }
+    .article-quotes {
+        margin: 0 3rem;
+    }
 
     /* .article-content { */
         /* margin: 1rem 3rem; */
@@ -518,6 +530,9 @@ figcaption {
         font-weight: 600;
         line-height: 1.25rem;
     }
+    .article-quotes {
+        margin: 0 3rem;
+    }
 
     /* .article-content { */
         /* margin: 1rem 3.5rem; */
@@ -537,6 +552,9 @@ figcaption {
         font-size: 0.95rem;
         font-weight: 600;
         line-height: 1.25rem;
+    }
+    .article-quotes {
+        margin: 0 3rem;
     }
 
     /* .article-content { */
