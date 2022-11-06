@@ -830,28 +830,22 @@ html, body {
 /* @media (min-width: 39rem) {} */
 
 /* 640 x 320 */
-/* @media (min-width: 40rem) {} */
+@media (min-width: 40rem) {
+    .leafbytes {
+        left: 49vw;
+    }
+    .subtitle {
+        left: 49vw;
+    }
+}
 
 /* 800 x 360 */
 /* @media (maxwidth: 50rem) and (max-height: 21rem){} */
 
 /* 926 x 428 */
-@media (max-height: 26rem) {
-    /* put the tablet/desktop settings here */
-    /* .navbar { */
-        /* background-color: red; */
-    /* } */
-    .leafbytes {
-        top: 57vh;
-        left: 49vw;
-    }
-    .subtitle {
-        top: 57vh;
-        left: 48vw;
-    }
-}
+@media (max-height: 26rem) {}
 
-/* height: 1080) */
+/* height: 1080 */
 /* @media (min-height: 67.5rem) {} */
 
 /* fullscreen desktop */
