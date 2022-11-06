@@ -416,12 +416,6 @@ figcaption {
 /* media queries */
 /* 320 x 640 */
 @media (max-width: 20rem) {
-    .article-content {
-        margin: 1rem auto;
-        font-size: 0.75rem;
-        font-weight: 600;
-        line-height: 0.75rem;
-    }
 
     .link-item-extension {
         width: 23vw;
@@ -437,8 +431,10 @@ figcaption {
 /* 360 x 800 */
 @media (min-width: 22.5rem) {
     .article-content {
-        margin: 1rem 1.25rem;
+        margin: 1rem 0.25rem;
+        font-size: 0.95rem;
         font-weight: 600;
+        line-height: 1.25rem;
     }
     img {
         margin: auto 0 auto -1.1rem;
