@@ -416,6 +416,16 @@ figcaption {
 /* media queries */
 /* 320 x 640 */
 @media (max-width: 20rem) {
+    .article-content {
+        margin: 1rem 0.25rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+    }
+
+    .article-lists {
+        font-size: 0.95rem;
+    }
 
     .link-item-extension {
         width: 23vw;
@@ -452,12 +462,6 @@ figcaption {
 
 /* widths 630 to 640 (i.e. everything inbetween)*/
 @media (min-width: 39rem) {
-    .article-content {
-        margin: 1rem 0.25rem;
-        font-size: 0.95rem;
-        font-weight: 600;
-        line-height: 1.25rem;
-    }
 
     .link-item-extension {
         margin: -0.75rem 0 0 52vw;
@@ -516,6 +520,7 @@ figcaption {
 }
 
 @media (min-width: 800px) {
+
     .next-btn {
         right: 17.5vw;
     }
