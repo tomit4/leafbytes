@@ -208,7 +208,8 @@ function makeDesktopItemsVisible() {
 
 async function fetchWelcomePage() {
     /* replace about.html with a custom welcome.html page */
-    await fetch('./about.html')
+    // await fetch('./about.html')
+    await fetch('./welcome.html')
         .then((res) => { return res.text() })
         .then((html) => {
             for (let i = 0; i < articleDesktop.length; i++)

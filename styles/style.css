@@ -616,7 +616,7 @@ html, body {
     z-index: 2;
     position: fixed;
     top: 50vh;
-    left: 48vw;
+    left: 50vw;
     opacity: 0%;
     transform: translate(-45%, -70%);
 }
@@ -702,7 +702,71 @@ html, body {
     }
 }
 
-/* onclick events */
+.welcome-container {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: 6px solid #004b77;
+    border-radius: 5px;
+    opacity: 0%;
+    background-image: linear-gradient(280deg, #62a5bf 0%, #2a7296 100%);
+    height: 9rem;
+    width: 30rem;
+    top: 42.5%;
+    left: 30%;
+}
+
+.welcome {
+    font-family: entsans;
+    font-size: clamp(250%, 1.5rem, 300%);
+    text-align: center;
+    text-shadow: 5px 4px 0px rgba(0, 75, 119, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    opacity: 80%;
+    z-index: 2;
+    position: fixed;
+    top: 47%;
+    left: 52.5%;
+}
+
+.loadwelcomefade {
+    animation: loadinwelcomefromfade 1.5s ease-in;
+    opacity: 65%;
+    visibility: visible;
+    animation-delay: 0.25s;
+}
+
+.sub-welcome {
+    font-family: entsans;
+    font-size: clamp(110%, 6vw, 120%);
+    width: 20rem;
+    text-align: center;
+    text-shadow: 5px 4px 0px rgba(0, 75, 119, 0.7);
+    color: white;
+    z-index: 2;
+    opacity: 80%;
+    position: fixed;
+    top: 52vh;
+    left: 54.5vw;
+}
+
+@keyframes loadinwelcomefromfade{
+   from {
+        opacity: 0;
+        visibility: hidden;
+   }
+   to {
+        opacity: 70%;
+        visibility: visible;
+   }
+}
+
 .scaled {
     animation: scaleup .5s;
     transform: scale(1.25);

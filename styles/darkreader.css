@@ -131,17 +131,38 @@ body {
 }
 
 .leafbytes {
-    text-shadow: #222f48;
+    text-shadow: 5px 4px 0px #222f48;
     color: #c5e8ff;
 }
 
 .subtitle {
-    text-shadow: #222f48;
+    text-shadow: 5px 4px 0px #222f48;
     color: #c5e8ff;
 }
 
 .logo {
     background-image: url('../svg/logo2.svg');
+}
+
+.welcome-container {
+    border: 6px solid #9ad7ff;
+    background-image: linear-gradient(
+        280deg,
+        rgba(75, 138, 161, 0.2),
+        rgba(38, 69, 103, 0.7)
+    );
+}
+
+.welcome {
+    color: #c5e8ff;
+    text-shadow: 5px 4px 0px #222f48;
+    opacity: 90%;
+}
+
+.sub-welcome {
+    color: #c5e8ff;
+    text-shadow: 5px 4px 0px #222f48;
+    opacity: 90%;
 }
 
 .next-btn,
