@@ -422,9 +422,6 @@ figcaption {
         font-weight: 600;
         line-height: 1.25rem;
     }
-    .article-quotes {
-        margin: 0 3rem;
-    }
 
     .article-lists {
         font-size: 0.95rem;
@@ -458,8 +455,13 @@ figcaption {
         font-weight: 600;
         line-height: 1.25rem;
     }
+
     .article-lists {
         font-size: 0.95rem;
+    }
+
+    .article-quotes {
+        margin: 0 2rem;
     }
 
     .link-item-extension {
@@ -476,24 +478,32 @@ figcaption {
 /* widths 630 to 640 (i.e. everything inbetween)*/
 @media (min-width: 39rem) {
     .article-content {
-        margin: 1rem 0.25rem;
+        margin: 1rem 5rem;
         font-size: 0.95rem;
         font-weight: 600;
         line-height: 1.25rem;
     }
+
     .article-lists {
         font-size: 0.95rem;
+    }
+
+    .article-quotes {
+        margin: 0 5rem;
     }
 
     .link-item-extension {
         margin: -0.75rem 0 0 52vw;
     }
+
     .folder-extension {
         margin: -0rem 0 0 51.25vw;
     }
+
     img {
         margin: auto 0 auto 0.75rem;
     }
+
     #olkb {
         margin: 0 3rem;
     }
@@ -511,9 +521,10 @@ figcaption {
         font-size: 0.95rem;
     }
 
-    /* .article-content { */
-        /* margin: 1rem 3rem; */
-    /* } */
+    .article-quotes {
+        margin: 0 5rem;
+    }
+
     .link-item-extension {
         margin: -0.75rem 0 0 53vw;
     }
@@ -534,9 +545,10 @@ figcaption {
         font-size: 0.95rem;
     }
 
-    /* .article-content { */
-        /* margin: 1rem 3.5rem; */
-    /* } */
+    .article-quotes {
+        margin: 0 5rem;
+    }
+
     .link-item-extension {
         margin: -0.75rem 0 0 53vw;
     }
@@ -548,21 +560,24 @@ figcaption {
 /* 926 x 428 */
 @media (min-width: 57rem) and (orientation:landscape) {
     .article-content {
-        margin: 1rem 0.25rem;
+        margin: 1rem 2rem;
         font-size: 0.95rem;
         font-weight: 600;
         line-height: 1.25rem;
     }
+
     .article-lists {
         font-size: 0.95rem;
     }
 
-    /* .article-content { */
-        /* margin: 1rem 4.5rem; */
-    /* } */
+    .article-quotes {
+        margin: 0 5rem;
+    }
+
     .link-item-extension {
         margin: -0.75rem 0 0 54vw;
     }
+
     .folder-extension {
         margin: 0rem 0 0 53.25vw;
     }
@@ -592,7 +607,7 @@ figcaption {
         left: 14vw;
     }
 
-    /* .article-lists { */
-        /* margin: 1rem 8rem; */
-    /* } */
+    .article-lists {
+        margin: 1rem 8rem;
+    }
 }
