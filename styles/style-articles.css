@@ -242,7 +242,7 @@ textarea:hover {
     font-size: 1rem;
     font-weight: 600;
     color: #004b77;
-    margin: 1rem 8rem;
+    /* margin: 1rem 8rem; */
     z-index: -1;
 }
 
@@ -547,4 +547,8 @@ figcaption {
     .article-quotes {
         margin: 0 9rem;
     }
+
+    /* .article-lists { */
+        /* margin: 1rem 8rem; */
+    /* } */
 }
