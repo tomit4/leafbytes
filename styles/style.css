@@ -707,15 +707,16 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     border: 6px solid #004b77;
+    /* border: 6px solid #072a50; */
     border-radius: 5px;
-    opacity: 0%;
+    /* opacity: 0%; */
     background-image: linear-gradient(280deg, #62a5bf 0%, #2a7296 100%);
     height: 9rem;
     width: 30rem;
-    top: 42.5%;
-    left: 30%;
+    top: 43.75%;
+    left: 51.25%;
 }
 
 .welcome {
@@ -726,7 +727,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     color: white;
     opacity: 80%;
     z-index: 2;
@@ -765,6 +767,13 @@ html, body {
         opacity: 70%;
         visibility: visible;
    }
+}
+
+.leafbytes:hover,
+.subtitle:hover,
+.welcome:hover,
+.sub-welcome:hover {
+    cursor: default;
 }
 
 .scaled {
