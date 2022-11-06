@@ -417,9 +417,10 @@ figcaption {
 /* 320 x 640 */
 @media (max-width: 20rem) {
     .article-content {
-        margin: 1rem 1rem;
+        margin: 1rem 0.25rem;
         font-size: 0.95rem;
         font-weight: 600;
+        line-height: 1rem;
     }
 
     .link-item-extension {
