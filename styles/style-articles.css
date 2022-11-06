@@ -423,10 +423,6 @@ figcaption {
         line-height: 1.25rem;
     }
 
-    .article-lists {
-        font-size: 0.95rem;
-    }
-
     .link-item-extension {
         width: 23vw;
     }
@@ -453,9 +449,6 @@ figcaption {
         line-height: 1.25rem;
     }
 
-    .article-lists {
-        font-size: 0.95rem;
-    }
 
     .article-quotes {
         margin: 0 2rem;
@@ -483,6 +476,7 @@ figcaption {
 
     .article-lists {
         font-size: 0.95rem;
+        margin: 0 5rem;
     }
 
     .article-quotes {
