@@ -359,11 +359,11 @@ figcaption {
 
 /* dark nav dark_icons */
 #link {
-    content: url('../dark_icons/brackets.svg');
+    content: url('../dark_icons/square-rss.svg');
 }
 
 #comments {
-    content: url('../dark_icons/chat-bubble.svg');
+    content: url('../dark_icons/brackets.svg');
 }
 
 #home {
