@@ -127,8 +127,24 @@
     border-radius: 0px 0px 7px 7px;
 }
 
+.article-header4 {
+    color: rgba(255, 255, 255, 1);
+    opacity: 65%;
+    background-color: rgba(0, 44, 70, 1);
+    font-family: HussarBold;
+    font-size: 14px;
+    max-width: 350px;
+    height: 2.1rem;
+    margin-bottom: -0.5rem;
+    /* margin-left: 2rem; */
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 44, 70, 1);
+    border-radius: 7px 7px 0px 0px;
+}
+
 .article-header:hover,
 .article-header3:hover,
+.article-header4:hover,
 .article-content:hover,
 input:hover,
 textarea:hover {
@@ -210,6 +226,11 @@ textarea:hover {
 
 .directories:hover {
     cursor: pointer;
+}
+
+.blockquote-links {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .article-links {
@@ -403,9 +424,13 @@ figcaption {
     max-width: 350px;
 }
 
-#home_row,
+#penguin {
+    max-height: 350px;
+}
+
 #ls_command,
-#olkb {
+#olkb,
+.header-images {
     max-width: 650px;
 }
 
@@ -453,6 +478,9 @@ figcaption {
     .article-quotes {
         margin: 0 2rem;
     }
+    .article-lists {
+        margin-left: -2rem;
+    }
 
     .link-item-extension {
         margin: -0.75rem 0 0 52vw;
@@ -472,6 +500,10 @@ figcaption {
         font-size: 0.95rem;
         font-weight: 600;
         line-height: 1.25rem;
+    }
+
+    .article-header4 {
+        margin-left: 5rem;
     }
 
     .article-lists {
@@ -508,6 +540,7 @@ figcaption {
         font-weight: 600;
         line-height: 1.25rem;
     }
+
     .article-lists {
         font-size: 0.95rem;
     }
@@ -532,6 +565,7 @@ figcaption {
         font-weight: 600;
         line-height: 1.25rem;
     }
+
     .article-lists {
         font-size: 0.95rem;
     }
@@ -596,6 +630,14 @@ figcaption {
 
     .prev-btn {
         left: 14vw;
+    }
+
+    .article-header4 {
+        margin-left: 9rem;
+    }
+
+    .article-quotes {
+        margin: 0 9rem;
     }
 
     .article-lists {

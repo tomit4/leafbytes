@@ -181,16 +181,12 @@ body {
     content: url('../dark_icons/triangle-left.svg');
 }
 
-.article-header {
+.article-header,
+.article-header3,
+.article-header4 {
     color: #222f48;
     background-color: #9ad7ff;
     border-color: #9ad7ff
-}
-
-.article-header3 {
-    color: #222f48;
-    background-color: #9ad7ff;
-    border-color: #9ad7ff;
 }
 
 .comment-list {
@@ -237,6 +233,10 @@ body {
 
 .article-links {
     list-style-image: none;
+}
+
+.blockquote-links {
+    color: #222f48;
 }
 
 .link-item {
