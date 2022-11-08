@@ -3,44 +3,104 @@
         <div class="next-btn" onclick="renderNext(4)"></div>
         <div class="prev-btn" onclick="renderPrev(4)"></div>
     </div>
-    <p class="article-header">musings on neovim</p>
-    <p class="article-header3">a text editor to rule them all</p>
+    <p class="article-header">musings on vim</p>
+    <p class="article-header3">one text editor to rule them all</p>
     <div class="article-body">
+        <figure>
+            <img
+                class="header-images"
+                id="vim_logo"
+                src="../../assets/vim.png"
+                alt="The Vim Logo"
+                title="The Vim Logo"
+                cite="https://commons.wikimedia.org"
+                loading="lazy"
+            />
+            <figcaption>The Vim Logo</figcaption>
+        </figure>
+        <blockquote class="article-quotes" cite="book: How Linux Works, by Brian Ward">
+            "How do I quit this thing?"
+            <br> -Every Vim User At Some Point
+        </blockquote>
+        <h4 class="article-header4">Introduction</h4>
         <p class="article-content">
-            Greetings!! You have stumbled across my tiny little corner of the world wide web!
+Should you have chosen to start programming/coding, you will undoubtedly at some point encounter those with opinions on which software is best to utilize. While the amount of tools availiable to software developers is extremely vast, there are three (maybe four) essential tools necessary for a beginner software developer to get started (not mentioning the Operating System). These tools are a Web Browser (for research and web development), a Terminal Emulator (for interfacing with software, both your own and others), and a Text Editor (the fourth is a compiler, but I'll digress on that topic for now).
         </p>
         <p class="article-content">
-            However you may have found me is anyone's guess, but please, sit back, relax,
-             and enjoy this blog.
+Each of these essential tools have a wide variety of options, with a few clear winners that are extremely popular. In the Web Browser world, you have Google's Chrome, MacOs's Safari, and Mozilla's Firefox. The Terminal Emulator world is quite vast where the clear winners are less obvious, but two of the most popular options on Linux currently are the Alacritty and Kitty Terminal Emulators. Then we come to the world of Text Editors, which has a somewhat vast array of choices, with Microsoft's Visual Studio Code being the most popular by far. Other text editors include Github's Atom (likely soon to be deprecated at the time of this writing), Sublime Text, Microsoft Notepad++, and many others. When addressing the subject of text editors in online communities, you're liikely to hear an overwhelming and increasing majority of users singing the praises of VS Code, perhaps a few chiming in about Sublime Text, the somewhat rare Emacs masochist waxing poetic about how Emacs isn't JUST a text editor, but a way of life. Then, of course, there's Vim.
+        </p>
+        <h4 class="article-header4">What Is A Text Editor?</h4>
+        <p class="article-content">
+To simplify greatly, a text editor is a piece of software for the purposes of generating and editing text. If you have ever played around in Microsoft Notepad, you'll be forgiven for thinking that it is so basic that it should only be used for quick notes and doesn't serve much other functionality. While this is somewhat true, you can indeed code in Notepad, as all you technically need to code is a piece of software that is capable of inputting and editing plain text.. Text Editors do have some overlap in functionality with Word Processors, but the purpose of a text editor has far less to do with presentation (meaning there is little to no formatting for the intentions of printing, and rather is intended for the ease of use in coding and technical documentation).
         </p>
         <p class="article-content">
-            Here you will find various articles on Web Development, Coding/Programming, Linux,
-             and computers in general.
+Modern text editors provide a basic suite of features by default. Some of the most obvious of these features are syntax highlighting (colorizing of certain keywords in the text depending on the programming language being edited), linting (helpful error messages that inform the user of possible errors in the code), and a vast suite of various tools for quickly navigating and searching throughout their project hiearchy. They are also highly customizable, with a wide variety of plugins available, as well as a configuration interface with which the user can further tailor the text editor to their specific needs.
+        </p>
+        <h4 class="article-header4">What Is Vim?</h4>
+        <p class="article-content">
+Obviously, given the track of the article thus far, you can easily ascertain that Vim is a text editor of some note. What makes Vim unique amongst text editors is its adoption of the original workflow from the Vi text editor, which heavily utilizies the feature of Modal Editing. Unlike other text editors, in which the user can immediately start inputting and editing text, Vi introduced the concept of "Modes," in which the input from the keyboard would not necessarily produce text on the screen, but would rather either navigate or manipulate the text in some way other than simple input. To be clear, Vi can still input text in the same fashion as other text editors, it's just that this mode (known as INSERT mode), is only one amongst many modes the user can choose to be in. On a modern text editor like VS Code, the navigation within the document from say, one word to the next, is accomplished using the 'ctrl + right arrow' keybinding. In Vim, while you can do the same in INSERT mode, if in what is known as NORMAL mode, one can traverse the same navigational pattern by simply typing 'w'. While this may seem trivial to the unitiated, this modal editing is the major distinguishing feature of Vim with the general effect being that the user's fingers never leave home row, and thusly do not need to "reach" for keys on the perimeter of the keyboard as often, thusly increasing typing speed. Additionally, the "chaining" of these different modal keybindings while in NORMAL mode also increases productivity as one can more quickly navigate and edit a document than in a traditional text editor like VS Code.
+        </p>
+        <h4 class="article-header4">Vim's Drawbacks</h4>
+        <p class="article-content">
+Utilizing Vim's keybindings and modal editing is actually nearly ubiquitous across text editors now. There is a Vim Feature/Plugin for nearly every text editor, as well as a Vim setting in your shell, and even your web browser can be modified with an extension to utiliizie Vim-style keyboard-centric navigation. With Vim's flagship keybindings having been ported to many other text editors, one might wonder why use Vim at all? This is a more compelling argument against using the original terminal based Vim text editor (especially if you also don't find the following argument below regarding the efficient of use of system resources compelling). Vim in the terminal requires more in-depth configuration than other text editors. While being more customizable than other text editors, the time spent in configuring any piece of software could easily be spent learning some programming language, or simply doing anything else for that matter. The scripting language, vim-script, is not portable to other programs, and thus the time you spend learning vim-script does not transfer over to other projects (It is poignent to point out that Vim's successor, Neovim, is configured in the scripting language Lua, and thusly learning Lua through configuring Neovim may be a more worthwhile endeavor in this regard). In my previous article on Why You Should Use Linux, one of my main arguments behind learning to utilize The Linux Operating System was the fact that the act of customizing your Linux machine will help you learn more about computers in general. This same argument cannot be applied when regarding configuring Vim as a way to learn more about your computer, though in confguring Vim, you will learn more about your text editor. Ultimately, many of the features available in VSCode natively have to be implemented in Vim via plugins and extensive configuration. So what are the utilitarian reasons for utilizing Vim?
+        </p>
+        <h4 class="article-header4">Why Use Vim?</h4>
+        <p class="article-content">
+It almost goes without saying that the majority of new programmers/coders reach for Microsoft's VS Code as their first (and possibly only) text editor. The predominance of VS Code is due to the simple fact that it is a great piece of software that works out of the box. Its ecosystem is vast, with a wide variety of plugins, color themes, and a helpful community. VS Code even has a Vim (and Neovim) plugin so one can utilize Vim-style modal editing keybindings. So, why, ultimately, would I suggest you utilize Vim(Neovim) over VS Code? There are a few good reasons.
         </p>
         <p class="article-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Just like with choosing Linux, the choice of a text editor, like Vim, can become quickly political in nature due to the fact that VS Code is not entirely Open Source. While VS Code's source code is released under the permissive MIT license, the popular Microsoft release of this has proprietary software integrated into it. Additionally, VS Code utilizes telemetry by default, which goes against the FOSS world's advocacy for opt-in, and not opt-out, telemetry (The fork, VS-Codium, turns off this telemetry by default).
         </p>
         <p class="article-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+On a less political note, Vim, and its popular descendant, Neovim, run natively within the Terminal and Terminal Emulator. This greatly reduces the amount of system resources utilized during operation when compared with VS Code, which utilizes the resource-intensive Electron as its base. This alone,is reason enough to utilize Vim. I have a relatively powerful machine with a modern CPU and GPU, but gravitate towards software that runs on as little resources as possible. Many argue that system resources are cheap today, and needing to squeeze every bit of memory out of your machine is a thing of the past, but this is a short-sighted argument. System resources are always disposable until you run out of them, and programmers in particular should never view system resources as being somehow magically infinite. This isn't to say that VS Code is a memory hog per say (that is relative), but the majority of what one can accomplish in VS Code, one can accomplish just as well, if not more efficiently, with Vim, and at a fraction of the system resource cost. The argument regarding system resources, however, is moot when compared to the next argument I will make in favor of using Vim as your text editor.
         </p>
         <p class="article-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Vim, with it's native modal editing ecosystem, incorporates a series of keybindings and shortcuts that greatly increase the speed with which the user can edit text. Much has been written on how to get started with Vim, and I will be providing you with a basic introduction to Vim towards the end of this article, but Vim is not an editor that is as intuitive to get started with as VS Code, and this is one of its major drawbacks. Although one could make the argument that learning Vim is similar in nature to learning the basic keybindings native in most Windows and MacOs applications, I would argue that Vim has a far more vast and rich set of keybindings, which, as mentioned above, can be chained together to achieve rapid results whether navigating or editing the document.
         </p>
-    </div
+        <h4 class="article-header4">Vim Basics</h4>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+        <p class="article-content">
+
+        </p>
+
+    </div>
     <div class="spacer"></div>
 </div>
