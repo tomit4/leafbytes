@@ -485,7 +485,6 @@ async function activateScrollDown() {
 async function activateScrollUp() {
     // onscrollup animations
     navi.classList.add('navbar-onscrollup')
-    navi.style.height="2.5rem"
     foot.classList.add('foot-onscrollup')
     article.classList.add('article-onscrollup')
     if (isAtDesktopDimensions)
