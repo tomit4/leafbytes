@@ -111,6 +111,10 @@ function determineIfPrefersDarkMode() {
     }
 }
 
+/* on hover of closed navbar or footer, they expand and become visible */
+navi.addEventListener('mouseover', () => activateScrollUp())
+foot.addEventListener('mouseover', () => activateScrollUp())
+
 /* simple bool @media check for 1920px x 980px */
 function determineIfAtDesktopDimensions() {
     isAtDesktopDimensions = (window.matchMedia('(min-width: 1920px)').matches &&
