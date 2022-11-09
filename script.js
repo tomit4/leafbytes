@@ -119,8 +119,22 @@ navi.addEventListener('mouseover', () => {
     if (!alreadyScrolledUp) activateScrollUp()
 })
 
+navi.addEventListener('click', () => {
+    if (!alreadyScrolledUp) {
+        activateScrollUp()
+        navi.style.height="2.5rem"
+    }
+})
+
 foot.addEventListener('mouseover', () => {
     if (!alreadyScrolledUp) activateScrollUp()
+})
+
+foot.addEventListener('click', () => {
+    if (!alreadyScrolledUp) {
+        activateScrollUp()
+        navi.style.height="2.5rem"
+    }
 })
 
 /* simple bool @media check for 1920px x 980px */
