@@ -485,6 +485,8 @@ async function activateScrollDown() {
 async function activateScrollUp() {
     // onscrollup animations
     navi.classList.add('navbar-onscrollup')
+    // strange bug in Firefox only requires that this be reiterated
+    if (!isAtDesktopDimensions) navi.style.height="2.5rem"
     foot.classList.add('foot-onscrollup')
     article.classList.add('article-onscrollup')
     if (isAtDesktopDimensions)
