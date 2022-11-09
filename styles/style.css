@@ -811,7 +811,11 @@ html, body {
 }
 
 /* 320 x 640 */
-/* @media (min-width: 20rem) {} */
+@media (max-width: 20rem) {
+    .icons {
+        margin: 0.25rem 0.75rem 0.25rem 0.80rem;
+    }
+}
 
 /* 360 x 800 */
 /* @media (min-width: 22.5rem) {} */
