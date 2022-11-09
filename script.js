@@ -74,6 +74,9 @@ const scripts = document.getElementsByTagName('script')
 /* flag that checks if at desktop dimensions */
 let isAtDesktopDimensions = false
 
+/* flag that checks if user has already scrolled up once */
+let alreadyScrolledUp = false
+
 /* flag that checks if initalPageLoad is complete
 * (i.e. loadArticles has loaded once)*/
 let initialPageLoad = true
@@ -211,8 +214,6 @@ function makeDesktopItemsVisible() {
 }
 
 async function fetchWelcomePage() {
-    /* replace about.html with a custom welcome.html page */
-    // await fetch('./about.html')
     await fetch('./welcome.html')
         .then((res) => { return res.text() })
         .then((html) => {
@@ -229,7 +230,6 @@ async function fetchHomePage() {
             article.innerHTML = html
         })
     showTreeOnInitialPageLoad()
-
 }
 
 async function loadPage() {
@@ -460,6 +460,7 @@ async function activateScrollDown() {
         for (let i = 0; i < articleDesktop.length; i++)
             articleDesktop[i].classList.remove('article-onscrollup')
 
+    alreadyScrolledUp = false
 }
 
 async function activateScrollUp() {
@@ -484,10 +485,8 @@ async function activateScrollUp() {
         icon.classList.add('fade-in')
     })
 
-    if (navi.classList.contains('navi-desktop'))
+    if (navi.classList.contains('navi-desktop')&& !alreadyScrolledUp)
         renderDesktopNavAndFoot()
-     else
-        navi.style.height = '2.5rem'
 
     footerIcons.forEach((footerIcon) => {
         footerIcon.style.visibility = 'visible'
@@ -498,6 +497,7 @@ async function activateScrollUp() {
         footerMenuItems[j].style.visibility = 'visible'
         footerMenuItems[j].classList.add('fade-in')
     }
+    alreadyScrolledUp = true
 }
 
 /* icon scale up */
