@@ -10,7 +10,7 @@
             <img
                 class="header-images"
                 id="vim_logo"
-                src="../../assets/vim.png"
+                src="../../assets/vim.webp"
                 alt="The Vim Logo"
                 title="The Vim Logo"
                 cite="https://commons.wikimedia.org"
@@ -59,48 +59,239 @@ Vim, with it's native modal editing ecosystem, incorporates a series of keybindi
         </p>
         <h4 class="article-header4">Vim Basics</h4>
         <p class="article-content">
-
+For the following short introduction to Vim, I will be utilizing the modern fork, Neovim, but for the purposes of this tutorial, you can use either version.
         </p>
         <p class="article-content">
-
+How you install Vim will depend on what Operating System you have. If on Windows or MacOs, please take a look at <a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://www.vim.org/download.php">these instructions</a>, or you can install <a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://github.com/neovim/neovim/wiki/Installing-Neovim">neovim</a>.
         </p>
         <p class="article-content">
-
+If you're using Linux, utilize your native package manager:
         </p>
         <p class="article-content">
-
+Debian-based Linux distributions:
+        </p>
+        <pre><code class="language-bash">[~]$ sudo apt install neovim</code></pre>
+        <p class="article-content">
+Arch-based Linux distributions:
         </p>
         <p class="article-content">
-
+The text editor will open with a brief introductory screen. For those more accustomed to VS Code or a similar Graphical User Interface(GUI) text editor, Vim can appear rather sparse. At least the introduction screen provides us with the some information abut how to get started (:help vim<Enter>). I would encourage you to take a look at this help page, as Vim and Neovim documentation is quite good. I will now cover some of the basic keybindings and Vim "movements" in concluding this article, in order that you might get a sense of Vim's appeal.
+        </p>
+        <pre><code class="language-bash">[~]$ sudo pacman -S neovim</code></pre>
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_01"
+                src="../../assets/ss_nvim_01.webp"
+                alt="The Introduction Screen to Neovim"
+                title="The Introduction Screen to Neovim"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>The Introduction Screen to Neovim</figcaption>
+        </figure>
+        <p class="article-content">
+When you first attempt to type anything into Vim, you may very well be immediately frustrated at the fact that no text appears on the screen! What the hell?! Isn't this supposed to be a text editor? Well, hold on, remember what I said earlier about it being a MODAL editor? Well if your cursor is in the default white block state, then Vim is currently in NORMAL mode, which one can think of as being a basic navigation and editing mode. In order to type something out, press 'i' in order to enter INSERT mode.
+        </p>
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_03"
+                src="../../assets/ss_nvim_03.webp"
+                alt="Neovim in Insert Mode with Sample Text"
+                title="Neovim in Insert Mode with Sample Text"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>Neovim in Insert Mode with Sample Text</figcaption>
+        </figure>
+        <br>
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_02"
+                src="../../assets/ss_nvim_02.webp"
+                alt="CloseUp of the INSERT mode prompt"
+                title="CloseUp of the INSERT mode prompt"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>NORMAL mode has no prompt by default in Vim, but the other modes do.</figcaption>
+        </figure>
+        <p class="article-content">
+        Usually changing over to insert mode change the shape of your cursor to the thin bar variety. You can now insert text like you would in a normal text editor. All the basic keybindings still work, be it ctrl+right arrow for navigating, as well as your standard editing keys like backspace and delete. I wouldn't recommend usiing these, however, as you would be overlooking NORMAL mode's editing capabilities. Generate some <a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://loremipsum.io/">dummy text using Lorem Ipsum</a>, enough so that it fills your sreen, and then return to NORMAL mode by hitting the <ESC> key. Next I'm going to cover the basic navigation.
         </p>
         <p class="article-content">
-
+In Vim, deviation from the home row of your keyboard is highly discouraged by design. On a standard QWERTY keyboard, when positioned coorrectly, all the "arrow" navigation keys can be found beneath your right hand, instead, while in NORMAL mode, left is 'h', down is 'j', up is 'k', and right is 'l'.
+        </p>
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_04"
+                src="../../assets/ss_nvim_04.gif"
+                alt="Demonstration of basic navigation in Vim"
+                title="Demonstration of basic navigation in Vim"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>Basic Navigation Demo in Vim using hjkl</figcaption>
+        </figure>
+        <p class="article-content">
+While this initial lesson is rather underwhelming, this basic feature of vim reinforces a sublte, but powerful productivity standard, which is that your workflow should be keyword-centric. I believe that coders/programmers, should at least have a few, if not many keybindings that they have memorized and engrained into muscle memory regardless of which text editor they use. It's simply more efficient than navigating solely with arrow keys, and there should be as little physical strain on the hands and wrists as possible while typing. The quicker you can accomplish your editing, the more time you have to devoting to coding and thinking hard about your next line of code.
         </p>
         <p class="article-content">
-
+Very basic navigation out of the way, let's cover word traversal. While still in NORMAL mode, at any point on your dummy text, hit the key 'w', and then the key 'b'. 'w' traverses the document word by word, 'b' does the same but towards the beginning.
+        </p>
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_05"
+                src="../../assets/ss_nvim_05.gif"
+                alt="Demonstration of word traversal in Vim"
+                title="Demonstration of word traversal in Vim"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>Basic Word Traversal in Vim</figcaption>
+        </figure>
+        <p class="article-content">
+Okay, now you're moving a bit faster, instead of letter by letter, you're traversing the document word by word. Next, we'll cover traversing an entire line. Navigate to the middle of one line and while in NORMAL mode, type the dollar sign symbol, '$', and then after taking a moment to notice the result in your editor, type the number zero, '0', and again, notice the results:
+        </p>
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_06"
+                src="../../assets/ss_nvim_06.gif"
+                alt="Demonstration of line traversal in Vim"
+                title="Demonstration of line traversal in Vim"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>Basic Line Traversal in Vim</figcaption>
+        </figure>
+        <p class="article-content">
+These two commands lead you to the end of your current line with dollar sign, '$', or to the beginniing of your current line with the number zero, '0'.
         </p>
         <p class="article-content">
-
+Now you have a few options for quickkly navigating your document horizontally, what about vertically? In NORMAL mode, while positioined more towards the top of your document than towards the bottom, enter 'ctrl+d', and notice the results.
+        </p>
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_07"
+                src="../../assets/ss_nvim_07.gif"
+                alt="Demonstration of vertical traversal in Vim"
+                title="Demonstration of vertical traversal in Vim"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>Basic Vertical Traversal in Vim</figcaption>
+        </figure>
+        <p class="article-content">
+Essentially 'ctrl+u' and 'ctrl+d' are Vim's version of pageup, and pagedown.
         </p>
         <p class="article-content">
-
+The next keybindings important to vertical traversal are that of 'gg' and 'shift+g'(capital G). While in NORMAL mode, enter both of these and notice their results.
+        </p>
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_08"
+                src="../../assets/ss_nvim_08.gif"
+                alt="Demonstration of entire document traversal in Vim"
+                title="Demonstration of entire document traversal in Vim"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>You can traverse the entire document using 'gg' and 'G'</figcaption>
+        </figure>
+        <p class="article-content">
+These keybindings navigate the entirety of your document. 'gg' will bring your cursor to the first line of your document, while capital G, or shift+g will bring you to the last line of your document.
         </p>
         <p class="article-content">
-
+At this point you might be underwhelmed, as it all seems like a more esoteric way of navigating using alternative keys other than pgdown, pgup, end, home, ctrl+left arrow, ctrl+right arrow, etc. And you'd be right...if this was all Vim had to offer.
         </p>
         <p class="article-content">
-
+While there is more to navigation than what I have presented here thus far, I will now move on to the basics of Vim Editing, which will hopefully further elucidate the power of Vim's modal editing feature.
         </p>
         <p class="article-content">
-
+For this example, please stay in NORMAL mode (if you hit 'i' at any time prior to this and entered INSERT mode, simply return to NORMAL mode by hitting the '<ESC>' key). Navigate to the beginning of any word in your document using 'w'. From here enter, the keys, 'dw', and witness the results, yes, very simple we deleted a word.
         </p>
         <p class="article-content">
-
+I want to pause here and point out that in any other classic text editors, the keybinding to do this is ctrl+delete, which isn't so bad (though you do have to navigate both hands a bit far away from home row to do so).
         </p>
         <p class="article-content">
-
+Also notice the chaining of commands here, 'd' is meant to be a mnemonic, reminding you of 'delete', but on its own doesn't do anything, it takes another command as an argument, so 'dw', means 'delete word.' We traverse using 'w' and when we come across a word we want to delete using 'dw'. What if we wanted to delete the previous word? Well we traverse using back to the previous word using the 'b' keybinding, so it makes sense that 'db', would be 'delete back' or 'delete previous word'.
         </p>
-
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_09"
+                src="../../assets/ss_nvim_09.gif"
+                alt="Demonstration of deleting a word using 'dw' and 'db' in Vim"
+                title="Demonstration of deleting a word using 'dw' and 'db' in Vim"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>You can delete a word using the 'dw' and 'db' command chains</figcaption>
+        </figure>
+        <p class="article-content">
+And indeed it does. And yes, this functionality can be accomplished using the standard text editor's keybinding 'ctrl+backspace'.
+        </p>
+        <p class="article-content">
+Should you wish to undo any of your recent deletions, simply hit 'u' to undo the last command. If you then change your mind and wish to redo your recent deletions, simply hit 'ctrl+r'. On standard editors, this redo functionality can be accomplshed usng 'ctrl+z'.
+        </p>
+        <p class="article-content">
+You may still be unconvinced of Vim's editing capabilities, as I have covered how to accomplish many of these edits in a standard text editor as well. Allow me to hammer home the point by covering a few more editing techniques involving just the 'd'/delete keybinding.
+        </p>
+        <p class="article-content">
+Suppose I think a bit on how else I can chain 'd' with other movement commands? What if I wish to delete just the next character to the right of me? Well 'l' will navigiate more cursor right, therefore d, 'delete' will 'delete' followed by 'l' 'one character to the right of me.' So 'dl' deletes one letter to the right of my cursor  and 'dh' will delete one character too the left of my cursor. What about 'dj'?
+        </p>
+        <p class="article-content">
+Suppose I think a bit on how else I can chain 'd' with other movement commands? What if I wish to delete just the next character to the right of me? Well 'l' will navigiate more cursor right, therefore d, 'delete' will 'delete' followed by 'l' 'one character to the right of me.' So 'dl' deletes one letter to the right of my cursor  and 'dh' will delete one character too the left of my cursor. 'dj' will delete the entire next line, whereas 'dk' if delete the preceding line above.
+        </p>
+        <p class="article-content">
+What about 'dd'? Well this one is less intuitive, isn't it? 'delete delete'. Well long story short, it deletes the entire line you are currently on.
+        </p>
+        <p class="article-content">
+What about 'd$'? You guessed right, delete all text from my current cursor position to the end of the line.
+'d0' will delete all text from my current cursor position to the beginning of the line.
+        </p>
+        <p class="article-content">
+'dG' will delete everything from my current cursor position to the end of the document, while 'dgg' will delete everything from my current cursor position to the beginning of the document.
+        </p>
+        <figure>
+            <img
+                class="header-images"
+                id="nvim_ss_10"
+                src="../../assets/ss_nvim_10.gif"
+                alt="Demonstration of various deletion methods in Vim"
+                title="Demonstration of deleting a word using 'dw' and 'db' in Vim"
+                cite="screenshot"
+                loading="lazy"
+            />
+            <figcaption>Various chaining of the 'd' command in Vim</figcaption>
+        </figure>
+        <p class="article-content">
+And so on...
+        </p>
+        <p class="article-content">
+This is a basic explanaion on the power of chaining commands. Now, how would we accomplish these things in a standard text editor without this MODAL editing feature? Well this is where the ergonomics of your standard text editor fail. Let's just say I wanted to do more than delete a few words, what if I wanted to delete everything from my current position to the end of the line? Well in Vim, as previously pointed out, that is accomplished simply by invoking 'd$'. In a standard text editor, this would be accomplised by 'ctrl+shift+end' followed by 'delete' or 'backspace'. Four keys to Vim's two, and much further from home row.
+        </p>
+        <p class="article-content">
+At this point, you may protest, saying "Well I could always use the mouse to highlight that text and then just hit the delete or backspace key! It's not a big deal!!" And that is where you'd be wrong, were you to make such an argument. While I am not opposed to the utilization of the mouse in text editing (I am known to use my mouse from time to time), the frequency with which a programmer must switch from moving one hand away from home row on their keyboard to utilize the mouse in a standard text editor is an inconvenience that I cannot imagine enduring after having utilized Vim's modal editing. It's just far superior.
+        </p>
+        <h4 class="article-header4">So Uhh...How Do I Quit?</h4>
+        <p class="article-content">
+It is a joke/meme among Vim users that many of us never leave Vim. Not necessarily because we love it, but because we never learned how to exit. Although the introduction screen does actually tell you how to exit vim, it is easy for a beginner to forget the command after having experimented with it for the first time.
+        </p>
+        <p class="article-content">
+From NORMAL mode, enter the colon key, ':'. Here you are entering "COMMAND" mode, which has syntax somewhat similar to the shell. If you wish to save the document you have worked on, enter 'w', which stands for 'write'. If you wish to quit without saving, enter ':q!'. The exclamation point is a 'force' point, without it the editor will warn you you have unsaved changes and not let you exit. Of course, you can chain these commands, so if you wish to write and quit in a single command, simply enter ':wq'.
+        </p>
+        <h4 class="article-header4">Conclusion</h4>
+        <p class="article-content">
+I will digress at this point and bring this article to an end. There are far more Vim keybindings to cover, but I do not wish to overwhelm you too much, as the basic navigation/editing keybindings presented above are a good start to using Vim. In order to utilize Vim to actually start coding, however, will require at least a few plugins(in my opinion, some do without), and a bit of configuration. I do plan to eventually write an article covering these more nuanced aspects to Vim, but in the meanwhile I encourage you to take a look at the following official documentation on Vim/Neovim. Thank you for taking the time to read my personal take on Vim, and Happy Coding!
+        </p>
     </div>
     <div class="spacer"></div>
 </div>
