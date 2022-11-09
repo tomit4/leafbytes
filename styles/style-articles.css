@@ -635,6 +635,7 @@ figcaption {
 
     .article-header4 {
         margin-left: 9rem;
+        text-align: left;
     }
 
     .article-quotes {
