@@ -485,6 +485,7 @@ async function activateScrollDown() {
 async function activateScrollUp() {
     // onscrollup animations
     navi.classList.add('navbar-onscrollup')
+    navi.style.height="2.5rem"
     foot.classList.add('foot-onscrollup')
     article.classList.add('article-onscrollup')
     if (isAtDesktopDimensions)
@@ -494,18 +495,19 @@ async function activateScrollUp() {
     navi.classList.remove('navbar-onscrolldown')
     foot.classList.remove('foot-onscrolldown')
     article.classList.remove('article-onscrolldown')
-    if (isAtDesktopDimensions)
+
+    if (isAtDesktopDimensions) {
         for (let i = 0; i < articleDesktop.length; i++)
             articleDesktop[i].classList.remove('article-onscrolldown')
+        if (navi.classList.contains('navi-desktop')&& !alreadyScrolledUp)
+            renderDesktopNavAndFoot()
+    }
 
     await wait(1200)
     icons.forEach((icon) => {
         icon.style.visibility = "visible"
         icon.classList.add('fade-in')
     })
-
-    if (navi.classList.contains('navi-desktop')&& !alreadyScrolledUp)
-        renderDesktopNavAndFoot()
 
     footerIcons.forEach((footerIcon) => {
         footerIcon.style.visibility = 'visible'
