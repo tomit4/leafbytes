@@ -1,6 +1,7 @@
 "use strict"
 
 window.addEventListener('load', () => {
+    console.log(window.location.href)
     loadPage()
     loadTitle()
     removeTitle()
