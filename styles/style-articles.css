@@ -434,6 +434,7 @@ figcaption {
     max-width: 650px;
 }
 
+#i3_logo,
 #vim_logo,
 #bash {
     max-width: 350px;
