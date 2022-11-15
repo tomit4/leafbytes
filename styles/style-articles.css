@@ -408,8 +408,6 @@ img {
     border: 4px solid #004b77;
     border-radius: 5px;
     width: 75vw;
-    /* @media queries for margins */
-    margin: auto 0 auto -0.75rem;
 }
 
 figcaption {
@@ -420,20 +418,13 @@ figcaption {
     text-align: center;
 }
 
-#me {
-    max-width: 350px;
-}
-
-#penguin {
-    max-height: 350px;
-}
-
 #ls_command,
 #olkb,
 .header-images {
     max-width: 650px;
 }
 
+#me,
 #i3_logo,
 #vim_logo,
 #bash {
@@ -456,17 +447,11 @@ figcaption {
     .folder-extension {
         width: 24vw;
     }
-    img {
-        margin: auto 0 auto -1.25rem;
-    }
+
 }
 
 /* 360 x 800 */
-@media (min-width: 22.5rem) {
-    img {
-        margin: auto 0 auto -1.1rem;
-    }
-}
+/* @media (min-width: 22.5rem) {} */
 
 @media (min-width: 23rem) {
     .article-content {
@@ -484,6 +469,7 @@ figcaption {
     .article-quotes {
         margin: 0 2rem;
     }
+
     .article-lists {
         margin-left: -2rem;
     }
@@ -494,9 +480,7 @@ figcaption {
     .folder-extension {
         margin: -0rem 0 0 51.25vw;
     }
-    img {
-        margin: auto 0 auto -0.25rem;
-    }
+
 }
 
 /* widths 630 to 640 (i.e. everything inbetween)*/
@@ -523,10 +507,6 @@ figcaption {
 
     .folder-extension {
         margin: -0rem 0 0 51.25vw;
-    }
-
-    img {
-        margin: auto 0 auto 0.75rem;
     }
 
     #olkb {
