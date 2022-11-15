@@ -441,6 +441,11 @@ figcaption {
         line-height: 1.25rem;
     }
 
+    .header-images {
+        width: 275px;
+        margin-left: -2rem;
+    }
+
     .link-item-extension {
         width: 23vw;
     }
@@ -451,7 +456,12 @@ figcaption {
 }
 
 /* 360 x 800 */
-/* @media (min-width: 22.5rem) {} */
+@media (max-width: 24rem) {
+    .header-images {
+        width: 325px;
+        margin-left: -1.75rem;
+    }
+}
 
 @media (min-width: 23rem) {
     .article-content {
