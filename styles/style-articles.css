@@ -424,11 +424,16 @@ figcaption {
     max-width: 650px;
 }
 
-#me,
-#i3_logo,
-#vim_logo,
 #bash {
     max-width: 350px;
+    margin-left: -0.5rem;
+}
+
+#me,
+#i3_logo,
+#vim_logo {
+    max-width: 300px;
+    margin-right: -1.75rem;
 }
 
 /* media queries */
@@ -537,10 +542,6 @@ figcaption {
         font-size: 0.95rem;
     }
 
-    .article-quotes {
-        margin: 0 5rem;
-    }
-
     .link-item-extension {
         margin: -0.75rem 0 0 53vw;
     }
@@ -562,10 +563,6 @@ figcaption {
         font-size: 0.95rem;
     }
 
-    .article-quotes {
-        margin: 0 5rem;
-    }
-
     .link-item-extension {
         margin: -0.75rem 0 0 53vw;
     }
@@ -585,10 +582,6 @@ figcaption {
 
     .article-lists {
         font-size: 0.95rem;
-    }
-
-    .article-quotes {
-        margin: 0 5rem;
     }
 
     .link-item-extension {
