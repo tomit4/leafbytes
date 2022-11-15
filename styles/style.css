@@ -273,7 +273,7 @@ html, body {
 .article {
     /* visibility: hidden; */
     top: 50vh;
-    margin: -44vh auto auto auto;
+    margin: -42vh auto auto auto;
     left: 0;
     right: 0;
     position: fixed;
@@ -284,7 +284,7 @@ html, body {
     );
     width: 98vw;
     max-width: 1040px;
-    height: 85.5vh;
+    height: 83.5vh;
     border: 6px solid #004b77;
     border-radius: 5px;
     overflow-y: scroll;
