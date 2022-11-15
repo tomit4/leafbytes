@@ -161,14 +161,14 @@ pre[class*='language-'] {
 /* 360 x 800 */
 @media (min-width: 22.5rem) {
     pre[class*='language-'] {
-        margin: 0.5em 2.25rem;
+        margin: 0.5em 0.6rem;
     }
 }
 
 /* 800 x 360 */
 @media (min-width: 50rem) {
     pre[class*='language-'] {
-        margin: 0.5em 4.25rem;
+        margin: 0.5em 2.25rem;
     }
 }
 
