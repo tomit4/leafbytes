@@ -239,10 +239,12 @@ textarea:hover {
     /* margin: 1rem auto; */
 }
 
+.inter-article-links,
 .footnotes-links {
     color: #0066cc;
 }
 
+.inter-article-links,
 .return-caret:hover,
 .footnotes-links:hover {
     cursor: pointer;

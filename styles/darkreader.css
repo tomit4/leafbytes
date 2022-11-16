@@ -235,6 +235,7 @@ body {
     list-style-image: none;
 }
 
+.inter-article-links,
 .footnotes-links {
     color: #cca700;
 }
