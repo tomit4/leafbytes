@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
 })
 
 window.addEventListener('resize', () => {
+    footnoteOriginPos = undefined
     determineIfAtDesktopDimensions()
     if (isAtDesktopDimensions)
         initialPageLoad = true

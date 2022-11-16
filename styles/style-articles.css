@@ -248,17 +248,17 @@ textarea:hover {
     cursor: pointer;
 }
 
+.footnote-container {
+    margin-left: 3rem;
+}
+
 .footnotes{
     font-family: LiberationMono;
     font-size: 0.9rem;
     font-weight: 600;
-    /* color: #0066cc; */
     color: #004b77;
     line-height: 1.2rem;
-    /* text-decoration: underline; */
     list-style: none;
-    /* @media */
-    margin-left: 2.25rem;
 }
 
 .footnote-href {
@@ -481,10 +481,10 @@ figcaption {
     .link-item-extension {
         width: 23vw;
     }
+
     .folder-extension {
         width: 24vw;
     }
-
 }
 
 /* 360 x 800 */
@@ -519,8 +519,13 @@ figcaption {
     .link-item-extension {
         margin: -0.75rem 0 0 52vw;
     }
+
     .folder-extension {
         margin: -0rem 0 0 51.25vw;
+    }
+
+    .footnote-container {
+        margin-left: -2rem;
     }
 
 }
@@ -655,5 +660,9 @@ figcaption {
 
     .article-lists {
         margin: 1rem 8rem;
+    }
+
+    .footnote-container {
+        margin-left: 6rem;
     }
 }
