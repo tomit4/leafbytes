@@ -373,14 +373,14 @@ async function renderIt(articleId) {
                 cachedArticle = html
                 for (let i = 0; i < articleDesktop.length; i++) {
                     articleDesktop[i].innerHTML = html
-                    articleDesktop[i].scrollTop = 0
+                    // articleDesktop[i].scrollTop = 0
                 }
             }
             else {
                 await wait(1000)
                 cachedArticle = html
                 article.innerHTML = html
-                article.scrollTop = 0
+                // article.scrollTop = 0
                 for (let i = 0; i < articleDesktop.length; i++)
                     body.removeChild(articleDesktop[i])
             }
