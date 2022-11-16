@@ -72,6 +72,14 @@ const footerMenuItems = document.getElementsByClassName('footer-menu-item')
 /* all script tags */
 const scripts = document.getElementsByTagName('script')
 
+/* testing for pic lazy loading removal */
+function eagerLoadPics() {
+    const headerImages = document.querySelectorAll('.header-images')
+    headerImages.forEach((image) => image.loading = "eager")
+    console.log(article.scrollHeight)
+    window.scrollTo(0, 8323)
+}
+
 /* flag that checks if at desktop dimensions */
 let isAtDesktopDimensions = false
 
