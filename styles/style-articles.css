@@ -239,6 +239,10 @@ textarea:hover {
     /* margin: 1rem auto; */
 }
 
+code {
+    user-select: text !important;
+}
+
 .inter-article-links,
 .footnotes-links {
     color: #0066cc;
