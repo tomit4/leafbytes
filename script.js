@@ -56,6 +56,7 @@ let article = document.querySelector('.article')
 const leafbytesBody = document.getElementsByClassName('leafbytes-body')
 const articleLinks= document.getElementsByClassName('article-links')
 const linkItems = document.getElementsByClassName('link-item')
+const headerImages = document.querySelectorAll('.header-images')
 
 /* article inner elements */
 const introHeader = document.querySelectorAll('.intro-header')
@@ -73,11 +74,9 @@ const footerMenuItems = document.getElementsByClassName('footer-menu-item')
 const scripts = document.getElementsByTagName('script')
 
 /* testing for pic lazy loading removal */
-function eagerLoadPics() {
-    const headerImages = document.querySelectorAll('.header-images')
-    headerImages.forEach((image) => image.loading = "eager")
-    console.log(article.scrollHeight)
-    window.scrollTo(0, 8323)
+async function scrollToFootnotes() {
+    await headerImages.forEach((image) => image.loading = "eager")
+    article.scrollTop = article.scrollHeight
 }
 
 /* flag that checks if at desktop dimensions */
