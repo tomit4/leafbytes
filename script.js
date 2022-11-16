@@ -73,11 +73,6 @@ const footerMenuItems = document.getElementsByClassName('footer-menu-item')
 /* all script tags */
 const scripts = document.getElementsByTagName('script')
 
-/* testing for pic lazy loading removal */
-async function scrollToFootnotes() {
-    await headerImages.forEach((image) => image.loading = "eager")
-    article.scrollTop = article.scrollHeight
-}
 
 /* flag that checks if at desktop dimensions */
 let isAtDesktopDimensions = false
@@ -88,6 +83,9 @@ let alreadyScrolledUp = false
 /* flag that checks if initalPageLoad is complete
 * (i.e. loadArticles has loaded once)*/
 let initialPageLoad = true
+
+/* variable that stores the original position of the footnote link */
+let footnoteOriginPos = undefined
 
 /* cache article so it doesn't
 * re-render fetched html upon page resize */
@@ -566,6 +564,27 @@ function expand() {
         }
 
     }, 1250)
+}
+
+async function scrollToFootnotes() {
+    await headerImages.forEach((image) => image.loading = "eager")
+    if (isAtDesktopDimensions) {
+        footnoteOriginPos = articleDesktop[0].scrollTop
+        articleDesktop[0].scrollTop = articleDesktop[0].scrollHeight
+    } else {
+        footnoteOriginPos = article.scrollTop
+        article.scrollTop = article.scrollHeight
+    }
+}
+
+function returnToOrig() {
+    if (isAtDesktopDimensions) {
+        articleDesktop[0].scrollTop = footnoteOriginPos
+        footnoteOriginPos = undefined
+    } else {
+        article.scrollTop = footnoteOriginPos
+        footnoteOriginPos = undefined
+    }
 }
 
 function toggleLight() {

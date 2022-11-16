@@ -239,6 +239,33 @@ textarea:hover {
     /* margin: 1rem auto; */
 }
 
+.footnotes-links {
+    color: #0066cc;
+}
+
+.return-caret:hover,
+.footnotes-links:hover {
+    cursor: pointer;
+}
+
+.footnotes{
+    font-family: LiberationMono;
+    font-size: 0.9rem;
+    font-weight: 600;
+    /* color: #0066cc; */
+    color: #004b77;
+    line-height: 1.2rem;
+    /* text-decoration: underline; */
+    list-style: none;
+    /* @media */
+    margin-left: 2.25rem;
+}
+
+.footnote-href {
+    text-decoration: none;
+    color: #0066cc;
+}
+
 .article-quotes {
     font-family: LiberationMono;
     color: rgba(255, 255, 255, 1);

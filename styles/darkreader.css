@@ -235,6 +235,18 @@ body {
     list-style-image: none;
 }
 
+.footnotes-links {
+    color: #cca700;
+}
+
+.footnotes{
+    color: #9ad7ff;
+}
+
+.footnote-href {
+    color: #cca700;
+}
+
 .blockquote-links {
     color: #222f48;
 }
