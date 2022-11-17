@@ -518,6 +518,7 @@ figcaption {
 @media (max-width: 24rem) {
     .header-images {
         width: 325px;
+        margin-left: -1.75rem;
     }
 }
 
