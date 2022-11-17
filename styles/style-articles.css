@@ -437,13 +437,25 @@ figure {
 }
 
 /* iframe stylings */
+#outer {
+    max-width: 75vw;
+    display: flex;
+    margin: 0.25rem auto;
+}
+
+#inner {
+    width: 75vw;
+}
+
 iframe {
     border: 4px solid #004b77;
     border-radius: 5px;
+    width: 75vw;
+    height: 30vh;
+    max-width: 560px;
+    max-height: 315px;
     display: flex;
     margin: 0.25rem auto;
-    left: 0;
-    right: 0;
 }
 
 /* image related stylings */
@@ -451,6 +463,8 @@ img {
     border: 4px solid #004b77;
     border-radius: 5px;
     width: 75vw;
+    display: flex;
+    margin: 0 auto;
 }
 
 figcaption {
@@ -469,14 +483,12 @@ figcaption {
 
 #bash {
     max-width: 350px;
-    margin-left: -0.5rem;
 }
 
 #me,
 #i3_logo,
 #vim_logo {
     max-width: 300px;
-    margin-right: -1.75rem;
 }
 
 /* media queries */
@@ -491,7 +503,6 @@ figcaption {
 
     .header-images {
         width: 275px;
-        margin-left: -2rem;
     }
 
     .link-item-extension {
@@ -507,7 +518,6 @@ figcaption {
 @media (max-width: 24rem) {
     .header-images {
         width: 325px;
-        margin-left: -1.75rem;
     }
 }
 
@@ -543,7 +553,6 @@ figcaption {
     .footnote-container {
         margin-left: -2rem;
     }
-
 }
 
 /* widths 630 to 640 (i.e. everything inbetween)*/
@@ -572,9 +581,6 @@ figcaption {
         margin: -0rem 0 0 51.25vw;
     }
 
-    #olkb {
-        margin: 0 3rem;
-    }
 }
 
 /* 640 x 320 */
@@ -641,8 +647,6 @@ figcaption {
     }
 }
 
-/* @media (min-width: 1440px) {} */
-
 @media (min-width: 800px) {
 
     .next-btn {
@@ -652,7 +656,6 @@ figcaption {
     .prev-btn {
         left: 17.5vw;
     }
-
 }
 
 
