@@ -436,28 +436,6 @@ figure {
     text-align: center;
 }
 
-/* iframe stylings */
-#outer {
-    max-width: 75vw;
-    display: flex;
-    margin: 0.25rem auto;
-}
-
-#inner {
-    width: 75vw;
-}
-
-iframe {
-    border: 4px solid #004b77;
-    border-radius: 5px;
-    width: 75vw;
-    height: 30vh;
-    max-width: 560px;
-    max-height: 315px;
-    display: flex;
-    margin: 0.25rem auto;
-}
-
 /* image related stylings */
 img {
     border: 4px solid #004b77;
