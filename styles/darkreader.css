@@ -315,6 +315,10 @@ textarea::placeholder {
     background-color: #222f48;
 }
 
+iframe {
+    border-color: #73aece;
+}
+
 img {
     border-color: #73aece;
 }
