@@ -503,6 +503,7 @@ figcaption {
 
     .header-images {
         width: 275px;
+        margin-left: -2rem;
     }
 
     .link-item-extension {
