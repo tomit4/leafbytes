@@ -499,6 +499,12 @@ figcaption {
         width: 325px;
         margin-left: -1.75rem;
     }
+
+    #me,
+    #i3_logo,
+    #vim_logo {
+        margin-left: -1rem;
+    }
 }
 
 @media (min-width: 23rem) {
