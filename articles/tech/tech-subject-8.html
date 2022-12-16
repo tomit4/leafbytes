@@ -3,44 +3,354 @@
         <div class="next-btn" onclick="renderNext(8)"></div>
         <div class="prev-btn" onclick="renderPrev(8)"></div>
     </div>
-    <p class="article-header">librewolf and brave</p>
-    <p class="article-header3">privacy related browsers</p>
+    <p class="article-header">what's init</p>
+    <p class="article-header3">why is systemd so divisive?</p>
     <div class="article-body">
+        <figure>
+            <img
+                id="no_sd"
+                src="../../assets/no_systemd_logo.webp"
+                alt="the systemd logo with general prohibition sign"
+                title="the systemd logo with general prohibition sign"
+                cite="https://commons.wikimedia.org"
+                loading="lazy"
+            />
+        <figcaption>the systemd logo with the general prohibition sign</figcaption>
+        </figure>
+        <blockquote class="article-quotes" cite="man pages of sysv-init">
+            "init is invoked as the last step of the boot procedure (see boot(8)). Generally
+its role is to create a process for each typewriter on which a user may log in.
+"
+            <br> -<a class="blockquote-links" target="_blank" rel="noopener
+                noreferrer"
+                href="https://ia802600.us.archive.org/9/items/bitsavers_attunix7thersManualSeventhEditionVol21983_34117955/UNIX_Programmers_Manual_Seventh_Edition_Vol_2_1983.pdf"><em>The
+            Unix Programmer's Manual 7th Edition</em></a>
+        </blockquote>
+        <h4 class="article-header4">A Summary Of Rethinking PID 1</h4>
         <p class="article-content">
-            Greetings!! You have stumbled across my tiny little corner of the world wide web!
+On April 30th, 2010, Lennart Poettering published a blog post titled "Rethinking
+PID 1" in which he gives a general overview of his offering to the init
+ecosystem, systemd. In this blog post, he introduces the reader to the various
+implementations that Lennart believed were an issue with the init system that had
+been predominant within the Linux world at the time, sysv-init.
         </p>
         <p class="article-content">
-            However you may have found me is anyone's guess, but please, sit back, relax,
-             and enjoy this blog.
+His initial arguments include the need to start less processes at boot, and to
+start what processes are needed in parallel. He elaborates on this argument by
+pointing out the technical advantages of starting processes such as socket
+services, bus services, and file system jobs all in parallel.
         </p>
         <p class="article-content">
-            Here you will find various articles on Web Development, Coding/Programming, Linux,
-             and computers in general.
+He moves on to the subject of the need to "Keep PID1 small," where he argues
+that the initialization of sysv-init is currently slow due to its heavy
+implementation and use shell scripts, which when used as he
+described them are indeed memory intensive. He then moves onto how systemd
+utilizes Cgroups for process supervision and management, which he argues is
+more effective for the task than simply monitoring the status of process
+identifiers (PIDS).
         </p>
         <p class="article-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+He briefly mentions systemd's use of setting resource limits and how to further use
+Cgroups and CPU and IO scheduler controls for security enforcement, and briefly
+mentioning their implementation of logging as apart from the traditional syslog
+and kmesg.
         </p>
         <p class="article-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lennart continues onto why he found Canonical's init contribution, Upstart, as
+a marked improvement over sysv-init, but ultimately still dissatisfactory.
+While he admits that Upstart solves many of the issues he also had with
+sysv-init, including parallelization of processes, Poettering ultimately finds
+the major flaw with Upstart has to do with the way it deals with the way it
+handles dependencies. He points out that Upstart is not ideal in design because
+it starts all processes that might be necessary for that process
+to rely on. He argues that this should be the other way around, that these
+dependency processes should only start upon user initialization, not by the init
+system. He does concede that some of his criticisms of Upstart were currently
+being addressed at the time, but his general indication is that this was a design
+problem that sits at the base of Upstart, which, as he writes towards the end in
+his conclusion, is why he decided to start systemd from the ground up rather
+than simply add onto Upstart's codebase.
         </p>
         <p class="article-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+In a lengthy list following these criticisms of Upstart, Lennart briefly covers
+the basics of how systemd's Unit files work, as well as a more technical
+investigation on how systemd integrates with the previous init interfaces
+occupied by sysv-init (/proc, /sys, and /dev).
         </p>
+        <p class="article-content">
+Finally, Lennart concludes the article by writing about his future plans for
+systemd.  Overall, Rethinking PID 1 is a fairly straight-forward technical summary of systemd
+itself and Lennart's reasoning behind creating it. In the coming years, however, the
+systemd project would expand out to a suite of tools that addressed a multitude
+of needs, and it became apparent that systemd was always intended to be more
+than just an init system.
+        </p>
+        <p class="article-content">
+Indeed, Lennart would say systemd was not a minimalist project(especially when
+compared with Upstart.), and not just an init system. This multifaceted approach
+to systemd flew in the face of the UNIX philosophy, a principle upheld within
+the Linux community of the time as akin to a religious mantra. The UNIX
+philosophy is often pointed to meaning that a piece of software should do only one
+thing, and do it well. Lennart's implementation of systemd was more akin to a Swiss
+army knife than a single sharpened blade, and many still question this choice,
+pointing to how systemd's large code base and ever expanding feature set
+is an indication of being prone to bugs and security holes. Proponents, however,
+point out that these features are a boon to system administrators, giving
+them a set of tools under one project's repertoire, rather than being cobbled
+together by a series of unrelated tools.
+        </p>
+        <h4 class="article-header4">On The Biggest Myths</h4>
+        <p class="article-content">
+Whenever a major change in paradigm occurs within any ecosystem, the inevitable
+turbulence that said change engages will ultimately leave some within that
+ecosystem at a loss. When the changeover from sysv-init was being heralded by
+both Canonical and Red Hat, there were those within the Linux world that claimed
+that both Upstart and systemd, respectively, were trying to fix something that
+wasn't broken, colloquially known as "reinventing the wheel". As the debate
+surrounding the changeover escalated, there would be those that perceived this
+paradigm shift as a corporate takeover of the Linux ecosystem, with Canonical
+and Red Hat at the helm of converting Linux over to an environment
+more alike to the corporate infrastructures of Microsoft or Apple.
+        </p>
+        <p class="article-content">
+Ultimately, however, it was becoming more and more apparent that SysV-init was
+showing its age, and a more modern implementation to init would have to come sooner
+rather than later. The question became not whether Linux distributions would continue
+to support and maintain SysV-init, but rather the question presented to many
+distribution developers/maintainers was whether or not Upstart or systemd would
+eventually be adopted.
+        </p>
+        <p class="article-content">
+In May of 2011, Fedora Linux, the upstream source for Red Hat Linux, would be
+the first Linux distribution to enable systemd by default, replacing Upstart.
+The developers would point to systemd's parallelization features, service management,
+and powerful transactional dependency-based service control logic. That same month,
+Mageia Linux would follow suit, with its parent distribution, Mandriva, replacing
+SysVinit with systemd a few months later in August. Other distributions like Gentoo
+Linux would offer systemd as an option, but included OpenRc init as an alternative.
+openSUSE Linux would also offer systemd as an alternative, while still offering support
+for SysVinit. Slackware Linux, one of the oldest distributions, notably declined to adopt
+systemd and remained using SysVinit.
+        </p>
+        <p class="article-content">
+In October 2012, the rolling release distribution, Arch Linux, switched their
+default init system from SystemVinit to systemd. They cited that maintenance of
+SysVinit would not be worth the effort in patches, while systemd was deemed to
+be overall faster than its predecessor. By this time, the debate surrounding
+systemd and its founder had gained momentum, as can be seen from these
+exchanges on Arch's public forum
+(https://bbs.archlinux.org/viewtopic.php?id=147272). The debate surrounding
+systemd's adoption involved its implementation of Unit files over bash scripts, it
+being much bigger and more extensive than SysVInit, its integration with dbus,
+udev, and replacing consolekit with logind.
+        </p>
+        <p class="article-content">
+As pushback against systemd began to escalate, in January of 2013, Lennart Poettering would
+address his detractors in an article on his blog. Titled, "The Biggest Myths",
+Lennart would attempt to counter many of The Linux communities criticisms of
+systemd. Some of these criticisms he would address included titles such as: "systemd is
+a monolith," "systemd is incompatible with shell scripts," "systemd is not modular,"
+"systemd is not UNIX," "systemd is bloated," "systemd being Linux-only is not nice
+to the BSDs," "systemd is unstable and buggy," and "systemd being Linux-only
+makes it impossible for Debian to adopt it as default."
+        </p>
+        <p class="article-content">
+For those who are not familiar with the intricacies of the Linux ecosystem, this
+point regarding Debian is of particular interest when talking about systemd, as
+Debian is one of the oldest Linux distributions with one the largest user bases.
+Debian at this point in time was well known for its stability, and was utilized
+on many servers around the world. At the time, Debian was at an interesting inflection
+point in the Linux ecosystem when it came to the init system, as Canonical's Ubuntu was
+a fork of the Debian distribution, and Canonical had been actively pursuing their init system,
+Upstart, to be adopted by Debian. Notably, Upstart developer, Steven
+Langasek, was on the Debian Technical Committee at that time. Additionally,
+Debian also offered a non-Linux version of their distribution known as GNU/kFreeBSD.
+Lennart Poettering had made a point early on in his promotion of systemd that he would not be
+offering support for any of the BSDs, as his implementation of Cgroups in systemd could not be
+implemented on BSD. He would also argue that the BSDs were not interested in adopting systemd,
+pointing out that their implementation of init had always been different from Linux. While true,
+this indeed did throw a wrench into Debian's adoption of systemd, as Debian had
+continually strived to provide as much compatibility of their distribution
+between both Linux and BSD.
+        </p>
+        <p class="article-content">
+In August of 2013, Lennart Poettering attended the Debian Conference in
+Switzerland. Here he would give a presentation titled, "Why Debian should(or should not)
+make systemd the default". Many of the same arguments Poettering would make in his initial 2010
+blog post, "Rethinking PID 1," were repeated here. While Lennart does his best to
+address his detractors, his lack of social graces is apparent, and at one point
+he calls aspects of the Upstart team's implementation of init "chicken shit" to
+their faces(https://www.youtube.com/watch?v=BXHCeWiQz9E).
+        </p>
+        <p class="article-content">
+These kinds of interactions are, perhaps unfortunately, common amongst software developers,
+especially those with competing pieces of software. And this conference occurred just
+months before the Debian Technical Committee would engage in an extensive email
+exchange debating whether or not to adopt systemd for their upcoming release,
+Debian Jessie.
+        </p>
+        <h4 class="article-header4">On The Biggest Fallacies</h4>
+        <p class="article-content">
+On October 25, 2013, Debian Developer Paul Tagliamonte called on the Debian
+Technical Committee to start discussions and come to a decision on which init
+system Debian would implement for their 2015 Version 8 release. Debian
+releases new versions of their distribution over a multiple year cycles and
+thusly major changes to the distribution are often discussed many years in
+advance. The changing of init systems was a heated debate amongst the Debian
+team, and is evidenced by the multi-month email exchange that followed,
+concluding on February 11, 2014.
+        </p>
+        <p class="article-content">
+I think it is safe to state that this email exchange did not leave all satisfied
+as to the result. After months of debate, the Debian Technical Committee came to
+the conclusion that systemd would become the default init system going forward
+and that support for other init systems would be supported, but not
+indefinitely. Eight months after the Debian Technical Committee made
+this decision, Ubuntu abandoned its own Upstart init system in favor of systemd.
+A new fork of the Debian distribution, Devuan was founded, keeping the original
+SysV-init as its default, eventually offering up OpenRC and runit as
+alternatives. The Gentoo developers would continue to offer both systemd and
+OpenRc as their init systems, with the user deciding which init to implement
+upon installation. A similar project, Artix Linux would fork from Arch Linux
+in 2017, five years after Arch Linux had officially adopted systemd
+as its sole init system. Artix Linux currently offers runit, s6, dinit, and
+OpenRc as alternatives to systemd. Slackware continues to offer SysV-init as its
+default init system. According to truelist.co, roughly 500 Linux distributions
+are under active development as of April of 2022, with less than 10% of those
+Linux Distributions not utilizing systemd according to my own estimates from
+Wikipedia's list of non-systemd
+distributions(https://en.wikipedia.org/wiki/Category:Linux_distributions_without_systemd).
+        </p>
+        <p class="article-content">
+So if systemd won the init wars, why are there still distributions that to this
+day refuse to use it? In the case of Artix and Devuan Linux, these distributions
+are pretty much defined by their defiance to utilizing systemd as an init
+system. Truthfully, the reasons range from simple dislike of the systemd founders, to
+somewhat technical arguments centered around systemd's feature creep. The latter
+of these arguments are what I personally find more intriguing, although I'll
+admit that I personally find Lennart Poettering and Kay Siever's social graces left
+for wanting.
+        </p>
+        <p class="article-content">
+After Debian's adoption of systemd, many within the Linux ecosystem saw that the
+init wars was indeed over. The choice by the Debian Technical Committee to adopt
+systemd was the nail in the coffin of Upstart, and other init systems were all
+but forgotten except amongst the distributions who adamantly opposed its mass
+adoption.
+        </p>
+        <p class="article-content">
+The years that followed systemd's mass adoption came with many detractors
+initially, as many bugs and security flaws were found during these early years.
+In September of 2015, Jude C. Nelson, Distributed Systems PhD student at
+Princeton University, wrote an article titled "The Biggest Fallacies," which
+retorted many of the common arguments made in favor of systemd's mass adoption. While this
+article provides in depth technical arguments for why systemd's monolithic
+design and use of binary logging was poor software design, ultimately the more
+technically sound arguments can be found presented by the s6 init system's developer,
+Laurent Bercot.
+        </p>
+        <p class="article-content">
+In January 2015, software developer Steve Litt wrote an email regarding an
+article on init systems he was writing to Laurent Bercot, developer of the s6
+init system. Laurent goes into a lengthy and descriptive argument as to why
+systemd's implementation of socket activation is not as beneficial as Lennart
+purports it to be. Additionally, Bercot points out that the integration of cgroups
+into the init system was never necessary unless the init system became so monolithic
+as to constitute its use. He finally points out that while systemd aims to provide an "OS Toolkit," it
+does so without providing enough modularity, making it a program that lacks
+composability, which is generally frowned upon in software design. He concludes
+with arguing that the complexity of systemd comes at the cost of manpower. All other
+init systems have been written by a small team, or in some cases (runit, s6), by
+a single individual. He argues that the manpower required to develop and
+maintain systemd could have been utilized for other more worthwhile projects had
+Red Hat chosen to keep their init system small and modular in design.
+        </p>
+        <p class="article-content">
+These arguments, however, would go unheard. Eventually, systemd became beloved for its
+features and ease of use. Writing Unit Files was praised for being easy and its
+feature set was seen no longer as an example of feature creep, but rather more alike
+the features of the modern day Web Browser, or the Linux kernel, monolithic by design
+and necessary. Modern Linux users downplay and/or ignore the UNIX philosophy as an overly
+simplistic model of software development, and to criticize systemd, or even
+bring up the subject of it possibly not being the best implementation of init, is immediately
+met with blind dismissal by the majority.
+        </p>
+        <h4 class="article-header4">Conclusion</h4>
+        <p class="article-content">
+It is impossible for me to cover this subject without any bias. While I did
+initially utilize systemd on my home desktop computer when I first started to
+use Manjaro Linux in 2020, I soon found myself installing and utilizing Artix
+Linux at the beginning of 2021 after doing some research on systemd, and
+determined that trying out another init system might be worthwhile. I have not
+installed a different Linux distribution on my home desktop nor laptop since
+then, as I have been happy using runit instead.
+        </p>
+        <p class="article-content">
+I suppose the ultimate question is: was the mass adoption of systemd a good thing?
+In the end? As a non-systemd user, one might think I would adamantly say, "never!"
+In truth though, even after this long in depth look into the systemd debate, I can
+only shrug my shoulders at this question and say "maybe?" I have only
+perused the source code of systemv-init, runit, upstart, s6, launchd, and
+systemd, and have not given each of them the technical screening each of them deserves
+to properly answer this question.
+        </p>
+        <p class="article-content">
+Ultimately, what init system one chooses to use shouldn't matter. Computers were
+meant to get work done, and init's main responsibility is simply to be sure that the
+computer remains running once booted. The fact is that sysv-init served that
+purpose just fine. It is also a fact that init systems like runit, s6, and Openrc
+addressed many of the concerns around sysv-init that existed when this debate
+took place (none of them, however, had the needed amount of manpower to work on mass
+integration). It appears to me that systemd also addressed these concerns,
+but also expanded its features to encompass parts of the Operating System that were never
+intrinsically part of init, but rather were traditionally the domains of either kernel
+or user space programs.
+        </p>
+        <p class="article-content">
+My personal preferences regarding software development are still coming into
+their own. I have not been coding for very long and truthfully should have
+probably waited until I had more expertise under my belt before commenting on
+this, but I personally find the debate around systemd compelling, and wanted to
+express that opinion now.
+        </p>
+        <p class="article-content">
+I do currently have a preference for small modular programs that only do one
+thing, and hopefully do them well, and if they do do more than one thing, it still falls within
+the purview of the overall theme of the project, hopefully. The editor I work in, NeoVim, has many
+features, but ultimately is solely for editing text, not browsing the internet. That said, I expect
+my browser to not do just one thing well, and indeed, the modern web browser is capable of
+doing nearly everything a modern Operating System can. Whether or not this is a
+good thing is actually a good analogy to the systemd debate. Certain pieces of
+software have a multitudinous feature set by necessity. I do believe it is no longer apt to
+say that every piece of software should "do one thing well." More succinctly, I
+think it is more appropriate to ask "which pieces of software should have a
+large feature set, and why?" In regards to init, one might ask "should my init
+system be more akin to a suite of software that does many things, or should it
+solely be an init system whose sole purpose is to start, reboot, and shutdown my
+OS?"
+        </p>
+        <p class="article-content">
+My final conclusion regarding all of this is that I personally do want my init
+system to solely do one thing, at least by default. I see the appeal of systemd,
+I really do, but I personally find that an init system should not be like
+a browser or any other multi-featured piece of software, and instead to simply
+do one thing well. Writing this blog post has opened my eyes to a particular
+aspect of how the philosophy around software design has evolved over the years, and
+I am glad I did so. I will probably always find this debate fascinating, as without the
+proper implementation of PID 1, it wouldn't matter how good any Operating System kernel was
+developed, it simply wouldn't run.
+        </p>
+        <p class="article-content">
+I do understand why most within the Linux community no longer wish to look
+into the topic. Ultimately init is meant simply to run in the background, do
+its job, and be forgotten about. Only when PID 1 fails to launch or has a security
+breach do most users care to investigate. I feel it is apt to point out that in
+all likelihood, systemd won't forever be the predominant init system on Linux. Much
+like sysv-init, one day, systemd will show its age, and be replaced by a piece of software
+that fits more in lines of the needs of the future. Perhaps then we'll look back at the more
+simple solutions, and once again, take closer look at what's init.
+        </p>
+
     </div>
     <div class="spacer"></div>
 </div>
