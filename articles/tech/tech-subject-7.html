@@ -4,7 +4,7 @@
         <div class="prev-btn" onclick="renderPrev(7)"></div>
     </div>
     <p class="article-header">what's init</p>
-    <p class="article-header3">why is systemd so divisive?</p>
+    <p class="article-header3">why is systemd so divisive?(part 1)</p>
     <div class="article-body">
         <figure>
             <img
@@ -88,7 +88,8 @@ Now, once GRUB has launched the Linux kernel, a series of messages is usually
 displayed, indicating that the Kernel has found the init system daemon, and this
 is the process that then starts the rest of your Operating System, eventually
 bringing you to a shell or a login screen. So what is this init system? I'll
-refer you to the Wikipedia Article<https://en.wikipedia.org/wiki/Init> for a more
+refer you to the <a class="article-outside-links" target="_blank" rel="noopener
+noreferrer" href="https://en.wikipedia.org/wiki/Init">Wikipedia Article</a> for a more
 in-depth summary, but very simply, the init system is the first process that runs
 on your computer after the bootloader has loaded the Kernel. If the Kernel doesn't
 find this init process, a Kernel Panic ensues, which is a safety measure indicating
@@ -138,10 +139,12 @@ As mentioned previously, the early 2000s saw the birth of a series of modern
 init system programs designed to replace System-V and BSD-style init. This was
 due to the increasing need for parallelization of processes and an efficient way
 of restarting processes should they fail. Many of the early programs that
-addressed these issues were based around the
-daemontools<https://en.wikipedia.org/wiki/Daemontools> processes supervision
+addressed these issues were based around the <a class="article-outside-links" target="_blank" rel="noopener
+noreferrer" href="https://en.wikipedia.org/wiki/Daemontools">daemontools</a> processes supervision
 toolkit written by American German mathematician, cryptologist, and computer
-scientist, Daniel Bernstein. Released in 2001, daemontools offered an
+scientist, <a class="article-outside-links" target="_blank" rel="noopener
+noreferrer" href="https://en.wikipedia.org/wiki/Daniel_J._Bernstein">Daniel Bernstein</a>.
+Released in 2001, daemontools offered an
 alternative to system initialization as well as a series of process supervision
 tools. The features that daemontools included were easy installation/removal,
 easy first-time service startup, reliable restarts, reliable signalling,
@@ -156,10 +159,12 @@ vast amount of scripts that were necessary for them to gain popularity. If
 System V init was to be replaced, it would need more momentum behind it. The
 original push towards a mainstream contender to System V Init came from a
 relative newcomer to the Linux Ecosystem, a UK software company called
-Canonical<https://en.wikipedia.org/wiki/Canonical_(company)>, and their now
-ubiquitously known Linux Distribution, Ubuntu(https://en.wikipedia.org/wiki/Ubuntu_(operating_system)).
-        </p>
-        <p class="article-content">
+Canonical <a class="article-outside-links" target="_blank" rel="noopener
+noreferrer" href="https://en.wikipedia.org/wiki/Canonical_(company)">Canonical</a>, and their now
+ubiquitously known Linux Distribution, <a class="article-outside-links" target="_blank" rel="noopener
+noreferrer" href="https://en.wikipedia.org/wiki/Ubuntu_(operating_system)">Ubuntu</a>.
+</p>
+<p class="article-content">
 Canonical's Ubuntu Linux, a very popular Linux distribution founded in 2004,
 converted their default init system over to their own in-house developed
 init, Upstart, in 2006. Upstart's init, unlike sys-v init, was based around an
@@ -168,8 +173,8 @@ to initialization, Upstart was able to respond to events asynchronously as they
 occurred. Examples of such events include the adding or removal of USB flash
 drives, discovery and scanning of new storage devices, and the loading of
 firmware for such devices. This was a marked improvement over sys-v init's synchronous event model, which inherently blocked such tasks from occurring until other pre-defined tasks had first been completed.
-        </p>
-        <p class="article-content">
+</p>
+<p class="article-content">
 Additionally, unlike runit or s6, Upstart had the backing of the company,
 Canonical, which provided Upstart creator, Scott James Remnant, with the
 resources to develop the necessary interoperability layer scripts for popular services. For a while, it appeared that System V init's successor would be Upstart. Red Hat's upstream distribution, Fedora Linux, would adopt Upstart in their version 9 release in 2008, and Red Hat Enterprise Linux itself would also adopt Upstart in 2011. It was within Red Hat's team, however, that a German developer Lennart Poettering would come to develop his own init system as an alternative to Upstart. Poettering called this new init offering "systemd".
@@ -187,21 +192,23 @@ positions in the world of The Linux ecosystem. His speaking style is
 particularly adverserial when addressing critics of his software suites. This is
 evidenced and confirmed by many who have participated in email exchanges with
 Lennart, and has been documented in his interactions with his interactions with
-detractors of his software on video (https://www.youtube.com/watch?v=ZTdUmlGxVo0).
+detractors of his software on <a class="article-outside-links" target="_blank" rel="noopener
+noreferrer"
+href="https://www.youtube.com/watch?v=ZTdUmlGxVo0.">video</a>.
 I think it is safe to say that he is brash and unabashedly frank in his expression
 of his opinions.
-        </p>
-        <p class="article-content">
+</p>
+<p class="article-content">
 His technical choices have been highly criticized by a variety of developers,
 with particularly vitriolic criticism coming from s6 developer, Laurent
-Bercot, as evidenced by this email exchange(https://skarnet.org/lists/supervision/0422.html),
-and this post on the Gentoo forums
-(https://forums.gentoo.org/viewtopic-t-994548-postdays-0-postorder-asc-start-25.html#7581522).
+Bercot, as evidenced by this <a class="article-outside-links" target="_blank" rel="noopener
+noreferrer" href="https://skarnet.org/lists/supervision/0422.html">email exchange</a>,
+and this <a class="article-outside-links" target="_blank" rel="noopener
+noreferrer" href="https://forums.gentoo.org/viewtopic-t-994548-postdays-0-postorder-asc-start-25.html#7581522">post on the Gentoo forums</a>
 Even Linux founder, Linus Torvaulds, has questioned and criticized
-Lennart's design choices within systemd and his team's handling of bug
-reports on systemd (https://lkml.iu.edu//hypermail/linux/kernel/1404.0/01331.html).
-        </p>
-        <p class="article-content">
+Lennart's design choices within systemd and his cofounder, <a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://lkml.iu.edu//hypermail/linux/kernel/1404.0/01331.html">Kay Siever's handling of bug reports on systemd</a>.
+</p>
+<p class="article-content">
 Regardless of this, Lennart Poettering's influence on the Linux ecosystem has
 stood the test of time, with systemd having been adopted now in 2022 by the vast
 majority of Linux distributions. It is perhaps due to the ubiquitous presence of
